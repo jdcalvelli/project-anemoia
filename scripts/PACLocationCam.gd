@@ -1,29 +1,39 @@
 extends Camera2D
 
+@export var circleRadius = 50
+@export var lerpFactor = 6
+
 func _process(delta):
 	_cameraSway(delta)
 
 ### helper funcs
 
 func _cameraSway(delta:float):
-	# when i try to roll this into one vector 2 based call it doesnt work
-	# probably because if it breaks clamp on one of the vector 2 it stops the whole thing
-	# could rewrite into an on input + tween combination later
-	position.x = lerp(
-		position.x, 
-		clamp(
+	# use built in godot funcs to get vector distance and angle
+	var distToMouse:float = Vector2.ZERO.distance_to(get_local_mouse_position())
+	var angleToMouse:float = Vector2.ZERO.angle_to_point(get_local_mouse_position())
+	
+	# if we're outside prescribed circle
+	if distToMouse >= circleRadius:
+		# use parametric form of circle to find closest point on circle
+		var closestPoint:Vector2 = Vector2(
+			circleRadius * cos(angleToMouse),
+			circleRadius * sin(angleToMouse)
+		)
+		# lerp there
+		position = lerp(
+			position,
+			closestPoint,
+			lerpFactor * delta
+		)
+	else:
+		# just lerp to mouse position
+		position.x = lerp(
+			position.x,
 			get_local_mouse_position().x,
-			-1 * get_viewport_rect().size.x / 20,
-			get_viewport_rect().size.x / 20
-		),
-		6 * delta
-	)
-	position.y = lerp(
-		position.y,
-		clamp(
+			lerpFactor * delta
+		)
+		position.y = lerp(
+			position.y, 
 			get_local_mouse_position().y,
-			-1 * get_viewport_rect().size.y / 20,
-			get_viewport_rect().size.y / 20
-		),
-		6 * delta
-	)
+			lerpFactor * delta)

@@ -13,17 +13,17 @@ func _cameraSway(delta:float):
 		position.x, 
 		clamp(
 			get_local_mouse_position().x,
-			-1 * get_viewport_rect().size.x / 8,
-			get_viewport_rect().size.x / 8
+			-1 * get_viewport_rect().size.x / 20,
+			get_viewport_rect().size.x / 20
 		),
-		delta
+		6 * delta
 	)
 	position.y = lerp(
 		position.y,
 		clamp(
 			get_local_mouse_position().y,
-			-1 * get_viewport_rect().size.y / 8,
-			get_viewport_rect().size.y / 8
+			-1 * get_viewport_rect().size.y / 20,
+			get_viewport_rect().size.y / 20
 		),
-		delta
+		6 * delta
 	)

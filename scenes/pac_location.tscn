@@ -1,13 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://kmi5bw14f0rg"]
+[gd_scene load_steps=6 format=3 uid="uid://kmi5bw14f0rg"]
 
 [ext_resource type="Script" path="res://scripts/PACLocationCam.gd" id="1_d5713"]
+[ext_resource type="Texture2D" uid="uid://cr11x1ivcjk84" path="res://icon.svg" id="2_3dyih"]
 [ext_resource type="Texture2D" uid="uid://bkmqhc1h058xg" path="res://assets/images/51119.jpg" id="2_s1bj8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wiot8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3dyih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmw2s"]
+size = Vector2(130, 131)
 
 [node name="PACLocation" type="Node2D"]
 
 [node name="holdover background" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
 texture = ExtResource("2_s1bj8")
+
+[node name="ClickableSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wiot8")
+
+[node name="Area2D" type="Area2D" parent="ClickableSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableSprite/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_qmw2s")
 
 [node name="PACLocationCam" type="Camera2D" parent="."]
 script = ExtResource("1_d5713")

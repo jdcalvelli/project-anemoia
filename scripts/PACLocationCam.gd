@@ -36,4 +36,5 @@ func _cameraSway(delta:float):
 		position.y = lerp(
 			position.y, 
 			get_local_mouse_position().y,
-			lerpFactor * delta)
+			lerpFactor * delta
+			)

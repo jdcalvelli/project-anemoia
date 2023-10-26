@@ -5,9 +5,9 @@
 
 [node name="PACLocation" type="Node2D"]
 
-[node name="PACLocationCam" type="Camera2D" parent="."]
-script = ExtResource("1_d5713")
-
 [node name="holdover background" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
 texture = ExtResource("2_s1bj8")
+
+[node name="PACLocationCam" type="Camera2D" parent="."]
+script = ExtResource("1_d5713")

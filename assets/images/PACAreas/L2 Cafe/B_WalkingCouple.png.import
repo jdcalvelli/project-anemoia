@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkmqhc1h058xg"
-path="res://.godot/imported/51119.jpg-1d5563047faa84ead0e8c1abbea4d41f.ctex"
+uid="uid://ciaqlaoeg3a6u"
+path="res://.godot/imported/B_WalkingCouple.png-6ac9397faf7046ce567dc2c950a63af7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/51119.jpg"
-dest_files=["res://.godot/imported/51119.jpg-1d5563047faa84ead0e8c1abbea4d41f.ctex"]
+source_file="res://assets/images/PACAreas/L2 Cafe/B_WalkingCouple.png"
+dest_files=["res://.godot/imported/B_WalkingCouple.png-6ac9397faf7046ce567dc2c950a63af7.ctex"]
 
 [params]
 

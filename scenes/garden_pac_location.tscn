@@ -1,0 +1,135 @@
+[gd_scene load_steps=21 format=3 uid="uid://kmi5bw14f0rg"]
+
+[ext_resource type="Script" path="res://scripts/pac_location.gd" id="1_ujhxi"]
+[ext_resource type="Resource" uid="uid://1x87n18x784" path="res://dialogues/cafePACLocation.dialogue" id="2_7i3po"]
+[ext_resource type="Texture2D" uid="uid://dapmrmutj6t8g" path="res://assets/images/PACAreas/L1 Garden/Setting_Garden.png" id="3_u0vg5"]
+[ext_resource type="Texture2D" uid="uid://c6r3ys3y8ute8" path="res://assets/images/PACAreas/L1 Garden/Objects/O_BenchCouple.png" id="4_gi5xr"]
+[ext_resource type="PackedScene" uid="uid://blsr14nnx3m6x" path="res://prefabs/clickable_obj.tscn" id="4_peiso"]
+[ext_resource type="Texture2D" uid="uid://n2ggcrahdnpr" path="res://assets/images/PACAreas/L1 Garden/Objects/B_BenchCouple.png" id="6_wijul"]
+[ext_resource type="Texture2D" uid="uid://5t3y272upo30" path="res://assets/images/PACAreas/L1 Garden/Objects/O_Lillies.png" id="7_ebkef"]
+[ext_resource type="Texture2D" uid="uid://chcrg6fg02drc" path="res://assets/images/PACAreas/L1 Garden/Objects/B_Lillies.png" id="8_28egp"]
+[ext_resource type="Texture2D" uid="uid://c4i7oju7w28b4" path="res://assets/images/PACAreas/L1 Garden/Objects/O_Flower.png" id="9_bbu5r"]
+[ext_resource type="PackedScene" uid="uid://caa6lhyf65px6" path="res://prefabs/pac_location_cam.tscn" id="9_upra4"]
+[ext_resource type="Texture2D" uid="uid://pbg3ki6e4fud" path="res://assets/images/PACAreas/L1 Garden/Objects/B_Flower.png" id="10_wrumm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52d3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gi5xr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xba8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wijul")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cor5y"]
+size = Vector2(318.182, 332.727)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hh4vp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ebkef")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_26na0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_28egp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3cr3"]
+size = Vector2(320.909, 213.636)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a84qd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bbu5r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_51amm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_wrumm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsiyy"]
+size = Vector2(144.546, 144.545)
+
+[node name="GardenPACLocation" type="Node2D"]
+script = ExtResource("1_ujhxi")
+PACLocationDialogue = ExtResource("2_7i3po")
+
+[node name="B_Garden" type="Sprite2D" parent="."]
+z_index = -2
+texture = ExtResource("3_u0vg5")
+
+[node name="O_Couple_Bench" parent="." instance=ExtResource("4_peiso")]
+sprite_frames = SubResource("SpriteFrames_52d3q")
+stitchName = "couple_bench"
+
+[node name="B_Splotch" parent="O_Couple_Bench" index="0"]
+sprite_frames = SubResource("SpriteFrames_1xba8")
+
+[node name="CollisionShape2D" parent="O_Couple_Bench/Area2D" index="0"]
+position = Vector2(134.545, 14.5455)
+shape = SubResource("RectangleShape2D_cor5y")
+
+[node name="O_Lillies" parent="." instance=ExtResource("4_peiso")]
+sprite_frames = SubResource("SpriteFrames_hh4vp")
+stitchName = "lillies"
+
+[node name="B_Splotch" parent="O_Lillies" index="0"]
+sprite_frames = SubResource("SpriteFrames_26na0")
+
+[node name="CollisionShape2D" parent="O_Lillies/Area2D" index="0"]
+position = Vector2(-225, 382.273)
+shape = SubResource("RectangleShape2D_e3cr3")
+
+[node name="O_Flowers" parent="." instance=ExtResource("4_peiso")]
+sprite_frames = SubResource("SpriteFrames_a84qd")
+stitchName = "flowers"
+
+[node name="B_Splotch" parent="O_Flowers" index="0"]
+sprite_frames = SubResource("SpriteFrames_51amm")
+
+[node name="CollisionShape2D" parent="O_Flowers/Area2D" index="0"]
+position = Vector2(-783.182, 48.6364)
+shape = SubResource("RectangleShape2D_lsiyy")
+
+[node name="PACLocationCam" parent="." instance=ExtResource("9_upra4")]
+
+[editable path="O_Couple_Bench"]
+[editable path="O_Lillies"]
+[editable path="O_Flowers"]

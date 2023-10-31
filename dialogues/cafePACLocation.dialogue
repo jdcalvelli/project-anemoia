@@ -1,11 +1,17 @@
-~ object1
+~ couple_bench
 
-Test for object 1.
+Test for couple_bench.
 
 => END
 
-~ object2
+~ lillies
 
-Test for object 2.
+Test for lillies.
+
+=> END
+
+~ flowers
+
+Test for flowers.
 
 => END

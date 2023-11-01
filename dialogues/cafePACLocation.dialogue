@@ -15,3 +15,9 @@ Test for lillies.
 Test for flowers.
 
 => END
+
+~ picnic_basket 
+
+Test for picnic_basket. Will need to be blocked until all other objects are clicked.
+
+=> END

@@ -1,7 +1,7 @@
 extends Camera2D
 
-@export var circleRadius = 50
-@export var lerpFactor = 6
+@export var circleRadius : int
+@export var lerpFactor : int
 
 func _process(delta):
 	_cameraSway(delta)

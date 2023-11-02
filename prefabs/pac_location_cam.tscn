@@ -5,3 +5,5 @@
 [node name="PACLocationCam" type="Camera2D"]
 zoom = Vector2(1.1, 1.1)
 script = ExtResource("1_3erxu")
+circleRadius = 50
+lerpFactor = 4

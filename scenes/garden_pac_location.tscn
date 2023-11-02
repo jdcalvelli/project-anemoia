@@ -302,6 +302,7 @@ shape = SubResource("RectangleShape2D_lsiyy")
 
 [node name="O_PicnicBasket" parent="." instance=ExtResource("4_peiso")]
 sprite_frames = SubResource("SpriteFrames_7nif5")
+isGated = true
 stitchName = "picnic_basket"
 
 [node name="B_Splotch" parent="O_PicnicBasket" index="0"]

@@ -20,8 +20,8 @@ func _onClickHandle(emitter:ClickableObject):
 	
 	# if the current object isn't gated
 	if !emitter.isGated:
-		# append it to the array
-		ClickedObjects.append(emitter)
+		# append it to the array if it isn't already there
+		if !ClickedObjects.has(emitter) : ClickedObjects.append(emitter)
 		# call the dialogue
 		# right now utilizing the example dialogue balloon, could change later
 		DialogueManager.show_example_dialogue_balloon(

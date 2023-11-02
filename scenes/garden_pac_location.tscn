@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/pac_location.gd" id="1_ujhxi"]
 [ext_resource type="Resource" uid="uid://1x87n18x784" path="res://dialogues/gardenPACLocation.dialogue" id="2_e7nx8"]
-[ext_resource type="Texture2D" uid="uid://dapmrmutj6t8g" path="res://assets/images/PACAreas/L1 Garden/Setting_Garden.png" id="3_u0vg5"]
+[ext_resource type="Texture2D" uid="uid://dsx5lvuenrpmx" path="res://assets/images/PACAreas/L1 Garden/Setting_Garden.png" id="3_u0vg5"]
 [ext_resource type="Texture2D" uid="uid://c6r3ys3y8ute8" path="res://assets/images/PACAreas/L1 Garden/Objects/O_BenchCouple.png" id="4_gi5xr"]
 [ext_resource type="PackedScene" uid="uid://blsr14nnx3m6x" path="res://prefabs/clickable_obj.tscn" id="4_peiso"]
 [ext_resource type="Texture2D" uid="uid://n2ggcrahdnpr" path="res://assets/images/PACAreas/L1 Garden/Objects/B_BenchCouple.png" id="6_wijul"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var PACLocationDialogue : Resource
+@export var PACLocationDialogue : DialogueResource
 
 var numClickables : int
 var ClickedObjects : Array

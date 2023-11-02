@@ -1,0 +1,17 @@
+~ gardenIntro
+
+TEST GARDEN INTRO
+
+a;lsdkjfa;lskdjf;
+
+a;slkdjfa;slkdjfa;sldkjfa;lskdj
+
+;aslkjdfa;lskjdf;alkj
+
+a;lskdfja;slkdfja;slkdjfa;lskjf
+
+# this calls the function changescene on the GameManager singleton
+# we can also emit signals from here which is gas
+do GameManager.changeScene("res://scenes/garden_pac_location.tscn")
+
+=> END

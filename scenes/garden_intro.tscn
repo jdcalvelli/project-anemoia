@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bca7ohyjyyjdi"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_fx0ag"]
+[ext_resource type="Texture2D" uid="uid://7jp15ctgr5wn" path="res://assets/images/Intros/L1.1_Background.png" id="1_v1a8v"]
+[ext_resource type="Resource" uid="uid://bvqeafbe8goxx" path="res://dialogues/gardenIntro.dialogue" id="2_68iu1"]
+[ext_resource type="Texture2D" uid="uid://bt1fx3uiq1aij" path="res://assets/images/Intros/L1.1_Character.png" id="2_tnlc7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdjjn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v1a8v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7mxg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tnlc7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="garden_intro" type="Node2D"]
+script = ExtResource("1_fx0ag")
+introDialogue = ExtResource("2_68iu1")
+stitchName = "gardenIntro"
+
+[node name="L1_1_Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(-75, 50)
+sprite_frames = SubResource("SpriteFrames_xdjjn")
+
+[node name="L1_1_Character" type="AnimatedSprite2D" parent="."]
+position = Vector2(75, -50)
+sprite_frames = SubResource("SpriteFrames_n7mxg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.1, 1.1)

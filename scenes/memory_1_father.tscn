@@ -22,10 +22,12 @@ radius = 446.814
 [node name="memory_1_father" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(2.08165e-12, -540)
 texture = ExtResource("1_qbq1c")
 
 [node name="DraggableApple" parent="." instance=ExtResource("3_fs4c4")]
+z_index = -1
 position = Vector2(-1913, -232)
 scale = Vector2(0.37, 0.37)
 
@@ -37,6 +39,7 @@ position = Vector2(24.3242, 24.3243)
 shape = SubResource("CircleShape2D_1yxpx")
 
 [node name="DraggablePear" parent="." instance=ExtResource("3_fs4c4")]
+z_index = -1
 position = Vector2(-2361, -272)
 scale = Vector2(0.47, 0.47)
 
@@ -48,6 +51,7 @@ position = Vector2(-1.90735e-05, 55.3192)
 shape = SubResource("CapsuleShape2D_5rhso")
 
 [node name="DraggableCantaloupe" parent="." instance=ExtResource("3_fs4c4")]
+z_index = 1
 position = Vector2(-2382, 227)
 scale = Vector2(0.47, 0.47)
 
@@ -63,6 +67,7 @@ position = Vector2(2.08165e-12, -540)
 texture = ExtResource("3_bsyqi")
 
 [node name="BottomBasket" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(2.08165e-12, -540)
 texture = ExtResource("5_0h5lp")
 

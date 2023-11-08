@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnt0y3ln7kjro"]
+
+[ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
+[ext_resource type="Texture2D" uid="uid://bxtf80mhakh2g" path="res://assets/images/Memories/memory_1/memory_1_father_bg.png" id="1_xjkaj"]
+
+[node name="memory_1_father" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, -540)
+texture = ExtResource("1_xjkaj")
+
+[node name="memory_1_father_cam" type="Camera2D" parent="."]
+script = ExtResource("1_blnsk")
+camLimit = 200

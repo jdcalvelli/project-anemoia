@@ -1,13 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=12 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
-[ext_resource type="Texture2D" uid="uid://b40rs2s2lf46x" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasket.png" id="4_w7jac"]
+[ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple_sprite.png" id="3_we8a1"]
+[ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/pear_sprite.png" id="4_2a3u6"]
+[ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
+[ext_resource type="Texture2D" uid="uid://dq3v3f0b54d4j" path="res://assets/images/Memories/memory_1/fruits/cantaloupe_sprite.png" id="5_1sskk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2pa1"]
-size = Vector2(127, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1yxpx"]
+radius = 322.574
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhso"]
+radius = 261.702
+height = 661.99
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g0llg"]
+radius = 446.814
 
 [node name="memory_1_father" type="Node2D"]
 
@@ -15,12 +25,38 @@ size = Vector2(127, 128)
 position = Vector2(2.08165e-12, -540)
 texture = ExtResource("1_qbq1c")
 
-[node name="DraggableFruit" parent="." instance=ExtResource("3_fs4c4")]
-position = Vector2(-2438, 185)
+[node name="DraggableApple" parent="." instance=ExtResource("3_fs4c4")]
+position = Vector2(-1913, -232)
+scale = Vector2(0.37, 0.37)
 
-[node name="CollisionShape2D" parent="DraggableFruit" index="0"]
-position = Vector2(-0.5, 1)
-shape = SubResource("RectangleShape2D_f2pa1")
+[node name="Sprite2D" parent="DraggableApple" index="0"]
+texture = ExtResource("3_we8a1")
+
+[node name="CollisionShape2D" parent="DraggableApple" index="1"]
+position = Vector2(24.3242, 24.3243)
+shape = SubResource("CircleShape2D_1yxpx")
+
+[node name="DraggablePear" parent="." instance=ExtResource("3_fs4c4")]
+position = Vector2(-2361, -272)
+scale = Vector2(0.47, 0.47)
+
+[node name="Sprite2D" parent="DraggablePear" index="0"]
+texture = ExtResource("4_2a3u6")
+
+[node name="CollisionShape2D" parent="DraggablePear" index="1"]
+position = Vector2(-1.90735e-05, 55.3192)
+shape = SubResource("CapsuleShape2D_5rhso")
+
+[node name="DraggableCantaloupe" parent="." instance=ExtResource("3_fs4c4")]
+position = Vector2(-2382, 227)
+scale = Vector2(0.47, 0.47)
+
+[node name="Sprite2D" parent="DraggableCantaloupe" index="0"]
+texture = ExtResource("5_1sskk")
+
+[node name="CollisionShape2D" parent="DraggableCantaloupe" index="1"]
+position = Vector2(-102.128, 23.4043)
+shape = SubResource("CircleShape2D_g0llg")
 
 [node name="TopBasket" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, -540)
@@ -28,10 +64,12 @@ texture = ExtResource("3_bsyqi")
 
 [node name="BottomBasket" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, -540)
-texture = ExtResource("4_w7jac")
+texture = ExtResource("5_0h5lp")
 
 [node name="memory_1_father_cam" type="Camera2D" parent="."]
 script = ExtResource("1_blnsk")
 camLimit = 200
 
-[editable path="DraggableFruit"]
+[editable path="DraggableApple"]
+[editable path="DraggablePear"]
+[editable path="DraggableCantaloupe"]

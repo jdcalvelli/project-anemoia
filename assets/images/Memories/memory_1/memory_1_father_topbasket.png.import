@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4nbo84rip1ql"
-path="res://.godot/imported/memory_1_father_front_basket.png-39e657a4c2a32476967317c99379a278.ctex"
+uid="uid://44mtnh8l2jj1"
+path="res://.godot/imported/memory_1_father_topbasket.png-38a89b5a75a164d84d7990861871ecb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Memories/memory_1/memory_1_father_front_basket.png"
-dest_files=["res://.godot/imported/memory_1_father_front_basket.png-39e657a4c2a32476967317c99379a278.ctex"]
+source_file="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png"
+dest_files=["res://.godot/imported/memory_1_father_topbasket.png-38a89b5a75a164d84d7990861871ecb2.ctex"]
 
 [params]
 

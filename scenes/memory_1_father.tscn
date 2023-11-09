@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=31 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -11,11 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://dbgicnlhay7us" path="res://assets/images/Memories/memory_1/knife/knife_down.png" id="4_ld6fa"]
 [ext_resource type="Script" path="res://scripts/DraggableKnife.gd" id="4_ujm3q"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
-[ext_resource type="Texture2D" uid="uid://dq3v3f0b54d4j" path="res://assets/images/Memories/memory_1/fruits/cantaloupe_sprite.png" id="5_1sskk"]
+[ext_resource type="Texture2D" uid="uid://bf87cr7djupla" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_1.png" id="9_u1214"]
 [ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_sprite.png" id="9_wpmxj"]
 [ext_resource type="Texture2D" uid="uid://v4a2vu5cn85m" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_1.png" id="10_4j6bq"]
+[ext_resource type="Texture2D" uid="uid://dvaaptg7its7b" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_2.png" id="10_bydta"]
+[ext_resource type="Texture2D" uid="uid://pcbg1u1kx8ri" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_3.png" id="11_fw22l"]
 [ext_resource type="Texture2D" uid="uid://bk5oyu87o1ayy" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_2.png" id="11_h7ky3"]
 [ext_resource type="Texture2D" uid="uid://fbng415pmnco" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_3.png" id="12_aposg"]
+[ext_resource type="Texture2D" uid="uid://d5j5s8rylcc8" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_0.png" id="16_k5s35"]
+[ext_resource type="Texture2D" uid="uid://cwl7txwbsejf5" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_1.png" id="17_87yam"]
+[ext_resource type="Texture2D" uid="uid://cvp4rfpbraj30" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_2.png" id="18_jgtg3"]
+[ext_resource type="Texture2D" uid="uid://dut4i04j3myxn" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_3.png" id="19_uy5ci"]
+[ext_resource type="Texture2D" uid="uid://cp1db731eff0e" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_4.png" id="20_cr3jj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ve22j"]
 animations = [{
@@ -36,6 +43,15 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_we8a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u1214")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bydta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fw22l")
 }],
 "loop": true,
 "name": &"default",
@@ -73,7 +89,19 @@ height = 661.99
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_1sskk")
+"texture": ExtResource("16_k5s35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_87yam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jgtg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uy5ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cr3jj")
 }],
 "loop": true,
 "name": &"default",
@@ -99,6 +127,7 @@ script = ExtResource("2_a4mea")
 polygon = PackedVector2Array(-579, -150, 644, -158, 826, 336, -794, 351)
 
 [node name="DraggableKnife" type="Area2D" parent="."]
+z_index = 4
 position = Vector2(661, 217)
 scale = Vector2(0.7, 0.7)
 script = ExtResource("4_ujm3q")
@@ -116,7 +145,7 @@ polygon = PackedVector2Array(-75, -6, 177, 189, 167, 95, -51, -100)
 [node name="KnifeEdgeArea2D" type="Area2D" parent="DraggableKnife"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DraggableKnife/KnifeEdgeArea2D"]
-polygon = PackedVector2Array(-304.286, -265.714, -368.571, -387.143, -381.429, -500, -227.143, -331.429)
+polygon = PackedVector2Array(-304.286, -265.714, -368.571, -387.143, -327.143, -440, -227.143, -331.429)
 
 [node name="DraggableApple" parent="." instance=ExtResource("3_fs4c4")]
 z_index = -1

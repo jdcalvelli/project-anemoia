@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpfd2eyqvoo3h"
-path="res://.godot/imported/Apple_chop_0.png-57af3c4768543e526a7ef95bbd7e9f30.ctex"
+uid="uid://cwl7txwbsejf5"
+path="res://.godot/imported/canta_chop_1.png-4076c7565928b7d474fe7cfd5bea955b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Memories/memory_1/fruits/Apple/Apple_chop_0.png"
-dest_files=["res://.godot/imported/Apple_chop_0.png-57af3c4768543e526a7ef95bbd7e9f30.ctex"]
+source_file="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_1.png"
+dest_files=["res://.godot/imported/canta_chop_1.png-4076c7565928b7d474fe7cfd5bea955b.ctex"]
 
 [params]
 

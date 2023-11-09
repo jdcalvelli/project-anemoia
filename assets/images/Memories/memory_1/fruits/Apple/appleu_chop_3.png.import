@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0nb3n1ep3667"
-path="res://.godot/imported/Apple_chop_2.png-a50e55c4393b89400e00c48f9a202edc.ctex"
+uid="uid://pcbg1u1kx8ri"
+path="res://.godot/imported/appleu_chop_3.png-64d9220ee1575d17b4c66c8d2679ff11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Memories/memory_1/fruits/Apple/Apple_chop_2.png"
-dest_files=["res://.godot/imported/Apple_chop_2.png-a50e55c4393b89400e00c48f9a202edc.ctex"]
+source_file="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_3.png"
+dest_files=["res://.godot/imported/appleu_chop_3.png-64d9220ee1575d17b4c66c8d2679ff11.ctex"]
 
 [params]
 

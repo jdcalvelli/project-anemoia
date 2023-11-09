@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=32 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -37,6 +37,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5cccp"]
+a = Vector2(-200, -122.857)
+b = Vector2(-345.714, -295.714)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kk101"]
 animations = [{
@@ -144,8 +148,8 @@ polygon = PackedVector2Array(-75, -6, 177, 189, 167, 95, -51, -100)
 
 [node name="KnifeEdgeArea2D" type="Area2D" parent="DraggableKnife"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DraggableKnife/KnifeEdgeArea2D"]
-polygon = PackedVector2Array(-304.286, -265.714, -368.571, -387.143, -327.143, -440, -227.143, -331.429)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableKnife/KnifeEdgeArea2D"]
+shape = SubResource("SegmentShape2D_5cccp")
 
 [node name="DraggableApple" parent="." instance=ExtResource("3_fs4c4")]
 z_index = -1

@@ -47,9 +47,14 @@ func _physics_process(delta):
 		
 # helper funcs
 func _on_knife_edge_entered(area:Area2D):
-	if isHeld and area is DraggableFruit:
-		isCutting = true
-		print("is cutting")
+	# this is a check just to make sure that youre cutting from the
+	# right side - ie knife is on the right, apple on left
+	# add an offset to make sure we're cutting from the left side?
+	if (area.global_position.x - 200
+	< global_position.x):
+		if isHeld and area is DraggableFruit:
+			isCutting = true
+			print("is cutting")
 		
 		
 func _on_knife_edge_exited(area:Area2D):

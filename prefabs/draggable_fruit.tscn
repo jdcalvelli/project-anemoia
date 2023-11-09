@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dejkgpopna657"]
+[gd_scene load_steps=2 format=3 uid="uid://dejkgpopna657"]
 
-[ext_resource type="Texture2D" uid="uid://cr11x1ivcjk84" path="res://icon.svg" id="1_a03vo"]
 [ext_resource type="Script" path="res://scripts/draggable_fruit.gd" id="1_ghfwh"]
 
 [node name="DraggableFruit" type="Area2D"]
 script = ExtResource("1_ghfwh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_a03vo")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

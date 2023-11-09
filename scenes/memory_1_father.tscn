@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=17 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -6,17 +6,50 @@
 [ext_resource type="Script" path="res://scripts/CuttingBoard.gd" id="2_a4mea"]
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
-[ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple_sprite.png" id="3_we8a1"]
+[ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple/Apple_sprite.png" id="3_we8a1"]
 [ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/pear_sprite.png" id="4_2a3u6"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
 [ext_resource type="Texture2D" uid="uid://dq3v3f0b54d4j" path="res://assets/images/Memories/memory_1/fruits/cantaloupe_sprite.png" id="5_1sskk"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_kk101"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_we8a1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1yxpx"]
 radius = 322.574
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxxpb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2a3u6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhso"]
 radius = 261.702
 height = 661.99
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5il5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1sskk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g0llg"]
 radius = 446.814
@@ -41,8 +74,8 @@ z_index = -1
 position = Vector2(-1913, -232)
 scale = Vector2(0.37, 0.37)
 
-[node name="Sprite2D" parent="DraggableApple" index="0"]
-texture = ExtResource("3_we8a1")
+[node name="AnimatedSprite2D" parent="DraggableApple" index="0"]
+sprite_frames = SubResource("SpriteFrames_kk101")
 
 [node name="CollisionShape2D" parent="DraggableApple" index="1"]
 position = Vector2(24.3242, 24.3243)
@@ -53,8 +86,8 @@ z_index = -1
 position = Vector2(-2361, -272)
 scale = Vector2(0.47, 0.47)
 
-[node name="Sprite2D" parent="DraggablePear" index="0"]
-texture = ExtResource("4_2a3u6")
+[node name="AnimatedSprite2D" parent="DraggablePear" index="0"]
+sprite_frames = SubResource("SpriteFrames_xxxpb")
 
 [node name="CollisionShape2D" parent="DraggablePear" index="1"]
 position = Vector2(-1.90735e-05, 55.3192)
@@ -65,8 +98,8 @@ z_index = 1
 position = Vector2(-2382, 227)
 scale = Vector2(0.47, 0.47)
 
-[node name="Sprite2D" parent="DraggableCantaloupe" index="0"]
-texture = ExtResource("5_1sskk")
+[node name="AnimatedSprite2D" parent="DraggableCantaloupe" index="0"]
+sprite_frames = SubResource("SpriteFrames_5il5t")
 
 [node name="CollisionShape2D" parent="DraggableCantaloupe" index="1"]
 position = Vector2(-102.128, 23.4043)

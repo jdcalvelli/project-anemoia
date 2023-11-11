@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=39 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -6,11 +6,11 @@
 [ext_resource type="Script" path="res://scripts/CuttingBoard.gd" id="2_a4mea"]
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
-[ext_resource type="Texture2D" uid="uid://c8vfqdok50r47" path="res://assets/images/Memories/memory_1/knife/knife_up.png" id="3_qhjom"]
 [ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple/Apple_sprite.png" id="3_we8a1"]
-[ext_resource type="Texture2D" uid="uid://dbgicnlhay7us" path="res://assets/images/Memories/memory_1/knife/knife_down.png" id="4_ld6fa"]
 [ext_resource type="Script" path="res://scripts/DraggableKnife.gd" id="4_ujm3q"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
+[ext_resource type="Texture2D" uid="uid://blem26vvp8774" path="res://assets/images/Memories/memory_1/knife/dark_knife_down.png" id="5_h3cxw"]
+[ext_resource type="Texture2D" uid="uid://cmvngxs4fojhv" path="res://assets/images/Memories/memory_1/knife/dark_knife_up.png" id="6_hvv2h"]
 [ext_resource type="Texture2D" uid="uid://bf87cr7djupla" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_1.png" id="9_u1214"]
 [ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_sprite.png" id="9_wpmxj"]
 [ext_resource type="Texture2D" uid="uid://v4a2vu5cn85m" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_1.png" id="10_4j6bq"]
@@ -23,15 +23,20 @@
 [ext_resource type="Texture2D" uid="uid://cvp4rfpbraj30" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_2.png" id="18_jgtg3"]
 [ext_resource type="Texture2D" uid="uid://dut4i04j3myxn" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_3.png" id="19_uy5ci"]
 [ext_resource type="Texture2D" uid="uid://cp1db731eff0e" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_4.png" id="20_cr3jj"]
+[ext_resource type="Texture2D" uid="uid://bhvjon85hg372" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_ chop_0.png" id="21_bw5uj"]
+[ext_resource type="Texture2D" uid="uid://bmybd6y8uf4sh" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_1.png" id="22_f5vwh"]
+[ext_resource type="Texture2D" uid="uid://poytmo4e01rp" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_2.png" id="23_04t4g"]
+[ext_resource type="Texture2D" uid="uid://dagmd0nbf8h13" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_3.png" id="24_ppwxy"]
+[ext_resource type="Texture2D" uid="uid://bkf34hiyl0cy4" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_4.png" id="25_plbo2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ve22j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_ld6fa")
+"texture": ExtResource("5_h3cxw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_qhjom")
+"texture": ExtResource("6_hvv2h")
 }],
 "loop": true,
 "name": &"default",
@@ -115,6 +120,33 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g0llg"]
 radius = 446.814
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8aav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_bw5uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_f5vwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_04t4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ppwxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_plbo2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r64fb"]
+radius = 336.171
+height = 842.553
+
 [node name="memory_1_father" type="Node2D"]
 script = ExtResource("1_xy1v7")
 
@@ -187,6 +219,20 @@ sprite_frames = SubResource("SpriteFrames_5il5t")
 position = Vector2(-102.128, 23.4043)
 shape = SubResource("CircleShape2D_g0llg")
 
+[node name="DraggablePineapple" parent="." instance=ExtResource("3_fs4c4")]
+z_index = 1
+position = Vector2(-1768, 143)
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimatedSprite2D" parent="DraggablePineapple" index="0"]
+sprite_frames = SubResource("SpriteFrames_o8aav")
+
+[node name="CollisionShape2D" parent="DraggablePineapple" index="1"]
+position = Vector2(-178.724, 195.745)
+rotation = 1.11456
+scale = Vector2(1, 0.777967)
+shape = SubResource("CapsuleShape2D_r64fb")
+
 [node name="TopBasket" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, -540)
 texture = ExtResource("3_bsyqi")
@@ -203,3 +249,4 @@ camLimit = 200
 [editable path="DraggableApple"]
 [editable path="DraggablePear"]
 [editable path="DraggableCantaloupe"]
+[editable path="DraggablePineapple"]

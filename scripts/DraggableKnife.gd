@@ -42,7 +42,10 @@ func _physics_process(delta):
 		# the dookie
 		if  knifeYPosFactored <= fruitYPosFactored - CutFactor:
 			print("cut should occur")
-			get_tree().current_scene.fruitOnBoard.get_node("AnimatedSprite2D").frame += 1
+			var spriteOfFruitOnBoardRef = get_tree().current_scene.fruitOnBoard.get_node("AnimatedSprite2D")
+			spriteOfFruitOnBoardRef.frame += 1
+			if spriteOfFruitOnBoardRef.frame + 1 >= spriteOfFruitOnBoardRef.sprite_frames.get_frame_count("default"):
+				get_tree().current_scene.fruitOnBoard.isCut = true
 			isCutting = false
 		
 # helper funcs

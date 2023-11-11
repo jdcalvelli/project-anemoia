@@ -1,28 +1,38 @@
 extends Area2D
 class_name DraggableFruit
 
-var isHeld : bool = false
+var isHeld:bool = false
+var isCut:bool = false
+
+var memoryController:memOneFatherController
 
 func _ready():
 	input_event.connect(_on_input)
 	
+	memoryController = get_tree().current_scene
+	
 func _on_input(viewport:Node, event:InputEvent, shape_idx:int):
 	# a lot of complex click logic going on here
 	if event.is_action_pressed("mouseClick"):
-		# you can only click on a fruit if theres nothing in hand
-		# and nothing on the board
-		if (!isHeld 
-		and get_tree().current_scene.fruitInHand == null
-		and get_tree().current_scene.fruitOnBoard == null):
-			isHeld = true
-			get_tree().current_scene.fruitInHand = self
-		# only in the event that this frut is on the board
-		# can you put it down, at which point
-		# you cant pick up another fruit - logic stops here
-		if (isHeld 
-		and get_tree().current_scene.fruitOnBoard == self):
-			isHeld = false
-			get_tree().current_scene.fruitInHand = null
+		if !isHeld:
+			# if theres already a fruit on board that isnt this one
+			if  memoryController.fruitOnBoard != self and memoryController.fruitOnBoard != null:
+				return
+			# if no fruit in hand and no fruit on board
+			elif (!memoryController.fruitInHand
+			and !memoryController.fruitOnBoard):
+				isHeld = true
+				memoryController.fruitInHand = self
+			# if fruit on board and fruit is cut
+			elif(memoryController.fruitOnBoard 
+			and memoryController.fruitOnBoard.isCut):
+				isHeld = true
+				memoryController.fruitInHand = self
+		elif isHeld:
+			# if in hand and over board, can be dropped
+			if memoryController.fruitOnBoard == self:
+				isHeld = false
+				memoryController.fruitInHand = null
 	
 func _physics_process(delta):
 	# this handles the draggability of this particular object

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=40 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
 [ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple/Apple_sprite.png" id="3_we8a1"]
+[ext_resource type="Script" path="res://scripts/Bowl.gd" id="4_myxaf"]
 [ext_resource type="Script" path="res://scripts/DraggableKnife.gd" id="4_ujm3q"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
 [ext_resource type="Texture2D" uid="uid://blem26vvp8774" path="res://assets/images/Memories/memory_1/knife/dark_knife_down.png" id="5_h3cxw"]
@@ -161,6 +162,12 @@ script = ExtResource("2_a4mea")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CuttingBoard"]
 polygon = PackedVector2Array(-579, -150, 644, -158, 826, 336, -794, 351)
+
+[node name="Bowl" type="Area2D" parent="."]
+script = ExtResource("4_myxaf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bowl"]
+polygon = PackedVector2Array(1935, -157, 1645, -122, 1403, -38, 1425, 78, 1551, 180, 1697, 234, 1935, 279, 2261, 227, 2468, 98, 2473, -27, 2286, -124)
 
 [node name="DraggableKnife" type="Area2D" parent="."]
 z_index = 4

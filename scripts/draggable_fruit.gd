@@ -33,6 +33,9 @@ func _on_input(viewport:Node, event:InputEvent, shape_idx:int):
 			if memoryController.fruitOnBoard == self:
 				isHeld = false
 				memoryController.fruitInHand = null
+			elif memoryController.fruitOverBowl == self:
+				isHeld = false
+				memoryController.fruitInHand = null
 	
 func _physics_process(delta):
 	# this handles the draggability of this particular object

@@ -1,5 +1,10 @@
 extends Area2D
 
+var appleTexture:Texture2D = preload("res://assets/images/Memories/memory_1/fruitbowl/Bowl_apple.png")
+var cantaloupeTexture:Texture2D = preload("res://assets/images/Memories/memory_1/fruitbowl/Bowl_cantaloupe.png")
+var pearTexture:Texture2D = preload("res://assets/images/Memories/memory_1/fruitbowl/Bowl_pear.png")
+var pineappleTexture:Texture2D = preload("res://assets/images/Memories/memory_1/fruitbowl/Bowl_pineapple.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	area_entered.connect(_on_area_entered)
@@ -19,15 +24,18 @@ func _on_area_exited(area:Area2D):
 func _input(event):
 	if event.is_action_pressed("mouseClick"):
 		if get_tree().current_scene.fruitOverBowl and get_tree().current_scene.fruitOverBowl.isCut:
+			var spriteToAdd = Sprite2D.new()
+			spriteToAdd.position.y = -540
 			match get_tree().current_scene.fruitOverBowl.fruitType:
 				"apple":
-					$AppleInBowl.visible = true
+					spriteToAdd.texture = appleTexture
 				"cantaloupe":
-					$CantaloupeInBowl.visible = true
+					spriteToAdd.texture = cantaloupeTexture
 				"pear":
-					$PearInBowl.visible = true
+					spriteToAdd.texture = pearTexture
 				"pineapple":
-					$PineappleInBowl.visible = true
+					spriteToAdd.texture = pineappleTexture
+			add_child(spriteToAdd)
 			get_tree().current_scene.fruitOverBowl.queue_free()
 			get_tree().current_scene.fruitInHand = null
 			get_tree().current_scene.fruitOnBoard = null

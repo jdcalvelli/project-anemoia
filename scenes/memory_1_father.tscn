@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=40 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -10,12 +10,8 @@
 [ext_resource type="Script" path="res://scripts/Bowl.gd" id="4_myxaf"]
 [ext_resource type="Script" path="res://scripts/DraggableKnife.gd" id="4_ujm3q"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
-[ext_resource type="Texture2D" uid="uid://y63s4d17ui3f" path="res://assets/images/Memories/memory_1/fruitbowl/Bowl_apple.png" id="5_0rntp"]
 [ext_resource type="Texture2D" uid="uid://blem26vvp8774" path="res://assets/images/Memories/memory_1/knife/dark_knife_down.png" id="5_h3cxw"]
 [ext_resource type="Texture2D" uid="uid://cmvngxs4fojhv" path="res://assets/images/Memories/memory_1/knife/dark_knife_up.png" id="6_hvv2h"]
-[ext_resource type="Texture2D" uid="uid://svewatp3xtbh" path="res://assets/images/Memories/memory_1/fruitbowl/Bowl_pear.png" id="6_p4py5"]
-[ext_resource type="Texture2D" uid="uid://cysnst8c5s4v4" path="res://assets/images/Memories/memory_1/fruitbowl/Bowl_cantaloupe.png" id="6_xop6r"]
-[ext_resource type="Texture2D" uid="uid://dxnt70dscn0jj" path="res://assets/images/Memories/memory_1/fruitbowl/Bowl_pineapple.png" id="8_0fn1o"]
 [ext_resource type="Texture2D" uid="uid://bf87cr7djupla" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_1.png" id="9_u1214"]
 [ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_sprite.png" id="9_wpmxj"]
 [ext_resource type="Texture2D" uid="uid://v4a2vu5cn85m" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_1.png" id="10_4j6bq"]
@@ -169,30 +165,6 @@ polygon = PackedVector2Array(-579, -150, 644, -158, 826, 336, -794, 351)
 
 [node name="Bowl" type="Area2D" parent="."]
 script = ExtResource("4_myxaf")
-
-[node name="AppleInBowl" type="Sprite2D" parent="Bowl"]
-visible = false
-texture_filter = 1
-position = Vector2(0, -540)
-texture = ExtResource("5_0rntp")
-
-[node name="CantaloupeInBowl" type="Sprite2D" parent="Bowl"]
-visible = false
-texture_filter = 1
-position = Vector2(0, -540)
-texture = ExtResource("6_xop6r")
-
-[node name="PearInBowl" type="Sprite2D" parent="Bowl"]
-visible = false
-texture_filter = 1
-position = Vector2(0, -540)
-texture = ExtResource("6_p4py5")
-
-[node name="PineappleInBowl" type="Sprite2D" parent="Bowl"]
-visible = false
-texture_filter = 1
-position = Vector2(0, -540)
-texture = ExtResource("8_0fn1o")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bowl"]
 polygon = PackedVector2Array(1935, -157, 1645, -122, 1403, -38, 1425, 78, 1551, 180, 1697, 234, 1935, 279, 2261, 227, 2468, 98, 2473, -27, 2286, -124)

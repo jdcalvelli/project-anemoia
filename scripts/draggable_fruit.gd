@@ -1,6 +1,9 @@
 extends Area2D
 class_name DraggableFruit
 
+# should probably make this more robust later
+@export var fruitType:String
+
 var isHeld:bool = false
 var isCut:bool = false
 
@@ -13,6 +16,7 @@ func _ready():
 	
 func _on_input(viewport:Node, event:InputEvent, shape_idx:int):
 	# a lot of complex click logic going on here
+	# this is actually so incredibly ugly im sorry
 	if event.is_action_pressed("mouseClick"):
 		if !isHeld:
 			# if theres already a fruit on board that isnt this one

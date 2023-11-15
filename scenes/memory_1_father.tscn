@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=44 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -8,10 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
 [ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple/Apple_sprite.png" id="3_we8a1"]
+[ext_resource type="Texture2D" uid="uid://bk470lm1q4qap" path="res://assets/images/Memories/memory_1/cigarettes/cigs_layer_1.png" id="4_l3p2n"]
 [ext_resource type="Script" path="res://scripts/Bowl.gd" id="4_myxaf"]
 [ext_resource type="Script" path="res://scripts/DraggableKnife.gd" id="4_ujm3q"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
+[ext_resource type="Texture2D" uid="uid://d1xnwjm4y0uei" path="res://assets/images/Memories/memory_1/cigarettes/cig_object_layer_2.png" id="5_8t5sd"]
 [ext_resource type="Texture2D" uid="uid://blem26vvp8774" path="res://assets/images/Memories/memory_1/knife/dark_knife_down.png" id="5_h3cxw"]
+[ext_resource type="Texture2D" uid="uid://bwmxj743c57qr" path="res://assets/images/Memories/memory_1/cigarettes/cig_pack_layer_3.png" id="6_6f8rd"]
 [ext_resource type="Texture2D" uid="uid://cmvngxs4fojhv" path="res://assets/images/Memories/memory_1/knife/dark_knife_up.png" id="6_hvv2h"]
 [ext_resource type="Texture2D" uid="uid://bf87cr7djupla" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_1.png" id="9_u1214"]
 [ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_sprite.png" id="9_wpmxj"]
@@ -158,6 +161,7 @@ autostart = true
 
 [node name="BarkManager" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 0
 offset_left = -960.5
 offset_top = -1620.0
 offset_right = 960.5
@@ -170,6 +174,19 @@ script = ExtResource("2_hlem2")
 z_index = -2
 position = Vector2(2.08165e-12, -540)
 texture = ExtResource("1_qbq1c")
+
+[node name="Cigs" type="Node2D" parent="."]
+position = Vector2(2968, 599)
+scale = Vector2(0.35, 0.35)
+
+[node name="CigBack" type="Sprite2D" parent="Cigs"]
+texture = ExtResource("4_l3p2n")
+
+[node name="Cig" type="Sprite2D" parent="Cigs"]
+texture = ExtResource("5_8t5sd")
+
+[node name="CigFront" type="Sprite2D" parent="Cigs"]
+texture = ExtResource("6_6f8rd")
 
 [node name="CuttingBoard" type="Area2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)

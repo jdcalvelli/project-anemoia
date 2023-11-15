@@ -7,14 +7,56 @@ var fruitInHand:DraggableFruit
 var fruitOnBoard:DraggableFruit
 var fruitOverBowl:DraggableFruit
 
+# timers for camera tweens
+var waitTime: int = 1
+var timers:Array[Timer]
+
 func _ready():
 	$barkTimer.timeout.connect(_on_bt_timeout)
+	
+	timers = [Timer.new(), Timer.new(), Timer.new()]
+	
+	# create the timers
+	for timer in timers:
+		timer.one_shot = true
+		timer.wait_time = waitTime
+		timer.timeout.connect(func(): _on_timer_timeout(timers.find(timer)))
+		add_child(timer)
+	
+	timers[0].start()
 
 func _on_bt_timeout():
 	# display a random bark
 	$BarkManager.displayBark(randi_range(1, $BarkManager.numBarks))
 	# change timer length to be a random amount
 	$barkTimer.wait_time = randi_range(3, 6)
+
+func _on_timer_timeout(index:int):
+	match index:
+		0:
+			print("start done")
+			# tween camera a bit
+			_tweenCamTowardCigs(1)
+		1:
+			print("mid done")
+			_tweenCamTowardCigs(2)
+		2:
+			print("end done")
+			_tweenCamTowardCigs(3)
+
+func _tweenCamTowardCigs(nextTimerID:int):
+	var tweenCam = create_tween()
+	tweenCam.tween_property(
+		$memory_1_father_cam,
+		"position",
+		Vector2($memory_1_father_cam.position + Vector2(30, 30)),
+		0.5
+	)
+	tweenCam.tween_callback(
+		func():
+			if nextTimerID < timers.size():
+				timers[nextTimerID].start()
+	)
 
 func _physics_process(delta):
 	if fruitInHand:

@@ -8,7 +8,7 @@ var fruitOnBoard:DraggableFruit
 var fruitOverBowl:DraggableFruit
 
 # timers for camera tweens
-var waitTime: int = 75
+var waitTime: int = 60
 var timers:Array[Timer]
 
 func _ready():

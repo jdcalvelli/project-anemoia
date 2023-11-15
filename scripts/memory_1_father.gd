@@ -37,12 +37,16 @@ func _on_timer_timeout(index:int):
 			print("start done")
 			# tween camera a bit
 			_tweenCamTowardCigs(1)
+			$Cigs.tweenCigs()
 		1:
 			print("mid done")
 			_tweenCamTowardCigs(2)
+			$Cigs.tweenCigs()
 		2:
 			print("end done")
 			_tweenCamTowardCigs(3)
+			$Cigs.tweenCigs()
+			$Cigs/Cig.canBeGrabbed = true
 
 func _tweenCamTowardCigs(nextTimerID:int):
 	var tweenCam = create_tween()

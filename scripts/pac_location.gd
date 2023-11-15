@@ -5,11 +5,16 @@ extends Node2D
 var numClickables : int
 var ClickedObjects : Array
 
+# called at the end of the dialogue
+signal sceneOver
+
 func _ready():
 	for child in get_children():
 		if child is ClickableObject:
 			numClickables += 1
 			child.isAccessed.connect(_onClickHandle)
+	
+	sceneOver.connect(_on_last_item_end)
 
 func _onClickHandle(emitter:ClickableObject):	
 
@@ -24,7 +29,10 @@ func _onClickHandle(emitter:ClickableObject):
 		if !ClickedObjects.has(emitter) : ClickedObjects.append(emitter)
 		# call the dialogue
 		# right now utilizing the example dialogue balloon, could change later
-		DialogueManager.show_example_dialogue_balloon(
+		await DialogueManager.show_example_dialogue_balloon(
 			PACLocationDialogue, 
 			emitter.stitchName
 		)
+
+func _on_last_item_end():
+	GameManager.changeScene("res://scenes/memory_1_father.tscn")

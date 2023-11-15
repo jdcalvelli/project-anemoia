@@ -28,5 +28,6 @@ would she have buried him with flowers just like these?
 ~ picnic_basket 
 
 Test for picnic_basket. Will need to be blocked until all other objects are clicked.
+do emit(sceneOver)
 
 => END

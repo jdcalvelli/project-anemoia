@@ -128,6 +128,15 @@ msgstr ""
 msgid "settings.revert_to_default_test_scene"
 msgstr ""
 
+msgid "settings.default_balloon_hint"
+msgstr ""
+
+msgid "settings.revert_to_default_balloon"
+msgstr ""
+
+msgid "settings.default_balloon_path"
+msgstr ""
+
 msgid "settings.autoload"
 msgstr ""
 
@@ -158,7 +167,7 @@ msgstr ""
 msgid "settings.custom_test_scene"
 msgstr ""
 
-msgid "settings.default_csv_local"
+msgid "settings.default_csv_locale"
 msgstr ""
 
 msgid "settings.states_shortcuts"
@@ -219,6 +228,9 @@ msgid "errors.already_imported"
 msgstr ""
 
 msgid "errors.duplicate_import"
+msgstr ""
+
+msgid "errors.unknown_using"
 msgstr ""
 
 msgid "errors.empty_title"
@@ -405,6 +417,9 @@ msgid "runtime.method_not_callable"
 msgstr ""
 
 msgid "runtime.unknown_operator"
+msgstr ""
+
+msgid "runtime.unknown_autoload"
 msgstr ""
 
 msgid "runtime.something_went_wrong"

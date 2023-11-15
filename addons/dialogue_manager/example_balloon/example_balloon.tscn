@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=12 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Texture2D" uid="uid://fnttklwns0se" path="res://assets/images/textBox/Proof_TextBox.png" id="2_jgxou"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://cw3d513sau0hg" path="res://assets/fonts/Edu_TAS_Beginner/static/EduTASBeginner-Regular.ttf" id="4_dk4p4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -63,6 +65,10 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w44gq"]
+texture = ExtResource("2_jgxou")
+region_rect = Rect2(194, 572, 1966, 368)
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_4u26j")
@@ -80,12 +86,17 @@ offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_qq3yp")
+theme_override_styles/panel = SubResource("StyleBoxTexture_w44gq")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 35.0
+offset_right = -51.0
+offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -94,6 +105,7 @@ layout_mode = 2
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Dialogue/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
@@ -106,9 +118,12 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("4_dk4p4")
+theme_override_font_sizes/normal_font_size = 32
 text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.226

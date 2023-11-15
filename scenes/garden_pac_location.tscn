@@ -274,7 +274,7 @@ shape = SubResource("RectangleShape2D_cor5y")
 
 [node name="O_Lillies" parent="." instance=ExtResource("4_peiso")]
 sprite_frames = SubResource("SpriteFrames_hh4vp")
-stitchName = "lillies"
+stitchName = "lilypad"
 
 [node name="B_Splotch" parent="O_Lillies" index="0"]
 sprite_frames = SubResource("SpriteFrames_26na0")

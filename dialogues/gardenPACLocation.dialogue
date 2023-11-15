@@ -1,33 +1,50 @@
 ~ couple_bench
-
-The young couple converse with noiseless mouths. 
-Their sleepy postures are comforting, 
-reminding him of a time when his skin was less wrinkled 
-and his heart was someone else's.
+The couple on the bench talk in faces and smiles. 
+He remembers this language, how love can look so effortless between two people and indecipherable to an outsider.
+Time takes shape painlessly around them. All he can do is stare on the outside
+and wait for tine to take the pain in his chest away, if he deserves that mercy.
+#The young couple converse with noiseless mouths. 
+#Their sleepy postures are comforting, 
+#reminding him of a time when his skin was less wrinkled 
+#and his heart was someone else's.
 
 => END
 
-~ lillies
+~ lilypad
+Once, she looked at the small pond and asked him how the green circles stayed atop the surface.
+He didn't know, but told her it was the work of creatures underneath, supporting the water plant. 
+She asked why, and he said the creatures wanted to show what they thought was beautiful to the world above. 
+Her smile was enough for him to believe the story he imagined. 
+He no longer knows whether the lily pads are beautiful or not, 
+whether the creatures underneath care for humanity or would happily see them gone. 
 
-He sees himself in the pond's reflection
-And for a brief moment he thinks he should fall in. 
-It's too shallow for him to drown. 
-Something something the lily pad is saving him.
+#He sees himself in the pond's reflection
+#And for a brief moment he thinks he should fall in. 
+#It's too shallow for him to drown. 
+#Something something the lily pad is saving him.
 
 => END
 
 ~ flowers
+He looks at the flower bed across the pond, and immediately begins to rally her favorite flowers in his mind.
+Yarrow to marigolds, tulips to petunias, daffodils to sweet peas.
+The last time they spoke, he said "see you soon, sweet pea" to her, like he always does, whenever she concedes and answers him.
+He never dreamed the Fates to be this cruel to bring them together in this way.
+A daughter at peace and her restless father left behind.  
 
-With the flowers in front of him swaying, 
-he remembers how tranquil she looked in her casket. 
-He wonders if he'd had died first like a good father does, 
-would she have buried him with flowers just like these?
+#With the flowers in front of him swaying, 
+#he remembers how tranquil she looked in her casket. 
+#He wonders if he'd had died first like a good father does, 
+#would she have buried him with flowers just like these?
 
 => END
 
 ~ picnic_basket 
 
-Test for picnic_basket. Will need to be blocked until all other objects are clicked.
+At the farthest point of his aging vision, he examines a youthful woman alone with an open picnic basket. 
+As if not to disturb the peaceful scene she creates, the woman gently pulls out a packaged bowl of sliced fruit.
+The father's eyes linger on the bowl, and a weak smile passes his face. His mind sinks into the past. 
+A Sunday, made up of a big breakfast and a smiling daughter.
 do emit(sceneOver)
 
 => END

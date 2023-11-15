@@ -1,14 +1,24 @@
 ~ gardenIntro
 
-TEST GARDEN INTRO
+Tired didn't begin to capture how the father felt.
 
-a;lsdkjfa;lskdjf;
+An overnight flight he couldn't sleep on, no matter how hard he tried, turned him into an aimless wanderer on the street.
 
-a;slkdjfa;slkdjfa;sldkjfa;lskdj
+Something beyond his consciousness took control, dragging his body through the familiar city.
 
-;aslkjdfa;lskjdf;alkj
+As his form moved, he began to speculate - 
 
-a;lskdfja;slkdfja;slkdjfa;lskjf
+How many hours of sleep did paremts lose over the entire ordeal. Was there a number to grief? 
+
+How many days did it take for parents to get a good night's sleep after their child dies? 
+
+He knew one week was nowhere near the answer. 
+
+His body brought him to the place she always asked him to take her. It was a flower garden across from the school. 
+
+He finally regained control, and for a brief moment, he closed his sunken eyes and sucked in cigarette smoke. 
+
+For a brief moment, he experienced the mindlessness he long sought after. 
 
 # this calls the function changescene on the GameManager singleton
 # we can also emit signals from here which is gas

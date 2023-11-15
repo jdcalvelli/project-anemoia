@@ -8,7 +8,7 @@ var fruitOnBoard:DraggableFruit
 var fruitOverBowl:DraggableFruit
 
 # timers for camera tweens
-var waitTime: int = 1
+var waitTime: int = 75
 var timers:Array[Timer]
 
 func _ready():
@@ -53,8 +53,8 @@ func _tweenCamTowardCigs(nextTimerID:int):
 	tweenCam.tween_property(
 		$memory_1_father_cam,
 		"position",
-		Vector2($memory_1_father_cam.position + Vector2(30, 30)),
-		0.5
+		Vector2($memory_1_father_cam.position + Vector2(20, 20)),
+		1
 	)
 	tweenCam.tween_callback(
 		func():
@@ -74,3 +74,12 @@ func _physics_process(delta):
 			print("fruit on board")
 			if fruitOnBoard.isCut:
 				print("fruit cut too")
+	
+	# pause the timers so that in the event that cam is tweening
+	# the other thing doesnt start
+	if $memory_1_father_cam.isCamTweening:
+		for timer in timers:
+			timer.paused = true
+	else:
+		for timer in timers:
+			timer.paused = false

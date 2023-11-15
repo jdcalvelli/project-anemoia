@@ -1,15 +1,59 @@
 ~ bark_1
-X: bark 1
+Y: Is that even a word? 
 => END
 
 ~ bark_2
-Y: bark 2
+Y: I dare you to use that in a sentence.
 => END
 
 ~ bark_3
-Z: bark 3
+A: Dad, let me know if you need any help okay? 
 => END
 
 ~ bark_4
-X: bark 4
+Y: I'm starving.
+=> END
+
+~ bark_5
+A: Are you actually messing the pieces up? 
+=> END
+
+~ bark_6
+X: Hey A, check this out?
+=> END
+
+~ bark_7
+X: But wait A, I need to show you this.
+=> END
+
+~ bark_8
+Y: How is this fun for you? 
+=> END
+
+~ bark_9
+Y: I didn't read to dictionary for fun like you A.
+=> END
+
+~ bark_10
+X: We'll eat soon, I can't wait!
+=> END
+
+~ bark_11
+Y: Next time let's sleepover at mine.
+=> END
+
+~ bark_12
+X: I bought a new game you two would like I think.
+=> END
+
+~ bark_13
+X: Should we go somewhere today?
+=> END
+
+~ bark_14
+A: Mom said she'd get me a phone for Chistmas, so we can finally call together!
+=> END
+
+~ bark_15
+Y: I'm still sleepy, we could've slept until lunch.
 => END

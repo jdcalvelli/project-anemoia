@@ -4,7 +4,7 @@ extends Control
 @onready var barkPrefab:PackedScene = preload("res://prefabs/bark_view.tscn")
 
 # this right now has to be hard coded based on the number in the dialogue
-var numBarks = 4
+var numBarks = 15
 var barkToDisplay:DialogueLine
 
 # this is internal

@@ -186,11 +186,9 @@ script = ExtResource("4_m4vy0")
 texture = ExtResource("4_l3p2n")
 
 [node name="Cig" type="Area2D" parent="Cigs"]
-scale = Vector2(1, 1)
 script = ExtResource("6_hs16d")
 
 [node name="CigSprite" type="Sprite2D" parent="Cigs/Cig"]
-scale = Vector2(1, 1)
 texture = ExtResource("5_8t5sd")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cigs/Cig"]

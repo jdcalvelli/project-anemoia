@@ -1,9 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bca7ohyjyyjdi"]
+[gd_scene load_steps=19 format=3 uid="uid://bca7ohyjyyjdi"]
 
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_fx0ag"]
 [ext_resource type="Texture2D" uid="uid://7jp15ctgr5wn" path="res://assets/images/Intros/L1.1_Background.png" id="1_v1a8v"]
 [ext_resource type="Resource" uid="uid://bvqeafbe8goxx" path="res://dialogues/gardenIntro.dialogue" id="2_68iu1"]
-[ext_resource type="Texture2D" uid="uid://bt1fx3uiq1aij" path="res://assets/images/Intros/L1.1_Character.png" id="2_tnlc7"]
+[ext_resource type="Texture2D" uid="uid://2ff50yo7jnaw" path="res://assets/images/Intros/L1.1_Character.png" id="2_tnlc7"]
+[ext_resource type="Texture2D" uid="uid://nkpi61mit5uo" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-1.png" id="5_2wx6c"]
+[ext_resource type="Texture2D" uid="uid://biemt35xfqdhk" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-2.png" id="6_go4is"]
+[ext_resource type="Texture2D" uid="uid://djd028v23s38c" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-3.png" id="7_j2o0i"]
+[ext_resource type="Texture2D" uid="uid://dnryodxr2q1p2" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-4.png" id="8_xq4wt"]
+[ext_resource type="Texture2D" uid="uid://bneu4f3pphalj" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-5.png" id="9_a8u6x"]
+[ext_resource type="Texture2D" uid="uid://bhwyxwy4yxmel" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-6.png" id="10_7sttx"]
+[ext_resource type="Texture2D" uid="uid://bs6kmfw4yroip" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-7.png" id="11_6figm"]
+[ext_resource type="Texture2D" uid="uid://k1ratmeafnat" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-8.png" id="12_cgnl0"]
+[ext_resource type="Texture2D" uid="uid://bcs2hhm4qh8xd" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-9.png" id="13_q5mqa"]
+[ext_resource type="Texture2D" uid="uid://ctsdyuwk0esfe" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-10.png" id="14_bahpi"]
+[ext_resource type="Texture2D" uid="uid://bqysomeuyquiu" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-11.png" id="15_mtm8b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xdjjn"]
 animations = [{
@@ -27,6 +38,47 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_uemrx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2wx6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_go4is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j2o0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xq4wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a8u6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7sttx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6figm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cgnl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_q5mqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bahpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mtm8b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="garden_intro" type="Node2D"]
 script = ExtResource("1_fx0ag")
 introDialogue = ExtResource("2_68iu1")
@@ -39,6 +91,11 @@ sprite_frames = SubResource("SpriteFrames_xdjjn")
 [node name="L1_1_Character" type="AnimatedSprite2D" parent="."]
 position = Vector2(75, -50)
 sprite_frames = SubResource("SpriteFrames_n7mxg")
+
+[node name="L1_1_SmokeAnim" type="AnimatedSprite2D" parent="L1_1_Character"]
+sprite_frames = SubResource("SpriteFrames_uemrx")
+autoplay = "default"
+frame_progress = 0.993714
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.1, 1.1)

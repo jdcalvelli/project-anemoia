@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ff50yo7jnaw"
-path="res://.godot/imported/L1.1_Character.png-be9e24da00064567c9fb4f1007b1f843.ctex"
+uid="uid://bqysomeuyquiu"
+path="res://.godot/imported/Proof_Intro_Scene_L1-11.png-7eff2cc02efb3052530d1f535fa2f2df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Intros/L1.1_Character.png"
-dest_files=["res://.godot/imported/L1.1_Character.png-be9e24da00064567c9fb4f1007b1f843.ctex"]
+source_file="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-11.png"
+dest_files=["res://.godot/imported/Proof_Intro_Scene_L1-11.png-7eff2cc02efb3052530d1f535fa2f2df.ctex"]
 
 [params]
 

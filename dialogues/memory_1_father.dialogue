@@ -1,0 +1,15 @@
+~ bark_1
+X: bark 1
+=> END
+
+~ bark_2
+Y: bark 2
+=> END
+
+~ bark_3
+Z: bark 3
+=> END
+
+~ bark_4
+X: bark 4
+=> END

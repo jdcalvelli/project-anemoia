@@ -1,9 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=41 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
 [ext_resource type="Script" path="res://scripts/memory_1_father.gd" id="1_xy1v7"]
 [ext_resource type="Script" path="res://scripts/CuttingBoard.gd" id="2_a4mea"]
+[ext_resource type="Script" path="res://scripts/BarkManager.gd" id="2_hlem2"]
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
 [ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple/Apple_sprite.png" id="3_we8a1"]
@@ -150,6 +151,20 @@ height = 842.553
 
 [node name="memory_1_father" type="Node2D"]
 script = ExtResource("1_xy1v7")
+
+[node name="barkTimer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="BarkManager" type="Control" parent="."]
+layout_mode = 3
+offset_left = -960.5
+offset_top = -1620.0
+offset_right = 960.5
+offset_bottom = -554.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hlem2")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -2

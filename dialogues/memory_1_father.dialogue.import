@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://mvkit8vlalhy"
+path="res://.godot/imported/memory_1_father.dialogue-0c4ffd2418fe9a617be310825247f775.tres"
+
+[deps]
+
+source_file="res://dialogues/memory_1_father.dialogue"
+dest_files=["res://.godot/imported/memory_1_father.dialogue-0c4ffd2418fe9a617be310825247f775.tres"]
+
+[params]
+
+defaults=true

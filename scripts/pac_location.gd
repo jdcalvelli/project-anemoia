@@ -35,4 +35,8 @@ func _onClickHandle(emitter:ClickableObject):
 		)
 
 func _on_last_item_end():
+	$BackgroundAudio.stop()
+	$BG2833Days.visible = true
+	$BG2833Days.play("default")
+	await get_tree().create_timer(5).timeout
 	GameManager.changeScene("res://scenes/memory_1_father.tscn")

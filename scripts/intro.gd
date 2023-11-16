@@ -4,7 +4,10 @@ extends Node2D
 @export var stitchName : String
 
 func _ready():
-	# start the intro dialogue
+	set_physics_process(false)
+	await get_tree().create_timer(5).timeout
+	$BG3Days.hide()
+	set_physics_process(true)
 	DialogueManager.show_example_dialogue_balloon(
 		introDialogue, 
 		stitchName

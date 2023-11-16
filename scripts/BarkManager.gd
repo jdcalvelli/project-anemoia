@@ -26,3 +26,4 @@ func displayBark(barkNum:int):
 		0
 	)
 	add_child(newBarkView)
+	#BarkAudio.play() - not used right now cause it's kinda annoying aha

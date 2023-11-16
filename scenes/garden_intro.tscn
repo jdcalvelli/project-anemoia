@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bca7ohyjyyjdi"]
+[gd_scene load_steps=21 format=3 uid="uid://bca7ohyjyyjdi"]
 
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_fx0ag"]
 [ext_resource type="Texture2D" uid="uid://7jp15ctgr5wn" path="res://assets/images/Intros/L1.1_Background.png" id="1_v1a8v"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://bcs2hhm4qh8xd" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-9.png" id="13_q5mqa"]
 [ext_resource type="Texture2D" uid="uid://ctsdyuwk0esfe" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-10.png" id="14_bahpi"]
 [ext_resource type="Texture2D" uid="uid://bqysomeuyquiu" path="res://assets/images/Intros/SmokeAnim/Proof_Intro_Scene_L1-11.png" id="15_mtm8b"]
+[ext_resource type="AudioStream" uid="uid://iqgpbuugr6nl" path="res://assets/Audio/garden_intro/wind_low.mp3" id="16_3gtth"]
+[ext_resource type="Texture2D" uid="uid://dws7pdbwipglt" path="res://assets/images/Intros/3 - 2,833/3 Days.png" id="17_r2s0v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xdjjn"]
 animations = [{
@@ -97,5 +99,15 @@ sprite_frames = SubResource("SpriteFrames_uemrx")
 autoplay = "default"
 frame_progress = 0.993714
 
+[node name="BG3Days" type="Sprite2D" parent="."]
+position = Vector2(2.50002, 1.49994)
+scale = Vector2(0.922396, 0.917593)
+texture = ExtResource("17_r2s0v")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.1, 1.1)
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_3gtth")
+volume_db = -5.0
+autoplay = true

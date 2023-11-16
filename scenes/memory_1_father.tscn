@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=50 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/CuttingBoard.gd" id="2_a4mea"]
 [ext_resource type="Script" path="res://scripts/BarkManager.gd" id="2_hlem2"]
 [ext_resource type="Texture2D" uid="uid://44mtnh8l2jj1" path="res://assets/images/Memories/memory_1/memory_1_father_topbasket.png" id="3_bsyqi"]
+[ext_resource type="AudioStream" uid="uid://bp5m1nwv4lv5x" path="res://assets/Audio/memory_1_father/Dialogue_bark_sound.wav" id="3_diojp"]
 [ext_resource type="PackedScene" uid="uid://dejkgpopna657" path="res://prefabs/draggable_fruit.tscn" id="3_fs4c4"]
 [ext_resource type="Texture2D" uid="uid://bgjyr2ntymsyc" path="res://assets/images/Memories/memory_1/fruits/Apple/Apple_sprite.png" id="3_we8a1"]
 [ext_resource type="Texture2D" uid="uid://bk470lm1q4qap" path="res://assets/images/Memories/memory_1/cigarettes/cigs_layer_1.png" id="4_l3p2n"]
@@ -25,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://pcbg1u1kx8ri" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_3.png" id="11_fw22l"]
 [ext_resource type="Texture2D" uid="uid://bk5oyu87o1ayy" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_2.png" id="11_h7ky3"]
 [ext_resource type="Texture2D" uid="uid://fbng415pmnco" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_3.png" id="12_aposg"]
+[ext_resource type="AudioStream" uid="uid://bd5f5jh5avy5u" path="res://assets/Audio/memory_1_father/knife_chop_clean.wav" id="15_bcybq"]
 [ext_resource type="Texture2D" uid="uid://d5j5s8rylcc8" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_0.png" id="16_k5s35"]
 [ext_resource type="Texture2D" uid="uid://cwl7txwbsejf5" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_1.png" id="17_87yam"]
 [ext_resource type="Texture2D" uid="uid://cvp4rfpbraj30" path="res://assets/images/Memories/memory_1/fruits/Cantaloupe/canta_chop_2.png" id="18_jgtg3"]
@@ -35,6 +37,8 @@
 [ext_resource type="Texture2D" uid="uid://poytmo4e01rp" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_2.png" id="23_04t4g"]
 [ext_resource type="Texture2D" uid="uid://dagmd0nbf8h13" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_3.png" id="24_ppwxy"]
 [ext_resource type="Texture2D" uid="uid://bkf34hiyl0cy4" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_4.png" id="25_plbo2"]
+[ext_resource type="AudioStream" uid="uid://35o005apj6h8" path="res://assets/Audio/memory_1_father/Bright_Red_Distorted_Kitchen_Scene.mp3" id="37_iadcp"]
+[ext_resource type="AudioStream" uid="uid://sc4sdgwt7wbn" path="res://assets/Audio/memory_1_father/kids_talking.mp3" id="38_xrqaa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ve22j"]
 animations = [{
@@ -172,6 +176,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_hlem2")
 
+[node name="BarkAudio" type="AudioStreamPlayer" parent="BarkManager"]
+stream = ExtResource("3_diojp")
+volume_db = -20.0
+pitch_scale = 0.3
+
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(2.08165e-12, -540)
@@ -230,6 +239,10 @@ polygon = PackedVector2Array(-75, -6, 177, 189, 167, 95, -51, -100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableKnife/KnifeEdgeArea2D"]
 shape = SubResource("SegmentShape2D_5cccp")
+
+[node name="KnifeChop" type="AudioStreamPlayer" parent="DraggableKnife"]
+stream = ExtResource("15_bcybq")
+volume_db = -30.0
 
 [node name="DraggableApple" parent="." instance=ExtResource("3_fs4c4")]
 z_index = -1
@@ -297,6 +310,16 @@ texture = ExtResource("5_0h5lp")
 [node name="memory_1_father_cam" type="Camera2D" parent="."]
 script = ExtResource("1_blnsk")
 camLimit = 200
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("37_iadcp")
+volume_db = -25.0
+autoplay = true
+
+[node name="BackgroundAudio2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_xrqaa")
+volume_db = -3.0
+autoplay = true
 
 [editable path="DraggableApple"]
 [editable path="DraggablePear"]

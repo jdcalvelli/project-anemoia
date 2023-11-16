@@ -44,6 +44,9 @@ func _physics_process(delta):
 			print("cut should occur")
 			var spriteOfFruitOnBoardRef = get_tree().current_scene.fruitOnBoard.get_node("AnimatedSprite2D")
 			spriteOfFruitOnBoardRef.frame += 1
+			#Devinne's attempt at knife audio, the last frame doesn't play but it's literally not that important it gets the idea across
+			if spriteOfFruitOnBoardRef.frame + 1  < spriteOfFruitOnBoardRef.sprite_frames.get_frame_count("default"):
+				$KnifeChop.play()
 			if spriteOfFruitOnBoardRef.frame + 1 >= spriteOfFruitOnBoardRef.sprite_frames.get_frame_count("default"):
 				get_tree().current_scene.fruitOnBoard.isCut = true
 			isCutting = false

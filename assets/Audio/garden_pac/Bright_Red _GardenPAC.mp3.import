@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl7kc1c7tgxd"
+path="res://.godot/imported/Bright_Red _GardenPAC.mp3-591ab389dbec65dc086e628cb1d4607d.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/garden_pac/Bright_Red _GardenPAC.mp3"
+dest_files=["res://.godot/imported/Bright_Red _GardenPAC.mp3-591ab389dbec65dc086e628cb1d4607d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

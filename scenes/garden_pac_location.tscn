@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://kmi5bw14f0rg"]
+[gd_scene load_steps=61 format=3 uid="uid://kmi5bw14f0rg"]
 
 [ext_resource type="Script" path="res://scripts/pac_location.gd" id="1_ujhxi"]
 [ext_resource type="Resource" uid="uid://1x87n18x784" path="res://dialogues/gardenPACLocation.dialogue" id="2_e7nx8"]
@@ -42,6 +42,11 @@
 [ext_resource type="Texture2D" uid="uid://cah1t80aq7og7" path="res://assets/images/PACAreas/L1 Garden/Objects/B_PicnicBasket_Anim/3.png" id="39_vnxiw"]
 [ext_resource type="Texture2D" uid="uid://c8y3685y46nso" path="res://assets/images/PACAreas/L1 Garden/Objects/B_PicnicBasket_Anim/4.png" id="40_tboeg"]
 [ext_resource type="Texture2D" uid="uid://xkhxktfxsup3" path="res://assets/images/PACAreas/L1 Garden/Objects/B_PicnicBasket_Anim/5.png" id="41_qh1aq"]
+[ext_resource type="Texture2D" uid="uid://dws7pdbwipglt" path="res://assets/images/Intros/3 - 2,833/3 Days.png" id="42_d68lh"]
+[ext_resource type="Texture2D" uid="uid://bxf8mknypw3k1" path="res://assets/images/Intros/3 - 2,833/33 Days.png" id="43_bht53"]
+[ext_resource type="AudioStream" uid="uid://cl7kc1c7tgxd" path="res://assets/Audio/garden_pac/Bright_Red _GardenPAC.mp3" id="43_i0ic2"]
+[ext_resource type="Texture2D" uid="uid://bja0xq1fhjgu7" path="res://assets/images/Intros/3 - 2,833/,833 Days.png" id="44_6hllf"]
+[ext_resource type="Texture2D" uid="uid://kmf33ov1biyn" path="res://assets/images/Intros/3 - 2,833/2,833 Days.png" id="45_vm6br"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52d3q"]
 animations = [{
@@ -250,6 +255,26 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0egc"]
 size = Vector2(64, 71.5)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsqpr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_d68lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_bht53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_6hllf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_vm6br")
+}],
+"loop": false,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="GardenPACLocation" type="Node2D"]
 script = ExtResource("1_ujhxi")
 PACLocationDialogue = ExtResource("2_e7nx8")
@@ -315,7 +340,18 @@ frame_progress = 0.483063
 position = Vector2(-196, -34.25)
 shape = SubResource("RectangleShape2D_r0egc")
 
+[node name="BG2833Days" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_dsqpr")
+frame = 3
+frame_progress = 1.0
+
 [node name="PACLocationCam" parent="." instance=ExtResource("9_upra4")]
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_i0ic2")
+volume_db = -25.0
+autoplay = true
 
 [editable path="O_BenchCouple"]
 [editable path="O_Lillies"]

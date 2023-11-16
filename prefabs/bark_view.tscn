@@ -1,19 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://qlikhkkoy451"]
+[gd_scene load_steps=5 format=3 uid="uid://qlikhkkoy451"]
 
+[ext_resource type="Texture2D" uid="uid://fnttklwns0se" path="res://assets/images/textBox/Proof_TextBox.png" id="1_4fblm"]
 [ext_resource type="Script" path="res://scripts/bark_view.gd" id="1_pqc3o"]
+[ext_resource type="FontFile" uid="uid://cw3d513sau0hg" path="res://assets/fonts/Edu_TAS_Beginner/static/EduTASBeginner-Regular.ttf" id="3_dpqjj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhs83"]
+texture = ExtResource("1_4fblm")
+region_rect = Rect2(194, 572, 1966, 368)
 
 [node name="BarkView" type="Panel"]
+z_index = 10
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -50.0
-offset_right = 100.0
-offset_bottom = 50.0
+offset_left = -132.0
+offset_top = -71.0
+offset_right = 256.0
+offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhs83")
 script = ExtResource("1_pqc3o")
 
 [node name="Label" type="Label" parent="."]
@@ -21,6 +29,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 44.0
+offset_right = -18.0
+offset_bottom = -47.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_dpqjj")
+theme_override_font_sizes/font_size = 32
 autowrap_mode = 3

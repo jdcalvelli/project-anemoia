@@ -8,8 +8,11 @@ var fruitOnBoard:DraggableFruit
 var fruitOverBowl:DraggableFruit
 
 # timers for camera tweens
-var waitTime: int = 60
+var waitTime: int = 25
 var timers:Array[Timer]
+
+#lerp factor
+var lerpFactor = 20
 
 func _ready():
 	$barkTimer.timeout.connect(_on_bt_timeout)
@@ -50,16 +53,20 @@ func _on_timer_timeout(index:int):
 
 func _tweenCamTowardCigs(nextTimerID:int):
 	var tweenCam = create_tween()
+	tweenCam.set_ease(Tween.EASE_IN_OUT)
+	tweenCam.set_trans(Tween.TRANS_CUBIC)
 	tweenCam.tween_property(
 		$memory_1_father_cam,
 		"position",
-		Vector2($memory_1_father_cam.position + Vector2(20, 20)),
+		Vector2($memory_1_father_cam.position + Vector2(30, 30)),
 		1
 	)
 	tweenCam.tween_callback(
 		func():
 			if nextTimerID < timers.size():
 				timers[nextTimerID].start()
+			# increase lerp factor by 20
+			lerpFactor -= 5.5
 	)
 
 func _physics_process(delta):

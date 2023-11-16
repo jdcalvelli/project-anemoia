@@ -8,6 +8,6 @@ func tweenCigs():
 	tween.tween_property(
 		self,
 		"position",
-		position + Vector2(-20, -20),
+		position + Vector2(-30, -30),
 		0.5
 	)

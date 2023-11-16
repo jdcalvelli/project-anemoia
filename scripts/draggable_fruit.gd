@@ -47,5 +47,5 @@ func _physics_process(delta):
 		position = lerp(
 			position,
 			get_global_mouse_position(),
-			20 * delta
+			get_tree().current_scene.lerpFactor * delta
 		)

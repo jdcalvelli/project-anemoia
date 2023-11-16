@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmr2sbouavbsx"]
+
+[ext_resource type="AudioStream" uid="uid://bil2s0qjeg4da" path="res://assets/Audio/garden_outro/Multiple_endings_endings.wav" id="1_o7jwq"]
+[ext_resource type="Texture2D" uid="uid://tumxwwntq8l8" path="res://assets/images/Project_Anemoia.png" id="2_vw0yd"]
+
+[node name="Proof_End" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_o7jwq")
+volume_db = -15.0
+autoplay = true
+
+[node name="ProjectAnemoia" type="Sprite2D" parent="."]
+position = Vector2(966, 547)
+texture = ExtResource("2_vw0yd")

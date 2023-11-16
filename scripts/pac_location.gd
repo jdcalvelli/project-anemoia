@@ -35,6 +35,8 @@ func _onClickHandle(emitter:ClickableObject):
 		)
 
 func _on_last_item_end():
+	$MemoryDrop.play()
+	await get_tree().create_timer(4).timeout
 	$BackgroundAudio.stop()
 	$BG2833Days.visible = true
 	$BG2833Days.play("default")

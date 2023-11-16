@@ -7,6 +7,7 @@ func _ready():
 	set_physics_process(false)
 	await get_tree().create_timer(5).timeout
 	$BG3Days.hide()
+	$BackgroundIntro.play()
 	set_physics_process(true)
 	DialogueManager.show_example_dialogue_balloon(
 		introDialogue, 

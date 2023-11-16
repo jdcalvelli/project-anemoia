@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://dyf8gyj3jy2mm"]
+[gd_scene load_steps=9 format=3 uid="uid://dyf8gyj3jy2mm"]
+
+[ext_resource type="Script" path="res://scenes/outro.gd" id="1_g3slt"]
+[ext_resource type="Resource" uid="uid://jckunykbly65" path="res://dialogues/gardenOutro.dialogue" id="2_o06ol"]
+[ext_resource type="Texture2D" uid="uid://bjxyy8jbo4mmd" path="res://assets/images/Outros/L1.1_End_Background.png" id="2_sp14p"]
+[ext_resource type="Texture2D" uid="uid://ba0fvijydgcnd" path="res://assets/images/Outros/L1.1_End_Character.png" id="3_hx0pm"]
+[ext_resource type="AudioStream" uid="uid://iqgpbuugr6nl" path="res://assets/Audio/garden_intro/wind_low.mp3" id="4_o2u8o"]
+[ext_resource type="Texture2D" uid="uid://c0bumoorvdm2m" path="res://assets/images/Outros/L1.x_End_Background.png" id="5_vlo83"]
+[ext_resource type="Texture2D" uid="uid://c6bh3p02rr52x" path="res://assets/images/Outros/L1.x_End_Object.png" id="6_76aqy"]
+[ext_resource type="AudioStream" uid="uid://ciqk6ef77oeqs" path="res://assets/Audio/garden_outro/jesse_closing_screen.mp3" id="8_kw8ru"]
 
 [node name="garden_outro" type="Node2D"]
+script = ExtResource("1_g3slt")
+outroDialogue = ExtResource("2_o06ol")
+stitchName = "gardenOutro"
+
+[node name="L1_1EndBackground" type="Sprite2D" parent="."]
+position = Vector2(-29, -3)
+texture = ExtResource("2_sp14p")
+
+[node name="L1_1EndCharacter" type="Sprite2D" parent="."]
+position = Vector2(-85, -11)
+texture = ExtResource("3_hx0pm")
+
+[node name="L1_xEndBackground" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-29, 1)
+texture = ExtResource("5_vlo83")
+
+[node name="L1_xEndObject" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-33, 5)
+texture = ExtResource("6_76aqy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.1, 1.1)
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o2u8o")
+volume_db = -5.0
+autoplay = true
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_kw8ru")
+volume_db = -10.0
+autoplay = true

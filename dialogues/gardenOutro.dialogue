@@ -1,0 +1,20 @@
+~ gardenOutro
+
+He releases the pent up smoke swirling in his lungs.
+
+He knows how much a parent can leave unsaid and still have a child hear it all. 
+
+His daughter read between lines better than anyone he knew. 
+
+He questions God, the trees, anyone willing to listen to an old, failing man. How selfish is he to desire
+
+his own death in exchange for his daughter's life? 
+
+So much yet to see, and he had seen enough.
+
+#do emit(WaterChange)
+# this calls the function changescene on the GameManager singleton
+# we can also emit signals from here which is gas
+do GameManager.changeScene("res://scenes/proof_end.tscn")
+
+=> END

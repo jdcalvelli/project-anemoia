@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=53 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Texture2D" uid="uid://c3f5uv5suklux" path="res://assets/images/Memories/memory_1/memory_1_father_bg_updated.png" id="1_qbq1c"]
@@ -37,7 +37,9 @@
 [ext_resource type="Texture2D" uid="uid://poytmo4e01rp" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_2.png" id="23_04t4g"]
 [ext_resource type="Texture2D" uid="uid://dagmd0nbf8h13" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_3.png" id="24_ppwxy"]
 [ext_resource type="Texture2D" uid="uid://bkf34hiyl0cy4" path="res://assets/images/Memories/memory_1/fruits/Pineapple/pine_chop_4.png" id="25_plbo2"]
+[ext_resource type="Texture2D" uid="uid://dec5h6v0vjbmh" path="res://assets/images/Memories/memory_1/Temp_splotch_anim/Memory_Character_Animation-1.png" id="37_57jlm"]
 [ext_resource type="AudioStream" uid="uid://35o005apj6h8" path="res://assets/Audio/memory_1_father/Bright_Red_Distorted_Kitchen_Scene.mp3" id="37_iadcp"]
+[ext_resource type="Texture2D" uid="uid://dtewcp27bg7rs" path="res://assets/images/Memories/memory_1/Temp_splotch_anim/Memory_Character_Animation-2.png" id="38_pupq7"]
 [ext_resource type="AudioStream" uid="uid://sc4sdgwt7wbn" path="res://assets/Audio/memory_1_father/kids_talking.mp3" id="38_xrqaa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ve22j"]
@@ -157,6 +159,20 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r64fb"]
 radius = 336.171
 height = 842.553
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jme4o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_57jlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_pupq7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="memory_1_father" type="Node2D"]
 script = ExtResource("1_xy1v7")
@@ -306,6 +322,11 @@ texture = ExtResource("3_bsyqi")
 z_index = 2
 position = Vector2(2.08165e-12, -540)
 texture = ExtResource("5_0h5lp")
+
+[node name="SplotchAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1065)
+sprite_frames = SubResource("SpriteFrames_jme4o")
+autoplay = "default"
 
 [node name="memory_1_father_cam" type="Camera2D" parent="."]
 script = ExtResource("1_blnsk")

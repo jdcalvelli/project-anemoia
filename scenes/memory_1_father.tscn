@@ -336,6 +336,7 @@ sprite_frames = SubResource("SpriteFrames_jme4o")
 autoplay = "default"
 
 [node name="memory_1_father_cam" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
 script = ExtResource("1_blnsk")
 camLimit = 200
 

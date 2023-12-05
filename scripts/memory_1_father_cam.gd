@@ -107,7 +107,7 @@ func _createCameraTween(direction:CameraDirections, timing:float):
 	tween.tween_callback(
 		func():
 			print("test")
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(0.75).timeout
 			print("test 2")
 			isCamTweening = false
 	)

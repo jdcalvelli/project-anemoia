@@ -19,10 +19,18 @@ func _on_input(viewport:Node, event:InputEvent, shape_idx:int):
 func _physics_process(delta):
 	# holding logic
 	if isHeld:
+		# lerp position to mouse position
 		$AnimatedSprite2D.frame = 1
 		position = lerp(
 			position,
 			get_global_mouse_position(),
+			get_tree().current_scene.lerpFactor * delta
+		)
+		# lerp rotation based on y position of mouse
+		print(get_global_mouse_position().y)
+		rotation = lerp(
+			rotation,
+			-deg_to_rad(maxf(-100, get_global_mouse_position().y) / 8),
 			get_tree().current_scene.lerpFactor * delta
 		)
 	elif !isHeld:
@@ -59,8 +67,9 @@ func _on_knife_edge_entered(area:Area2D):
 	if (area.global_position.x - 200
 	< global_position.x):
 		if isHeld and area is DraggableFruit:
-			isCutting = true
-			print("is cutting")
+			if get_tree().current_scene.fruitOnBoard:
+				isCutting = true
+				print("is cutting")
 		
 		
 func _on_knife_edge_exited(area:Area2D):

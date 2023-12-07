@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=55 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Script" path="res://scripts/memory_1_father.gd" id="1_xy1v7"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bwmxj743c57qr" path="res://assets/images/Memories/memory_1/cigarettes/cig_pack_layer_3.png" id="6_6f8rd"]
 [ext_resource type="Script" path="res://scripts/Cig.gd" id="6_hs16d"]
 [ext_resource type="Texture2D" uid="uid://cmvngxs4fojhv" path="res://assets/images/Memories/memory_1/knife/dark_knife_up.png" id="6_hvv2h"]
+[ext_resource type="Texture2D" uid="uid://coeh3f2pge55q" path="res://assets/images/Memories/memory_1/cigarettes/Cig_pack_closed.png" id="8_lygej"]
 [ext_resource type="Texture2D" uid="uid://bf87cr7djupla" path="res://assets/images/Memories/memory_1/fruits/Apple/appleu_chop_1.png" id="9_u1214"]
 [ext_resource type="Texture2D" uid="uid://cp05r315ggsjq" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_sprite.png" id="9_wpmxj"]
 [ext_resource type="Texture2D" uid="uid://v4a2vu5cn85m" path="res://assets/images/Memories/memory_1/fruits/Pear/pear_chop_1.png" id="10_4j6bq"]
@@ -215,9 +216,18 @@ scale = Vector2(0.35, 0.35)
 script = ExtResource("4_m4vy0")
 
 [node name="CigBack" type="Sprite2D" parent="Cigs"]
+visible = false
 texture = ExtResource("4_l3p2n")
 
+[node name="CigClosed" type="Sprite2D" parent="Cigs"]
+z_index = 1
+position = Vector2(-62.8571, -17.1429)
+rotation = 0.0508525
+scale = Vector2(1, 1)
+texture = ExtResource("8_lygej")
+
 [node name="Cig" type="Area2D" parent="Cigs"]
+visible = false
 script = ExtResource("6_hs16d")
 
 [node name="CigSprite" type="Sprite2D" parent="Cigs/Cig"]

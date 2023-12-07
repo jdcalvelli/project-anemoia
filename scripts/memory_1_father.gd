@@ -49,6 +49,9 @@ func _on_timer_timeout(index:int):
 			print("end done")
 			_tweenCamTowardCigs(3)
 			$Cigs.tweenCigs()
+			$Cigs/CigClosed.visible = false
+			$Cigs/CigBack.visible = true
+			$Cigs/Cig.visible = true
 			$Cigs/Cig.canBeGrabbed = true
 
 func _tweenCamTowardCigs(nextTimerID:int):

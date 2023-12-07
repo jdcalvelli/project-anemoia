@@ -8,7 +8,7 @@ var fruitOnBoard:DraggableFruit
 var fruitOverBowl:DraggableFruit
 
 # timers for camera tweens
-var waitTime: int = 9
+var waitTime: int = 10
 var timers:Array[Timer]
 
 #lerp factor
@@ -41,14 +41,22 @@ func _on_timer_timeout(index:int):
 			# tween camera a bit
 			_tweenCamTowardCigs(1)
 			$Cigs.tweenCigs()
+			# call the change lowpass
+			AudioManager.changeLowPassState(0)
+			
 		1:
 			print("mid done")
 			_tweenCamTowardCigs(2)
 			$Cigs.tweenCigs()
+			# call the change lowpass
+			AudioManager.changeLowPassState(1)
 		2:
 			print("end done")
 			_tweenCamTowardCigs(3)
 			$Cigs.tweenCigs()
+			# call the change lowpass
+			AudioManager.changeLowPassState(2)
+			# the changing of the cig picture
 			$Cigs/CigClosed.visible = false
 			$Cigs/CigBack.visible = true
 			$Cigs/Cig.visible = true

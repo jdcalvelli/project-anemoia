@@ -223,7 +223,6 @@ texture = ExtResource("4_l3p2n")
 z_index = 1
 position = Vector2(-62.8571, -17.1429)
 rotation = 0.0508525
-scale = Vector2(1, 1)
 texture = ExtResource("8_lygej")
 
 [node name="Cig" type="Area2D" parent="Cigs"]

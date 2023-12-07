@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=56 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Script" path="res://scripts/memory_1_father.gd" id="1_xy1v7"]
@@ -15,8 +15,8 @@
 [ext_resource type="Script" path="res://scripts/DraggableKnife.gd" id="4_ujm3q"]
 [ext_resource type="Texture2D" uid="uid://bfskdn4nw07k8" path="res://assets/images/Memories/memory_1/memory_1_father_bottombasketupdate.png" id="5_0h5lp"]
 [ext_resource type="Texture2D" uid="uid://d1xnwjm4y0uei" path="res://assets/images/Memories/memory_1/cigarettes/cig_object_layer_2.png" id="5_8t5sd"]
-[ext_resource type="Texture2D" uid="uid://drm2kdcte85g4" path="res://assets/images/Memories/memory_1/Memory_Kitchen_Main_Scene 2.png" id="5_g10ej"]
 [ext_resource type="Texture2D" uid="uid://blem26vvp8774" path="res://assets/images/Memories/memory_1/knife/dark_knife_down.png" id="5_h3cxw"]
+[ext_resource type="Texture2D" uid="uid://dift8n6pdbbhl" path="res://assets/images/Memories/memory_1/UpdatesForWinter/Memory_Kitchen_Main_Scene.png" id="5_myoln"]
 [ext_resource type="Texture2D" uid="uid://bwmxj743c57qr" path="res://assets/images/Memories/memory_1/cigarettes/cig_pack_layer_3.png" id="6_6f8rd"]
 [ext_resource type="Script" path="res://scripts/Cig.gd" id="6_hs16d"]
 [ext_resource type="Texture2D" uid="uid://cmvngxs4fojhv" path="res://assets/images/Memories/memory_1/knife/dark_knife_up.png" id="6_hvv2h"]
@@ -43,6 +43,7 @@
 [ext_resource type="AudioStream" uid="uid://35o005apj6h8" path="res://assets/Audio/memory_1_father/Bright_Red_Distorted_Kitchen_Scene.mp3" id="37_iadcp"]
 [ext_resource type="Texture2D" uid="uid://dtewcp27bg7rs" path="res://assets/images/Memories/memory_1/Temp_splotch_anim/Memory_Character_Animation-2.png" id="38_pupq7"]
 [ext_resource type="AudioStream" uid="uid://sc4sdgwt7wbn" path="res://assets/Audio/memory_1_father/kids_talking.mp3" id="38_xrqaa"]
+[ext_resource type="Texture2D" uid="uid://i8osdg6854qu" path="res://assets/images/Memories/memory_1/UpdatesForWinter/Memory_Kitchen_Main_Scene 3.png" id="42_n6bcp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ve22j"]
 animations = [{
@@ -208,7 +209,7 @@ pitch_scale = 0.3
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(2.08165e-12, -540)
-texture = ExtResource("5_g10ej")
+texture = ExtResource("5_myoln")
 
 [node name="Cigs" type="Node2D" parent="."]
 position = Vector2(2968, 599)
@@ -348,6 +349,18 @@ autoplay = "default"
 zoom = Vector2(0.6, 0.6)
 script = ExtResource("1_blnsk")
 camLimit = 200
+
+[node name="Blur" type="Sprite2D" parent="memory_1_father_cam"]
+z_index = 3
+position = Vector2(-2.1684e-19, 37)
+scale = Vector2(0.64, 1)
+texture = ExtResource("42_n6bcp")
+
+[node name="Blur2" type="Sprite2D" parent="memory_1_father_cam"]
+z_index = 3
+position = Vector2(-2.1684e-19, 37)
+scale = Vector2(0.64, 1)
+texture = ExtResource("42_n6bcp")
 
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("37_iadcp")

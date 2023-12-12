@@ -8,7 +8,7 @@ var fruitOnBoard:DraggableFruit
 var fruitOverBowl:DraggableFruit
 
 # timers for camera tweens
-var waitTime: int = 10
+var waitTime: int = 15
 var timers:Array[Timer]
 
 #lerp factor
@@ -49,8 +49,8 @@ func _on_timer_timeout(index:int):
 			
 			#creating a tween for the blur that will decrease in scale and hover
 			var tween = get_tree().create_tween().set_loops(3)
-			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 5).set_ease(Tween.EASE_OUT_IN)
-			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.67,1.047), 5).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 2.5).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.67,1.047), 2.5).set_ease(Tween.EASE_OUT_IN)
 			
 		1:
 			#blur color shift 
@@ -66,8 +66,8 @@ func _on_timer_timeout(index:int):
 			
 		
 			var tween = get_tree().create_tween().set_loops(3)
-			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 4.5).set_ease(Tween.EASE_OUT_IN)
-			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.57,0.891), 4.5).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 2.5).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.57,0.891), 2.5).set_ease(Tween.EASE_OUT_IN)
 		2:
 			#blur color shift 2
 			$memory_1_father_cam/Blur.self_modulate = Color (0.184314, 0.309804, 0.309804)

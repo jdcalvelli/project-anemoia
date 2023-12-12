@@ -352,7 +352,7 @@ script = ExtResource("1_blnsk")
 camLimit = 200
 
 [node name="Blur" type="Sprite2D" parent="memory_1_father_cam"]
-z_index = 3
+z_index = 6
 position = Vector2(-2.1684e-19, 37)
 scale = Vector2(0.62, 0.969)
 texture = ExtResource("42_n6bcp")

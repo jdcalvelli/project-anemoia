@@ -44,13 +44,34 @@ func _on_timer_timeout(index:int):
 			# call the change lowpass
 			AudioManager.changeLowPassState(0)
 			
+			var col = get_tree().create_tween()
+			col.tween_property($memory_1_father_cam/Blur, "modulate", Color(.411765,0.411765,0.411765),15).set_ease(Tween.EASE_OUT_IN)
+			
+			#creating a tween for the blur that will decrease in scale and hover
+			var tween = get_tree().create_tween().set_loops(3)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 5).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.67,1.047), 5).set_ease(Tween.EASE_OUT_IN)
+			
 		1:
+			#blur color shift 
+			$memory_1_father_cam/Blur.self_modulate = Color (.411765,0.411765,0.411765)
+			var col = get_tree().create_tween()
+			col.tween_property($memory_1_father_cam/Blur, "modulate", Color(0.184314, 0.309804, 0.309804),15).set_ease(Tween.EASE_OUT_IN)
+			
 			print("mid done")
 			_tweenCamTowardCigs(2)
 			$Cigs.tweenCigs()
 			# call the change lowpass
 			AudioManager.changeLowPassState(1)
+			
+		
+			var tween = get_tree().create_tween().set_loops(3)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 4.5).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.57,0.891), 4.5).set_ease(Tween.EASE_OUT_IN)
 		2:
+			#blur color shift 2
+			$memory_1_father_cam/Blur.self_modulate = Color (0.184314, 0.309804, 0.309804)
+			
 			print("end done")
 			_tweenCamTowardCigs(3)
 			$Cigs.tweenCigs()
@@ -61,6 +82,10 @@ func _on_timer_timeout(index:int):
 			$Cigs/CigBack.visible = true
 			$Cigs/Cig.visible = true
 			$Cigs/Cig.canBeGrabbed = true
+			
+			var tween = get_tree().create_tween().set_loops()
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.57,0.891), 3).set_ease(Tween.EASE_OUT_IN)
+			tween.tween_property($memory_1_father_cam/Blur, "scale", Vector2(0.62,0.969), 3).set_ease(Tween.EASE_OUT_IN)
 
 func _tweenCamTowardCigs(nextTimerID:int):
 	var tweenCam = create_tween()

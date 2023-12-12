@@ -2,7 +2,7 @@ extends Area2D
 class_name DraggableKnife
 
 @export var CutFactor:int
-
+@onready var knifeInstruct = $"../memory_1_father_cam/KnifeInstruct"
 var isHeld:bool = false
 var isCutting:bool = false
 
@@ -19,6 +19,13 @@ func _on_input(viewport:Node, event:InputEvent, shape_idx:int):
 func _physics_process(delta):
 	# holding logic
 	if isHeld:
+		#display knifeInstruct 
+		knifeInstruct.show()
+		var tween = get_tree().create_tween()
+		tween.tween_property(knifeInstruct,"rotation_degrees",-60,1).set_ease(Tween.EASE_OUT_IN)
+		tween.parallel().tween_property(knifeInstruct,"position:y",-630,1).set_ease(Tween.EASE_OUT_IN)
+		#tween.tween_property(knifeInstruct,"rotation_degrees",60,.5).as_relative().set_ease(Tween.EASE_OUT_IN)
+		#tween.parallel().tween_property(knifeInstruct,"position:y",-200,.5).as_relative().set_ease(Tween.EASE_OUT_IN)
 		# lerp position to mouse position
 		$AnimatedSprite2D.frame = 1
 		position = lerp(
@@ -35,7 +42,13 @@ func _physics_process(delta):
 		)
 	elif !isHeld:
 		$AnimatedSprite2D.frame = 0
+		knifeInstruct.hide()
 		
+		var tween = get_tree().create_tween()
+		#tween.tween_property(knifeInstruct,"rotation_degrees",-60,.7).set_ease(Tween.EASE_OUT_IN)
+		#tween.parallel().tween_property(knifeInstruct,"position:y",-530,.7).set_ease(Tween.EASE_OUT_IN)
+		tween.tween_property(knifeInstruct,"rotation_degrees",60,.7).as_relative().set_ease(Tween.EASE_OUT_IN)
+		tween.parallel().tween_property(knifeInstruct,"position:y",-200,.7).as_relative().set_ease(Tween.EASE_OUT_IN)
 	# cutting logic
 	if isCutting:
 		var knifeYPosFactored = (

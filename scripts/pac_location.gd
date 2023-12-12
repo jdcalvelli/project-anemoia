@@ -20,6 +20,9 @@ func _ready():
 
 func _onClickHandle(emitter:ClickableObject):	
 
+	# turn off the shit
+	emitter.get_node("B_Splotch").play("default")
+
 	# if the current object is the last to be clicked
 	if ClickedObjects.size() == numClickables - 1:
 		# ungate it

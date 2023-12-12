@@ -9,6 +9,8 @@ var ClickedObjects : Array
 signal sceneOver
 
 func _ready():
+	$O_PicnicBasket/B_Splotch.hide()
+	
 	for child in get_children():
 		if child is ClickableObject:
 			numClickables += 1
@@ -33,6 +35,11 @@ func _onClickHandle(emitter:ClickableObject):
 			PACLocationDialogue, 
 			emitter.stitchName
 		)
+		
+
+func _process(delta):
+	if ClickedObjects.size() == numClickables - 1:
+		$O_PicnicBasket/B_Splotch.show()
 
 func _on_last_item_end():
 	$MemoryDrop.play()

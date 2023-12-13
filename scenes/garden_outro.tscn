@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dyf8gyj3jy2mm"]
 
-[ext_resource type="Script" path="res://scenes/outro.gd" id="1_g3slt"]
+[ext_resource type="Script" path="res://scripts/outro.gd" id="1_g3slt"]
 [ext_resource type="Resource" uid="uid://jckunykbly65" path="res://dialogues/gardenOutro.dialogue" id="2_o06ol"]
 [ext_resource type="Texture2D" uid="uid://bjxyy8jbo4mmd" path="res://assets/images/Outros/L1.1_End_Background.png" id="2_sp14p"]
 [ext_resource type="Texture2D" uid="uid://ba0fvijydgcnd" path="res://assets/images/Outros/L1.1_End_Character.png" id="3_hx0pm"]

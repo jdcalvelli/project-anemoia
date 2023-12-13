@@ -67,7 +67,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w44gq"]
 texture = ExtResource("2_jgxou")
-region_rect = Rect2(194, 572, 1966, 368)
+region_rect = Rect2(194, 572, 2238.61, 368)
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -80,11 +80,12 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 21.0
-offset_top = -183.0
+offset_top = -218.0
 offset_right = -19.0
-offset_bottom = -19.0
+offset_bottom = -54.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.13, 1.13)
 theme = SubResource("Theme_qq3yp")
 theme_override_styles/panel = SubResource("StyleBoxTexture_w44gq")
 
@@ -93,10 +94,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 49.0
+offset_left = 35.0
 offset_top = 35.0
-offset_right = -51.0
-offset_bottom = -39.0
+offset_right = -229.0
+offset_bottom = -39.0001
 grow_horizontal = 2
 grow_vertical = 2
 

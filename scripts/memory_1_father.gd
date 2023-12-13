@@ -15,6 +15,9 @@ var timers:Array[Timer]
 var lerpFactor = 20
 
 func _ready():
+	cutFade()
+	await get_tree().create_timer(4).timeout
+	$BackgroundAudio.play()
 	$barkTimer.timeout.connect(_on_bt_timeout)
 	
 	timers = [Timer.new(), Timer.new(), Timer.new()]
@@ -126,3 +129,7 @@ func _physics_process(delta):
 	else:
 		for timer in timers:
 			timer.paused = false
+
+func cutFade():
+	var tween = get_tree().create_tween()
+	tween.tween_property($memory_1_father_cam/Cut, "modulate", Color (1,1,1,0),4)

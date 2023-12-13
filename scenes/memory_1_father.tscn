@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://cnt0y3ln7kjro"]
+[gd_scene load_steps=58 format=3 uid="uid://cnt0y3ln7kjro"]
 
 [ext_resource type="Script" path="res://scripts/memory_1_father_cam.gd" id="1_blnsk"]
 [ext_resource type="Script" path="res://scripts/memory_1_father.gd" id="1_xy1v7"]
@@ -45,6 +45,7 @@
 [ext_resource type="AudioStream" uid="uid://sc4sdgwt7wbn" path="res://assets/Audio/memory_1_father/kids_talking.mp3" id="38_xrqaa"]
 [ext_resource type="Texture2D" uid="uid://i8osdg6854qu" path="res://assets/images/Memories/memory_1/UpdatesForWinter/Memory_Kitchen_Main_Scene 3.png" id="42_n6bcp"]
 [ext_resource type="Texture2D" uid="uid://c8vfqdok50r47" path="res://assets/images/Memories/memory_1/knife/knife_up.png" id="43_bxs67"]
+[ext_resource type="Texture2D" uid="uid://b02uspxkd1ws5" path="res://assets/images/Proof_Water_Transition.png" id="43_pvq2h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ve22j"]
 animations = [{
@@ -357,7 +358,14 @@ position = Vector2(-2.1684e-19, 37)
 scale = Vector2(0.62, 0.969)
 texture = ExtResource("42_n6bcp")
 
+[node name="Cut" type="Sprite2D" parent="memory_1_father_cam"]
+z_index = 6
+position = Vector2(1, 39)
+scale = Vector2(1.96, 1.96)
+texture = ExtResource("43_pvq2h")
+
 [node name="KnifeInstruct" type="Sprite2D" parent="memory_1_father_cam"]
+visible = false
 z_index = 5
 position = Vector2(1075, -730)
 rotation = -0.785398
@@ -367,7 +375,6 @@ texture = ExtResource("43_bxs67")
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("37_iadcp")
 volume_db = -17.505
-autoplay = true
 
 [node name="BackgroundAudio2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("38_xrqaa")

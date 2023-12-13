@@ -3,6 +3,7 @@ extends Node2D
 var spaceLock = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	cutFade()
 	$Background.hide()
 	$LabelSpace.hide()
 	$LabelSpace2.hide()
@@ -20,3 +21,8 @@ func _process(delta):
 		$LabelSpace2.show()
 	if Input.is_action_pressed("ui_accept") && $Background.visible == true: 
 		get_tree().change_scene_to_file("res://scenes/garden_intro.tscn")
+
+
+func cutFade():
+	var tween = get_tree().create_tween()
+	tween.tween_property($Cut, "modulate", Color (1,1,1,0),4)

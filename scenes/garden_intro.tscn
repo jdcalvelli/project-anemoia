@@ -115,4 +115,4 @@ autoplay = true
 
 [node name="BackgroundIntro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_ff3yy")
-volume_db = -10.0
+volume_db = -2.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyf8gyj3jy2mm"]
+[gd_scene load_steps=10 format=3 uid="uid://dyf8gyj3jy2mm"]
 
 [ext_resource type="Script" path="res://scripts/outro.gd" id="1_g3slt"]
 [ext_resource type="Resource" uid="uid://jckunykbly65" path="res://dialogues/gardenOutro.dialogue" id="2_o06ol"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c0bumoorvdm2m" path="res://assets/images/Outros/L1.x_End_Background.png" id="5_vlo83"]
 [ext_resource type="Texture2D" uid="uid://c6bh3p02rr52x" path="res://assets/images/Outros/L1.x_End_Object.png" id="6_76aqy"]
 [ext_resource type="AudioStream" uid="uid://ciqk6ef77oeqs" path="res://assets/Audio/garden_outro/jesse_closing_screen.mp3" id="8_kw8ru"]
+[ext_resource type="Texture2D" uid="uid://b02uspxkd1ws5" path="res://assets/images/Proof_Water_Transition.png" id="9_q4pt8"]
 
 [node name="garden_outro" type="Node2D"]
 script = ExtResource("1_g3slt")
@@ -44,3 +45,7 @@ autoplay = true
 stream = ExtResource("8_kw8ru")
 volume_db = -10.0
 autoplay = true
+
+[node name="Cut" type="Sprite2D" parent="."]
+position = Vector2(-30, -5)
+texture = ExtResource("9_q4pt8")

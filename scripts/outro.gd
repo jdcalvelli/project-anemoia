@@ -7,6 +7,8 @@ signal WaterChange
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	await get_tree().create_timer(1).timeout
+	cutFade()
 	await get_tree().create_timer(3).timeout
 	DialogueManager.show_example_dialogue_balloon(
 	outroDialogue, 
@@ -32,3 +34,7 @@ func _physics_process(delta):
 		Vector2(0,0),
 		ease(0.08 * delta, -1.05)
 	)
+
+func cutFade():
+	var tween = get_tree().create_tween()
+	tween.tween_property($Cut, "modulate", Color (1,1,1,0),4)

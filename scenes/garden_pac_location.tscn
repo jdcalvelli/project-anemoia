@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://kmi5bw14f0rg"]
+[gd_scene load_steps=63 format=3 uid="uid://kmi5bw14f0rg"]
 
 [ext_resource type="Script" path="res://scripts/pac_location.gd" id="1_ujhxi"]
 [ext_resource type="Resource" uid="uid://1x87n18x784" path="res://dialogues/gardenPACLocation.dialogue" id="2_e7nx8"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://bja0xq1fhjgu7" path="res://assets/images/Intros/3 - 2,833/,833 Days.png" id="44_6hllf"]
 [ext_resource type="Texture2D" uid="uid://kmf33ov1biyn" path="res://assets/images/Intros/3 - 2,833/2,833 Days.png" id="45_vm6br"]
 [ext_resource type="AudioStream" uid="uid://tdvvi8kuusv2" path="res://assets/Audio/garden_pac/Memory_drop.mp3" id="48_olto6"]
+[ext_resource type="Texture2D" uid="uid://b02uspxkd1ws5" path="res://assets/images/Proof_Water_Transition.png" id="49_hnsse"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52d3q"]
 animations = [{
@@ -342,21 +343,22 @@ position = Vector2(-196, -34.25)
 shape = SubResource("RectangleShape2D_r0egc")
 
 [node name="BG2833Days" type="AnimatedSprite2D" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
 sprite_frames = SubResource("SpriteFrames_dsqpr")
-frame = 3
-frame_progress = 1.0
 
 [node name="PACLocationCam" parent="." instance=ExtResource("9_upra4")]
 
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("43_i0ic2")
 volume_db = -25.0
-autoplay = true
 
 [node name="MemoryDrop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("48_olto6")
 volume_db = 7.0
+
+[node name="Cut" type="Sprite2D" parent="."]
+position = Vector2(5, -5)
+texture = ExtResource("49_hnsse")
 
 [editable path="O_BenchCouple"]
 [editable path="O_Lillies"]

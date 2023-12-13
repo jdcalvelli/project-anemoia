@@ -10,7 +10,9 @@ signal sceneOver
 
 func _ready():
 	$O_PicnicBasket/B_Splotch.hide()
-	
+	cutFade()
+	await get_tree().create_timer(3.5).timeout
+	$BackgroundAudio.play()
 	for child in get_children():
 		if child is ClickableObject:
 			numClickables += 1
@@ -48,7 +50,16 @@ func _on_last_item_end():
 	$MemoryDrop.play()
 	await get_tree().create_timer(2).timeout
 	$BackgroundAudio.stop()
-	$BG2833Days.visible = true
+	fadeIn()
+	await get_tree().create_timer(2).timeout
 	$BG2833Days.play("default")
 	await get_tree().create_timer(6).timeout
 	GameManager.changeScene("res://scenes/memory_1_father.tscn")
+
+func cutFade():
+	var tween = get_tree().create_tween()
+	tween.tween_property($Cut, "modulate", Color (1,1,1,0),4)
+
+func fadeIn():
+	var tween = get_tree().create_tween()
+	tween.tween_property($BG2833Days, "modulate", Color (1,1,1,1),2)

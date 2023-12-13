@@ -31,7 +31,7 @@ Y: How is this fun for you?
 => END
 
 ~ bark_9
-Y: I didn't read to dictionary for fun like you A.
+Y: I didn't read the dictionary for fun like you A.
 => END
 
 ~ bark_10
@@ -51,7 +51,7 @@ X: Should we go somewhere today?
 => END
 
 ~ bark_14
-A: Mom said she'd get me a phone for Chistmas, so we can finally call together!
+A: I got a phone for Chistmas, so we can finally call together!
 => END
 
 ~ bark_15

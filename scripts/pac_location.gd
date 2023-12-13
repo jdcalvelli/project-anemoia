@@ -46,9 +46,9 @@ func _process(delta):
 
 func _on_last_item_end():
 	$MemoryDrop.play()
-	await get_tree().create_timer(4).timeout
+	await get_tree().create_timer(2).timeout
 	$BackgroundAudio.stop()
 	$BG2833Days.visible = true
 	$BG2833Days.play("default")
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(6).timeout
 	GameManager.changeScene("res://scenes/memory_1_father.tscn")

@@ -21,6 +21,7 @@ offset_right = 256.0
 offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 theme_override_styles/panel = SubResource("StyleBoxTexture_mhs83")
 script = ExtResource("1_pqc3o")
 

@@ -44,6 +44,7 @@ Where does love for a person go when they're no longer here to receive it?
 horizontal_alignment = 1
 
 [node name="TW" type="Label" parent="Background/LabelInstruct"]
+layout_mode = 0
 offset_left = 1369.0
 offset_top = 680.0
 offset_right = 1790.0

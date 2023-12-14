@@ -374,11 +374,11 @@ texture = ExtResource("43_bxs67")
 
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("37_iadcp")
-volume_db = -17.505
+volume_db = -24.532
 
 [node name="BackgroundAudio2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("38_xrqaa")
-volume_db = 3.559
+volume_db = -3.0
 autoplay = true
 
 [editable path="DraggableApple"]

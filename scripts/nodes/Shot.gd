@@ -5,6 +5,9 @@ class_name Shot
 
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
+
+@export var actionScene:bool = false
+
 @export var nextShot:String
 
 func _ready():

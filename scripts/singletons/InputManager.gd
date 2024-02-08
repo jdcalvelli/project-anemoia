@@ -27,7 +27,7 @@ var hitBottom := false
 # process func for the analog stick motions
 func _physics_process(delta):
 	# determine which stick we care about
-	match GameManager.currentCharacter:
+	match GameManager.currentShot.currentCharacter:
 		GameManager.Characters.FATHER:
 			input_vec = Input.get_vector(
 				"left-analog-left",
@@ -92,7 +92,7 @@ func joy_rotate(input_vec:Vector2):
 			if current_angle > inverse_angle and current_angle < 0:
 				passedInverseCounter = true
 			elif current_angle > starting_angle and passedInverseCounter:
-				match GameManager.currentCharacter:
+				match GameManager.currentShot.currentCharacter:
 					GameManager.Characters.FATHER:
 						EventBus.analogRotate.emit(AnalogSticks.LEFT)
 					GameManager.Characters.MOTHER:
@@ -103,7 +103,7 @@ func joy_rotate(input_vec:Vector2):
 			if current_angle < inverse_angle and current_angle > -PI:
 				passedInverseClock = true
 			elif current_angle < starting_angle and passedInverseClock:
-				match GameManager.currentCharacter:
+				match GameManager.currentShot.currentCharacter:
 					GameManager.Characters.FATHER:
 						EventBus.analogRotate.emit(AnalogSticks.LEFT)
 					GameManager.Characters.MOTHER:
@@ -135,7 +135,7 @@ func joy_flick(input_vec:Vector2):
 		previous_pos = current_pos
 		
 	if hitBottom and hitTop:
-		match GameManager.currentCharacter:
+		match GameManager.currentShot.currentCharacter:
 			GameManager.Characters.FATHER:
 				EventBus.analogFlick.emit(AnalogSticks.LEFT)
 			GameManager.Characters.MOTHER:

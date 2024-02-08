@@ -5,13 +5,8 @@ enum Characters {
 	MOTHER
 }
 
-# game state
-# set by the scene itself
-var currentCharacter: Characters = Characters.FATHER
-var currentDay: int
-var currentShot: int
-
-var reverseActions = false
+# current shot reference
+var currentShot: Shot
 
 func _ready():
 	EventBus.analogClick.connect(_on_stick_click)
@@ -21,27 +16,29 @@ func _ready():
 func _on_stick_click(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
-			if currentCharacter == Characters.FATHER:
+			if currentShot.currentCharacter == Characters.FATHER:
 				print("advance father story")
+				get_tree().change_scene_to_file(currentShot.nextShot)
 		InputManager.AnalogSticks.RIGHT:
-			if currentCharacter == Characters.MOTHER:
+			if currentShot.currentCharacter == Characters.MOTHER:
 				print("advance mother story")
+				get_tree().change_scene_to_file(currentShot.nextShot)
 				
 func _on_analog_rotate(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
-			if !reverseActions:
+			if !currentShot.reverseActions:
 				print("father rotate")
 		InputManager.AnalogSticks.RIGHT:
-			if reverseActions:
+			if currentShot.reverseActions:
 				print("mother rotate")
 			
 func _on_analog_flick(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
-			if reverseActions:
+			if currentShot.reverseActions:
 				print("father flick")
 		InputManager.AnalogSticks.RIGHT:
-			if !reverseActions:
+			if !currentShot.reverseActions:
 				print("mother flick")
 	

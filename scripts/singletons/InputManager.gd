@@ -1,20 +1,39 @@
-extends Node2D
+extends Node
 
-var starting_angle := 0.0
-var inverse_angle := 0.0
+enum AnalogSticks {
+	LEFT,
+	RIGHT
+}
+
+# needed for rotate and flick
 var current_angle := 0.0
 var previous_angle := 0.0
-
 var current_pos := Vector2(0,0)
 var previous_pos := Vector2(0,0)
 
+# needed for rotate
+var starting_angle := 0.0
+var inverse_angle := 0.0
 var current_rotationDir : ClockDirection
 var previous_rotationDir : ClockDirection
 var passedInverseCounter = false
 var passedInverseClock = false
 
+# needed for flick
+var hitTop := false
+var hitBottom := false
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	# get the coords of the left joystick
+	joy_rotate(GameManager.currentCharacter)
+	joy_flick(GameManager.currentCharacter)
+
+
+
+# ### helper funcs ###
+
+func joy_rotate(char:GameManager.Characters):
+		# get the coords of the left joystick
 	# make this specific joystick independent
 	var input_vector = Input.get_vector(
 		"left-analog-left",
@@ -71,3 +90,40 @@ func _physics_process(delta):
 	previous_pos = current_pos
 	previous_angle = current_angle
 	previous_rotationDir = current_rotationDir
+
+func joy_flick(char:GameManager.Characters):
+		# get input vector for right joystick
+	# make this specific joystick independent
+	var input_vector = Input.get_vector(
+		"right-analog-left",
+		"right-analog-right", 
+		"right-analog-down", 
+		"right-analog-up"
+		)
+	
+	current_angle = atan2(input_vector.y, input_vector.x)
+	
+	if current_angle >= deg_to_rad(-100) and current_angle <= deg_to_rad(-60):
+		current_pos = input_vector
+		
+		if current_pos.y == previous_pos.y and current_pos.y <= -0.9:
+			hitBottom = true
+		
+		previous_pos = current_pos
+		
+	elif current_angle >= deg_to_rad(60) and current_angle <= deg_to_rad(100) and hitBottom:
+		current_pos = input_vector
+		
+		if current_pos.y == previous_pos.y and current_pos.y >= 0.9:
+			hitTop = true
+		
+		previous_pos = current_pos
+		
+	if hitBottom and hitTop:
+		print("flick registered")
+		hitTop = false
+		hitBottom = false
+		current_angle = 0.0
+		previous_angle = 0.0
+		current_pos = Vector2(0,0)
+		previous_pos = Vector2(0,0)

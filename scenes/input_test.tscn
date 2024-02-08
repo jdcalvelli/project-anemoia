@@ -1,12 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://ovmrfqn60eyt"]
-
-[ext_resource type="Script" path="res://scripts/joy_flick.gd" id="1_anbpe"]
-[ext_resource type="Script" path="res://scripts/joy_rotate.gd" id="2_kvch3"]
+[gd_scene format=3 uid="uid://ovmrfqn60eyt"]
 
 [node name="input_test" type="Node2D"]
-
-[node name="joy_flick" type="Node2D" parent="."]
-script = ExtResource("1_anbpe")
-
-[node name="joy_rotate" type="Node2D" parent="."]
-script = ExtResource("2_kvch3")

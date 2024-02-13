@@ -9,6 +9,7 @@
 script = ExtResource("2_jiagl")
 currentCharacter = 1
 actionScene = true
+numRequiredActions = 2
 nextShot = "res://scenes/scene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]

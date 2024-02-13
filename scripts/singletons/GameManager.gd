@@ -29,20 +29,28 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 		InputManager.AnalogSticks.LEFT:
 			if !currentShot.reverseActions and currentShot.actionScene:
 				print("father rotate")
-				get_tree().change_scene_to_file(currentShot.nextShot)
+				currentShot.numActionsTaken += 1
+				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					get_tree().change_scene_to_file(currentShot.nextShot)
 		InputManager.AnalogSticks.RIGHT:
 			if currentShot.reverseActions and currentShot.actionScene:
 				print("mother rotate")
-				get_tree().change_scene_to_file(currentShot.nextShot)
+				currentShot.numActionsTaken += 1
+				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					get_tree().change_scene_to_file(currentShot.nextShot)
 			
 func _on_analog_flick(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
 			if currentShot.reverseActions and currentShot.actionScene:
 				print("father flick")
-				get_tree().change_scene_to_file(currentShot.nextShot)
+				currentShot.numActionsTaken += 1
+				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					get_tree().change_scene_to_file(currentShot.nextShot)
 		InputManager.AnalogSticks.RIGHT:
 			if !currentShot.reverseActions and currentShot.actionScene:
 				print("mother flick")
-				get_tree().change_scene_to_file(currentShot.nextShot)
+				currentShot.numActionsTaken += 1
+				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					get_tree().change_scene_to_file(currentShot.nextShot)
 	

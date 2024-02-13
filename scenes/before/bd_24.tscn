@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d08dcujmtlet6"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_8jkwv"]
+
+[node name="bd_24" instance=ExtResource("1_8jkwv")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 1
+nextShot = "res://scenes/cards/title_card.tscn"
+
+[node name="temp - name display" parent="." index="3"]
+text = "bd_24"

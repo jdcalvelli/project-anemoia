@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cud2dmv762521"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_tf1lx"]
+
+[node name="bd_17" instance=ExtResource("1_tf1lx")]
+
+[node name="Shot" parent="." index="0"]
+nextShot = "res://scenes/before/bd_18.tscn"
+
+[node name="temp - name display" parent="." index="3"]
+text = "bd_17"

@@ -21,6 +21,12 @@ EventBus="*res://scripts/singletons/EventBus.gd"
 GameManager="*res://scripts/singletons/GameManager.gd"
 InputManager="*res://scripts/singletons/InputManager.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/resizable=false
+
 [input]
 
 left-analog-right={
@@ -73,3 +79,7 @@ right-stick-click={
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":8,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

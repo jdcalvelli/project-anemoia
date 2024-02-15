@@ -42,12 +42,20 @@ func _physics_process(delta):
 				"right-analog-down",
 				"right-analog-up"
 				)
-				
+	
+	# if can go next isnt true, break
+	if !GameManager.canGoNext:
+		return
+	
 	joy_rotate(input_vec)
-	joy_flick(input_vec)
+	joy_rock(input_vec)
 
 # input func for stick clicks ONLY
 func _input(event):
+	# if can go next isnt true, break
+	if !GameManager.canGoNext:
+		return
+	
 	if event.is_action_pressed("left-stick-click"):
 		EventBus.analogClick.emit(AnalogSticks.LEFT)
 	elif event.is_action_pressed("right-stick-click"):
@@ -115,7 +123,7 @@ func joy_rotate(input_vec:Vector2):
 	previous_angle = current_angle
 	previous_rotationDir = current_rotationDir
 
-func joy_flick(input_vec:Vector2):	
+func joy_rock(input_vec:Vector2):
 	current_angle = atan2(input_vec.y, input_vec.x)
 	
 	if current_angle >= deg_to_rad(-100) and current_angle <= deg_to_rad(-60):

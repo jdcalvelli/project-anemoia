@@ -6,6 +6,5 @@
 
 [node name="Shot" type="Node" parent="."]
 script = ExtResource("1_xq5ul")
-currentCharacter = 1
 actionScene = true
 numRequiredActions = 999

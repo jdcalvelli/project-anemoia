@@ -13,14 +13,6 @@ var current_pos := Vector2(0,0)
 var previous_pos := Vector2(0,0)
 
 # needed for rotate
-var starting_angle := 0.0
-var inverse_angle := 0.0
-var current_rotationDir : ClockDirection
-var previous_rotationDir : ClockDirection
-var passedInverseCounter = false
-var passedInverseClock = false
-
-# needed for rotate 2
 var rotateFlags := [0,0,0,0,0,0]
 
 # needed for rock
@@ -50,10 +42,8 @@ func _physics_process(delta):
 	if !GameManager.canGoNext:
 		return
 	
-	#joy_rotate(input_vec)
-	#joy_rock(input_vec)
-	
-	joy_rotate2(input_vec)
+	joy_rotate(input_vec)
+	joy_rock(input_vec)
 
 # input func for stick clicks ONLY
 func _input(event):
@@ -71,73 +61,10 @@ func _input(event):
 # ### helper funcs ###
 
 func joy_rotate(input_vec:Vector2):
-	# keep reference to current input vector
-	current_pos = input_vec
-	
-	# if the joystick is at coord (0,0), break out of the update
-	if current_pos == Vector2(0,0):
-		passedInverseCounter = false
-		passedInverseClock = false
-		return
-	
-	# get current angle based on atan2 - which means the angle based on pos x axis
-	current_angle = atan2(input_vec.y, input_vec.x)
-	
-	# establish starting angle and inverse
-	if previous_pos == Vector2(0,0):
-		starting_angle = current_angle
-		inverse_angle = starting_angle - PI
-		
-	if current_angle > previous_angle:
-		# moving counter
-		current_rotationDir = COUNTERCLOCKWISE
-	if current_angle < previous_angle:
-		# moving clockwise
-		current_rotationDir = CLOCKWISE
-	
-	# on the frame that you change directions, set the starting angle and inverse again
-	# to whatever the angle was when you changed directions
-	
-	# if sign of starting angle is positive
-	if sign(starting_angle) == 1:
-		if current_rotationDir == COUNTERCLOCKWISE and previous_rotationDir == COUNTERCLOCKWISE:
-			passedInverseClock = false
-			if current_angle > inverse_angle and current_angle < 0:
-				passedInverseCounter = true
-			elif current_angle > starting_angle and passedInverseCounter:
-				match GameManager.currentShot.currentCharacter:
-					GameManager.Characters.FATHER:
-						EventBus.analogRotate.emit(AnalogSticks.LEFT)
-					GameManager.Characters.MOTHER:
-						EventBus.analogRotate.emit(AnalogSticks.RIGHT)
-				passedInverseCounter = false
-		if current_rotationDir == CLOCKWISE and previous_rotationDir == CLOCKWISE:
-			passedInverseCounter = false
-			if current_angle < inverse_angle and current_angle > -PI:
-				passedInverseClock = true
-			elif current_angle < starting_angle and passedInverseClock:
-				match GameManager.currentShot.currentCharacter:
-					GameManager.Characters.FATHER:
-						EventBus.analogRotate.emit(AnalogSticks.LEFT)
-					GameManager.Characters.MOTHER:
-						EventBus.analogRotate.emit(AnalogSticks.RIGHT)
-				passedInverseClock = false
-	
-	# frame updates
-	previous_pos = current_pos
-	previous_angle = current_angle
-	previous_rotationDir = current_rotationDir
-
-func joy_rotate2(input_vec:Vector2):
 	# mariokart flag method
 	current_pos = input_vec
 	
 	current_angle = atan2(input_vec.y, input_vec.x)
-	
-	# this check will change to a magnitude of vector check i think
-	if current_pos == Vector2(0,0):
-		#print("dropped")
-		rotateFlags = [0,0,0,0,0,0]
 	
 	if current_angle < -2*PI/3 and previous_angle > -2*PI/3:
 		#print("passed flag 1")
@@ -159,8 +86,13 @@ func joy_rotate2(input_vec:Vector2):
 		rotateFlags[5] = 1
 		
 	if rotateFlags[5]:
-		rotateFlags = [0,0,0,0,0,0]
 		print("full rotation")
+		rotateFlags = [0,0,0,0,0,0]
+		match GameManager.currentShot.currentCharacter:
+			GameManager.Characters.FATHER:
+				EventBus.analogRotate.emit(AnalogSticks.LEFT)
+			GameManager.Characters.MOTHER:
+				EventBus.analogRotate.emit(AnalogSticks.RIGHT)
 		
 	# frame updates
 	previous_angle = current_angle

@@ -20,7 +20,10 @@ var previous_rotationDir : ClockDirection
 var passedInverseCounter = false
 var passedInverseClock = false
 
-# needed for flick
+# needed for rotate 2
+var rotateFlags := [0,0,0,0,0,0]
+
+# needed for rock
 var hitTop := false
 var hitBottom := false
 
@@ -47,8 +50,10 @@ func _physics_process(delta):
 	if !GameManager.canGoNext:
 		return
 	
-	joy_rotate(input_vec)
-	joy_rock(input_vec)
+	#joy_rotate(input_vec)
+	#joy_rock(input_vec)
+	
+	joy_rotate2(input_vec)
 
 # input func for stick clicks ONLY
 func _input(event):
@@ -122,6 +127,43 @@ func joy_rotate(input_vec:Vector2):
 	previous_pos = current_pos
 	previous_angle = current_angle
 	previous_rotationDir = current_rotationDir
+
+func joy_rotate2(input_vec:Vector2):
+	# mariokart flag method
+	current_pos = input_vec
+	
+	current_angle = atan2(input_vec.y, input_vec.x)
+	
+	# this check will change to a magnitude of vector check i think
+	if current_pos == Vector2(0,0):
+		#print("dropped")
+		rotateFlags = [0,0,0,0,0,0]
+	
+	if current_angle < -2*PI/3 and previous_angle > -2*PI/3:
+		#print("passed flag 1")
+		rotateFlags[0] = 1
+	elif current_angle > PI - 0.2 and previous_angle < PI - 0.2 and rotateFlags[0]:
+		#print("passed flag 2")
+		rotateFlags[1] = 1
+	elif current_angle < 2*PI/3 and previous_angle > 2*PI/3 and rotateFlags[1]:
+		#print("passed flag 3")
+		rotateFlags[2] = 1
+	elif current_angle < PI/3 and previous_angle > PI/3 and rotateFlags[2]:
+		#print("passed flag 4")
+		rotateFlags[3] = 1
+	elif current_angle < 0 and previous_angle > 0 and rotateFlags[3]:
+		#print("passed flag 5")
+		rotateFlags[4] = 1
+	elif current_angle < -PI/3 and previous_angle > -PI/3 and rotateFlags[4]:
+		#print("passed flag 6")
+		rotateFlags[5] = 1
+		
+	if rotateFlags[5]:
+		rotateFlags = [0,0,0,0,0,0]
+		print("full rotation")
+		
+	# frame updates
+	previous_angle = current_angle
 
 func joy_rock(input_vec:Vector2):
 	current_angle = atan2(input_vec.y, input_vec.x)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=3 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
+[ext_resource type="Script" path="res://scripts/prefabs/AnimChange.gd" id="2_ahngt"]
 
 [node name="scene-template" type="Node2D"]
 
@@ -9,6 +10,7 @@ script = ExtResource("1_jgvs3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
+script = ExtResource("2_ahngt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

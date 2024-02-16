@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmgts5u7ay28q"]
+
+[ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_xq5ul"]
+
+[node name="debug" type="Node2D"]
+
+[node name="Shot" type="Node" parent="."]
+script = ExtResource("1_xq5ul")
+currentCharacter = 1
+actionScene = true
+numRequiredActions = 999

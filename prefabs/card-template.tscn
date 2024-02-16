@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://nml24vc02rfl"]
+
+[ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_3otwj"]
+[ext_resource type="Texture2D" uid="uid://cr11x1ivcjk84" path="res://icon.svg" id="2_flxuu"]
+
+[node name="card-template" type="Node2D"]
+
+[node name="Shot" type="Node" parent="."]
+script = ExtResource("1_3otwj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_flxuu")
+
+[node name="temp - card title" type="Label" parent="."]
+offset_left = -204.0
+offset_top = -277.0
+offset_right = 205.0
+offset_bottom = -186.0
+theme_override_font_sizes/font_size = 64
+text = "card - title"

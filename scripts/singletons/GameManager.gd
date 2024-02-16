@@ -7,22 +7,43 @@ enum Characters {
 
 # current shot reference
 var currentShot: Shot
+var nextScene: PackedScene
+var goNextWaitTime: int = 2
+var canGoNext: bool = false
 
 func _ready():
 	EventBus.analogClick.connect(_on_stick_click)
 	EventBus.analogRotate.connect(_on_analog_rotate)
 	EventBus.analogFlick.connect(_on_analog_flick)
 
+func _physics_process(delta):
+	# if can go next isnt true, break
+	if !canGoNext:
+		return
+	
+	# listen for the right kind of input depending on char
+	if currentShot.currentCharacter == Characters.FATHER:
+		if currentShot.actionScene and !currentShot.reverseActions:
+			InputManager.joy_rotate(InputManager.input_vec)
+		elif currentShot.actionScene and currentShot.reverseActions:
+			InputManager.joy_rock(InputManager.input_vec)
+	elif currentShot.currentCharacter == Characters.MOTHER:
+		if currentShot.actionScene and !currentShot.reverseActions:
+			InputManager.joy_rock(InputManager.input_vec)
+		elif currentShot.actionScene and currentShot.reverseActions:
+			InputManager.joy_rotate(InputManager.input_vec)
+			
+
 func _on_stick_click(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
 			if currentShot.currentCharacter == Characters.FATHER:
 				if !currentShot.actionScene:
-					get_tree().change_scene_to_file(currentShot.nextShot)
+					get_tree().change_scene_to_packed(nextScene)
 		InputManager.AnalogSticks.RIGHT:
 			if currentShot.currentCharacter == Characters.MOTHER:
 				if !currentShot.actionScene:
-					get_tree().change_scene_to_file(currentShot.nextShot)
+					get_tree().change_scene_to_packed(nextScene)
 				
 func _on_analog_rotate(stick:InputManager.AnalogSticks):
 	match stick:
@@ -31,13 +52,17 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 				print("father rotate")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
-					get_tree().change_scene_to_file(currentShot.nextShot)
+					# adding wait on scene change
+					await get_tree().create_timer(goNextWaitTime).timeout
+					get_tree().change_scene_to_packed(nextScene)
 		InputManager.AnalogSticks.RIGHT:
 			if currentShot.reverseActions and currentShot.actionScene:
 				print("mother rotate")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
-					get_tree().change_scene_to_file(currentShot.nextShot)
+					# adding wait on scene change
+					await get_tree().create_timer(goNextWaitTime).timeout
+					get_tree().change_scene_to_packed(nextScene)
 			
 func _on_analog_flick(stick:InputManager.AnalogSticks):
 	match stick:
@@ -46,11 +71,15 @@ func _on_analog_flick(stick:InputManager.AnalogSticks):
 				print("father flick")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
-					get_tree().change_scene_to_file(currentShot.nextShot)
+					# adding wait on scene change
+					await get_tree().create_timer(goNextWaitTime).timeout
+					get_tree().change_scene_to_packed(nextScene)
 		InputManager.AnalogSticks.RIGHT:
 			if !currentShot.reverseActions and currentShot.actionScene:
 				print("mother flick")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
-					get_tree().change_scene_to_file(currentShot.nextShot)
+					# adding wait on scene change
+					await get_tree().create_timer(goNextWaitTime).timeout
+					get_tree().change_scene_to_packed(nextScene)
 	

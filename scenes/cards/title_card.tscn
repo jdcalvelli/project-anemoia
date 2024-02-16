@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkashxgho6hu6"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_gf4if"]
+
+[node name="title-card" instance=ExtResource("1_gf4if")]
+
+[node name="temp - card title" parent="." index="3"]
+text = "title card"

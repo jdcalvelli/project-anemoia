@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dik7atq6bn42f"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_7eehm"]
+[ext_resource type="Texture2D" uid="uid://wrom07byayin" path="res://assets/before/BD_02.png" id="2_s44s0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhl64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s44s0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="bd_2" instance=ExtResource("1_7eehm")]
+
+[node name="Shot" parent="." index="0"]
+nextShot = "res://scenes/before/bd_3.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_qhl64")
+
+[node name="temp - name display" parent="." index="3"]
+visible = false
+text = "bd_2"

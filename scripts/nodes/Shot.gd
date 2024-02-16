@@ -14,4 +14,14 @@ var numActionsTaken:int = 0
 
 func _ready():
 	# pass the shot up to the gamemanager
-	GameManager.currentShot = self 
+	GameManager.currentShot = self
+	# pass the next scene up as preload
+	GameManager.nextScene = load(nextShot)
+	
+	# make sure not can go next
+	GameManager.canGoNext = false
+	print("cant go next")
+	# wait two seconds before interactable
+	await get_tree().create_timer(GameManager.goNextWaitTime).timeout
+	GameManager.canGoNext = true
+	print("can go next")

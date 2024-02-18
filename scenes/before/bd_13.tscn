@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://cig704bej3m2l"]
+[gd_scene load_steps=5 format=3 uid="uid://cig704bej3m2l"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_r4cks"]
+[ext_resource type="Texture2D" uid="uid://be1sresq5uh60" path="res://assets/before/BD_13_Anim/frame_01.png" id="2_n0n4a"]
+[ext_resource type="Texture2D" uid="uid://b6m7nbtyrm4op" path="res://assets/before/BD_13_Anim/frame_02.png" id="3_gavqo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4mvw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n0n4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gavqo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
 
 [node name="bd_13" instance=ExtResource("1_r4cks")]
 
@@ -8,5 +24,10 @@
 currentCharacter = 1
 nextShot = "res://scenes/before/bd_14.tscn"
 
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_y4mvw")
+autoplay = "default"
+
 [node name="temp - name display" parent="." index="3"]
+visible = false
 text = "bd_13"

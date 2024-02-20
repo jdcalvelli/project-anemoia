@@ -1,11 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddtvogx4hi485"]
+[gd_scene load_steps=6 format=3 uid="uid://ddtvogx4hi485"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_qbg2f"]
+[ext_resource type="Texture2D" uid="uid://d2x60pgjdbc8c" path="res://assets/before/BD_16_Anim/frame_00.png" id="2_1hsic"]
+[ext_resource type="Texture2D" uid="uid://hxyljvlwhpis" path="res://assets/before/BD_16_Anim/frame_01.png" id="2_axmig"]
+[ext_resource type="Texture2D" uid="uid://c1hsogvhsp50s" path="res://assets/before/BD_16_Anim/frame_02.png" id="3_c57mh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_taf0u"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("2_1hsic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_axmig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c57mh")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
 
 [node name="bd_16" instance=ExtResource("1_qbg2f")]
 
 [node name="Shot" parent="." index="0"]
 nextShot = "res://scenes/before/bd_17.tscn"
 
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_taf0u")
+autoplay = "default"
+
 [node name="temp - name display" parent="." index="3"]
+visible = false
 text = "bd_16"

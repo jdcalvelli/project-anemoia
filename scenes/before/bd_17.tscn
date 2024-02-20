@@ -1,11 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://cud2dmv762521"]
+[gd_scene load_steps=4 format=3 uid="uid://cud2dmv762521"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_tf1lx"]
+[ext_resource type="Texture2D" uid="uid://b4evvrij5103m" path="res://assets/before/BD_17.png" id="2_7rap4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqeyg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7rap4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="bd_17" instance=ExtResource("1_tf1lx")]
 
 [node name="Shot" parent="." index="0"]
 nextShot = "res://scenes/before/bd_18.tscn"
 
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_kqeyg")
+autoplay = "default"
+
 [node name="temp - name display" parent="." index="3"]
+visible = false
 text = "bd_17"

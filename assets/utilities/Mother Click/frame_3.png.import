@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cph0sqe2y3x6"
-path="res://.godot/imported/frame_5.png-8b50df3c1e8ce14ffd286abd1d03f067.ctex"
+uid="uid://74qcguknfg2e"
+path="res://.godot/imported/frame_3.png-d73a5e216c75adb6be245f85760f68b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/utilities/Sophie Click 1/frame_5.png"
-dest_files=["res://.godot/imported/frame_5.png-8b50df3c1e8ce14ffd286abd1d03f067.ctex"]
+source_file="res://assets/utilities/Mother Click/frame_3.png"
+dest_files=["res://.godot/imported/frame_3.png-d73a5e216c75adb6be245f85760f68b0.ctex"]
 
 [params]
 

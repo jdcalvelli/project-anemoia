@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciet2pvg4weqc"
-path="res://.godot/imported/frame_5.png-795249f5417a920551b3b65f3b5c445b.ctex"
+uid="uid://cldyvpjqe1ulf"
+path="res://.godot/imported/frame_3.png-435be41764247e0a8a588ca9bbf727a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/utilities/Jamie Click/frame_5.png"
-dest_files=["res://.godot/imported/frame_5.png-795249f5417a920551b3b65f3b5c445b.ctex"]
+source_file="res://assets/utilities/Father Click/frame_3.png"
+dest_files=["res://.godot/imported/frame_3.png-435be41764247e0a8a588ca9bbf727a3.ctex"]
 
 [params]
 

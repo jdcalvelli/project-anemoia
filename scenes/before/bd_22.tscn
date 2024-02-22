@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxprutschtnaw"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_2widx"]
-[ext_resource type="Texture2D" uid="uid://bmrrvmvwh4hni" path="res://assets/before/BD_22_Anim/frame_01.png" id="2_s1s1r"]
-[ext_resource type="Texture2D" uid="uid://bmkbhrr84dcdh" path="res://assets/before/BD_22_Anim/frame_02.png" id="3_jwwvf"]
+[ext_resource type="Texture2D" uid="uid://bsdddu264m5d8" path="res://assets/before/BD_22_Anim/frame_01.png" id="2_s1s1r"]
+[ext_resource type="Texture2D" uid="uid://d0x53vl8m7vc8" path="res://assets/before/BD_22_Anim/frame_02.png" id="3_jwwvf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yma8c"]
 animations = [{

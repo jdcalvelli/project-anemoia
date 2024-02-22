@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_c6287"]
 [ext_resource type="Texture2D" uid="uid://cg2p1g65d5uu" path="res://assets/before/BD_19_Anim/frame_01.png" id="2_scdo6"]
-[ext_resource type="Texture2D" uid="uid://c6j2sircyjni5" path="res://assets/before/BD_19_Anim/frame_02.png" id="3_mkv0d"]
-[ext_resource type="Texture2D" uid="uid://bhepw6xdu3m8r" path="res://assets/before/BD_19_Anim/frame_03.png" id="4_6w65v"]
+[ext_resource type="Texture2D" uid="uid://chosqwrtywhaq" path="res://assets/before/BD_19_Anim/frame_02.png" id="3_mkv0d"]
+[ext_resource type="Texture2D" uid="uid://chqgqt5tss5ry" path="res://assets/before/BD_19_Anim/frame_03.png" id="4_6w65v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wbewh"]
 animations = [{

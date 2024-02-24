@@ -21,7 +21,7 @@ animations = [{
 [node name="bd_11" instance=ExtResource("1_66aya")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 1
+currentCharacter = 2
 nextShot = "res://scenes/before/bd_12.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

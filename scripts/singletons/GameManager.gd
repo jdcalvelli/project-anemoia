@@ -2,13 +2,15 @@ extends Node
 
 enum Characters {
 	FATHER,
-	MOTHER
+	MOTHER,
+	BOTH
 }
 
 # current shot reference
 var currentShot: Shot
 var nextScene: PackedScene
-var goNextWaitTime: int = 2
+# this will be refactored out for sure
+var goNextWaitTime: int = 4
 var canGoNext: bool = false
 
 func _ready():
@@ -44,7 +46,11 @@ func _on_stick_click(stick:InputManager.AnalogSticks):
 			if currentShot.currentCharacter == Characters.MOTHER:
 				if !currentShot.actionScene:
 					get_tree().change_scene_to_packed(nextScene)
-				
+		InputManager.AnalogSticks.BOTH:
+			if currentShot.currentCharacter == Characters.BOTH:
+				if !currentShot.actionScene:
+					get_tree().change_scene_to_packed(nextScene)
+
 func _on_analog_rotate(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:

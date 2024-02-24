@@ -42,3 +42,19 @@ func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 				"modulate:a",
 				1, 
 				helperTweenDuration)
+	elif currentChar == GameManager.Characters.BOTH:
+		if actionScene:
+			pass
+		else:
+			tween.set_parallel(true)
+			tween.tween_property(
+				$"Mother-Click-Helper",
+				"modulate:a",
+				1, 
+				helperTweenDuration)
+			tween.tween_property(
+				$"Father-Click-Helper",
+				"modulate:a",
+				1,
+				helperTweenDuration
+			)

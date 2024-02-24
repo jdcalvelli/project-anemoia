@@ -31,6 +31,7 @@ animations = [{
 }]
 
 [node name="bd_18" instance=ExtResource("1_4pn8r")]
+helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
 nextShot = "res://scenes/before/bd_19.tscn"

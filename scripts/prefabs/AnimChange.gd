@@ -16,10 +16,10 @@ func _on_change_anim_state(animState: int):
 	else:
 		if self.frame == self.sprite_frames.get_frame_count("default") - 1:
 			self.frame = 1
-			await get_tree().create_timer(0.15).timeout
+			await get_tree().create_timer(0.05).timeout
 			self.frame += 1
 		else:
 			# increase anim
 			self.frame += 1
-			await get_tree().create_timer(0.15).timeout
+			await get_tree().create_timer(0.05).timeout
 			self.frame += 1

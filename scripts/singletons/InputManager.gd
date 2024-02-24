@@ -54,13 +54,13 @@ func _input(event):
 	if event.is_action_pressed("left-stick-click"):
 		# wait and see if the second click happens
 		await wait_for_second_stick(AnalogSticks.RIGHT)
-		
-		# EventBus.analogClick.emit(AnalogSticks.LEFT)
+		# should the post wait for second click be here?
 	elif event.is_action_pressed("right-stick-click"):
 		# wait and see if the second click happens
 		await wait_for_second_stick(AnalogSticks.LEFT)
+		# should the post wait for second click be here?
 	else:
-		# if its anything else
+		# if its anything else, dont do anything
 		return
 
 # ### helper funcs ###

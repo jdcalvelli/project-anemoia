@@ -2,7 +2,8 @@ extends Node
 
 enum Characters {
 	FATHER,
-	MOTHER
+	MOTHER,
+	BOTH
 }
 
 # current shot reference

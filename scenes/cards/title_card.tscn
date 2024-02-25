@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkashxgho6hu6"]
 
 [ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_gf4if"]
-[ext_resource type="Texture2D" uid="uid://blwjnb3ksjdlu" path="res://assets/before/Title_Card.png" id="2_ebtgb"]
+[ext_resource type="Texture2D" uid="uid://cp5oy7fwhaxdp" path="res://assets/before/Title_Card/Title_Card.png" id="2_4imm5"]
 
 [node name="title-card" instance=ExtResource("1_gf4if")]
 
@@ -12,4 +12,4 @@ text = "title card"
 [node name="TitleCard" type="Sprite2D" parent="." index="4"]
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.52, 0.52)
-texture = ExtResource("2_ebtgb")
+texture = ExtResource("2_4imm5")

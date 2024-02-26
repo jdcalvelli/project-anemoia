@@ -1,0 +1,42 @@
+[gd_resource type="ProjectCache" load_steps=5 format=3 uid="uid://stgt38bmt840"]
+
+[ext_resource type="BankAsset" uid="uid://bkumgio0tf81p" path="res://addons/FMOD/editor/resources/banks/{1ed4ac8a-8f90-4183-8494-65525f8bd933}.tres" id="1_y2c12"]
+[ext_resource type="BankAsset" uid="uid://dm0su6js1vmno" path="res://addons/FMOD/editor/resources/banks/{86c98c5e-feeb-0dc1-02dd-efacae78dfab}.tres" id="2_15pn5"]
+[ext_resource type="BusAsset" uid="uid://dlglc2pw1vmts" path="res://addons/FMOD/editor/resources/busses/{e700db10-905d-47fc-a252-f4c32cfc0906}.tres" id="3_0w8se"]
+[ext_resource type="BusAsset" uid="uid://cg5xjkefioaff" path="res://addons/FMOD/editor/resources/busses/{ad704468-2335-47f2-9767-7978f556895c}.tres" id="4_tyctt"]
+
+[resource]
+banks = {
+"{1ed4ac8a-8f90-4183-8494-65525f8bd933}": ExtResource("1_y2c12"),
+"{86c98c5e-feeb-0dc1-02dd-efacae78dfab}": ExtResource("2_15pn5")
+}
+busses = {
+"{ad704468-2335-47f2-9767-7978f556895c}": ExtResource("4_tyctt"),
+"{e700db10-905d-47fc-a252-f4c32cfc0906}": ExtResource("3_0w8se")
+}
+bank_tree = [{
+"children": [],
+"item_type": 3,
+"node_name": "Master",
+"path": "bank:/Master",
+"resource": ExtResource("1_y2c12")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master.strings",
+"path": "bank:/Master.strings",
+"resource": ExtResource("2_15pn5")
+}]
+bus_tree = [{
+"children": [{
+"children": [],
+"item_type": 4,
+"node_name": "Reverb",
+"path": "bus:/Reverb",
+"resource": ExtResource("4_tyctt")
+}],
+"item_type": 4,
+"node_name": "bus:",
+"path": "bus:/",
+"resource": ExtResource("3_0w8se")
+}]

@@ -7,6 +7,8 @@ extends Node2D
 @export var helperTweenDuration = 4
 
 func _ready():
+	# play shutter click sound
+	$ShutterClick.play()
 	# wait for timeout
 	await get_tree().create_timer(helperTimeToWait).timeout
 	# then do the tween for the right object

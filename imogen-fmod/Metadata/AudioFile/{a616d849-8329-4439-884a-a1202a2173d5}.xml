@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a616d849-8329-4439-884a-a1202a2173d5}">
+		<property name="assetPath">
+			<value>old_SLR_sounds.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>27.096</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2e756c3c-c61b-4edd-8f86-b8abdd04a165}</destination>
+		</relationship>
+	</object>
+</objects>

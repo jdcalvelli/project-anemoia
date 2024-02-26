@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{515a50b4-e813-428c-89fd-1133183c6ec9}">
+		<property name="assetPath">
+			<value>ui-ish/SLR3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.29997916666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2e756c3c-c61b-4edd-8f86-b8abdd04a165}</destination>
+		</relationship>
+	</object>
+</objects>

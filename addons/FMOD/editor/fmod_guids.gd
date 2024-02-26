@@ -14,6 +14,5 @@ class Busses:
 	const REVERB = "{ad704468-2335-47f2-9767-7978f556895c}"
 
 class Banks:
-	const BANK_A = "{7b020d1f-46fc-4f4e-a9d4-7e76ece49e21}"
 	const MASTER = "{1ed4ac8a-8f90-4183-8494-65525f8bd933}"
 

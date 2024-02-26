@@ -8,7 +8,8 @@ extends Node2D
 
 func _ready():
 	# play shutter click sound
-	$ShutterClick.play()
+	# play one shot will abide by loop regions!
+	FMODRuntime.play_one_shot_id(FMODGuids.Events.SHUTTERCLICK)
 	# wait for timeout
 	await get_tree().create_timer(helperTimeToWait).timeout
 	# then do the tween for the right object

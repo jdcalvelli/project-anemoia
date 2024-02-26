@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{a616d849-8329-4439-884a-a1202a2173d5}">
 		<property name="assetPath">
-			<value>old_SLR_sounds.mp3</value>
+			<value>ui-ish/old_SLR_sounds.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

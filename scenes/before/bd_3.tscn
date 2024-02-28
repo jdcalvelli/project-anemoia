@@ -17,7 +17,6 @@ animations = [{
 [node name="bd_3" instance=ExtResource("1_cco3l")]
 
 [node name="Shot" parent="." index="0"]
-desiredAmbience = "event:/Ambience/schoolAmbience"
 nextShot = "res://scenes/before/bd_4.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

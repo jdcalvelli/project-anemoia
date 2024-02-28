@@ -3,8 +3,11 @@ class_name Shot
 
 # data class for each shot
 
-@export var desiredAmbience:String
+@export_category("FMOD Event Refs")
+@export var sceneAmbiencePath:String
+@export var sceneAudioPath:String
 
+@export_category("Shot Logic")
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
 

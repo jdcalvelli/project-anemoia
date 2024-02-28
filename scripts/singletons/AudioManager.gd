@@ -11,7 +11,12 @@ func _ready():
 		FMODRuntime.create_instance_path("event:/Ambience/testAmbience")
 	)
 
-func change_ambience(eventPath : String):
+func play_scene_audio(eventPath:String):
+	# should probably change this into instance based
+	if eventPath != null:
+		FMODRuntime.play_one_shot_path(eventPath)
+
+func change_ambience(eventPath:String):
 	for ambienceInstance in ambienceInstances:
 		# check if we're talking about the right one
 		if ambienceInstance.get_description().get_path() == eventPath:

@@ -12,7 +12,10 @@ func _ready():
 	# play shutter click sound
 	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
 	# calling change_ambience
-	AudioManager.change_ambience($Shot.desiredAmbience)
+	AudioManager.change_ambience($Shot.sceneAmbiencePath)
+	# play the scene audio
+	AudioManager.play_scene_audio($Shot.sceneAudioPath)
+	
 	
 	# wait for timeout
 	await get_tree().create_timer(helperTimeToWait).timeout

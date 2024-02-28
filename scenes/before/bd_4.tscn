@@ -61,7 +61,6 @@ animations = [{
 [node name="bd_4" instance=ExtResource("1_22qf4")]
 
 [node name="Shot" parent="." index="0"]
-desiredAmbience = "event:/Ambience/testAmbience"
 actionScene = true
 numRequiredActions = 1
 nextShot = "res://scenes/before/bd_5.tscn"

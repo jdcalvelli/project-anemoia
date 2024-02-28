@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cig704bej3m2l"]
+[gd_scene load_steps=6 format=3 uid="uid://cig704bej3m2l"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_r4cks"]
-[ext_resource type="Texture2D" uid="uid://be1sresq5uh60" path="res://assets/before/BD_13_Anim/frame_01.png" id="2_n0n4a"]
-[ext_resource type="Texture2D" uid="uid://b6m7nbtyrm4op" path="res://assets/before/BD_13_Anim/frame_02.png" id="3_gavqo"]
+[ext_resource type="Texture2D" uid="uid://dydw1u6gbp4rm" path="res://assets/before/BD_13_Anim/frame_01.png" id="2_n0n4a"]
+[ext_resource type="Texture2D" uid="uid://b7i3prs8d3g6h" path="res://assets/before/BD_13_Anim/frame_02.png" id="3_gavqo"]
+[ext_resource type="Texture2D" uid="uid://dimquwo0jvb4h" path="res://assets/before/BD_13_Anim/frame_03.png" id="4_lf3lu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y4mvw"]
 animations = [{
@@ -10,8 +11,23 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_n0n4a")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("3_gavqo")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_lf3lu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_gavqo")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_lf3lu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_gavqo")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_lf3lu")
 }],
 "loop": false,
 "name": &"default",
@@ -27,6 +43,8 @@ nextShot = "res://scenes/before/bd_14.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_y4mvw")
 autoplay = "default"
+frame = 6
+frame_progress = 1.0
 
 [node name="temp - name display" parent="." index="3"]
 visible = false

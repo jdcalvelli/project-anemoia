@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://b430gf6kp6r5i"]
+
+[resource]
+file_path = "res://imogen-fmod/Build/Desktop/SFX.bank"
+modified_time = 1709132553
+path = "bank:/SFX"
+guid = "{77a3cdc3-4851-47c9-b68f-58cdf59d79e8}"
+name = "SFX"

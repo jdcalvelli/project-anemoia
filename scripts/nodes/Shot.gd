@@ -3,6 +3,8 @@ class_name Shot
 
 # data class for each shot
 
+@export var desiredAmbience:String
+
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
 

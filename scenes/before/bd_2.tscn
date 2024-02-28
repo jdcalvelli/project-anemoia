@@ -17,6 +17,7 @@ animations = [{
 [node name="bd_2" instance=ExtResource("1_7eehm")]
 
 [node name="Shot" parent="." index="0"]
+desiredAmbience = "event:/Ambience/schoolAmbience"
 currentCharacter = 2
 nextShot = "res://scenes/before/bd_3.tscn"
 

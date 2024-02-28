@@ -5,6 +5,8 @@ class_name Shot
 
 @export_category("FMOD Event Refs")
 @export var sceneAmbiencePath:String
+@export var sceneAmbienceParam:String
+@export var sceneAmbienceVal:float
 @export var sceneAudioPath:String
 
 @export_category("Shot Logic")

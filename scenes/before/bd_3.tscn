@@ -17,6 +17,9 @@ animations = [{
 [node name="bd_3" instance=ExtResource("1_cco3l")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/schoolAmbience"
+sceneAmbienceParam = "muffleLevel"
+sceneAmbienceVal = 0.5
 nextShot = "res://scenes/before/bd_4.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

@@ -16,6 +16,11 @@ func play_scene_audio(eventPath:String):
 	if eventPath != null:
 		FMODRuntime.play_one_shot_path(eventPath)
 
+func update_ambience_param(eventPath:String, param:String, value:float):
+	for ambienceInstance in ambienceInstances:
+		if ambienceInstance.get_description().get_path() == eventPath:
+			ambienceInstance.set_parameter_by_name(param, value)
+
 func change_ambience(eventPath:String):
 	for ambienceInstance in ambienceInstances:
 		# check if we're talking about the right one

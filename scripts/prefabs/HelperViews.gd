@@ -13,6 +13,8 @@ func _ready():
 	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
 	# calling change_ambience
 	AudioManager.change_ambience($Shot.sceneAmbiencePath)
+	# change ambience param
+	AudioManager.update_ambience_param($Shot.sceneAmbiencePath, $Shot.sceneAmbienceParam, $Shot.sceneAmbienceVal)
 	# play the scene audio
 	AudioManager.play_scene_audio($Shot.sceneAudioPath)
 	

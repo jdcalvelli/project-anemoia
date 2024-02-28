@@ -1,18 +1,18 @@
 [gd_scene load_steps=15 format=3 uid="uid://bq6m04u45jyp3"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_22qf4"]
-[ext_resource type="Texture2D" uid="uid://2jbtdq48dpw2" path="res://assets/before/BD_04_Anim/frame_01.png" id="2_ckoh8"]
-[ext_resource type="Texture2D" uid="uid://s0kfcg3g4o2r" path="res://assets/before/BD_04_Anim/frame_02.png" id="3_hpmlf"]
-[ext_resource type="Texture2D" uid="uid://w5q1utudvu88" path="res://assets/before/BD_04_Anim/frame_03.png" id="4_mmrhf"]
-[ext_resource type="Texture2D" uid="uid://brcbl6u8qs376" path="res://assets/before/BD_04_Anim/frame_04.png" id="5_upll0"]
-[ext_resource type="Texture2D" uid="uid://df4bnxxuddlkj" path="res://assets/before/BD_04_Anim/frame_05.png" id="6_bhqgu"]
-[ext_resource type="Texture2D" uid="uid://f5nigwiykg3r" path="res://assets/before/BD_04_Anim/frame_06.png" id="7_k83x3"]
-[ext_resource type="Texture2D" uid="uid://0er5at45tvv" path="res://assets/before/BD_04_Anim/frame_07.png" id="8_txyoq"]
-[ext_resource type="Texture2D" uid="uid://wilguy7mvsls" path="res://assets/before/BD_04_Anim/frame_08.png" id="9_g3ogu"]
-[ext_resource type="Texture2D" uid="uid://c7up3jivlwkos" path="res://assets/before/BD_04_Anim/frame_09.png" id="10_dc52d"]
-[ext_resource type="Texture2D" uid="uid://q68p8yf4y0m2" path="res://assets/before/BD_04_Anim/frame_10.png" id="11_j2158"]
-[ext_resource type="Texture2D" uid="uid://0vogyjygdmbh" path="res://assets/before/BD_04_Anim/frame_11.png" id="12_uagxo"]
-[ext_resource type="Texture2D" uid="uid://dmxf3anu4nkuy" path="res://assets/before/BD_04_Anim/frame_12.png" id="13_cgw1q"]
+[ext_resource type="Texture2D" uid="uid://dadtxuft72ivf" path="res://assets/before/BD_04_Anim/frame_01.png" id="2_ckoh8"]
+[ext_resource type="Texture2D" uid="uid://cd3to6ehqwawe" path="res://assets/before/BD_04_Anim/frame_02.png" id="3_hpmlf"]
+[ext_resource type="Texture2D" uid="uid://dhnjjn6tq1fp3" path="res://assets/before/BD_04_Anim/frame_03.png" id="4_mmrhf"]
+[ext_resource type="Texture2D" uid="uid://dwcsqtvmgcu8h" path="res://assets/before/BD_04_Anim/frame_04.png" id="5_upll0"]
+[ext_resource type="Texture2D" uid="uid://cwbtr242icdlw" path="res://assets/before/BD_04_Anim/frame_05.png" id="6_bhqgu"]
+[ext_resource type="Texture2D" uid="uid://bjnb5yosisaie" path="res://assets/before/BD_04_Anim/frame_06.png" id="7_k83x3"]
+[ext_resource type="Texture2D" uid="uid://c7p1bn7b33wpe" path="res://assets/before/BD_04_Anim/frame_07.png" id="8_txyoq"]
+[ext_resource type="Texture2D" uid="uid://dsu6sdfpe7exc" path="res://assets/before/BD_04_Anim/frame_08.png" id="9_g3ogu"]
+[ext_resource type="Texture2D" uid="uid://co1bvr7oth68r" path="res://assets/before/BD_04_Anim/frame_09.png" id="10_dc52d"]
+[ext_resource type="Texture2D" uid="uid://diduhp6rbo857" path="res://assets/before/BD_04_Anim/frame_10.png" id="11_j2158"]
+[ext_resource type="Texture2D" uid="uid://btgef4u4rwrc0" path="res://assets/before/BD_04_Anim/frame_11.png" id="12_uagxo"]
+[ext_resource type="Texture2D" uid="uid://hxjgmufufdrm" path="res://assets/before/BD_04_Anim/frame_12.png" id="13_cgw1q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w6c1s"]
 animations = [{
@@ -67,7 +67,6 @@ nextShot = "res://scenes/before/bd_5.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_w6c1s")
-frame = 1
 frame_progress = 0.278228
 
 [node name="temp - name display" parent="." index="3"]

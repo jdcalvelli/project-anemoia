@@ -61,6 +61,11 @@ animations = [{
 [node name="bd_7" instance=ExtResource("1_w361j")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/headphoneAmbience"
+sceneAmbienceParam = "muffleLevel"
+sceneAmbienceVal = 0.7
+sceneAudioPath = "event:/beforeDays/bd7"
+sceneAudioPlaybackPoint = 2
 currentCharacter = 1
 actionScene = true
 numRequiredActions = 1

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dws5ivo4wa4tq"
+path="res://.godot/imported/Photek - T'Raenon.mp3-a06a795bc45d909f653bdf3d856fc6ad.mp3str"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/ambience/headphoneAmbience/Photek - T'Raenon.mp3"
+dest_files=["res://.godot/imported/Photek - T'Raenon.mp3-a06a795bc45d909f653bdf3d856fc6ad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

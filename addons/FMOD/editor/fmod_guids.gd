@@ -7,9 +7,13 @@
 class_name FMODGuids
 
 class Events:
+	const AMBIENCE_HEADPHONEAMBIENCE = "{678ff57a-cf1c-462d-b053-70e345c297c3}"
 	const AMBIENCE_SCHOOLAMBIENCE = "{d19261b1-a71b-45f7-812a-aa609d1eabd5}"
 	const AMBIENCE_TESTAMBIENCE = "{9a280be6-60de-444c-ae85-1965f2dc9a23}"
 	const BEFOREDAYS_BD2 = "{2dd5040f-5125-4c71-96e7-657678d8a863}"
+	const BEFOREDAYS_BD4 = "{b35915ec-9d5f-4ccc-85f2-e6c5d7a52edf}"
+	const BEFOREDAYS_BD5 = "{f859d130-de0b-4b9a-9626-caebcb956f38}"
+	const BEFOREDAYS_BD7 = "{cb9cd52c-46f8-4af2-b7a5-cb24dc6b1e23}"
 	const SFX_SHUTTERCLICK = "{c545782c-8b2e-47ce-825c-ed1420db07c7}"
 
 class Busses:

@@ -61,6 +61,11 @@ animations = [{
 [node name="bd_4" instance=ExtResource("1_22qf4")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/schoolAmbience"
+sceneAmbienceParam = "muffleLevel"
+sceneAmbienceVal = 0.5
+sceneAudioPath = "event:/beforeDays/bd4"
+sceneAudioPlaybackPoint = 1
 actionScene = true
 numRequiredActions = 1
 nextShot = "res://scenes/before/bd_5.tscn"

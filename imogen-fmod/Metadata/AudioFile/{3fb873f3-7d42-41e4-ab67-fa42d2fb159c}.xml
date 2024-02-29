@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{3fb873f3-7d42-41e4-ab67-fa42d2fb159c}">
 		<property name="assetPath">
-			<value>beforeDays/bd2/378394__deleted_user_7020630__school-bell.wav</value>
+			<value>beforeDays/bd2/school-bell.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

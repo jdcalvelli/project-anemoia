@@ -17,6 +17,8 @@ animations = [{
 [node name="bd_6" instance=ExtResource("1_4ybcg")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/headphoneAmbience"
+sceneAmbienceParam = "muffleLevel"
 currentCharacter = 1
 nextShot = "res://scenes/before/bd_7.tscn"
 

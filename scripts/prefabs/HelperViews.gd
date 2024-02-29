@@ -6,19 +6,7 @@ extends Node2D
 @export var helperTimeToWait = 5
 @export var helperTweenDuration = 4
 
-var ambienceInstance : EventInstance
-
 func _ready():
-	# play shutter click sound
-	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
-	# calling change_ambience
-	AudioManager.change_ambience($Shot.sceneAmbiencePath)
-	# change ambience param
-	AudioManager.update_ambience_param($Shot.sceneAmbiencePath, $Shot.sceneAmbienceParam, $Shot.sceneAmbienceVal)
-	# play the scene audio
-	AudioManager.play_scene_audio($Shot.sceneAudioPath)
-	
-	
 	# wait for timeout
 	await get_tree().create_timer(helperTimeToWait).timeout
 	# then do the tween for the right object

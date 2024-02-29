@@ -23,6 +23,10 @@ func _physics_process(delta):
 	if !canGoNext:
 		return
 	
+	# if we're over the num shots
+	if currentShot.numActionsTaken >= currentShot.numRequiredActions:
+		return
+	
 	# listen for the right kind of input depending on char
 	if currentShot.currentCharacter == Characters.FATHER:
 		if currentShot.actionScene and !currentShot.reverseActions:

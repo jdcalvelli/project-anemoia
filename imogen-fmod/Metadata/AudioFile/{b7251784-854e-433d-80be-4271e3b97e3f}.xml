@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{b7251784-854e-433d-80be-4271e3b97e3f}">
 		<property name="assetPath">
-			<value>beforeDays/bd5/gas-ignite.wav</value>
+			<value>beforeDays/gas-ignite.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

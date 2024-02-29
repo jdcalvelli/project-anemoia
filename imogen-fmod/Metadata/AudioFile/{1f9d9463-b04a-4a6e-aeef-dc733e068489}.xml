@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{1f9d9463-b04a-4a6e-aeef-dc733e068489}">
 		<property name="assetPath">
-			<value>beforeDays/bd7/cassette-stop.flac</value>
+			<value>beforeDays/cassette-stop.flac</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

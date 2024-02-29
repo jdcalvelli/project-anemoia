@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1hwh8c30kn2b"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_aj1hn"]
-[ext_resource type="Texture2D" uid="uid://erpotckrfvhc" path="res://assets/before/BD_15_Anim/frame_01.png" id="2_tdgr0"]
-[ext_resource type="Texture2D" uid="uid://bfoqrviurfvm" path="res://assets/before/BD_15_Anim/frame_02.png" id="3_ywf1y"]
-[ext_resource type="Texture2D" uid="uid://x4vkoj0050kl" path="res://assets/before/BD_15_Anim/frame_03.png" id="4_nc34l"]
-[ext_resource type="Texture2D" uid="uid://bbl3myyfohugt" path="res://assets/before/BD_15_Anim/frame_04.png" id="5_tmd8g"]
+[ext_resource type="Texture2D" uid="uid://cg2e056i6j6ow" path="res://assets/before/BD_15_Anim/frame_01.png" id="2_tdgr0"]
+[ext_resource type="Texture2D" uid="uid://bxfphi3tc23d1" path="res://assets/before/BD_15_Anim/frame_02.png" id="3_ywf1y"]
+[ext_resource type="Texture2D" uid="uid://bac4n3jgk4pay" path="res://assets/before/BD_15_Anim/frame_03.png" id="4_nc34l"]
+[ext_resource type="Texture2D" uid="uid://blw4e8hcjrvlh" path="res://assets/before/BD_15_Anim/frame_04.png" id="5_tmd8g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3v7uy"]
 animations = [{
@@ -15,7 +15,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_ywf1y")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("4_nc34l")
 }, {
 "duration": 1.0,
@@ -27,6 +27,7 @@ animations = [{
 }]
 
 [node name="bd_15" instance=ExtResource("1_aj1hn")]
+helperTimeToWait = 6
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/beforeDays/bd15"

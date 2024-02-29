@@ -5,6 +5,10 @@
 
 [node name="title-card" instance=ExtResource("1_gf4if")]
 
+[node name="Shot" parent="." index="0"]
+currentCharacter = 2
+nextShot = "res://scenes/fourdaysuntil/4du_1.tscn"
+
 [node name="temp - card title" parent="." index="3"]
 visible = false
 text = "title card"

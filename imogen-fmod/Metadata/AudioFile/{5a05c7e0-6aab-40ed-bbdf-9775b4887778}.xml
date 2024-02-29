@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{5a05c7e0-6aab-40ed-bbdf-9775b4887778}">
 		<property name="assetPath">
-			<value>beforeDays/Cymatics - LIFE - Walking on Boardwalk.wav</value>
+			<value>beforeDays/walk.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

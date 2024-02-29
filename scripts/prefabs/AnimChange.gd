@@ -23,3 +23,7 @@ func _on_change_anim_state(animState: int):
 			self.frame += 1
 			await get_tree().create_timer(0.05).timeout
 			self.frame += 1
+			
+	# normalize angle / pos of analog stick to be between zero and one
+	# use that to calculate where in the total number of frames you should be
+	# absolute value under the x axis, then not

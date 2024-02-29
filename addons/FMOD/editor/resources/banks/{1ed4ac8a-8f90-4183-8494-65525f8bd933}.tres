@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://bkumgio0tf81p"]
+
+[resource]
+file_path = "res://imogen-fmod/Build/Desktop/Master.bank"
+modified_time = 1709228419
+path = "bank:/Master"
+guid = "{1ed4ac8a-8f90-4183-8494-65525f8bd933}"
+name = "Master"

@@ -37,6 +37,7 @@ animations = [{
 [node name="bd_13" instance=ExtResource("1_r4cks")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd13"
 currentCharacter = 1
 nextShot = "res://scenes/before/bd_14.tscn"
 

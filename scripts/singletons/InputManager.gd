@@ -43,10 +43,6 @@ func _physics_process(delta):
 
 # input func for stick clicks ONLY
 func _input(event):
-	# if can go next isnt true, break
-	if !GameManager.canGoNext:
-		return
-	
 	# if we're in a double click , stop listening for events here
 	if doubleClickScenario:
 		return
@@ -110,6 +106,9 @@ func joy_rotate(input_vec:Vector2):
 	if current_angle < -2*PI/3 and previous_angle > -2*PI/3 and !rotateFlags[0]:
 		#print("passed flag 1")
 		rotateFlags[0] = 1
+		# audio related
+		EventBus.actionStarted.emit()
+		# anim related, will be reworked
 		EventBus.changeAnimState.emit(1)
 	elif current_angle > PI - 0.2 and previous_angle < PI - 0.2 and rotateFlags[0]:
 		#print("passed flag 2")
@@ -137,8 +136,12 @@ func joy_rotate(input_vec:Vector2):
 		rotateFlags = [0,0,0,0,0,0]
 		match GameManager.currentShot.currentCharacter:
 			GameManager.Characters.FATHER:
+				# for audio
+				EventBus.actionCompleted.emit()
+				# for logic
 				EventBus.analogRotate.emit(AnalogSticks.LEFT)
 			GameManager.Characters.MOTHER:
+				EventBus.actionCompleted.emit()
 				EventBus.analogRotate.emit(AnalogSticks.RIGHT)
 		
 	# frame updates
@@ -153,6 +156,7 @@ func joy_rock(input_vec:Vector2):
 	if current_pos.y < -0.25 and previous_pos.y > -0.25 and !rockFlags[0]:
 		#print("first flag")
 		rockFlags[0] = 1
+		EventBus.actionStarted.emit()
 		EventBus.changeAnimState.emit(1)
 	if current_pos.y < -0.50 and previous_pos.y > -0.50 and rockFlags[0]:
 		#print("second flag")
@@ -180,8 +184,10 @@ func joy_rock(input_vec:Vector2):
 		rockFlags = [0,0,0,0,0,0]
 		match GameManager.currentShot.currentCharacter:
 			GameManager.Characters.FATHER:
+				EventBus.actionCompleted.emit()
 				EventBus.analogFlick.emit(AnalogSticks.LEFT)
 			GameManager.Characters.MOTHER:
+				EventBus.actionCompleted.emit()
 				EventBus.analogFlick.emit(AnalogSticks.RIGHT)
 	
 	# prev/curr frame updates

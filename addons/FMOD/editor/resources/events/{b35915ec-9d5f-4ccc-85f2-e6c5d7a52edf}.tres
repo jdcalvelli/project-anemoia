@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://brewwi0p4plui"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/beforeDays/bd4"
+guid = "{b35915ec-9d5f-4ccc-85f2-e6c5d7a52edf}"
+name = "bd4"

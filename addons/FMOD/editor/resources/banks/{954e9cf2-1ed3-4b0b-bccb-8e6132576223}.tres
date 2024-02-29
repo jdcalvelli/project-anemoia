@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://mxay26dn1wtu"]
+
+[resource]
+file_path = "res://imogen-fmod/Build/Desktop/beforeDays.bank"
+modified_time = 1709229147
+path = "bank:/beforeDays"
+guid = "{954e9cf2-1ed3-4b0b-bccb-8e6132576223}"
+name = "beforeDays"

@@ -1,0 +1,27 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://jxqy37rqfthh"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_nat1h"]
+data1 = 1019254239
+data2 = 3709706800
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_7t0kt"]
+name = "muffleLevel"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_nat1h")
+maximum = 1.0
+guid = "{0713b10a-839e-4931-a8a4-171b9154cccd}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_2q7rm"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_7t0kt")
+path = "parameter:/muffleLevel"
+guid = "{0713b10a-839e-4931-a8a4-171b9154cccd}"
+name = "muffleLevel"
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{0713b10a-839e-4931-a8a4-171b9154cccd}": SubResource("ParameterAsset_2q7rm")
+}
+path = "event:/Ambience/schoolAmbience"
+guid = "{d19261b1-a71b-45f7-812a-aa609d1eabd5}"
+name = "schoolAmbience"

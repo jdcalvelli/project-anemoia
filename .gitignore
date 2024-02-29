@@ -16,3 +16,8 @@ mono_crash.*.json
 
 .DS_Store
 build
+imogen-fmod/.cache/buildrecords/Desktop
+imogen-fmod/.unsaved/.user/Metadata
+imogen-fmod/.user/Metadata
+imogen-fmod/.cache
+addons/FMOD/editor/cache

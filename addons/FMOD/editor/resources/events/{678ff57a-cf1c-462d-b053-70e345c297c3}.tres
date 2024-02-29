@@ -1,0 +1,27 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://chhg0m5mbjl6s"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_gn22s"]
+data1 = 1019254239
+data2 = 3709706800
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_6cxbe"]
+name = "muffleLevel"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_gn22s")
+maximum = 1.0
+guid = "{0713b10a-839e-4931-a8a4-171b9154cccd}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_xsxwx"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_6cxbe")
+path = "parameter:/muffleLevel"
+guid = "{0713b10a-839e-4931-a8a4-171b9154cccd}"
+name = "muffleLevel"
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{0713b10a-839e-4931-a8a4-171b9154cccd}": SubResource("ParameterAsset_xsxwx")
+}
+path = "event:/Ambience/headphoneAmbience"
+guid = "{678ff57a-cf1c-462d-b053-70e345c297c3}"
+name = "headphoneAmbience"

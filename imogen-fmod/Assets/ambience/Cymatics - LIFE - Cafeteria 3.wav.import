@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh4qatp2cyai7"
+path="res://.godot/imported/Cymatics - LIFE - Cafeteria 3.wav-97d8754eb6505bd3f3c475bbf1d0abb0.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/ambience/Cymatics - LIFE - Cafeteria 3.wav"
+dest_files=["res://.godot/imported/Cymatics - LIFE - Cafeteria 3.wav-97d8754eb6505bd3f3c475bbf1d0abb0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

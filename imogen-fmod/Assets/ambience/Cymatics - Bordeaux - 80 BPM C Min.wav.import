@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ci8s74yepdb2s"
+path="res://.godot/imported/Cymatics - Bordeaux - 80 BPM C Min.wav-829a2300ceaf8aeb639326dc0fef46ad.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/ambience/Cymatics - Bordeaux - 80 BPM C Min.wav"
+dest_files=["res://.godot/imported/Cymatics - Bordeaux - 80 BPM C Min.wav-829a2300ceaf8aeb639326dc0fef46ad.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

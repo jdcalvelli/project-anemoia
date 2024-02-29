@@ -10,8 +10,7 @@ enum Characters {
 var currentShot: Shot
 var nextScene: PackedScene
 # this will be refactored out for sure
-var goNextWaitTime: int = 4
-var canGoNext: bool = false
+var goNextWaitTime: float = 1.5
 
 func _ready():
 	EventBus.analogClick.connect(_on_stick_click)
@@ -19,8 +18,8 @@ func _ready():
 	EventBus.analogFlick.connect(_on_analog_flick)
 
 func _physics_process(delta):
-	# if can go next isnt true, break
-	if !canGoNext:
+	# if we're over the num shots
+	if currentShot.numActionsTaken >= currentShot.numRequiredActions:
 		return
 	
 	# listen for the right kind of input depending on char

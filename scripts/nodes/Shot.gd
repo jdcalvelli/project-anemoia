@@ -3,6 +3,16 @@ class_name Shot
 
 # data class for each shot
 
+@export_category("FMOD Event Refs")
+@export var sceneAmbiencePath:String
+@export var sceneAmbienceParam:String
+@export var sceneAmbienceVal:float
+@export var sceneAudioPath:String
+# if 0, play at ready, if 1, play at start of action, if 2, play at end of action
+# make this an enum eventually prob
+@export var sceneAudioPlaybackPoint:int
+
+@export_category("Shot Logic")
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
 
@@ -13,15 +23,33 @@ var numActionsTaken:int = 0
 @export var nextShot:String
 
 func _ready():
+	# subscribe to events
+	EventBus.actionStarted.connect(_on_action_started_audio)
+	EventBus.actionCompleted.connect(_on_action_completed_audio)
 	# pass the shot up to the gamemanager
 	GameManager.currentShot = self
 	# pass the next scene up as preload
 	GameManager.nextScene = load(nextShot)
 	
-	# make sure not can go next
-	GameManager.canGoNext = false
-	print("cant go next")
-	# wait two seconds before interactable
-	await get_tree().create_timer(GameManager.goNextWaitTime).timeout
-	GameManager.canGoNext = true
-	print("can go next")
+	# FMOD
+		# play shutter click sound
+	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
+	# calling change_ambience
+	AudioManager.change_ambience(sceneAmbiencePath)
+	# change ambience param
+	AudioManager.update_ambience_param(sceneAmbiencePath, sceneAmbienceParam, sceneAmbienceVal)
+	# play the scene audio if 0
+	if sceneAudioPlaybackPoint == 0:
+		AudioManager.play_scene_audio(sceneAudioPath)
+
+func _on_action_started_audio():
+	if sceneAudioPlaybackPoint == 1:
+		AudioManager.play_scene_audio(sceneAudioPath)
+
+func _on_action_completed_audio():
+	if sceneAudioPlaybackPoint == 2:
+		AudioManager.play_scene_audio(sceneAudioPath)
+
+func _exit_tree():
+	# cleanup audio when we leave the tree
+	AudioManager.cleanup_scene_audio(sceneAudioPath)

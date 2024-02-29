@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckhfw0y5xop86"
+path="res://.godot/imported/Cymatics - LIFE - Walking on Boardwalk.wav-c3db87ab4077bd6f7897fb5e69be05c7.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/beforeDays/Cymatics - LIFE - Walking on Boardwalk.wav"
+dest_files=["res://.godot/imported/Cymatics - LIFE - Walking on Boardwalk.wav-c3db87ab4077bd6f7897fb5e69be05c7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

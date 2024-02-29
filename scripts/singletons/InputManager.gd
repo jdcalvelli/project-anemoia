@@ -43,10 +43,6 @@ func _physics_process(delta):
 
 # input func for stick clicks ONLY
 func _input(event):
-	# if can go next isnt true, break
-	if !GameManager.canGoNext:
-		return
-	
 	# if we're in a double click , stop listening for events here
 	if doubleClickScenario:
 		return

@@ -41,14 +41,6 @@ func _ready():
 	# play the scene audio if 0
 	if sceneAudioPlaybackPoint == 0:
 		AudioManager.play_scene_audio(sceneAudioPath)
-	
-	# make sure not can go next
-	GameManager.canGoNext = false
-	print("cant go next")
-	# wait two seconds before interactable
-	await get_tree().create_timer(GameManager.goNextWaitTime).timeout
-	GameManager.canGoNext = true
-	print("can go next")
 
 func _on_action_started_audio():
 	if sceneAudioPlaybackPoint == 1:

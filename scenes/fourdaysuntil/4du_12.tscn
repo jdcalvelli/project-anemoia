@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqf07g5dygabf"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_lrvy2"]
+
+[node name="4du_12" instance=ExtResource("1_lrvy2")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 1
+nextShot = "res://scenes/fourdaysuntil/4du_13.tscn"
+
+[node name="temp - name display" parent="." index="3"]
+text = "4du_12"

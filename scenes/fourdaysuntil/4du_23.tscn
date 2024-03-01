@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxo35aenay3u4"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_y4asm"]
+
+[node name="4du_23" instance=ExtResource("1_y4asm")]
+
+[node name="Shot" parent="." index="0"]
+nextShot = "res://scenes/cards/three_days_card.tscn"
+
+[node name="temp - name display" parent="." index="3"]
+text = "4du_23"

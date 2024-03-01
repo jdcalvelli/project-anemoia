@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu24pi2top25r"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_xxcf6"]
+
+[node name="4du_21" instance=ExtResource("1_xxcf6")]
+
+[node name="Shot" parent="." index="0"]
+actionScene = true
+numRequiredActions = 1
+nextShot = "res://scenes/fourdaysuntil/4du_22.tscn"
+
+[node name="temp - name display" parent="." index="3"]
+text = "4du_21"

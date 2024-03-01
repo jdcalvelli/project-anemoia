@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://drtvrkuvfqgt2"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/beforeDays/bd19"
+guid = "{6e0a702c-1f12-461f-9cc3-db22164dbaa6}"
+name = "bd19"

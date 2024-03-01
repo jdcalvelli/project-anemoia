@@ -25,6 +25,7 @@ animations = [{
 [node name="bd_16" instance=ExtResource("1_qbg2f")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd16"
 nextShot = "res://scenes/before/bd_17.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

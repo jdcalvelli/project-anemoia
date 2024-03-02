@@ -115,33 +115,26 @@ func joy_rotate(input_vec:Vector2):
 		rotateFlags[0] = 1
 		# audio related
 		EventBus.actionStarted.emit()
-		# anim related, will be reworked
-		EventBus.changeAnimState.emit(1)
 	elif current_angle > PI - 0.2 and previous_angle < PI - 0.2 and rotateFlags[0]:
 		#print("passed flag 2")
 		rotateFlags[0] = 0
 		rotateFlags[1] = 1
-		EventBus.changeAnimState.emit(2)
 	elif current_angle < 2*PI/3 and previous_angle > 2*PI/3 and rotateFlags[1]:
 		#print("passed flag 3")
 		rotateFlags[1] = 0
 		rotateFlags[2] = 1
-		EventBus.changeAnimState.emit(3)
 	elif current_angle < PI/3 and previous_angle > PI/3 and rotateFlags[2]:
 		#print("passed flag 4")
 		rotateFlags[2] = 2
 		rotateFlags[3] = 1
-		EventBus.changeAnimState.emit(4)
 	elif current_angle < 0 and previous_angle > 0 and rotateFlags[3]:
 		#print("passed flag 5")
 		rotateFlags[3] = 0
 		rotateFlags[4] = 1
-		EventBus.changeAnimState.emit(5)
 	elif current_angle < -PI/3 and previous_angle > -PI/3 and rotateFlags[4]:
 		#print("passed flag 6")
 		rotateFlags[4] = 0
 		rotateFlags[5] = 1
-		EventBus.changeAnimState.emit(6)
 		
 	if rotateFlags[5]:
 		print("full rotation")

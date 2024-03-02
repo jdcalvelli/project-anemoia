@@ -21,7 +21,7 @@ func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 			tween.tween_property(
 				$"RAA-Helper", 
 				"modulate:a",
-				1, 
+				1,
 				helperTweenDuration)
 		else:
 			tween.tween_property(

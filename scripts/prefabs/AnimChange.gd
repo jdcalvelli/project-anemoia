@@ -9,7 +9,7 @@ var readyForNextSide = false
 func _physics_process(delta):
 	# every twelve frames do the jitter
 	if frameCounter % 12 == 0:
-		print("twelve frame")
+		#print("twelve frame")
 		# set the position of this image to some random value between 0 and maxjitterval
 		position = Vector2(randi_range(0, maxJitterVal.x + 1), randi_range(0, maxJitterVal.y + 1))
 	# increment frame counter
@@ -29,7 +29,7 @@ func _rotation_view():
 	print(checkVal)
 	# get position
 	if sign(InputManager.current_pos.x) == -1:
-		print("1 to 6 happen here")
+		#print("1 to 6 happen here")
 		if checkVal == -9 or checkVal == -8 or checkVal == -7:
 			frame = 0
 		elif checkVal == -6 or checkVal == -5 or checkVal == -4:
@@ -45,7 +45,7 @@ func _rotation_view():
 			# this is also dumb
 			readyForNextSide = true
 	elif sign(InputManager.current_pos.x) == 1 and readyForNextSide:
-		print("7 to 12 happen here")
+		#print("7 to 12 happen here")
 		if checkVal == 9 or checkVal == 8 or checkVal == 7:
 			frame = 6
 		elif checkVal == 6 or checkVal == 5 or checkVal == 4:
@@ -64,7 +64,7 @@ func _rotation_view():
 # this math is so much nicer lmao
 func _rock_view():
 	var checkVal = roundi(InputManager.current_pos.y * 6)
-	print(checkVal)
+	#print(checkVal)
 	if sign(checkVal) == -1:
 		# catch -6 case
 		if checkVal == -6:

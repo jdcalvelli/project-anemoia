@@ -3,9 +3,7 @@ extends AnimatedSprite2D
 var maxJitterVal:Vector2 = Vector2(2, 2)
 var frameCounter:int = 0
 
-# this needs to receive the signal for anim change
-func _ready():
-	EventBus.changeAnimState.connect(_on_change_anim_state)
+var readyForNextSide = false
 
 # update to be able to do the jitter animation
 func _physics_process(delta):
@@ -17,26 +15,67 @@ func _physics_process(delta):
 	# increment frame counter
 	frameCounter += 1
 
-# if number of frames on the frameresource is bigger than 1
-# then change the frame to equal whatever the frame signal number is
-func _on_change_anim_state(animState: int):
-	# six gates, but twelve frames devinne makes
+	if GameManager.currentShot.currentCharacter == GameManager.Characters.FATHER:
+		_rotation_view()
+	elif GameManager.currentShot.currentCharacter == GameManager.Characters.MOTHER:
+		_rock_view()
+
+
+### helper funcs
+
+func _rotation_view():
+	# this is the dumb way
+	var checkVal = floori(InputManager.current_pos.y * 10)
+	print(checkVal)
+	# get position
+	if sign(InputManager.current_pos.x) == -1:
+		print("1 to 6 happen here")
+		if checkVal == -9 or checkVal == -8 or checkVal == -7:
+			frame = 0
+		elif checkVal == -6 or checkVal == -5 or checkVal == -4:
+			frame = 1
+		elif checkVal == -3 or checkVal == -2 or checkVal == -1:
+			frame = 2
+		elif checkVal == 0 or checkVal == 1 or checkVal == 2:
+			frame = 3
+		elif checkVal == 3 or checkVal == 4 or checkVal == 5:
+			frame = 4
+		elif checkVal == 6 or checkVal == 7 or checkVal == 8:
+			frame = 5
+			# this is also dumb
+			readyForNextSide = true
+	elif sign(InputManager.current_pos.x) == 1 and readyForNextSide:
+		print("7 to 12 happen here")
+		if checkVal == 9 or checkVal == 8 or checkVal == 7:
+			frame = 6
+		elif checkVal == 6 or checkVal == 5 or checkVal == 4:
+			frame = 7
+		elif checkVal == 3 or checkVal == 2 or checkVal == 1:
+			frame = 8
+		elif checkVal == 0 or checkVal == -1 or checkVal == -2:
+			frame = 9
+		elif checkVal == -3 or checkVal == -4 or checkVal == -5:
+			frame = 10
+		elif checkVal == -6 or checkVal == -7 or checkVal == -8:
+			frame = 11
+			# equally dumb
+			readyForNextSide = true
 	
-	# first check if the if we've taken the correct num actions at least, and do nothing
-	if GameManager.currentShot.numActionsTaken >= GameManager.currentShot.numRequiredActions:
-		print("correct num actions taken - view")
-		return
-	else:
-		if self.frame == self.sprite_frames.get_frame_count("default") - 1:
-			self.frame = 1
-			await get_tree().create_timer(0.05).timeout
-			self.frame += 1
-		else:
-			# increase anim
-			self.frame += 1
-			await get_tree().create_timer(0.05).timeout
-			self.frame += 1
-			
-	# normalize angle / pos of analog stick to be between zero and one
-	# use that to calculate where in the total number of frames you should be
-	# absolute value under the x axis, then not
+# this math is so much nicer lmao
+func _rock_view():
+	var checkVal = roundi(InputManager.current_pos.y * 6)
+	print(checkVal)
+	if sign(checkVal) == -1:
+		# catch -6 case
+		if checkVal == -6:
+			frame = 5
+		elif !readyForNextSide:
+			frame = abs(checkVal)
+		# still dumb
+		if checkVal == -6:
+			readyForNextSide = true
+	elif sign(checkVal) == 1 and readyForNextSide:
+		frame = 6 + checkVal
+		# once again, still dumb
+		if checkVal == 5:
+			readyForNextSide = false

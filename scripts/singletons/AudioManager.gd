@@ -16,8 +16,13 @@ func _ready():
 	)
 
 func play_scene_audio(eventPath:String):
-	# right now always making a new one, should only make new one if there isn't one already
-	sceneAudioInstances.push_back(FMODRuntime.create_instance_path(eventPath))
+	# if any instances already have this path do nothing
+	if sceneAudioInstances.any(func(element): return element.get_description().get_path() == eventPath):
+		print("already exists once")
+		pass
+	else:
+		# create an instance
+		sceneAudioInstances.push_back(FMODRuntime.create_instance_path(eventPath))
 	
 	# play logic
 	for sceneAudioInstance in sceneAudioInstances:

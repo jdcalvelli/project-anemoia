@@ -18,7 +18,7 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 2
-nextShot = "res://scenes/before/bd_20_5.tscn"
+nextShot = "res://scenes/before/bd_21.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_qtxj4")

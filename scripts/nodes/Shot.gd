@@ -15,10 +15,13 @@ class_name Shot
 @export_category("Shot Logic")
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
-
 @export var actionScene:bool = false
 @export var numRequiredActions:int = 0
 var numActionsTaken:int = 0
+
+# this is only going to be used in the auto character case
+# this is a strong case of i should refactor this all into shot and shot subclasses
+@export var autoCharacterWaitTime: float
 
 @export var nextShot:String
 

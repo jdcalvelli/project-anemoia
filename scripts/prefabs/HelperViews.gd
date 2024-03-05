@@ -15,8 +15,8 @@ func _ready():
 
 # helper func
 func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
-	var tween = create_tween()
 	if currentChar == GameManager.Characters.FATHER:
+		var tween = create_tween()
 		if actionScene:
 			tween.tween_property(
 				$"RAA-Helper", 
@@ -30,6 +30,7 @@ func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 				1, 
 				helperTweenDuration)
 	elif currentChar == GameManager.Characters.MOTHER:
+		var tween = create_tween()
 		if actionScene:
 			tween.tween_property(
 				$"VAA-Helper", 
@@ -43,6 +44,7 @@ func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 				1, 
 				helperTweenDuration)
 	elif currentChar == GameManager.Characters.BOTH:
+		var tween = create_tween()
 		if actionScene:
 			pass
 		else:

@@ -25,6 +25,14 @@ var numActionsTaken:int = 0
 
 @export var nextShot:String
 
+func _enter_tree():
+	# this is for the auto character
+	# nill at this point
+	await get_tree().create_timer(autoCharacterWaitTime).timeout
+	if currentCharacter == GameManager.Characters.AUTO:
+		print("AUTOMOVE")
+		get_tree().change_scene_to_packed(GameManager.nextScene)
+
 func _ready():
 	# subscribe to events
 	EventBus.actionStarted.connect(_on_action_started_audio)

@@ -108,8 +108,6 @@ func joy_rotate(input_vec:Vector2):
 		rotateFlags = [0,0,0,0,0,0]
 		return
 		
-		print(rotateFlags)
-	
 	if current_angle < -2*PI/3 and previous_angle > -2*PI/3 and !rotateFlags[0]:
 		#print("passed flag 1")
 		rotateFlags[0] = 1

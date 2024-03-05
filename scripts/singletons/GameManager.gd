@@ -3,13 +3,14 @@ extends Node
 enum Characters {
 	FATHER,
 	MOTHER,
-	BOTH
+	BOTH,
+	AUTO,
 }
 
 # current shot reference
 var currentShot: Shot
 var nextScene: PackedScene
-# this will be refactored out for sure
+# this will be refactored out?
 var goNextWaitTime: float = 1.5
 
 func _ready():
@@ -19,7 +20,7 @@ func _ready():
 
 func _physics_process(delta):
 	# if we're over the num shots
-	if currentShot.numActionsTaken >= currentShot.numRequiredActions:
+	if currentShot.numActionsTaken >= currentShot.numRequiredActions and currentShot.numRequiredActions != 0:
 		return
 	
 	# listen for the right kind of input depending on char
@@ -33,7 +34,7 @@ func _physics_process(delta):
 			InputManager.joy_rock(InputManager.input_vec)
 		elif currentShot.actionScene and currentShot.reverseActions:
 			InputManager.joy_rotate(InputManager.input_vec)
-			
+	# both is handled in inputmanager input function - should that move?
 
 func _on_stick_click(stick:InputManager.AnalogSticks):
 	match stick:

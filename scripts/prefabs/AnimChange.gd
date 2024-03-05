@@ -26,7 +26,6 @@ func _physics_process(delta):
 func _rotation_view():
 	# this is the dumb way
 	var checkVal = floori(InputManager.current_pos.y * 10)
-	print(checkVal)
 	# get position
 	if sign(InputManager.current_pos.x) == -1:
 		#print("1 to 6 happen here")

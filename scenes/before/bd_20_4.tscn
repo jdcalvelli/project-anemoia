@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://7bm8qe6yu6qw"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_qk2o5"]
+[ext_resource type="Texture2D" uid="uid://p2care4dd5l3" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_01.png" id="2_eakmf"]
+[ext_resource type="Texture2D" uid="uid://deseyn8sv3y0x" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_02.png" id="3_txjff"]
+[ext_resource type="Texture2D" uid="uid://dxguqop3hc68f" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_03.png" id="4_bf5le"]
+[ext_resource type="Texture2D" uid="uid://f4afb75joapy" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_04.png" id="5_d2sd0"]
+[ext_resource type="Texture2D" uid="uid://ccrc3m5lo85k5" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_05.png" id="6_rxer8"]
+[ext_resource type="Texture2D" uid="uid://drdnnse634fav" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_06.png" id="7_7vr7o"]
+[ext_resource type="Texture2D" uid="uid://wi18vw5mqs4a" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_07.png" id="8_34q2o"]
+[ext_resource type="Texture2D" uid="uid://cmag4321fxi5w" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_08.png" id="9_ceecw"]
+[ext_resource type="Texture2D" uid="uid://bovwflcwa2egu" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_09.png" id="10_hgmrf"]
+[ext_resource type="Texture2D" uid="uid://40l0is2cd4yx" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_10.png" id="11_rvis3"]
+[ext_resource type="Texture2D" uid="uid://dnwspifvgosfr" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_11.png" id="12_wywl7"]
+[ext_resource type="Texture2D" uid="uid://7j7bdgpdko18" path="res://assets/before/BD_20_Anim/BD_20_mother/frame_12.png" id="13_qdmh8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mu033"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eakmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txjff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bf5le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d2sd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rxer8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7vr7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_34q2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ceecw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hgmrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rvis3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wywl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qdmh8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bd_20_4" instance=ExtResource("1_qk2o5")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 1
+actionScene = true
+numRequiredActions = 3
+nextShot = "res://scenes/before/bd_20_5.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_mu033")
+
+[node name="temp - name display" parent="." index="3"]
+visible = false
+text = "bd_20_4
+"

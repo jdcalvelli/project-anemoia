@@ -30,6 +30,8 @@ func _rotation_view():
 	var checkVal = floori(InputManager.current_pos.y * 10)
 	# maybe we have to just cut this in the event that all rotateflags are 0
 	if InputManager.rotateFlags.all(func(element): return element == 0):
+		if frame != 0 and frame != 11:
+			frame -= 1
 		return
 		
 	if sign(InputManager.current_pos.x) == -1:
@@ -64,36 +66,38 @@ func _rotation_view():
 	
 # this math is so much nicer lmao
 func _rock_view():
-	var checkVal = floori(InputManager.current_pos.y * 19)
+	var checkVal = floori(InputManager.current_pos.y * 200)
 	# print(checkVal)
 	# print(InputManager.rockFlags)
 	# in the event that flag values are all zero, return
 	if InputManager.rockFlags.all(func(element): return element == 0):
+		if frame != 0 and frame != 11:
+			frame -= 1
 		return
 		
 	if sign(InputManager.current_pos.y) == -1 and !InputManager.isRockingUp:
-		if checkVal >= -3 and checkVal < 0:
+		if checkVal > -30 and checkVal < 0:
 			frame = 0
-		elif checkVal >= -6 and checkVal < 0:
+		elif checkVal > -60 and checkVal < 0:
 			frame = 1
-		elif checkVal >= -9 and checkVal < 0 and InputManager.rockFlags[0]:
+		elif checkVal > -120 and checkVal < 0 and InputManager.rockFlags[0]:
 			frame = 2
-		elif checkVal >= -12 and checkVal < 0 and InputManager.rockFlags[0]:
+		elif checkVal > -150 and checkVal < 0 and InputManager.rockFlags[0]:
 			frame = 3
-		elif checkVal >= -15 and checkVal < 0 and InputManager.rockFlags[1]:
+		elif checkVal > -180 and checkVal < 0 and InputManager.rockFlags[1]:
 			frame = 4
-		elif checkVal >= -20 and checkVal < 0 and InputManager.rockFlags[1]:
+		elif checkVal > -200 and checkVal < 0 and InputManager.rockFlags[1]:
 			frame = 5
 	elif sign(InputManager.current_pos.y) == 1 and InputManager.isRockingUp:
-		if checkVal <= 3 and checkVal > 0 and InputManager.rockFlags[2]:
+		if checkVal < 30 and checkVal > 0 and InputManager.rockFlags[2]:
 			frame = 6
-		elif checkVal <= 6 and checkVal > 0 and InputManager.rockFlags[2]:
+		elif checkVal < 60 and checkVal > 0 and InputManager.rockFlags[2]:
 			frame = 7
-		elif checkVal <= 9 and checkVal > 0 and InputManager.rockFlags[3]:
+		elif checkVal < 120 and checkVal > 0 and InputManager.rockFlags[3]:
 			frame = 8
-		elif checkVal <= 12 and checkVal > 0 and InputManager.rockFlags[3]:
+		elif checkVal < 150 and checkVal > 0 and InputManager.rockFlags[3]:
 			frame = 9
-		elif checkVal <= 15 and checkVal > 0 and InputManager.rockFlags[4]:
+		elif checkVal < 180 and checkVal > 0 and InputManager.rockFlags[4]:
 			frame = 10
-		elif checkVal <= 20 and checkVal > 0 and InputManager.rockFlags[4]:
+		elif checkVal < 200 and checkVal > 0 and InputManager.rockFlags[4]:
 			frame = 11

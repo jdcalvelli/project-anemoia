@@ -106,7 +106,7 @@ func joy_rotate(input_vec:Vector2):
 	
 	# need to have some sort of drop logic i think
 	# if the vector distance is ever less than 0.9, reset rotate flags
-	if Vector2(0,0).distance_to(input_vec) <= 0.9:
+	if Vector2(0,0).distance_to(input_vec) <= 0.7:
 		# print("drop")
 		rotateFlags = [0,0,0,0,0,0]
 		return
@@ -160,7 +160,7 @@ func joy_rock(input_vec:Vector2):
 	#print(current_pos.y)
 	
 	# should include an x check so that we stay within a box
-	if current_pos.x > 0.3 or current_pos.x < -0.3:
+	if current_pos.x >= 0.8 or current_pos.x <= -0.8:
 		print("reset bc too far on x")
 		rockFlags = [0,0,0,0,0,0]
 		isRockingUp = false
@@ -171,25 +171,25 @@ func joy_rock(input_vec:Vector2):
 	
 	if !isRockingUp:
 		if current_pos.y <= -0.7 and rockFlags[1]:
-			print("flag 3")
+			# print("flag 3")
 			rockFlags[2] = 1
 			isRockingUp = true
 		elif current_pos.y <= -0.5 and rockFlags[0]:
-			print("flag 2")
+			# print("flag 2")
 			rockFlags[1] = 1
 		elif current_pos.y <= -0.2 and !rockFlags[0]:
-			print("flag 1")
+			# print("flag 1")
 			rockFlags[0] = 1
 			EventBus.actionStarted.emit()
 	elif isRockingUp:
 		if current_pos.y >= 0.7 and rockFlags[4]:
-			print("flag 6")
+			# print("flag 6")
 			rockFlags[5] = 1
 		elif current_pos.y >= 0.5 and rockFlags[3]:
-			print("flag 5")
+			# print("flag 5")
 			rockFlags[4] = 1
 		elif current_pos.y >= 0.2 and rockFlags[2]:
-			print("flag 4")
+			# print("flag 4")
 			rockFlags[3] = 1
 	
 	if rockFlags[5]:

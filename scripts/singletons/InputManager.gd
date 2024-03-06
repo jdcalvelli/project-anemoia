@@ -170,26 +170,26 @@ func joy_rock(input_vec:Vector2):
 	#print(rockFlags)
 	
 	if !isRockingUp:
-		if current_pos.y <= -0.7 and rockFlags[1]:
-			# print("flag 3")
+		if current_pos.y <= -0.9 and rockFlags[1]:
+			print("flag 3")
 			rockFlags[2] = 1
 			isRockingUp = true
 		elif current_pos.y <= -0.5 and rockFlags[0]:
-			# print("flag 2")
+			print("flag 2")
 			rockFlags[1] = 1
-		elif current_pos.y <= -0.2 and !rockFlags[0]:
-			# print("flag 1")
+		elif current_pos.y <= -0.1 and !rockFlags[0]:
+			print("flag 1")
 			rockFlags[0] = 1
 			EventBus.actionStarted.emit()
 	elif isRockingUp:
-		if current_pos.y >= 0.7 and rockFlags[4]:
-			# print("flag 6")
+		if current_pos.y >= 0.9 and rockFlags[4]:
+			print("flag 6")
 			rockFlags[5] = 1
 		elif current_pos.y >= 0.5 and rockFlags[3]:
-			# print("flag 5")
+			print("flag 5")
 			rockFlags[4] = 1
-		elif current_pos.y >= 0.2 and rockFlags[2]:
-			# print("flag 4")
+		elif current_pos.y >= 0.1 and rockFlags[2]:
+			print("flag 4")
 			rockFlags[3] = 1
 	
 	if rockFlags[5]:

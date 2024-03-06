@@ -15,12 +15,23 @@ class_name Shot
 @export_category("Shot Logic")
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
-
 @export var actionScene:bool = false
 @export var numRequiredActions:int = 0
 var numActionsTaken:int = 0
 
+# this is only going to be used in the auto character case
+# this is a strong case of i should refactor this all into shot and shot subclasses
+@export var autoCharacterWaitTime: float
+
 @export var nextShot:String
+
+func _enter_tree():
+	# this is for the auto character
+	# nill at this point
+	await get_tree().create_timer(autoCharacterWaitTime).timeout
+	if currentCharacter == GameManager.Characters.AUTO:
+		print("AUTOMOVE")
+		get_tree().change_scene_to_packed(GameManager.nextScene)
 
 func _ready():
 	# subscribe to events

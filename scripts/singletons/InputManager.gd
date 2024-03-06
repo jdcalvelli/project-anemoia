@@ -21,6 +21,7 @@ var rotateFlags := [0,0,0,0,0,0]
 
 # needed for rock
 var rockFlags := [0,0,0,0,0,0]
+var isRockingUp := false
 
 # process func for the analog stick motions
 func _physics_process(delta):
@@ -55,6 +56,8 @@ func _input(event):
 		# wait and see if the second click happens
 		await wait_for_second_stick(AnalogSticks.LEFT)
 		# should the post wait for second click be here?
+	elif event.is_action_pressed("restart-button"):
+		get_tree().change_scene_to_file("res://scenes/before/bd_1.tscn")
 	else:
 		# if its anything else, dont do anything
 		return
@@ -108,8 +111,6 @@ func joy_rotate(input_vec:Vector2):
 		rotateFlags = [0,0,0,0,0,0]
 		return
 		
-		print(rotateFlags)
-	
 	if current_angle < -2*PI/3 and previous_angle > -2*PI/3 and !rotateFlags[0]:
 		#print("passed flag 1")
 		rotateFlags[0] = 1
@@ -125,7 +126,7 @@ func joy_rotate(input_vec:Vector2):
 		rotateFlags[2] = 1
 	elif current_angle < PI/3 and previous_angle > PI/3 and rotateFlags[2]:
 		#print("passed flag 4")
-		rotateFlags[2] = 2
+		rotateFlags[2] = 0
 		rotateFlags[3] = 1
 	elif current_angle < 0 and previous_angle > 0 and rotateFlags[3]:
 		#print("passed flag 5")
@@ -156,37 +157,45 @@ func joy_rock(input_vec:Vector2):
 	# this can be angleless
 	current_pos = input_vec
 	
-	# should include an x check so that we stay within a box
+	#print(current_pos.y)
 	
-	if current_pos.y < -0.25 and previous_pos.y > -0.25 and !rockFlags[0]:
-		#print("first flag")
-		rockFlags[0] = 1
-		EventBus.actionStarted.emit()
-		EventBus.changeAnimState.emit(1)
-	if current_pos.y < -0.50 and previous_pos.y > -0.50 and rockFlags[0]:
-		#print("second flag")
-		rockFlags[1] = 1
-		EventBus.changeAnimState.emit(2)
-	if current_pos.y < -0.75 and previous_pos.y > -0.75 and rockFlags[1]:
-		#print("third flag")
-		rockFlags[2] = 1
-		EventBus.changeAnimState.emit(3)
-	if current_pos.y > 0.25 and previous_pos.y < 0.25 and rockFlags[2]:
-		#print("fourth flag")
-		rockFlags[3] = 1
-		EventBus.changeAnimState.emit(4)
-	if current_pos.y > 0.50 and previous_pos.y < 0.50 and rockFlags[3]:
-		#print("fifth flag")
-		rockFlags[4] = 1
-		EventBus.changeAnimState.emit(5)
-	if current_pos.y > 0.75 and previous_pos.y < 0.75 and rockFlags[4]:
-		#print("sixth flag")
-		rockFlags[5] = 1
-		EventBus.changeAnimState.emit(6)
+	# should include an x check so that we stay within a box
+	if current_pos.x > 0.3 or current_pos.x < -0.3:
+		print("reset bc too far on x")
+		rockFlags = [0,0,0,0,0,0]
+		isRockingUp = false
+		return
+	
+	#print(current_pos.y * 100)
+	#print(rockFlags)
+	
+	if !isRockingUp:
+		if current_pos.y <= -0.7 and rockFlags[1]:
+			print("flag 3")
+			rockFlags[2] = 1
+			isRockingUp = true
+		elif current_pos.y <= -0.5 and rockFlags[0]:
+			print("flag 2")
+			rockFlags[1] = 1
+		elif current_pos.y <= -0.2 and !rockFlags[0]:
+			print("flag 1")
+			rockFlags[0] = 1
+			EventBus.actionStarted.emit()
+	elif isRockingUp:
+		if current_pos.y >= 0.7 and rockFlags[4]:
+			print("flag 6")
+			rockFlags[5] = 1
+		elif current_pos.y >= 0.5 and rockFlags[3]:
+			print("flag 5")
+			rockFlags[4] = 1
+		elif current_pos.y >= 0.2 and rockFlags[2]:
+			print("flag 4")
+			rockFlags[3] = 1
 	
 	if rockFlags[5]:
 		print("complete rock")
 		rockFlags = [0,0,0,0,0,0]
+		isRockingUp = false
 		match GameManager.currentShot.currentCharacter:
 			GameManager.Characters.FATHER:
 				EventBus.actionCompleted.emit()

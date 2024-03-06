@@ -8,6 +8,3 @@ signal analogFlick(stick: InputManager.AnalogSticks)
 # AUDIO EVENTS
 signal actionStarted()
 signal actionCompleted()
-
-# VIEW EVENTS
-signal changeAnimState(animState: int)

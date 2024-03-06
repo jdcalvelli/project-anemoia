@@ -58,6 +58,8 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 				print("father rotate")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					# emit total actions completed
+					EventBus.totalActionsCompleted.emit()
 					# adding wait on scene change
 					await get_tree().create_timer(goNextWaitTime).timeout
 					get_tree().change_scene_to_packed(nextScene)
@@ -66,6 +68,8 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 				print("mother rotate")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					# emit total actions completed
+					EventBus.totalActionsCompleted.emit()
 					# adding wait on scene change
 					await get_tree().create_timer(goNextWaitTime).timeout
 					get_tree().change_scene_to_packed(nextScene)
@@ -77,6 +81,8 @@ func _on_analog_flick(stick:InputManager.AnalogSticks):
 				print("father flick")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					# emit total actions completed
+					EventBus.totalActionsCompleted.emit()
 					# adding wait on scene change
 					await get_tree().create_timer(goNextWaitTime).timeout
 					get_tree().change_scene_to_packed(nextScene)
@@ -85,6 +91,8 @@ func _on_analog_flick(stick:InputManager.AnalogSticks):
 				print("mother flick")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
+					# emit total actions completed
+					EventBus.totalActionsCompleted.emit()
 					# adding wait on scene change
 					await get_tree().create_timer(goNextWaitTime).timeout
 					get_tree().change_scene_to_packed(nextScene)

@@ -3,7 +3,7 @@ extends AnimatedSprite2D
 var maxJitterVal:Vector2 = Vector2(2, 2)
 var frameCounter:int = 0
 
-var readyForNextSide = false
+var flipSide:bool = false
 
 # update to be able to do the jitter animation
 func _physics_process(delta):
@@ -15,6 +15,8 @@ func _physics_process(delta):
 	# increment frame counter
 	frameCounter += 1
 
+# moved this to regular update bc we want it to happen faster than the physics process
+func _process(delta):
 	if GameManager.currentShot.currentCharacter == GameManager.Characters.FATHER:
 		_rotation_view()
 	elif GameManager.currentShot.currentCharacter == GameManager.Characters.MOTHER:
@@ -26,55 +28,72 @@ func _physics_process(delta):
 func _rotation_view():
 	# this is the dumb way
 	var checkVal = floori(InputManager.current_pos.y * 10)
-	# get position
+	# maybe we have to just cut this in the event that all rotateflags are 0
+	if InputManager.rotateFlags.all(func(element): return element == 0):
+		return
+		
 	if sign(InputManager.current_pos.x) == -1:
-		#print("1 to 6 happen here")
-		if checkVal == -9 or checkVal == -8 or checkVal == -7:
+		# print("1 to 6 happen here")
+		# should also check based on current flag status
+		if checkVal <= -7:
 			frame = 0
-		elif checkVal == -6 or checkVal == -5 or checkVal == -4:
+		elif checkVal <= -4:
 			frame = 1
-		elif checkVal == -3 or checkVal == -2 or checkVal == -1:
+		elif checkVal <= -1 and InputManager.rotateFlags[0]:
 			frame = 2
-		elif checkVal == 0 or checkVal == 1 or checkVal == 2:
+		elif checkVal <= 2 and InputManager.rotateFlags[0]:
 			frame = 3
-		elif checkVal == 3 or checkVal == 4 or checkVal == 5:
+		elif checkVal <= 5 and InputManager.rotateFlags[1]:
 			frame = 4
-		elif checkVal == 6 or checkVal == 7 or checkVal == 8:
+		elif checkVal <= 8 and InputManager.rotateFlags[1]:
 			frame = 5
-			# this is also dumb
-			readyForNextSide = true
-	elif sign(InputManager.current_pos.x) == 1 and readyForNextSide:
+	elif sign(InputManager.current_pos.x) == 1:
 		#print("7 to 12 happen here")
-		if checkVal == 9 or checkVal == 8 or checkVal == 7:
+		if checkVal >= 7 and InputManager.rotateFlags[2]:
 			frame = 6
-		elif checkVal == 6 or checkVal == 5 or checkVal == 4:
+		elif checkVal >= 4 and InputManager.rotateFlags[2]:
 			frame = 7
-		elif checkVal == 3 or checkVal == 2 or checkVal == 1:
+		elif checkVal >= 1 and InputManager.rotateFlags[3]:
 			frame = 8
-		elif checkVal == 0 or checkVal == -1 or checkVal == -2:
+		elif checkVal >= -2 and InputManager.rotateFlags[3]:
 			frame = 9
-		elif checkVal == -3 or checkVal == -4 or checkVal == -5:
+		elif checkVal >= -5 and InputManager.rotateFlags[4]:
 			frame = 10
-		elif checkVal == -6 or checkVal == -7 or checkVal == -8:
+		elif checkVal >= -8 and InputManager.rotateFlags[4]:
 			frame = 11
-			# equally dumb
-			readyForNextSide = true
 	
 # this math is so much nicer lmao
 func _rock_view():
-	var checkVal = roundi(InputManager.current_pos.y * 6)
-	#print(checkVal)
-	if sign(checkVal) == -1:
-		# catch -6 case
-		if checkVal == -6:
+	var checkVal = floori(InputManager.current_pos.y * 19)
+	# print(checkVal)
+	# print(InputManager.rockFlags)
+	# in the event that flag values are all zero, return
+	if InputManager.rockFlags.all(func(element): return element == 0):
+		return
+		
+	if sign(InputManager.current_pos.y) == -1 and !InputManager.isRockingUp:
+		if checkVal >= -3 and checkVal < 0:
+			frame = 0
+		elif checkVal >= -6 and checkVal < 0:
+			frame = 1
+		elif checkVal >= -9 and checkVal < 0 and InputManager.rockFlags[0]:
+			frame = 2
+		elif checkVal >= -12 and checkVal < 0 and InputManager.rockFlags[0]:
+			frame = 3
+		elif checkVal >= -15 and checkVal < 0 and InputManager.rockFlags[1]:
+			frame = 4
+		elif checkVal >= -20 and checkVal < 0 and InputManager.rockFlags[1]:
 			frame = 5
-		elif !readyForNextSide:
-			frame = abs(checkVal)
-		# still dumb
-		if checkVal == -6:
-			readyForNextSide = true
-	elif sign(checkVal) == 1 and readyForNextSide:
-		frame = 6 + checkVal
-		# once again, still dumb
-		if checkVal == 5:
-			readyForNextSide = false
+	elif sign(InputManager.current_pos.y) == 1 and InputManager.isRockingUp:
+		if checkVal <= 3 and checkVal > 0 and InputManager.rockFlags[2]:
+			frame = 6
+		elif checkVal <= 6 and checkVal > 0 and InputManager.rockFlags[2]:
+			frame = 7
+		elif checkVal <= 9 and checkVal > 0 and InputManager.rockFlags[3]:
+			frame = 8
+		elif checkVal <= 12 and checkVal > 0 and InputManager.rockFlags[3]:
+			frame = 9
+		elif checkVal <= 15 and checkVal > 0 and InputManager.rockFlags[4]:
+			frame = 10
+		elif checkVal <= 20 and checkVal > 0 and InputManager.rockFlags[4]:
+			frame = 11

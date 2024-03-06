@@ -8,3 +8,6 @@ signal analogFlick(stick: InputManager.AnalogSticks)
 # AUDIO EVENTS
 signal actionStarted()
 signal actionCompleted()
+
+# SHOT ACTION EVENTS
+signal totalActionsCompleted()

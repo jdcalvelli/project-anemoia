@@ -6,7 +6,12 @@ extends Node2D
 @export var helperTimeToWait = 5
 @export var helperTweenDuration = 4
 
+var tween : Tween
+
 func _ready():
+	# connect to signal when all actions completed
+	EventBus.totalActionsCompleted.connect(_on_total_actions_completed)
+	
 	# wait for timeout
 	await get_tree().create_timer(helperTimeToWait).timeout
 	# then do the tween for the right object
@@ -14,9 +19,19 @@ func _ready():
 	
 
 # helper func
+func _on_total_actions_completed():
+	# kill the tween and hide all helper object
+	if tween:
+		tween.kill()
+	$"RAA-Helper".hide()
+	$"VAA-Helper".hide()
+	$"Father-Click-Helper".hide()
+	$"Mother-Click-Helper".hide()
+	pass
+
 func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 	if currentChar == GameManager.Characters.FATHER:
-		var tween = create_tween()
+		tween = create_tween()
 		if actionScene:
 			tween.tween_property(
 				$"RAA-Helper", 
@@ -30,7 +45,7 @@ func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 				1, 
 				helperTweenDuration)
 	elif currentChar == GameManager.Characters.MOTHER:
-		var tween = create_tween()
+		tween = create_tween()
 		if actionScene:
 			tween.tween_property(
 				$"VAA-Helper", 
@@ -44,7 +59,7 @@ func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
 				1, 
 				helperTweenDuration)
 	elif currentChar == GameManager.Characters.BOTH:
-		var tween = create_tween()
+		tween = create_tween()
 		if actionScene:
 			pass
 		else:

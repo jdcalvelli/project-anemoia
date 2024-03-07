@@ -3,6 +3,8 @@ extends AnimatedSprite2D
 var maxJitterVal:Vector2 = Vector2(2, 2)
 var frameCounter:int = 0
 
+var flipSide:bool = false
+
 # update to be able to do the jitter animation
 func _physics_process(delta):
 	# every twelve frames do the jitter
@@ -71,9 +73,19 @@ func _rock_view():
 		if frame != 0 and frame != 11:
 			frame -= 1
 		return
-	elif sign(InputManager.current_pos.y) == -1 and InputManager.current_pos.x < 0.3 and InputManager.current_pos.x > -0.3:
-		if frame < 6:
+	elif InputManager.current_pos.y == 0 and InputManager.previous_pos.y == 0:
+		if frame != 0 and frame != 11:
+			frame -= 1
+		return
+	elif sign(InputManager.current_pos.y) == -1 and InputManager.current_pos.x < 0.3 and InputManager.current_pos.x > -0.3 and !flipSide:
+		if frame < 5:
 			frame += 1
-	elif sign(InputManager.current_pos.y) == 1 and InputManager.current_pos.x < 0.3 and InputManager.current_pos.x > -0.3:
-		if frame < 12:
+		if frame == 6:
+			flipSide = true
+	elif sign(InputManager.current_pos.y) == 1 and InputManager.current_pos.x < 0.3 and InputManager.current_pos.x > -0.3 and flipSide:
+		if frame < 10:
 			frame += 1
+		if frame == 11:
+			flipSide = false
+	else:
+		frame = frame

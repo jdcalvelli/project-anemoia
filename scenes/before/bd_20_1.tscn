@@ -18,7 +18,6 @@ animations = [{
 helperTimeToWait = 8
 
 [node name="Shot" parent="." index="0"]
-sceneAudioPath = "event:/beforeDays/bd20"
 currentCharacter = 2
 nextShot = "res://scenes/before/bd_20_2.tscn"
 

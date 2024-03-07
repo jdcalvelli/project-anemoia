@@ -14,9 +14,11 @@ func _physics_process(delta):
 	frameCounter += 1
 	
 	if GameManager.currentShot.currentCharacter == GameManager.Characters.FATHER:
-		_rotation_view()
+		if GameManager.currentShot.actionScene:
+			_rotation_view()
 	elif GameManager.currentShot.currentCharacter == GameManager.Characters.MOTHER:
-		_rock_view()
+		if GameManager.currentShot.actionScene:
+			_rock_view()
 
 
 ### helper funcs

@@ -61,6 +61,8 @@ animations = [{
 [node name="bd_20_4" instance=ExtResource("1_qk2o5")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd20_2_4"
+sceneAudioPlaybackPoint = 1
 currentCharacter = 1
 actionScene = true
 numRequiredActions = 3

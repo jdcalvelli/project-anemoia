@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cy0mtd3mgju37"
+path="res://.godot/imported/write-w-pencil _1.wav-8ed9b295599176e8c5ca2a9d7fca2349.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/beforeDays/write-w-pencil _1.wav"
+dest_files=["res://.godot/imported/write-w-pencil _1.wav-8ed9b295599176e8c5ca2a9d7fca2349.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

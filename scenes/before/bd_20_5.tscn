@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0cknq8bol4xs"]
+[gd_scene load_steps=4 format=3 uid="uid://chn0mf1n7ocxc"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_yd4vd"]
 [ext_resource type="Texture2D" uid="uid://gy8u658yvod7" path="res://assets/before/BD_20_Anim/frame_05.png" id="2_1wx3m"]

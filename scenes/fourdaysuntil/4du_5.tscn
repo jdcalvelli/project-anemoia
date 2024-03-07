@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv7e2oiw0g637"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_g3cqo"]
-[ext_resource type="Texture2D" uid="uid://danmpctd7rxw4" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_01.png" id="2_pbrjx"]
-[ext_resource type="Texture2D" uid="uid://bcs5frnc4dhfs" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_02.png" id="3_srfnn"]
-[ext_resource type="Texture2D" uid="uid://bpnr3xoldvkoo" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_03.png" id="4_5irh6"]
-[ext_resource type="Texture2D" uid="uid://dtbiy3slj1gtq" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_04.png" id="5_nc0nf"]
+[ext_resource type="Texture2D" uid="uid://b2rn2j8mtxjq" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_01.png" id="2_pbrjx"]
+[ext_resource type="Texture2D" uid="uid://bingip4hakhj5" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_02.png" id="3_srfnn"]
+[ext_resource type="Texture2D" uid="uid://dolprt7pe1a01" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_03.png" id="4_5irh6"]
+[ext_resource type="Texture2D" uid="uid://f370qesrf3xq" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_04.png" id="5_nc0nf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nl14y"]
 animations = [{

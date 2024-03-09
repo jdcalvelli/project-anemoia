@@ -1,11 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1hspv3nbnb5w"]
+[gd_scene load_steps=5 format=3 uid="uid://d1hspv3nbnb5w"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_kdppe"]
+[ext_resource type="Texture2D" uid="uid://qavvu8v3v4cx" path="res://assets/fourdaysuntil/4DU_20_Anim/frame_01.png" id="2_iq8wf"]
+[ext_resource type="Texture2D" uid="uid://dywc3nicguuq1" path="res://assets/fourdaysuntil/4DU_20_Anim/frame_02.png" id="3_3qvkd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4b560"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iq8wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3qvkd")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
 
 [node name="4du_20" instance=ExtResource("1_kdppe")]
 
 [node name="Shot" parent="." index="0"]
 nextShot = "res://scenes/fourdaysuntil/4du_21.tscn"
 
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_4b560")
+autoplay = "default"
+
 [node name="temp - name display" parent="." index="3"]
+visible = false
 text = "4du_20"

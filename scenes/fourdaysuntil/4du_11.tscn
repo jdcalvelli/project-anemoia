@@ -63,7 +63,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 currentCharacter = 1
 actionScene = true
-numRequiredActions = 1
+numRequiredActions = 10
 nextShot = "res://scenes/fourdaysuntil/4du_12.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

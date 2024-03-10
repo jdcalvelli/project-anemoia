@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjy2hkvsoo6b1"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_fnqjx"]
+[ext_resource type="Texture2D" uid="uid://brrwklsryt5ml" path="res://assets/fourdaysuntil/4DU_01.png" id="2_sjx7d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n8wh3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sjx7d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="4du_1" instance=ExtResource("1_fnqjx")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 2
+nextShot = "res://scenes/fourdaysuntil/4du_2.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_n8wh3")
+
+[node name="temp - name display" parent="." index="3"]
+visible = false
+text = "4du_01"

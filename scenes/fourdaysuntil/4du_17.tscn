@@ -155,6 +155,7 @@ animations = [{
 }]
 
 [node name="4du_17" instance=ExtResource("1_svsua")]
+helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
 nextShot = "res://scenes/fourdaysuntil/4du_18.tscn"

@@ -59,6 +59,7 @@ animations = [{
 }]
 
 [node name="bd_7" instance=ExtResource("1_w361j")]
+helperTimeToWait = 1
 
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/headphoneAmbience"

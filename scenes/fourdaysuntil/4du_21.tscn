@@ -59,6 +59,7 @@ animations = [{
 }]
 
 [node name="4du_21" instance=ExtResource("1_xxcf6")]
+helperTimeToWait = 1
 
 [node name="Shot" parent="." index="0"]
 actionScene = true

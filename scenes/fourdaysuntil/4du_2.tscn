@@ -41,7 +41,8 @@ animations = [{
 [node name="4du_2" instance=ExtResource("1_aqep2")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 2
+currentCharacter = 3
+autoCharacterWaitTime = 9.0
 nextShot = "res://scenes/fourdaysuntil/4du_3.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

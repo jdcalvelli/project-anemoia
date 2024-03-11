@@ -17,6 +17,8 @@ animations = [{
 [node name="4du_23" instance=ExtResource("1_y4asm")]
 
 [node name="Shot" parent="." index="0"]
+currentCharacter = 3
+autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/cards/three_days_card.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

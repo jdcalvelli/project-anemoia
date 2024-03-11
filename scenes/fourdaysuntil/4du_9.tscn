@@ -151,10 +151,11 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 3.0
+"speed": 3.5
 }]
 
 [node name="4du_9" instance=ExtResource("1_7vw0y")]
+helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 1

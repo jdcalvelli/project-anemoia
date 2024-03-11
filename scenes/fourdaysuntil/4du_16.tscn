@@ -15,7 +15,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_igeek")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("4_qrr2y")
 }, {
 "duration": 1.0,
@@ -29,6 +29,8 @@ animations = [{
 [node name="4du_16" instance=ExtResource("1_q4aev")]
 
 [node name="Shot" parent="." index="0"]
+currentCharacter = 3
+autoCharacterWaitTime = 9.0
 nextShot = "res://scenes/fourdaysuntil/4du_17.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

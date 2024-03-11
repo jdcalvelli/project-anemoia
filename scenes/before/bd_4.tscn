@@ -59,6 +59,7 @@ animations = [{
 }]
 
 [node name="bd_4" instance=ExtResource("1_22qf4")]
+helperTimeToWait = 1
 
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/schoolAmbience"

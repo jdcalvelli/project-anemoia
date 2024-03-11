@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnswkmund7627"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_2hb0d"]
+[ext_resource type="Texture2D" uid="uid://drfsnm0p2pqcb" path="res://assets/before/BD_19-20_Anim/frame_01.png" id="2_uo3n5"]
+[ext_resource type="Texture2D" uid="uid://bt045jlxx5s78" path="res://assets/before/BD_19-20_Anim/frame_02.png" id="3_374bs"]
+[ext_resource type="Texture2D" uid="uid://40mpomli35my" path="res://assets/before/BD_19-20_Anim/frame_03.png" id="4_dmu0w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hybsk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uo3n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_374bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dmu0w")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="bd_19-20" instance=ExtResource("1_2hb0d")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 3
+autoCharacterWaitTime = 5.0
+nextShot = "res://scenes/before/bd_20_1.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_hybsk")
+autoplay = "default"
+
+[node name="temp - name display" parent="." index="3"]
+visible = false

@@ -59,6 +59,7 @@ animations = [{
 }]
 
 [node name="bd_20_4" instance=ExtResource("1_qk2o5")]
+helperTimeToWait = 1
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/beforeDays/bd20_2_4"

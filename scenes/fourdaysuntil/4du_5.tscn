@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv7e2oiw0g637"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_g3cqo"]
+[ext_resource type="Texture2D" uid="uid://b2rn2j8mtxjq" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_01.png" id="2_pbrjx"]
+[ext_resource type="Texture2D" uid="uid://bingip4hakhj5" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_02.png" id="3_srfnn"]
+[ext_resource type="Texture2D" uid="uid://dolprt7pe1a01" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_03.png" id="4_5irh6"]
+[ext_resource type="Texture2D" uid="uid://f370qesrf3xq" path="res://assets/fourdaysuntil/4DU_05_Anim/frame_04.png" id="5_nc0nf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nl14y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pbrjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_srfnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5irh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nc0nf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.8
+}]
+
+[node name="4du_5" instance=ExtResource("1_g3cqo")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 3
+autoCharacterWaitTime = 6.0
+nextShot = "res://scenes/fourdaysuntil/4du_6.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_nl14y")
+autoplay = "default"
+
+[node name="temp - name display" parent="." index="3"]
+visible = false
+text = "4du_5"

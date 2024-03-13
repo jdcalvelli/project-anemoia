@@ -1,0 +1,74 @@
+[gd_scene load_steps=15 format=3 uid="uid://dnswkmund7627"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_06158"]
+[ext_resource type="Texture2D" uid="uid://djudge725bnl8" path="res://assets/before/BD_19_20_sophie/frame_01.png" id="2_5e2ed"]
+[ext_resource type="Texture2D" uid="uid://c8l6f6sdeu66i" path="res://assets/before/BD_19_20_sophie/frame_02.png" id="3_fl8lb"]
+[ext_resource type="Texture2D" uid="uid://dgeb1e4sw7i6n" path="res://assets/before/BD_19_20_sophie/frame_03.png" id="4_8amug"]
+[ext_resource type="Texture2D" uid="uid://cfo8juya24vw7" path="res://assets/before/BD_19_20_sophie/frame_04.png" id="5_q1h1g"]
+[ext_resource type="Texture2D" uid="uid://ddneent7skwup" path="res://assets/before/BD_19_20_sophie/frame_05.png" id="6_lbeo7"]
+[ext_resource type="Texture2D" uid="uid://gli2jncwlj65" path="res://assets/before/BD_19_20_sophie/frame_06.png" id="7_jcxdn"]
+[ext_resource type="Texture2D" uid="uid://cxf7enwgg632j" path="res://assets/before/BD_19_20_sophie/frame_07.png" id="8_uk1h8"]
+[ext_resource type="Texture2D" uid="uid://bvkr508fcen0c" path="res://assets/before/BD_19_20_sophie/frame_08.png" id="9_vku8x"]
+[ext_resource type="Texture2D" uid="uid://ctf845iyyqmti" path="res://assets/before/BD_19_20_sophie/frame_09.png" id="10_3evgc"]
+[ext_resource type="Texture2D" uid="uid://dbuj83dg45wvg" path="res://assets/before/BD_19_20_sophie/frame_10.png" id="11_x0ay2"]
+[ext_resource type="Texture2D" uid="uid://ctxx1t768w43g" path="res://assets/before/BD_19_20_sophie/frame_11.png" id="12_comjo"]
+[ext_resource type="Texture2D" uid="uid://damv18jpmf8c1" path="res://assets/before/BD_19_20_sophie/frame_12.png" id="13_7hhnv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hybsk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5e2ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fl8lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8amug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q1h1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lbeo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jcxdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uk1h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vku8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3evgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x0ay2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_comjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7hhnv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bd_19-20_sophie" instance=ExtResource("1_06158")]
+helperTimeToWait = 1
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 1
+actionScene = true
+numRequiredActions = 1
+nextShot = "res://scenes/before/bd_19_20_jamie.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_hybsk")
+
+[node name="temp - name display" parent="." index="3"]
+visible = false

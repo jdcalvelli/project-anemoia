@@ -1,0 +1,73 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4d8g4rcbopmx"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_uyk0m"]
+[ext_resource type="Texture2D" uid="uid://bb6gdsoq7gp8m" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_01.png" id="2_6e7uy"]
+[ext_resource type="Texture2D" uid="uid://c302my3ts05v1" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_02.png" id="3_7aysl"]
+[ext_resource type="Texture2D" uid="uid://dmiba1ripalfl" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_03.png" id="4_u7ffr"]
+[ext_resource type="Texture2D" uid="uid://cm7x2n05sroxf" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_04.png" id="5_galmd"]
+[ext_resource type="Texture2D" uid="uid://fequ7wgkf5hm" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_05.png" id="6_6o6gn"]
+[ext_resource type="Texture2D" uid="uid://dpbqqhkthiq0u" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_06.png" id="7_uooyd"]
+[ext_resource type="Texture2D" uid="uid://ctovnf5ebrn8p" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_07.png" id="8_elrb8"]
+[ext_resource type="Texture2D" uid="uid://6kjh3lomdn7q" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_08.png" id="9_ycfdy"]
+[ext_resource type="Texture2D" uid="uid://cukrsg60by1tw" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_09.png" id="10_grxcn"]
+[ext_resource type="Texture2D" uid="uid://deft03oomrx87" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_10.png" id="11_be3fj"]
+[ext_resource type="Texture2D" uid="uid://dafi1imv6r41o" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_11.png" id="12_8cfs6"]
+[ext_resource type="Texture2D" uid="uid://do6c8plimqx73" path="res://assets/fourdaysuntil/4DU_21_Past_Anim/frame_12.png" id="13_fu0wg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ve0mc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6e7uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7aysl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u7ffr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_galmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6o6gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uooyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_elrb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ycfdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_grxcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_be3fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8cfs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fu0wg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="4du_21_past" instance=ExtResource("1_uyk0m")]
+
+[node name="Shot" parent="." index="0"]
+actionScene = true
+numRequiredActions = 10
+nextShot = "res://scenes/fourdaysuntil/4du_21_return_present.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_ve0mc")
+
+[node name="temp - name display" parent="." index="3"]
+visible = false
+text = "4du_21_past"

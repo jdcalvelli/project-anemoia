@@ -62,6 +62,8 @@ animations = [{
 helperTimeToWait = 1
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd19_20_jamie"
+sceneAudioPlaybackPoint = 1
 actionScene = true
 numRequiredActions = 1
 nextShot = "res://scenes/before/bd_20_1.tscn"

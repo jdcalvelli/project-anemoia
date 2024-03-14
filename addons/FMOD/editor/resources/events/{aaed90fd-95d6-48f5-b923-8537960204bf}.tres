@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://p76dgs0guohe"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/beforeDays/bd19_20_sophie"
+guid = "{aaed90fd-95d6-48f5-b923-8537960204bf}"
+name = "bd19_20_sophie"

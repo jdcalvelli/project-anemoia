@@ -1,0 +1,27 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://dmwnqgbt1fw22"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_q0n43"]
+data1 = 3166638776
+data2 = 105617982
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_g5hwh"]
+name = "volumeLevel"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_q0n43")
+maximum = 1.0
+guid = "{77e88a3e-1973-41cf-b9fb-bebdb04db08a}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_kl8v4"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_g5hwh")
+path = "parameter:/volumeLevel"
+guid = "{77e88a3e-1973-41cf-b9fb-bebdb04db08a}"
+name = "volumeLevel"
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{77e88a3e-1973-41cf-b9fb-bebdb04db08a}": SubResource("ParameterAsset_kl8v4")
+}
+path = "event:/Ambience/trainAmbience"
+guid = "{e6cbdbbe-fb9e-4860-b439-2abb89d44244}"
+name = "trainAmbience"

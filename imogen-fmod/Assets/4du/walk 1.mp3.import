@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o07dspeyobkf"
+path="res://.godot/imported/walk 1.mp3-ae22c32c7d45684f5da6cfdb1f3a43eb.mp3str"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/4du/walk 1.mp3"
+dest_files=["res://.godot/imported/walk 1.mp3-ae22c32c7d45684f5da6cfdb1f3a43eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

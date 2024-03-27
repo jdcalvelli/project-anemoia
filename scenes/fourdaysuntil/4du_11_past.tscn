@@ -71,6 +71,7 @@ nextShot = "res://scenes/fourdaysuntil/4du_11_return_present.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_3vyfh")
+speed_scale = 3.0
 
 [node name="temp - name display" parent="." index="3"]
 visible = false

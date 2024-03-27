@@ -23,6 +23,8 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
 sceneAmbienceParam = "reverbLevel"
+currentCharacter = 3
+autoCharacterWaitTime = 7.0
 nextShot = "res://scenes/fourdaysuntil/4du_21.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

@@ -161,6 +161,8 @@ helperTimeToWait = 10
 sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
 sceneAmbienceParam = "reverbLevel"
 sceneAudioPath = "event:/4du/4du_17"
+currentCharacter = 3
+autoCharacterWaitTime = 12.0
 nextShot = "res://scenes/fourdaysuntil/4du_18.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

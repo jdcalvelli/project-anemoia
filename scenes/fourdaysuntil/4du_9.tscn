@@ -158,6 +158,7 @@ animations = [{
 helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/4du/4du_9"
 currentCharacter = 1
 nextShot = "res://scenes/fourdaysuntil/4du_10.tscn"
 

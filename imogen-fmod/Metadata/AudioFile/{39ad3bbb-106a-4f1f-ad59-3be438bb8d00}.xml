@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{39ad3bbb-106a-4f1f-ad59-3be438bb8d00}">
 		<property name="assetPath">
-			<value>4du/train passing 2.aiff</value>
+			<value>ambience/trainAmbience/train passing 2.aiff</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

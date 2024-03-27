@@ -17,6 +17,8 @@ animations = [{
 [node name="4du_18" instance=ExtResource("1_xcqny")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
+sceneAmbienceParam = "reverbLevel"
 nextShot = "res://scenes/fourdaysuntil/4du_19.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

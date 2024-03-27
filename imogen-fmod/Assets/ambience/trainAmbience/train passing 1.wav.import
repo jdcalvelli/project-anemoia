@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0wqj83lx6o3y"
+path="res://.godot/imported/train passing 1.wav-8ed7ca89b63bdb6cc47fe0812a7af914.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/ambience/trainAmbience/train passing 1.wav"
+dest_files=["res://.godot/imported/train passing 1.wav-8ed7ca89b63bdb6cc47fe0812a7af914.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

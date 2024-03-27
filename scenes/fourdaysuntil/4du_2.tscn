@@ -43,7 +43,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/trainAmbience"
 sceneAmbienceParam = "volumeLevel"
-sceneAmbienceVal = 0.6
+sceneAmbienceVal = 0.7
 currentCharacter = 3
 autoCharacterWaitTime = 9.0
 nextShot = "res://scenes/fourdaysuntil/4du_3.tscn"

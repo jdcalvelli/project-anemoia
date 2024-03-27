@@ -62,6 +62,10 @@ animations = [{
 helperTimeToWait = 1
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
+sceneAmbienceParam = "reverbLevel"
+sceneAudioPath = "event:/4du/4du_21"
+sceneAudioPlaybackPoint = 1
 actionScene = true
 numRequiredActions = 10
 nextShot = "res://scenes/fourdaysuntil/4du_21_past.tscn"

@@ -7,10 +7,20 @@
 class_name FMODGuids
 
 class Events:
+	const _4DU_4DU_10 = "{bea4bdab-ffb2-41a5-99e1-e889057a1ee6}"
+	const _4DU_4DU_11 = "{f81e14e1-ec0e-4138-b414-216edb5aba40}"
+	const _4DU_4DU_11_PAST = "{f18302b3-aa0a-4eea-b0fa-73b8195165e2}"
+	const _4DU_4DU_14 = "{b923d606-9349-474a-a94b-dbcb99b38434}"
+	const _4DU_4DU_17 = "{39e238f0-77a5-4f6a-ac14-adabda61bede}"
+	const _4DU_4DU_21 = "{6fbff9d8-9536-47cf-923c-a456c03b22d4}"
+	const _4DU_4DU_21_PAST = "{ab602e94-2344-40d8-8465-fadfd7a6d077}"
 	const _4DU_4DU_3 = "{45c4d0ba-9527-4c09-94ed-5aac4dccb7d7}"
 	const _4DU_4DU_4 = "{9083c829-4763-4f00-9924-9ab94814c664}"
 	const _4DU_4DU_5 = "{bf0e2c9d-b050-4828-a184-0e9d816148ad}"
+	const _4DU_4DU_9 = "{f4a7765b-35bd-451f-9876-a6bcca2a8a65}"
+	const AMBIENCE_BABYCRYAMBIENCE = "{d1459fdc-543e-430f-a8d3-fd7797c74dbc}"
 	const AMBIENCE_HEADPHONEAMBIENCE = "{678ff57a-cf1c-462d-b053-70e345c297c3}"
+	const AMBIENCE_MOVIETHEATERAMBIENCE = "{0dc9b035-c5a1-45cb-9de5-eccf0b242be3}"
 	const AMBIENCE_SCHOOLAMBIENCE = "{d19261b1-a71b-45f7-812a-aa609d1eabd5}"
 	const AMBIENCE_TRAINAMBIENCE = "{e6cbdbbe-fb9e-4860-b439-2abb89d44244}"
 	const BEFOREDAYS_BD10 = "{db496cfd-c539-4b6f-822c-553729426ec3}"
@@ -43,5 +53,6 @@ class Banks:
 
 class Parameters:
 	const MUFFLELEVEL = "{62ef29c1-c8cc-4a76-965f-0345ea5c7cc3}"
+	const REVERBLEVEL = "{a3af0bf0-8702-47bf-9707-4d948b1e3ac6}"
 	const VOLUMELEVEL = "{f991d813-090e-4f78-8b60-8e247fa28034}"
 

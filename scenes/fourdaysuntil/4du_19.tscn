@@ -17,6 +17,8 @@ animations = [{
 [node name="4du_19" instance=ExtResource("1_ooruj")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
+sceneAmbienceParam = "reverbLevel"
 currentCharacter = 3
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/fourdaysuntil/4du_20.tscn"

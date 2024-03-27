@@ -1,0 +1,28 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://d10fc6w4sbwnf"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_8h0f5"]
+data1 = 3986864898
+data2 = 28500755
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_hvtgq"]
+name = "reverbLevel"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_8h0f5")
+maximum = 1.0
+guid = "{69e5a6ce-5966-4662-ab09-01d905f5bc3f}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_cm503"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_hvtgq")
+path = "parameter:/reverbLevel"
+guid = "{69e5a6ce-5966-4662-ab09-01d905f5bc3f}"
+name = "reverbLevel"
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{69e5a6ce-5966-4662-ab09-01d905f5bc3f}": SubResource("ParameterAsset_cm503")
+}
+path = "event:/Ambience/movieTheaterAmbience"
+guid = "{0dc9b035-c5a1-45cb-9de5-eccf0b242be3}"
+name = "movieTheaterAmbience"

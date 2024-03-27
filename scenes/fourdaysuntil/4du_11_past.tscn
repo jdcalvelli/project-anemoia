@@ -61,6 +61,9 @@ animations = [{
 [node name="4du_11_past" instance=ExtResource("1_pxwwv")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/babyCryAmbience"
+sceneAudioPath = "event:/4du/4du_11_past"
+sceneAudioPlaybackPoint = 1
 currentCharacter = 1
 actionScene = true
 numRequiredActions = 10

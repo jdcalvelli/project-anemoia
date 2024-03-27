@@ -29,6 +29,8 @@ animations = [{
 [node name="4du_16" instance=ExtResource("1_q4aev")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/trainAmbience"
+sceneAmbienceParam = "volumeLevel"
 currentCharacter = 3
 autoCharacterWaitTime = 9.0
 nextShot = "res://scenes/fourdaysuntil/4du_17.tscn"

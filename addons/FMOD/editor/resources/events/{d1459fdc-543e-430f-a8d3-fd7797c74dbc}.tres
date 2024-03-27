@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://bfn4wa5pukagi"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Ambience/babyCryAmbience"
+guid = "{d1459fdc-543e-430f-a8d3-fd7797c74dbc}"
+name = "babyCryAmbience"

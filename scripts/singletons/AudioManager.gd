@@ -12,7 +12,13 @@ func _ready():
 		FMODRuntime.create_instance_path("event:/Ambience/headphoneAmbience")
 	)
 	ambienceInstances.push_back(
-		FMODRuntime.create_instance_path("event:/Ambience/testAmbience")
+		FMODRuntime.create_instance_path("event:/Ambience/trainAmbience")
+	)
+	ambienceInstances.push_back(
+		FMODRuntime.create_instance_path("event:/Ambience/babyCryAmbience")
+	)
+	ambienceInstances.push_back(
+		FMODRuntime.create_instance_path("event:/Ambience/movieTheaterAmbience")
 	)
 
 func play_scene_audio(eventPath:String):

@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://vtacarlqgxt4"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/4du/4du_21_past"
+guid = "{ab602e94-2344-40d8-8465-fadfd7a6d077}"
+name = "4du_21_past"

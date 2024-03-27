@@ -151,19 +151,23 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 3.5
+"speed": 4.0
 }]
 
 [node name="4du_9" instance=ExtResource("1_7vw0y")]
 helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 1
+sceneAudioPath = "event:/4du/4du_9"
+currentCharacter = 3
+autoCharacterWaitTime = 12.0
 nextShot = "res://scenes/fourdaysuntil/4du_10.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_httom")
 autoplay = "default"
+frame = 35
+frame_progress = 1.0
 
 [node name="temp - name display" parent="." index="3"]
 visible = false

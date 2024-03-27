@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cenmby5kq3swk"
+path="res://.godot/imported/glassWipe - Trimmed.wav-48f2bd0d9bf5565374d6b29539af7565.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/4du/glassWipe - Trimmed.wav"
+dest_files=["res://.godot/imported/glassWipe - Trimmed.wav-48f2bd0d9bf5565374d6b29539af7565.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -65,27 +65,14 @@ func _rotation_view():
 	
 # this math is so much nicer lmao
 func _rock_view():
-	var checkVal = InputManager.current_pos.y
-	#print(checkVal)
-	# print(InputManager.rockFlags)
-	# in the event that flag values are all zero, return
-	if InputManager.rockFlags.all(func(element): return element == 0):
-		if frame != 0 and frame != 11:
-			frame -= 1
-		return
-	elif InputManager.current_pos.y == 0 and InputManager.previous_pos.y == 0:
-		if frame != 0 and frame != 11:
-			frame -= 1
-		return
-	elif sign(InputManager.current_pos.y) == -1 and InputManager.current_pos.x < 0.3 and InputManager.current_pos.x > -0.3 and !flipSide:
-		if frame < 5:
-			frame += 1
-		if frame == 6:
-			flipSide = true
-	elif sign(InputManager.current_pos.y) == 1 and InputManager.current_pos.x < 0.3 and InputManager.current_pos.x > -0.3 and flipSide:
-		if frame < 10:
-			frame += 1
-		if frame == 11:
-			flipSide = false
-	else:
-		frame = frame
+	# print(InputManager.current_pos)
+	if InputManager.rockFlags.all(func(element): return element == 0) and GameManager.currentShot.numRequiredActions > 1:
+		frame = 1
+	elif InputManager.current_pos.y < 0:
+		if !InputManager.rockFlags[3]:
+			if frame <= 5:
+				frame += 1
+	elif InputManager.current_pos.y > 0:
+		if !InputManager.rockFlags[4]:
+			if frame <= 10:
+				frame += 1

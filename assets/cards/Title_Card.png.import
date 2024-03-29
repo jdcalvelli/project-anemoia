@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsltmyp13n27s"
-path="res://.godot/imported/3_Days_Before_Funeral.png-d83eec0dff628794df8e99c6e40c6dd5.ctex"
+uid="uid://cp5oy7fwhaxdp"
+path="res://.godot/imported/Title_Card.png-ff6f860ea475715af70e5e0b9ae59245.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fourdaysuntil/3_Days_Before_Funeral.png"
-dest_files=["res://.godot/imported/3_Days_Before_Funeral.png-d83eec0dff628794df8e99c6e40c6dd5.ctex"]
+source_file="res://assets/cards/Title_Card.png"
+dest_files=["res://.godot/imported/Title_Card.png-ff6f860ea475715af70e5e0b9ae59245.ctex"]
 
 [params]
 

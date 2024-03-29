@@ -42,7 +42,3 @@ nextShot = "res://scenes/before/bd_19.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_m4fhw")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_18"

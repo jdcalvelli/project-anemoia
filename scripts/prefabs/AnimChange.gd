@@ -63,8 +63,9 @@ func _rotation_view():
 		elif checkVal >= -8 and InputManager.rotateFlags[4]:
 			frame = 11
 	
-# this math is so much nicer lmao
 func _rock_view():
+	# need some sort of reset to rock back to zero
+	
 	# print(InputManager.current_pos)
 	if InputManager.rockFlags.all(func(element): return element == 0) and GameManager.currentShot.numRequiredActions > 1:
 		frame = 1
@@ -76,3 +77,6 @@ func _rock_view():
 		if !InputManager.rockFlags[4]:
 			if frame <= 10:
 				frame += 1
+	elif InputManager.current_pos.y == 0 and InputManager.previous_pos.y == 0:
+		if frame != 0:
+			frame -= 1

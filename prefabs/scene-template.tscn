@@ -482,14 +482,6 @@ script = ExtResource("2_ahngt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="temp - name display" type="Label" parent="."]
-offset_left = -204.0
-offset_top = -277.0
-offset_right = 205.0
-offset_bottom = -186.0
-theme_override_font_sizes/font_size = 64
-text = "card title"
-
 [node name="RAA-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-672, 320)

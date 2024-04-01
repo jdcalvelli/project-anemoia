@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://d210degtn0q1k"]
 
 [ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_ud6kq"]
-[ext_resource type="Texture2D" uid="uid://dsltmyp13n27s" path="res://assets/fourdaysuntil/3_Days_Before_Funeral.png" id="2_p2m5q"]
+[ext_resource type="Texture2D" uid="uid://dsltmyp13n27s" path="res://assets/cards/3_Days_Before_Funeral.png" id="2_p2m5q"]
 
 [node name="three_days_card" instance=ExtResource("1_ud6kq")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 3
+autoCharacterWaitTime = 5.0
+nextShot = "res://scenes/threedaysuntil/3du_01.tscn"
 
 [node name="Sprite2D" parent="." index="2"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_p2m5q")
-
-[node name="temp - card title" parent="." index="3"]
-visible = false
-text = "card - three_days_before_funeral"

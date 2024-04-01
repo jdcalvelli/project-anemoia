@@ -10,6 +10,7 @@ enum Characters {
 # current shot reference
 var currentShot: Shot
 var nextScene: PackedScene
+var prevScene: PackedScene # developmental purposes
 # this will be refactored out?
 var goNextWaitTime: float = 1.5
 

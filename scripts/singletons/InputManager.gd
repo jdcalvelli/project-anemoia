@@ -58,6 +58,12 @@ func _input(event):
 		# should the post wait for second click be here?
 	elif event.is_action_pressed("restart-button"):
 		get_tree().change_scene_to_file("res://scenes/before/bd_1.tscn")
+	elif event.is_action_pressed("period-button"):
+		# move to the next scene in the assigned shot counter
+		get_tree().change_scene_to_packed(GameManager.nextScene)
+	elif event.is_action_pressed("comma-button"):
+		# move to the next scene in the assigned shot counter
+		get_tree().change_scene_to_packed(GameManager.prevScene)
 	else:
 		# if its anything else, dont do anything
 		return

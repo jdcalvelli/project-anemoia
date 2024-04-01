@@ -66,10 +66,8 @@ sceneAudioPath = "event:/beforeDays/bd19_20_jamie"
 sceneAudioPlaybackPoint = 1
 actionScene = true
 numRequiredActions = 1
+prevShot = "res://scenes/before/bd_19_20_sophie.tscn"
 nextShot = "res://scenes/before/bd_20_1.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_obiey")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false

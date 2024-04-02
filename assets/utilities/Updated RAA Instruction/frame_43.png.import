@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7a6xmmkj2ld4"
-path="res://.godot/imported/frame_43.png-5854748fd39c3550da43754d3cf18227.ctex"
+path.s3tc="res://.godot/imported/frame_43.png-5854748fd39c3550da43754d3cf18227.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/utilities/Updated RAA Instruction/frame_43.png"
-dest_files=["res://.godot/imported/frame_43.png-5854748fd39c3550da43754d3cf18227.ctex"]
+dest_files=["res://.godot/imported/frame_43.png-5854748fd39c3550da43754d3cf18227.s3tc.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.4
 compress/hdr_compression=1

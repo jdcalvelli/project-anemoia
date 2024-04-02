@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsltmyp13n27s"
-path="res://.godot/imported/3_Days_Before_Funeral.png-b957668dd62014b7411386481fcc116f.ctex"
+path.s3tc="res://.godot/imported/3_Days_Before_Funeral.png-b957668dd62014b7411386481fcc116f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cards/3_Days_Before_Funeral.png"
-dest_files=["res://.godot/imported/3_Days_Before_Funeral.png-b957668dd62014b7411386481fcc116f.ctex"]
+dest_files=["res://.godot/imported/3_Days_Before_Funeral.png-b957668dd62014b7411386481fcc116f.s3tc.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.4
 compress/hdr_compression=1

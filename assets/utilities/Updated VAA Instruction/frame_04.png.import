@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf0jkf2ahhays"
-path="res://.godot/imported/frame_04.png-7db6fe8ebb1a7730c30e5de0755b122a.ctex"
+path.s3tc="res://.godot/imported/frame_04.png-7db6fe8ebb1a7730c30e5de0755b122a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/utilities/Updated VAA Instruction/frame_04.png"
-dest_files=["res://.godot/imported/frame_04.png-7db6fe8ebb1a7730c30e5de0755b122a.ctex"]
+dest_files=["res://.godot/imported/frame_04.png-7db6fe8ebb1a7730c30e5de0755b122a.s3tc.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.4
 compress/hdr_compression=1

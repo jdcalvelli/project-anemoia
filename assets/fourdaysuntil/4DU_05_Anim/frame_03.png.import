@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dolprt7pe1a01"
-path="res://.godot/imported/frame_03.png-7481688ab87da9ec97175133589f8167.ctex"
+path.s3tc="res://.godot/imported/frame_03.png-7481688ab87da9ec97175133589f8167.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/fourdaysuntil/4DU_05_Anim/frame_03.png"
-dest_files=["res://.godot/imported/frame_03.png-7481688ab87da9ec97175133589f8167.ctex"]
+dest_files=["res://.godot/imported/frame_03.png-7481688ab87da9ec97175133589f8167.s3tc.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.4
 compress/hdr_compression=1

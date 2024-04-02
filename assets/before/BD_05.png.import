@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://in1nlj5k2uik"
-path="res://.godot/imported/BD_05.png-2701c0614f986bf1e0d0c2f7527ac38a.ctex"
+path.s3tc="res://.godot/imported/BD_05.png-2701c0614f986bf1e0d0c2f7527ac38a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/before/BD_05.png"
-dest_files=["res://.godot/imported/BD_05.png-2701c0614f986bf1e0d0c2f7527ac38a.ctex"]
+dest_files=["res://.godot/imported/BD_05.png-2701c0614f986bf1e0d0c2f7527ac38a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

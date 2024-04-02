@@ -56,6 +56,8 @@ func _input(event):
 		# wait and see if the second click happens
 		await wait_for_second_stick(AnalogSticks.LEFT)
 		# should the post wait for second click be here?
+	elif event.is_action_pressed("right-bumper-press"):
+		EventBus.rightBumperPress.emit()
 	elif event.is_action_pressed("restart-button"):
 		get_tree().change_scene_to_file("res://scenes/before/bd_1.tscn")
 	elif event.is_action_pressed("period-button"):

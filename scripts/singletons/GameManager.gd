@@ -5,6 +5,7 @@ enum Characters {
 	MOTHER,
 	BOTH,
 	AUTO,
+	CAMERA,
 }
 
 # current shot reference
@@ -18,6 +19,7 @@ func _ready():
 	EventBus.analogClick.connect(_on_stick_click)
 	EventBus.analogRotate.connect(_on_analog_rotate)
 	EventBus.analogFlick.connect(_on_analog_flick)
+	EventBus.shutterComplete.connect(_on_shutter_complete)
 
 func _physics_process(delta):
 	# if we're over the num shots
@@ -36,6 +38,13 @@ func _physics_process(delta):
 		elif currentShot.actionScene and currentShot.reverseActions:
 			InputManager.joy_rotate(InputManager.input_vec)
 	# both is handled in inputmanager input function - should that move?
+
+func _on_shutter_complete():
+	currentShot.numActionsTaken += 1
+	if currentShot.currentCharacter == Characters.CAMERA and currentShot.actionScene:
+		if currentShot.numActionsTaken == currentShot.numRequiredActions:
+			await get_tree().create_timer(goNextWaitTime).timeout
+			get_tree().change_scene_to_packed(nextScene)
 
 func _on_stick_click(stick:InputManager.AnalogSticks):
 	match stick:
@@ -74,7 +83,7 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 					# adding wait on scene change
 					await get_tree().create_timer(goNextWaitTime).timeout
 					get_tree().change_scene_to_packed(nextScene)
-			
+
 func _on_analog_flick(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
@@ -97,4 +106,4 @@ func _on_analog_flick(stick:InputManager.AnalogSticks):
 					# adding wait on scene change
 					await get_tree().create_timer(goNextWaitTime).timeout
 					get_tree().change_scene_to_packed(nextScene)
-	
+

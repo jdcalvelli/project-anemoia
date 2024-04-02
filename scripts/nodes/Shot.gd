@@ -44,7 +44,7 @@ func _ready():
 	GameManager.nextScene = load(nextShot)
 	# pass the previous scene up as a preload
 	GameManager.prevScene = load(prevShot)
-	#GameManager.prevScene = load(prevShot)
+		
 	# FMOD
 		# play shutter click sound
 	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")

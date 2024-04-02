@@ -21,14 +21,12 @@ animations = [{
 [node name="4DU_21_return_present" instance=ExtResource("1_7kdkr")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 3
+currentCharacter = 4
+actionScene = true
+numRequiredActions = 1
 autoCharacterWaitTime = 4.0
 nextShot = "res://scenes/fourdaysuntil/4du_22.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_ot2b6")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_21_return_present"

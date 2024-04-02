@@ -46,8 +46,6 @@ func _ready():
 	GameManager.prevScene = load(prevShot)
 		
 	# FMOD
-		# play shutter click sound
-	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
 	# calling change_ambience
 	AudioManager.change_ambience(sceneAmbiencePath)
 	# change ambience param

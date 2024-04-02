@@ -26,6 +26,9 @@ func _ready():
 func _on_right_bumper_press():
 	$"Camera-Helper".hide()
 	if GameManager.currentShot.numActionsTaken != GameManager.currentShot.numRequiredActions:
+		# play shutter click sound
+		FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
+		# tween the shutter
 		tween = create_tween()
 		tween.set_ease(Tween.EASE_IN_OUT)
 		tween.set_trans(Tween.TRANS_CIRC)

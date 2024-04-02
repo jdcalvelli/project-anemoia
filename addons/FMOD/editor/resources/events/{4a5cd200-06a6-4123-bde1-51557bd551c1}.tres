@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c7icledmks0hr"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Ambience/rollingShutterAmbience"
+guid = "{4a5cd200-06a6-4123-bde1-51557bd551c1}"
+name = "rollingShutterAmbience"

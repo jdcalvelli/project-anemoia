@@ -15,6 +15,7 @@ animations = [{
 }]
 
 [node name="bd_21" instance=ExtResource("1_tiytn")]
+helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 4

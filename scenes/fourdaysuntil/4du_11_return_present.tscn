@@ -19,6 +19,7 @@ animations = [{
 }]
 
 [node name="4DU_11_return_present" instance=ExtResource("1_ux0ms")]
+helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 4

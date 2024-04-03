@@ -3,22 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b32nytmr7627i"
-path.s3tc="res://.godot/imported/frame_05.png-f6307e55840dc1c51698ffa19c4f7a04.s3tc.ctex"
+path="res://.godot/imported/frame_05.png-f6307e55840dc1c51698ffa19c4f7a04.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/utilities/Bumper Snapshot Instruction/frame_05.png"
-dest_files=["res://.godot/imported/frame_05.png-f6307e55840dc1c51698ffa19c4f7a04.s3tc.ctex"]
+dest_files=["res://.godot/imported/frame_05.png-f6307e55840dc1c51698ffa19c4f7a04.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

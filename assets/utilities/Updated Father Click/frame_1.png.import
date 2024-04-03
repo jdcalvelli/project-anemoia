@@ -3,22 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccvsidlo4q123"
-path.s3tc="res://.godot/imported/frame_1.png-b6ec0774986a06923761df7272641ff3.s3tc.ctex"
+path="res://.godot/imported/frame_1.png-b6ec0774986a06923761df7272641ff3.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/utilities/Updated Father Click/frame_1.png"
-dest_files=["res://.godot/imported/frame_1.png-b6ec0774986a06923761df7272641ff3.s3tc.ctex"]
+dest_files=["res://.godot/imported/frame_1.png-b6ec0774986a06923761df7272641ff3.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.01
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

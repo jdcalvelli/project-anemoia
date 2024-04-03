@@ -3,22 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://twlug8mlv6jh"
-path.s3tc="res://.godot/imported/frame_06.png-c6f552e195603282853f4eb313b83eee.s3tc.ctex"
+path="res://.godot/imported/frame_06.png-c6f552e195603282853f4eb313b83eee.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/before/BD_07_NewAnim_2/frame_06.png"
-dest_files=["res://.godot/imported/frame_06.png-c6f552e195603282853f4eb313b83eee.s3tc.ctex"]
+dest_files=["res://.godot/imported/frame_06.png-c6f552e195603282853f4eb313b83eee.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.4
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

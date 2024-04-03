@@ -3,22 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxguqop3hc68f"
-path.s3tc="res://.godot/imported/frame_03.png-3eb1746b759f13182ad9f8a0b7546469.s3tc.ctex"
+path="res://.godot/imported/frame_03.png-3eb1746b759f13182ad9f8a0b7546469.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/before/BD_20_Anim/BD_20_mother/frame_03.png"
-dest_files=["res://.godot/imported/frame_03.png-3eb1746b759f13182ad9f8a0b7546469.s3tc.ctex"]
+dest_files=["res://.godot/imported/frame_03.png-3eb1746b759f13182ad9f8a0b7546469.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.4
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

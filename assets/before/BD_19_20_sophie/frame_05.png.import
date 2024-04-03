@@ -3,22 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5jo3t7b2mii2"
-path.s3tc="res://.godot/imported/frame_05.png-e78e3f9804f08ba66f82aa500756f04f.s3tc.ctex"
+path="res://.godot/imported/frame_05.png-e78e3f9804f08ba66f82aa500756f04f.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/before/BD_19_20_sophie/frame_05.png"
-dest_files=["res://.godot/imported/frame_05.png-e78e3f9804f08ba66f82aa500756f04f.s3tc.ctex"]
+dest_files=["res://.godot/imported/frame_05.png-e78e3f9804f08ba66f82aa500756f04f.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.4
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

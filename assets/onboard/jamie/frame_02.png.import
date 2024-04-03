@@ -3,22 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yi5b52dkc0lo"
-path.s3tc="res://.godot/imported/frame_02.png-75f3dc7c3da7ccd885902ed936f16f8c.s3tc.ctex"
+path="res://.godot/imported/frame_02.png-75f3dc7c3da7ccd885902ed936f16f8c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/onboard/jamie/frame_02.png"
-dest_files=["res://.godot/imported/frame_02.png-75f3dc7c3da7ccd885902ed936f16f8c.s3tc.ctex"]
+dest_files=["res://.godot/imported/frame_02.png-75f3dc7c3da7ccd885902ed936f16f8c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.3
+compress/lossy_quality=0.2
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

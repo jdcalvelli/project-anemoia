@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw1vk4g6drti5"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_tjg3r"]
+[ext_resource type="Texture2D" uid="uid://bf8odbt1qvxws" path="res://assets/threedaysuntil/3DU_04_Anim/frame_01.png" id="2_8x5ao"]
+[ext_resource type="Texture2D" uid="uid://jcqth24yfcl4" path="res://assets/threedaysuntil/3DU_04_Anim/frame_02.png" id="3_adebu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7hw6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8x5ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_adebu")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="3du_04" instance=ExtResource("1_tjg3r")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 3
+autoCharacterWaitTime = 5.0
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_7hw6t")
+autoplay = "default"

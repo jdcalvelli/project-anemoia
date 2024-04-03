@@ -63,7 +63,7 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
 			if !currentShot.reverseActions and currentShot.actionScene:
-				print("father rotate")
+				# print("father rotate")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
 					# emit total actions completed
@@ -73,7 +73,7 @@ func _on_analog_rotate(stick:InputManager.AnalogSticks):
 					get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(currentShot.nextShot))
 		InputManager.AnalogSticks.RIGHT:
 			if currentShot.reverseActions and currentShot.actionScene:
-				print("mother rotate")
+				# print("mother rotate")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
 					# emit total actions completed
@@ -86,7 +86,7 @@ func _on_analog_flick(stick:InputManager.AnalogSticks):
 	match stick:
 		InputManager.AnalogSticks.LEFT:
 			if currentShot.reverseActions and currentShot.actionScene:
-				print("father flick")
+				# print("father flick")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
 					# emit total actions completed
@@ -96,7 +96,7 @@ func _on_analog_flick(stick:InputManager.AnalogSticks):
 					get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(currentShot.nextShot))
 		InputManager.AnalogSticks.RIGHT:
 			if !currentShot.reverseActions and currentShot.actionScene:
-				print("mother flick")
+				# print("mother flick")
 				currentShot.numActionsTaken += 1
 				if currentShot.numActionsTaken == currentShot.numRequiredActions:
 					# emit total actions completed

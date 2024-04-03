@@ -88,7 +88,7 @@ func wait_for_second_stick(secondStick:AnalogSticks):
 				timer += 1
 				await get_tree().create_timer(1/60).timeout
 			# else print just left
-			print("KEEP JUST LEFT")
+			# print("KEEP JUST LEFT")
 			EventBus.analogClick.emit(AnalogSticks.LEFT)
 			doubleClickScenario = false
 		AnalogSticks.LEFT:
@@ -102,7 +102,7 @@ func wait_for_second_stick(secondStick:AnalogSticks):
 				timer += 1
 				await get_tree().create_timer(1/60).timeout
 			#else just print right
-			print("KEEP JUST RIGHT")
+			# print("KEEP JUST RIGHT")
 			EventBus.analogClick.emit(AnalogSticks.RIGHT)
 			doubleClickScenario = false
 
@@ -146,7 +146,7 @@ func joy_rotate(input_vec:Vector2):
 		rotateFlags[5] = 1
 		
 	if rotateFlags[5]:
-		print("full rotation")
+		# print("full rotation")
 		rotateFlags = [0,0,0,0,0,0]
 		match GameManager.currentShot.currentCharacter:
 			GameManager.Characters.FATHER:
@@ -169,7 +169,7 @@ func joy_rock(input_vec:Vector2):
 	
 	# should include an x check so that we stay within a box
 	if current_pos.x >= 0.8 or current_pos.x <= -0.8:
-		print("reset bc too far on x")
+		# print("reset bc too far on x")
 		rockFlags = [0,0,0,0,0,0]
 		isRockingUp = false
 		return
@@ -179,29 +179,29 @@ func joy_rock(input_vec:Vector2):
 	
 	if !isRockingUp:
 		if current_pos.y <= -0.9 and rockFlags[1]:
-			print("flag 3")
+			# print("flag 3")
 			rockFlags[2] = 1
 			isRockingUp = true
 		elif current_pos.y <= -0.5 and rockFlags[0]:
-			print("flag 2")
+			# print("flag 2")
 			rockFlags[1] = 1
 		elif current_pos.y <= -0.1 and !rockFlags[0]:
-			print("flag 1")
+			# print("flag 1")
 			rockFlags[0] = 1
 			EventBus.actionStarted.emit()
 	elif isRockingUp:
 		if current_pos.y >= 0.9 and rockFlags[4]:
-			print("flag 6")
+			# print("flag 6")
 			rockFlags[5] = 1
 		elif current_pos.y >= 0.5 and rockFlags[3]:
-			print("flag 5")
+			# print("flag 5")
 			rockFlags[4] = 1
 		elif current_pos.y >= 0.1 and rockFlags[2]:
-			print("flag 4")
+			# print("flag 4")
 			rockFlags[3] = 1
 	
 	if rockFlags[5]:
-		print("complete rock")
+		# print("complete rock")
 		rockFlags = [0,0,0,0,0,0]
 		isRockingUp = false
 		match GameManager.currentShot.currentCharacter:

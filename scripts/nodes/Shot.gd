@@ -35,7 +35,7 @@ func _enter_tree():
 	# nill at this point
 	await get_tree().create_timer(autoCharacterWaitTime).timeout
 	if currentCharacter == GameManager.Characters.AUTO:
-		print("AUTOMOVE")
+		# print("AUTOMOVE")
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
 
 func _ready():

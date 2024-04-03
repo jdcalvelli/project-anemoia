@@ -27,12 +27,16 @@ var numActionsTaken:int = 0
 @export var nextShot:String
 
 func _enter_tree():
+	
+	# async loading next and prev shots
+	ResourceLoader.load_threaded_request(nextShot)
+	ResourceLoader.load_threaded_request(prevShot)
 	# this is for the auto character
 	# nill at this point
 	await get_tree().create_timer(autoCharacterWaitTime).timeout
 	if currentCharacter == GameManager.Characters.AUTO:
 		print("AUTOMOVE")
-		get_tree().change_scene_to_packed(GameManager.nextScene)
+		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
 
 func _ready():
 	# subscribe to events
@@ -40,10 +44,6 @@ func _ready():
 	EventBus.actionCompleted.connect(_on_action_completed_audio)
 	# pass the shot up to the gamemanager
 	GameManager.currentShot = self
-	# pass the next scene up as preload
-	GameManager.nextScene = load(nextShot)
-	# pass the previous scene up as a preload
-	GameManager.prevScene = load(prevShot)
 		
 	# FMOD
 	# calling change_ambience

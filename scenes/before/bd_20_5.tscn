@@ -19,11 +19,8 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 currentCharacter = 3
 autoCharacterWaitTime = 2.0
+prevShot = "res://scenes/before/bd_20_4.tscn"
 nextShot = "res://scenes/before/bd_21.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_qtxj4")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_20_5"

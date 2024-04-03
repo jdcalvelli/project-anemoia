@@ -67,12 +67,8 @@ sceneAudioPlaybackPoint = 1
 currentCharacter = 1
 actionScene = true
 numRequiredActions = 3
+prevShot = "res://scenes/before/bd_20_3.tscn"
 nextShot = "res://scenes/before/bd_20_5.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_mu033")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_20_4
-"

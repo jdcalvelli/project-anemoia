@@ -25,7 +25,3 @@ nextShot = "res://scenes/before/bd_7.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_fbw3w")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_6"

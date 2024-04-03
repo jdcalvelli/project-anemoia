@@ -25,12 +25,9 @@ sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAmbienceParam = "muffleLevel"
 currentCharacter = 3
 autoCharacterWaitTime = 7.0
+prevShot = "res://scenes/before/bd_7.tscn"
 nextShot = "res://scenes/before/bd_9.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_qlx3h")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_8"

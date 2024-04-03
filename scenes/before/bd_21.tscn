@@ -15,15 +15,13 @@ animations = [{
 }]
 
 [node name="bd_21" instance=ExtResource("1_tiytn")]
+helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 3
-autoCharacterWaitTime = 6.0
+currentCharacter = 4
+actionScene = true
+numRequiredActions = 1
 nextShot = "res://scenes/before/bd_22.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_fusj8")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_21"

@@ -22,7 +22,8 @@ var numActionsTaken:int = 0
 # this is only going to be used in the auto character case
 # this is a strong case of i should refactor this all into shot and shot subclasses
 @export var autoCharacterWaitTime: float
-
+@export var prevShot:String
+#added a previous shot variable for developmental purposes
 @export var nextShot:String
 
 func _enter_tree():
@@ -41,10 +42,10 @@ func _ready():
 	GameManager.currentShot = self
 	# pass the next scene up as preload
 	GameManager.nextScene = load(nextShot)
-	
+	# pass the previous scene up as a preload
+	GameManager.prevScene = load(prevShot)
+		
 	# FMOD
-		# play shutter click sound
-	FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
 	# calling change_ambience
 	AudioManager.change_ambience(sceneAmbiencePath)
 	# change ambience param

@@ -692,6 +692,7 @@ script = ExtResource("2_ahngt")
 
 [node name="RAA-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 position = Vector2(-672, 320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_4h4lq")
@@ -699,6 +700,7 @@ autoplay = "default"
 
 [node name="VAA-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 position = Vector2(672, 320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_58hut")
@@ -706,12 +708,14 @@ autoplay = "default"
 
 [node name="Camera-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 position = Vector2(672, -320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_befrp")
 autoplay = "default"
 
 [node name="ShutterVFX" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(2.08165e-12, -1140)
 scale = Vector2(1920, 1200)
 texture = SubResource("GradientTexture1D_ub7su")

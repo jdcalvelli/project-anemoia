@@ -27,7 +27,7 @@ func _ready():
 func play_scene_audio(eventPath:String):
 	# if any instances already have this path do nothing
 	if sceneAudioInstances.any(func(element): return element.get_description().get_path() == eventPath):
-		print("already exists once")
+		# print("already exists once")
 		pass
 	else:
 		# create an instance

@@ -20,13 +20,8 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/trainAmbience"
 sceneAmbienceParam = "volumeLevel"
 sceneAmbienceVal = 0.5
-currentCharacter = 3
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/fourdaysuntil/4du_2.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_n8wh3")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_01"

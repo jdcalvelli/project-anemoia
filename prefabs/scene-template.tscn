@@ -1,4 +1,4 @@
-[gd_scene load_steps=167 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=153 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/HelperViews.gd" id="1_46rmh"]
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
@@ -51,30 +51,18 @@
 [ext_resource type="Texture2D" uid="uid://cbrk8nibgeofc" path="res://assets/utilities/Updated RAA Instruction/frame_46.png" id="49_avwfe"]
 [ext_resource type="Texture2D" uid="uid://bwwe64y2lf85e" path="res://assets/utilities/Updated RAA Instruction/frame_47.png" id="50_inyt8"]
 [ext_resource type="Texture2D" uid="uid://cwgaqhh4wpbr7" path="res://assets/utilities/Updated RAA Instruction/frame_48.png" id="51_olenb"]
-[ext_resource type="Texture2D" uid="uid://ccvsidlo4q123" path="res://assets/utilities/Updated Father Click/frame_1.png" id="52_gy084"]
 [ext_resource type="Texture2D" uid="uid://dkhw04hdoqsrn" path="res://assets/utilities/Updated VAA Instruction/frame_01.png" id="52_nxgf5"]
 [ext_resource type="Texture2D" uid="uid://ruwre1gaoa8i" path="res://assets/utilities/Updated VAA Instruction/frame_02.png" id="53_21e6a"]
-[ext_resource type="Texture2D" uid="uid://63bg6h57rr0i" path="res://assets/utilities/Updated Father Click/frame_2.png" id="53_dtexj"]
-[ext_resource type="Texture2D" uid="uid://m81rf64w7e25" path="res://assets/utilities/Updated Father Click/frame_3.png" id="54_soptp"]
 [ext_resource type="Texture2D" uid="uid://c4hjksfbnj8hi" path="res://assets/utilities/Updated VAA Instruction/frame_03.png" id="54_wj5o0"]
 [ext_resource type="Texture2D" uid="uid://cf0jkf2ahhays" path="res://assets/utilities/Updated VAA Instruction/frame_04.png" id="55_8y7oc"]
-[ext_resource type="Texture2D" uid="uid://bcx0arb4oxggw" path="res://assets/utilities/Updated Father Click/frame_4.png" id="55_g8y10"]
 [ext_resource type="Texture2D" uid="uid://cfowkakcuf3b4" path="res://assets/utilities/Updated VAA Instruction/frame_05.png" id="56_bccmr"]
-[ext_resource type="Texture2D" uid="uid://cei7dn5yhomki" path="res://assets/utilities/Updated Father Click/frame_5.png" id="56_r1maj"]
 [ext_resource type="Texture2D" uid="uid://cvnk7cxtt5yh2" path="res://assets/utilities/Updated VAA Instruction/frame_06.png" id="57_jgfq6"]
-[ext_resource type="Texture2D" uid="uid://c73u28jdilcsl" path="res://assets/utilities/Updated Father Click/frame_6.png" id="57_s787o"]
-[ext_resource type="Texture2D" uid="uid://bqj0ctvfho7gl" path="res://assets/utilities/Updated Mother Click/frame_1.png" id="58_7lkvc"]
 [ext_resource type="Texture2D" uid="uid://ddvjpj835reri" path="res://assets/utilities/Updated VAA Instruction/frame_07.png" id="58_bhrwi"]
-[ext_resource type="Texture2D" uid="uid://cggjionqyo2m" path="res://assets/utilities/Updated Mother Click/frame_2.png" id="59_04yg7"]
 [ext_resource type="Texture2D" uid="uid://djlrp1e5mhcns" path="res://assets/utilities/Updated VAA Instruction/frame_08.png" id="59_tnt1x"]
 [ext_resource type="Texture2D" uid="uid://d0f0d3j6bcnax" path="res://assets/utilities/Updated VAA Instruction/frame_09.png" id="60_4r1n5"]
-[ext_resource type="Texture2D" uid="uid://0ocsnbreowv8" path="res://assets/utilities/Updated Mother Click/frame_3.png" id="60_rc31y"]
-[ext_resource type="Texture2D" uid="uid://bw0q28b40rvsw" path="res://assets/utilities/Updated Mother Click/frame_4.png" id="61_hbq7p"]
 [ext_resource type="Texture2D" uid="uid://d2o0p7fmplgir" path="res://assets/utilities/Updated VAA Instruction/frame_10.png" id="61_v5r4m"]
 [ext_resource type="Texture2D" uid="uid://c4e7hessy4ei1" path="res://assets/utilities/Updated VAA Instruction/frame_11.png" id="62_m16in"]
-[ext_resource type="Texture2D" uid="uid://dvgmu8xrvd7ec" path="res://assets/utilities/Updated Mother Click/frame_5.png" id="62_y37h5"]
 [ext_resource type="Texture2D" uid="uid://vkvse8l7hbbo" path="res://assets/utilities/Updated VAA Instruction/frame_12.png" id="63_72ld2"]
-[ext_resource type="Texture2D" uid="uid://bflhkj6kwqu6b" path="res://assets/utilities/Updated Mother Click/frame_6.png" id="63_ruw5o"]
 [ext_resource type="Texture2D" uid="uid://bir87by8h53y8" path="res://assets/utilities/Updated VAA Instruction/frame_13.png" id="64_nwrx5"]
 [ext_resource type="Texture2D" uid="uid://i26eetal26i5" path="res://assets/utilities/Updated VAA Instruction/frame_14.png" id="65_cibps"]
 [ext_resource type="Texture2D" uid="uid://bgufrm7tbxycv" path="res://assets/utilities/Updated VAA Instruction/frame_15.png" id="66_68s6p"]
@@ -624,58 +612,6 @@ colors = PackedColorArray(0.129412, 0.129412, 0.129412, 1)
 gradient = SubResource("Gradient_p8wme")
 width = 1
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7pcfg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("52_gy084")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_dtexj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_soptp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_g8y10")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_r1maj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_s787o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_epkwn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("58_7lkvc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_04yg7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_rc31y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_hbq7p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_y37h5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("63_ruw5o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
 [node name="scene-template" type="Node2D"]
 script = ExtResource("1_46rmh")
 helperTimeToWait = 4
@@ -683,6 +619,7 @@ helperTweenDuration = 2
 
 [node name="Shot" type="Node" parent="."]
 script = ExtResource("1_jgvs3")
+currentCharacter = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
@@ -697,6 +634,7 @@ position = Vector2(-672, 320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_4h4lq")
 autoplay = "default"
+speed_scale = 1.5
 
 [node name="VAA-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -719,19 +657,3 @@ z_index = 2
 position = Vector2(2.08165e-12, -1140)
 scale = Vector2(1920, 1200)
 texture = SubResource("GradientTexture1D_ub7su")
-
-[node name="Father-Click-Helper" type="AnimatedSprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(-672, 320)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_7pcfg")
-autoplay = "default"
-
-[node name="Mother-Click-Helper" type="AnimatedSprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(672, 320)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_epkwn")
-autoplay = "default"

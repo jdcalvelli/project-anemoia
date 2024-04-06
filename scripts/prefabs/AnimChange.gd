@@ -16,11 +16,9 @@ func _physics_process(delta):
 	frameCounter += 1
 	
 	if GameManager.currentShot.currentCharacter == GameManager.Characters.FATHER:
-		if GameManager.currentShot.actionScene:
-			_rotation_view()
+		_rotation_view()
 	elif GameManager.currentShot.currentCharacter == GameManager.Characters.MOTHER:
-		if GameManager.currentShot.actionScene:
-			_rock_view()
+		_rock_view()
 
 
 ### helper funcs
@@ -64,8 +62,6 @@ func _rotation_view():
 			frame = 11
 	
 func _rock_view():
-	# need some sort of reset to rock back to zero
-	
 	# print(InputManager.current_pos)
 	if InputManager.rockFlags.all(func(element): return element == 0) and GameManager.currentShot.numRequiredActions > 1:
 		frame = 1

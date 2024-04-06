@@ -21,14 +21,9 @@ animations = [{
 [node name="4du_12" instance=ExtResource("1_lrvy2")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 3
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/fourdaysuntil/4du_13.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_nnk0d")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_12"

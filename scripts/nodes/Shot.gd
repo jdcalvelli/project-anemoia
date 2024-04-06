@@ -15,7 +15,6 @@ class_name Shot
 @export_category("Shot Logic")
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
-@export var actionScene:bool = false
 @export var numRequiredActions:int = 0
 var numActionsTaken:int = 0
 

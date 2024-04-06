@@ -33,15 +33,9 @@ helperTimeToWait = 6
 sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAmbienceParam = "muffleLevel"
 sceneAudioPath = "event:/beforeDays/bd9"
-currentCharacter = 3
 autoCharacterWaitTime = 8.0
 nextShot = "res://scenes/before/bd_10.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_2ijkd")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_9
-"

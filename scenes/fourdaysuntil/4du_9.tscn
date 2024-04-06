@@ -159,7 +159,6 @@ helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/4du/4du_9"
-currentCharacter = 3
 autoCharacterWaitTime = 12.0
 nextShot = "res://scenes/fourdaysuntil/4du_10.tscn"
 
@@ -168,7 +167,3 @@ sprite_frames = SubResource("SpriteFrames_httom")
 autoplay = "default"
 frame = 35
 frame_progress = 1.0
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_9"

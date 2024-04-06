@@ -22,8 +22,7 @@ animations = [{
 helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 4
-actionScene = true
+currentCharacter = 3
 numRequiredActions = 1
 nextShot = "res://scenes/fourdaysuntil/4du_12.tscn"
 

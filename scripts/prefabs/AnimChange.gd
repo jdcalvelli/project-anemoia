@@ -3,8 +3,6 @@ extends AnimatedSprite2D
 var maxJitterVal:Vector2 = Vector2(2, 2)
 var frameCounter:int = 0
 
-var flipSide:bool = false
-
 # update to be able to do the jitter animation
 func _physics_process(delta):
 	# every twelve frames do the jitter

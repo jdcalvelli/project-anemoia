@@ -1,4 +1,4 @@
-[gd_scene load_steps=153 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=154 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/HelperViews.gd" id="1_46rmh"]
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
@@ -147,6 +147,7 @@
 [ext_resource type="Texture2D" uid="uid://c2k7cgu2u8o6q" path="res://assets/utilities/Bumper Snapshot Instruction/frame_46.png" id="145_hd3i1"]
 [ext_resource type="Texture2D" uid="uid://b00g8pjcvf20i" path="res://assets/utilities/Bumper Snapshot Instruction/frame_47.png" id="146_x6jga"]
 [ext_resource type="Texture2D" uid="uid://ctlipuv4jh57c" path="res://assets/utilities/Bumper Snapshot Instruction/frame_48.png" id="147_egxpm"]
+[ext_resource type="Script" path="res://scripts/prefabs/FadeInOverlay.gd" id="148_wxbdn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h4lq"]
 animations = [{
@@ -657,3 +658,7 @@ z_index = 2
 position = Vector2(2.08165e-12, -1140)
 scale = Vector2(1920, 1200)
 texture = SubResource("GradientTexture1D_ub7su")
+
+[node name="FadeInOverlay" type="Sprite2D" parent="."]
+scale = Vector2(0.52, 0.52)
+script = ExtResource("148_wxbdn")

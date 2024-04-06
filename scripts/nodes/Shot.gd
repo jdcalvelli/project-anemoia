@@ -12,7 +12,7 @@ class_name Shot
 # make this an enum eventually prob
 @export var sceneAudioPlaybackPoint:int
 
-@export_category("Scene Fade Options")
+@export_category("Pre Scene Options")
 # 0 = no fade in, 1 = fade from last image
 @export var sceneFadeIn:bool
 

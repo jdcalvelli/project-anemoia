@@ -18,7 +18,7 @@ func _ready():
 	# wait for timeout
 	await get_tree().create_timer(helperTimeToWait).timeout
 	# then do the tween for the right object
-	_create_helper_tween(GameManager.currentShot.currentCharacter, GameManager.currentShot.actionScene)
+	_create_helper_tween(GameManager.currentShot.currentCharacter)
 	
 
 # helper func
@@ -43,56 +43,23 @@ func _on_total_actions_completed():
 	$"RAA-Helper".hide()
 	$"VAA-Helper".hide()
 	$"Camera-Helper".hide()
-	$"Father-Click-Helper".hide()
-	$"Mother-Click-Helper".hide()
 	pass
 
-func _create_helper_tween(currentChar:GameManager.Characters, actionScene:bool):
+func _create_helper_tween(currentChar:GameManager.Characters):
 	if currentChar == GameManager.Characters.FATHER:
 		tween = create_tween()
-		if actionScene:
-			tween.tween_property(
-				$"RAA-Helper", 
-				"modulate:a",
-				1,
-				helperTweenDuration)
-		else:
-			tween.tween_property(
-				$"Father-Click-Helper", 
-				"modulate:a", 
-				1, 
-				helperTweenDuration)
+		tween.tween_property(
+			$"RAA-Helper", 
+			"modulate:a",
+			1,
+			helperTweenDuration)
 	elif currentChar == GameManager.Characters.MOTHER:
 		tween = create_tween()
-		if actionScene:
-			tween.tween_property(
-				$"VAA-Helper", 
-				"modulate:a",
-				1, 
-				helperTweenDuration)
-		else:
-			tween.tween_property(
-				$"Mother-Click-Helper",
-				"modulate:a",
-				1, 
-				helperTweenDuration)
-	elif currentChar == GameManager.Characters.BOTH:
-		tween = create_tween()
-		if actionScene:
-			pass
-		else:
-			tween.set_parallel(true)
-			tween.tween_property(
-				$"Mother-Click-Helper",
-				"modulate:a",
-				1, 
-				helperTweenDuration)
-			tween.tween_property(
-				$"Father-Click-Helper",
-				"modulate:a",
-				1,
-				helperTweenDuration
-			)
+		tween.tween_property(
+			$"VAA-Helper", 
+			"modulate:a",
+			1, 
+			helperTweenDuration)
 	elif currentChar == GameManager.Characters.CAMERA:
 		tween = create_tween()
 		tween.tween_property(

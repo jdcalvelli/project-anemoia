@@ -1,4 +1,4 @@
-[gd_scene load_steps=167 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=154 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/HelperViews.gd" id="1_46rmh"]
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
@@ -159,6 +159,7 @@
 [ext_resource type="Texture2D" uid="uid://c2k7cgu2u8o6q" path="res://assets/utilities/Bumper Snapshot Instruction/frame_46.png" id="145_hd3i1"]
 [ext_resource type="Texture2D" uid="uid://b00g8pjcvf20i" path="res://assets/utilities/Bumper Snapshot Instruction/frame_47.png" id="146_x6jga"]
 [ext_resource type="Texture2D" uid="uid://ctlipuv4jh57c" path="res://assets/utilities/Bumper Snapshot Instruction/frame_48.png" id="147_egxpm"]
+[ext_resource type="Script" path="res://scripts/prefabs/FadeInOverlay.gd" id="148_wxbdn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h4lq"]
 animations = [{
@@ -624,58 +625,6 @@ colors = PackedColorArray(0.129412, 0.129412, 0.129412, 1)
 gradient = SubResource("Gradient_p8wme")
 width = 1
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7pcfg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("52_gy084")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_dtexj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_soptp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_g8y10")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_r1maj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_s787o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_epkwn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("58_7lkvc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_04yg7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_rc31y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_hbq7p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_y37h5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("63_ruw5o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
 [node name="scene-template" type="Node2D"]
 script = ExtResource("1_46rmh")
 helperTimeToWait = 4
@@ -683,6 +632,7 @@ helperTweenDuration = 2
 
 [node name="Shot" type="Node" parent="."]
 script = ExtResource("1_jgvs3")
+currentCharacter = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
@@ -697,6 +647,7 @@ position = Vector2(-672, 320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_4h4lq")
 autoplay = "default"
+speed_scale = 1.5
 
 [node name="VAA-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -720,18 +671,6 @@ position = Vector2(2.08165e-12, -1140)
 scale = Vector2(1920, 1200)
 texture = SubResource("GradientTexture1D_ub7su")
 
-[node name="Father-Click-Helper" type="AnimatedSprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(-672, 320)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_7pcfg")
-autoplay = "default"
-
-[node name="Mother-Click-Helper" type="AnimatedSprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(672, 320)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_epkwn")
-autoplay = "default"
+[node name="FadeInOverlay" type="Sprite2D" parent="."]
+scale = Vector2(0.52, 0.52)
+script = ExtResource("148_wxbdn")

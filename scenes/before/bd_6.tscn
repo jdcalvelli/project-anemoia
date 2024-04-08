@@ -19,7 +19,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/headphoneAmbience"
 sceneAmbienceParam = "muffleLevel"
-currentCharacter = 3
+currentCharacter = 2
 autoCharacterWaitTime = 4.0
 nextShot = "res://scenes/before/bd_7.tscn"
 

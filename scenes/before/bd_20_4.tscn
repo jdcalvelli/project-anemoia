@@ -65,7 +65,6 @@ helperTimeToWait = 1
 sceneAudioPath = "event:/beforeDays/bd20_2_4"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1
-actionScene = true
 numRequiredActions = 3
 prevShot = "res://scenes/before/bd_20_3.tscn"
 nextShot = "res://scenes/before/bd_20_5.tscn"

@@ -14,7 +14,7 @@ config/name="imogen"
 run/main_scene="res://scenes/before/bd_1.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.svg"
-config/version="0.5.0"
+config/version="0.5.1"
 
 [autoload]
 
@@ -98,16 +98,6 @@ right-analog-up={
 right-analog-down={
 "deadzone": 0.5,
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
-]
-}
-left-stick-click={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":7,"pressure":0.0,"pressed":true,"script":null)
-]
-}
-right-stick-click={
-"deadzone": 0.5,
-"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":8,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
 right-bumper-press={

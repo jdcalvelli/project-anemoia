@@ -29,7 +29,6 @@ sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAmbienceParam = "muffleLevel"
 sceneAmbienceVal = 0.5
 sceneAudioPath = "event:/beforeDays/bd4_5"
-currentCharacter = 3
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/before/bd_5.tscn"
 

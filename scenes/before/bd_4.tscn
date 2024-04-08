@@ -67,7 +67,7 @@ sceneAmbienceParam = "muffleLevel"
 sceneAmbienceVal = 0.5
 sceneAudioPath = "event:/beforeDays/bd4"
 sceneAudioPlaybackPoint = 1
-actionScene = true
+currentCharacter = 0
 numRequiredActions = 1
 nextShot = "res://scenes/before/bd_04-05.tscn"
 

@@ -12,10 +12,13 @@ class_name Shot
 # make this an enum eventually prob
 @export var sceneAudioPlaybackPoint:int
 
+@export_category("Pre Scene Options")
+# 0 = no fade in, 1 = fade from last image
+@export var sceneFadeIn:bool
+
 @export_category("Shot Logic")
 @export var currentCharacter:GameManager.Characters
 @export var reverseActions:bool = false
-@export var actionScene:bool = false
 @export var numRequiredActions:int = 0
 var numActionsTaken:int = 0
 
@@ -27,6 +30,8 @@ var numActionsTaken:int = 0
 @export var nextShot:String
 
 func _enter_tree():
+	# pass the shot up to the gamemanager
+	GameManager.currentShot = self
 	
 	# async loading next and prev shots
 	ResourceLoader.load_threaded_request(nextShot)
@@ -42,8 +47,6 @@ func _ready():
 	# subscribe to events
 	EventBus.actionStarted.connect(_on_action_started_audio)
 	EventBus.actionCompleted.connect(_on_action_completed_audio)
-	# pass the shot up to the gamemanager
-	GameManager.currentShot = self
 		
 	# FMOD
 	# calling change_ambience

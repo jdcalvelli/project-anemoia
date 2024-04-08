@@ -23,7 +23,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAmbienceParam = "muffleLevel"
-currentCharacter = 3
+currentCharacter = 2
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/before/bd_8.tscn"
 

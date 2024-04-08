@@ -66,16 +66,9 @@ sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
 sceneAmbienceParam = "reverbLevel"
 sceneAudioPath = "event:/4du/4du_21"
 sceneAudioPlaybackPoint = 1
-actionScene = true
+currentCharacter = 0
 numRequiredActions = 10
 nextShot = "res://scenes/fourdaysuntil/4du_21_past.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_cfc6x")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_21"
-
-[node name="RAA-Helper" parent="." index="4"]
-speed_scale = 3.0

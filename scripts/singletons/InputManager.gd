@@ -3,7 +3,6 @@ extends Node
 enum AnalogSticks {
 	LEFT,
 	RIGHT,
-	BOTH
 }
 
 # needed for double stick click
@@ -24,7 +23,7 @@ var rockFlags := [0,0,0,0,0,0]
 var isRockingUp := false
 
 # process func for the analog stick motions
-func _physics_process(delta):
+func _physics_process(_delta):
 	# determine which stick we care about
 	match GameManager.currentShot.currentCharacter:
 		GameManager.Characters.FATHER:
@@ -44,19 +43,7 @@ func _physics_process(delta):
 
 # input func for stick clicks ONLY
 func _input(event):
-	# if we're in a double click , stop listening for events here
-	if doubleClickScenario:
-		return
-	
-	if event.is_action_pressed("left-stick-click"):
-		# wait and see if the second click happens
-		await wait_for_second_stick(AnalogSticks.RIGHT)
-		# should the post wait for second click be here?
-	elif event.is_action_pressed("right-stick-click"):
-		# wait and see if the second click happens
-		await wait_for_second_stick(AnalogSticks.LEFT)
-		# should the post wait for second click be here?
-	elif event.is_action_pressed("right-bumper-press"):
+	if event.is_action_pressed("right-bumper-press"):
 		EventBus.rightBumperPress.emit()
 	elif event.is_action_pressed("restart-button"):
 		get_tree().change_scene_to_file("res://scenes/before/bd_1.tscn")
@@ -71,40 +58,6 @@ func _input(event):
 		return
 
 # ### helper funcs ###
-
-func wait_for_second_stick(secondStick:AnalogSticks):
-	doubleClickScenario = true
-	var timer = 0
-	
-	match secondStick:
-		AnalogSticks.RIGHT:
-			# quarter sec to click both
-			while timer < 15:
-				if Input.is_action_just_pressed("right-stick-click"):
-					#print("BOTH")
-					EventBus.analogClick.emit(AnalogSticks.BOTH)
-					doubleClickScenario = false
-					return
-				timer += 1
-				await get_tree().create_timer(1/60).timeout
-			# else print just left
-			# print("KEEP JUST LEFT")
-			EventBus.analogClick.emit(AnalogSticks.LEFT)
-			doubleClickScenario = false
-		AnalogSticks.LEFT:
-			# quarter sec to click both
-			while timer < 15:
-				if Input.is_action_just_pressed("left-stick-click"):
-					# print("BOTH")
-					EventBus.analogClick.emit(AnalogSticks.BOTH)
-					doubleClickScenario = false
-					return
-				timer += 1
-				await get_tree().create_timer(1/60).timeout
-			#else just print right
-			# print("KEEP JUST RIGHT")
-			EventBus.analogClick.emit(AnalogSticks.RIGHT)
-			doubleClickScenario = false
 
 func joy_rotate(input_vec:Vector2):
 	# mariokart flag method

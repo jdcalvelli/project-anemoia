@@ -19,9 +19,7 @@ helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/4du/4du_4"
-currentCharacter = 4
-actionScene = true
-numRequiredActions = 1
+autoCharacterWaitTime = 6.0
 nextShot = "res://scenes/fourdaysuntil/4du_5.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

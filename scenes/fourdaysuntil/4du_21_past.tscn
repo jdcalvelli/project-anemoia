@@ -66,14 +66,10 @@ sceneAmbienceParam = "reverbLevel"
 sceneAmbienceVal = 1.0
 sceneAudioPath = "event:/4du/4du_21_past"
 sceneAudioPlaybackPoint = 1
-actionScene = true
-numRequiredActions = 10
+currentCharacter = 0
+numRequiredActions = 5
 nextShot = "res://scenes/fourdaysuntil/4du_21_return_present.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_ve0mc")
 speed_scale = 3.0
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_21_past"

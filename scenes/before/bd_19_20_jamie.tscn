@@ -64,7 +64,7 @@ helperTimeToWait = 1
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/beforeDays/bd19_20_jamie"
 sceneAudioPlaybackPoint = 1
-actionScene = true
+currentCharacter = 0
 numRequiredActions = 1
 prevShot = "res://scenes/before/bd_19_20_sophie.tscn"
 nextShot = "res://scenes/before/bd_20_1.tscn"

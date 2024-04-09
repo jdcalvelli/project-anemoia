@@ -62,7 +62,6 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 1
-actionScene = true
 numRequiredActions = 1
 
 [node name="AnimatedSprite2D" parent="." index="1"]

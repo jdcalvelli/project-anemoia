@@ -18,7 +18,6 @@ animations = [{
 helperTimeToWait = 8
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 3
 autoCharacterWaitTime = 2.0
 prevShot = "res://scenes/before/bd_19_20_jamie.tscn"
 nextShot = "res://scenes/before/bd_20_2.tscn"

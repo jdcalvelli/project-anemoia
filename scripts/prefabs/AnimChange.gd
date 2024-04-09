@@ -1,26 +1,10 @@
 extends AnimatedSprite2D
 
-var maxJitterVal:Vector2 = Vector2(2, 2)
-var frameCounter:int = 0
-
-var flipSide:bool = false
-
-# update to be able to do the jitter animation
-func _physics_process(delta):
-	# every twelve frames do the jitter
-	if frameCounter % 12 == 0:
-		#print("twelve frame")
-		# set the position of this image to some random value between 0 and maxjitterval
-		position = Vector2(randi_range(0, maxJitterVal.x + 1), randi_range(0, maxJitterVal.y + 1))
-	# increment frame counter
-	frameCounter += 1
-	
+func _physics_process(_delta):
 	if GameManager.currentShot.currentCharacter == GameManager.Characters.FATHER:
-		if GameManager.currentShot.actionScene:
-			_rotation_view()
+		_rotation_view()
 	elif GameManager.currentShot.currentCharacter == GameManager.Characters.MOTHER:
-		if GameManager.currentShot.actionScene:
-			_rock_view()
+		_rock_view()
 
 
 ### helper funcs
@@ -64,8 +48,6 @@ func _rotation_view():
 			frame = 11
 	
 func _rock_view():
-	# need some sort of reset to rock back to zero
-	
 	# print(InputManager.current_pos)
 	if InputManager.rockFlags.all(func(element): return element == 0) and GameManager.currentShot.numRequiredActions > 1:
 		frame = 1

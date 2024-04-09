@@ -29,6 +29,11 @@ var numActionsTaken:int = 0
 #added a previous shot variable for developmental purposes
 @export var nextShot:String
 
+# for jitter shot
+var shouldJitter:bool = true
+var maxJitterVal:Vector2 = Vector2(2, 2)
+var frameCounter:int = 0
+
 func _enter_tree():
 	# pass the shot up to the gamemanager
 	GameManager.currentShot = self
@@ -47,6 +52,7 @@ func _ready():
 	# subscribe to events
 	EventBus.actionStarted.connect(_on_action_started_audio)
 	EventBus.actionCompleted.connect(_on_action_completed_audio)
+	EventBus.shutterComplete.connect(_on_shutter_complete)
 		
 	# FMOD
 	# calling change_ambience
@@ -57,6 +63,19 @@ func _ready():
 	if sceneAudioPlaybackPoint == 0:
 		AudioManager.play_scene_audio(sceneAudioPath)
 
+# for jitter
+func _physics_process(_delta):
+	# if we shouldnt jitter, break out
+	if !shouldJitter:
+		return
+	# every twelve frames do the jitter
+	if frameCounter % 12 == 0 and get_node("../AnimatedSprite2D"):
+		#print("twelve frame")
+		# set the position of this image to some random value between 0 and maxjitterval
+		get_node("../AnimatedSprite2D").position = Vector2(randi_range(0, maxJitterVal.x + 1), randi_range(0, maxJitterVal.y + 1))
+	# increment frame counter
+	frameCounter += 1
+
 func _on_action_started_audio():
 	if sceneAudioPlaybackPoint == 1:
 		AudioManager.play_scene_audio(sceneAudioPath)
@@ -64,6 +83,27 @@ func _on_action_started_audio():
 func _on_action_completed_audio():
 	if sceneAudioPlaybackPoint == 2:
 		AudioManager.play_scene_audio(sceneAudioPath)
+
+func _on_shutter_complete():
+		# turn should jitter off
+	shouldJitter = false
+	# now do the slight pan out and rotate
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.tween_property(
+		get_node("../AnimatedSprite2D"),
+		"rotation_degrees",
+		-45,
+		50
+	)
+	tween.tween_property(
+		get_node("../AnimatedSprite2D"),
+		"scale",
+		Vector2(1, 1),
+		50
+	)
 
 func _exit_tree():
 	# cleanup audio when we leave the tree

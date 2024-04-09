@@ -36,10 +36,11 @@ func _physics_process(_delta):
 	# both is handled in inputmanager input function - should that move?
 
 func _on_shutter_complete():
+	# handle logic	
 	currentShot.numActionsTaken += 1
 	if currentShot.currentCharacter == Characters.CAMERA:
 		if currentShot.numActionsTaken == currentShot.numRequiredActions:
-			await get_tree().create_timer(goNextWaitTime).timeout
+			await get_tree().create_timer(goNextWaitTime * 10).timeout
 			get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(currentShot.nextShot))
 
 func _on_analog_rotate(stick:InputManager.AnalogSticks):

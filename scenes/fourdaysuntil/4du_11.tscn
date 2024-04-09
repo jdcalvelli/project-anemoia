@@ -65,7 +65,7 @@ helperTimeToWait = 1
 sceneAudioPath = "event:/4du/4du_11"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1
-numRequiredActions = 10
+numRequiredActions = 5
 nextShot = "res://scenes/fourdaysuntil/4du_11_past.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

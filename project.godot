@@ -14,7 +14,7 @@ config/name="imogen"
 run/main_scene="res://scenes/before/bd_1.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.svg"
-config/version="0.5.1"
+config/version="0.6.0"
 
 [autoload]
 

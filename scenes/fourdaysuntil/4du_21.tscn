@@ -67,7 +67,7 @@ sceneAmbienceParam = "reverbLevel"
 sceneAudioPath = "event:/4du/4du_21"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 0
-numRequiredActions = 10
+numRequiredActions = 5
 nextShot = "res://scenes/fourdaysuntil/4du_21_past.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

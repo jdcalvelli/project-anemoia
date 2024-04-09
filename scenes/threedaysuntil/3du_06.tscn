@@ -59,9 +59,11 @@ animations = [{
 }]
 
 [node name="3du_06" instance=ExtResource("1_sojuh")]
+helperTimeToWait = 2
+helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
-actionScene = true
+currentCharacter = 0
 numRequiredActions = 3
 nextShot = "res://scenes/threedaysuntil/3du_6_1.tscn"
 

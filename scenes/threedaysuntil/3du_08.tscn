@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://v26nre74adj"]
+[gd_scene load_steps=29 format=3 uid="uid://v26nre74adj"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_ssbkx"]
 [ext_resource type="Texture2D" uid="uid://dhh65lpkkhgnc" path="res://assets/threedaysuntil/3DU_08_Anim/frame_01.png" id="2_2cvk3"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://djhwoguy78s17" path="res://assets/threedaysuntil/3DU_08_Anim/frame_23.png" id="24_eddwt"]
 [ext_resource type="Texture2D" uid="uid://dt55mbkrmw5jm" path="res://assets/threedaysuntil/3DU_08_Anim/frame_24.png" id="25_6ffe7"]
 [ext_resource type="Texture2D" uid="uid://bv5d157mww5ue" path="res://assets/threedaysuntil/3DU_08_Anim/frame_25.png" id="26_47bl7"]
+[ext_resource type="Texture2D" uid="uid://cyb8mq0dktxxp" path="res://assets/threedaysuntil/3DU_07_Anim/frame_02.png" id="27_ff0rp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6kpcj"]
 animations = [{
@@ -107,16 +108,19 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 6.0
+"speed": 3.0
 }]
 
 [node name="3du_08" instance=ExtResource("1_ssbkx")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 3
-autoCharacterWaitTime = 6.0
+sceneFadeIn = true
+autoCharacterWaitTime = 10.0
 nextShot = "res://scenes/threedaysuntil/3du_09.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_6kpcj")
 autoplay = "default"
+
+[node name="FadeInOverlay" parent="." index="7"]
+fadeImage = ExtResource("27_ff0rp")

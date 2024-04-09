@@ -63,7 +63,7 @@ helperTimeToWait = 2
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
-actionScene = true
+currentCharacter = 0
 numRequiredActions = 5
 nextShot = "res://scenes/threedaysuntil/3du_12.tscn"
 

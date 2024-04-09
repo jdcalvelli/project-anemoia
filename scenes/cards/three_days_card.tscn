@@ -6,7 +6,8 @@
 [node name="three_days_card" instance=ExtResource("1_ud6kq")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 2
+autoCharacterWaitTime = 5.0
+nextShot = "res://scenes/threedaysuntil/3du_01.tscn"
 
 [node name="Sprite2D" parent="." index="2"]
 scale = Vector2(0.5, 0.5)

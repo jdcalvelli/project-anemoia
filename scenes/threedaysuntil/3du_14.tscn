@@ -25,7 +25,6 @@ animations = [{
 [node name="3du_14" instance=ExtResource("1_p8tpg")]
 
 [node name="Shot" parent="." index="0"]
-currentCharacter = 3
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/threedaysuntil/3du_15.tscn"
 

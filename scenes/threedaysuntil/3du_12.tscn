@@ -63,8 +63,8 @@ helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
 actionScene = true
-numRequiredActions = 10
-nextShot = "res://scenes/threedaysuntil/3du_12_return_present.tscn"
+numRequiredActions = 5
+nextShot = "res://scenes/threedaysuntil/3du_12_return.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_osphe")

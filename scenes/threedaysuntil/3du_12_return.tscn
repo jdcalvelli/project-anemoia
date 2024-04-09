@@ -19,6 +19,8 @@ animations = [{
 }]
 
 [node name="3du_12_return" instance=ExtResource("1_eovgl")]
+helperTimeToWait = 2
+helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 3

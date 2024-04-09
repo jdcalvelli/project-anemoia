@@ -58,13 +58,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="3du__05" instance=ExtResource("1_id0li")]
+[node name="3du_05" instance=ExtResource("1_id0li")]
 helperTimeToWait = 2
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
 actionScene = true
 numRequiredActions = 3
+nextShot = "res://scenes/threedaysuntil/3du_06.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_05aea")

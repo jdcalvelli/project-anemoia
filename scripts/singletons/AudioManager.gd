@@ -20,11 +20,14 @@ func _ready():
 	ambienceInstances.push_back(
 		FMODRuntime.create_instance_path("event:/Ambience/movieTheaterAmbience")
 	)
+	
+	# constant background rolling shutter
+	FMODRuntime.play_one_shot_path("event:/Ambience/rollingShutterAmbience")
 
 func play_scene_audio(eventPath:String):
 	# if any instances already have this path do nothing
 	if sceneAudioInstances.any(func(element): return element.get_description().get_path() == eventPath):
-		print("already exists once")
+		# print("already exists once")
 		pass
 	else:
 		# create an instance

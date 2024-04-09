@@ -65,16 +65,8 @@ helperTimeToWait = 1
 sceneAudioPath = "event:/4du/4du_11"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1
-actionScene = true
 numRequiredActions = 10
 nextShot = "res://scenes/fourdaysuntil/4du_11_past.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_tbq0w")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_11"
-
-[node name="VAA-Helper" parent="." index="5"]
-speed_scale = 3.0

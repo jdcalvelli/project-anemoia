@@ -30,14 +30,9 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/4du/4du_5"
-currentCharacter = 3
 autoCharacterWaitTime = 6.0
 nextShot = "res://scenes/fourdaysuntil/4du_6.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_nl14y")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_5"

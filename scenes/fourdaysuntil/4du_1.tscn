@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjy2hkvsoo6b1"]
+[gd_scene load_steps=5 format=3 uid="uid://cjy2hkvsoo6b1"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_fnqjx"]
 [ext_resource type="Texture2D" uid="uid://brrwklsryt5ml" path="res://assets/fourdaysuntil/4DU_01.png" id="2_sjx7d"]
+[ext_resource type="Texture2D" uid="uid://cp5oy7fwhaxdp" path="res://assets/cards/Title_Card.png" id="3_8ygvu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n8wh3"]
 animations = [{
@@ -20,13 +21,13 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/trainAmbience"
 sceneAmbienceParam = "volumeLevel"
 sceneAmbienceVal = 0.5
-currentCharacter = 3
-autoCharacterWaitTime = 5.0
+sceneFadeIn = true
+autoCharacterWaitTime = 10.0
 nextShot = "res://scenes/fourdaysuntil/4du_2.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_n8wh3")
 
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_01"
+[node name="FadeInOverlay" parent="." index="7"]
+scale = Vector2(0.5, 0.5)
+fadeImage = ExtResource("3_8ygvu")

@@ -19,13 +19,9 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/headphoneAmbience"
 sceneAmbienceParam = "muffleLevel"
-currentCharacter = 3
+currentCharacter = 2
 autoCharacterWaitTime = 4.0
 nextShot = "res://scenes/before/bd_7.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_fbw3w")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_6"

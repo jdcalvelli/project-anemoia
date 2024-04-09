@@ -19,17 +19,13 @@ animations = [{
 }]
 
 [node name="4DU_11_return_present" instance=ExtResource("1_ux0ms")]
+helperTimeToWait = 2
 
 [node name="Shot" parent="." index="0"]
 currentCharacter = 3
-autoCharacterWaitTime = 4.0
+numRequiredActions = 1
 nextShot = "res://scenes/fourdaysuntil/4du_12.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_xxvwm")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_11_return_present
-"

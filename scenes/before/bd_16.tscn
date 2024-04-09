@@ -26,14 +26,9 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/beforeDays/bd16"
-currentCharacter = 3
 autoCharacterWaitTime = 8.0
 nextShot = "res://scenes/before/bd_17.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_taf0u")
 autoplay = "default"
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_16"

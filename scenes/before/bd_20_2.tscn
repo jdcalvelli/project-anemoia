@@ -64,13 +64,10 @@ helperTimeToWait = 1
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/beforeDays/bd20_2_4"
 sceneAudioPlaybackPoint = 1
-actionScene = true
+currentCharacter = 0
 numRequiredActions = 3
+prevShot = "res://scenes/before/bd_20_1.tscn"
 nextShot = "res://scenes/before/bd_20_3.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_pdsju")
-
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "bd_20_2"

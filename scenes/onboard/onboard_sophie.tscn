@@ -1,0 +1,68 @@
+[gd_scene load_steps=15 format=3 uid="uid://bo3560c1frkuc"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_14vdu"]
+[ext_resource type="Texture2D" uid="uid://dr7nb0s2de7r2" path="res://assets/onboard/sophie/frame_01.png" id="2_oxvwn"]
+[ext_resource type="Texture2D" uid="uid://d3lso3us4gfvh" path="res://assets/onboard/sophie/frame_02.png" id="3_8sslx"]
+[ext_resource type="Texture2D" uid="uid://6lqb2ehtdkys" path="res://assets/onboard/sophie/frame_03.png" id="4_mlfy8"]
+[ext_resource type="Texture2D" uid="uid://durkxmu53rb8m" path="res://assets/onboard/sophie/frame_04.png" id="5_36w3b"]
+[ext_resource type="Texture2D" uid="uid://dhjh3vdkncci4" path="res://assets/onboard/sophie/frame_05.png" id="6_n5xyk"]
+[ext_resource type="Texture2D" uid="uid://dxa0x376dn3oq" path="res://assets/onboard/sophie/frame_06.png" id="7_oblvy"]
+[ext_resource type="Texture2D" uid="uid://h2xa2ghpxwd4" path="res://assets/onboard/sophie/frame_07.png" id="8_orjsf"]
+[ext_resource type="Texture2D" uid="uid://b0mhgdtggkk3e" path="res://assets/onboard/sophie/frame_08.png" id="9_fo8kt"]
+[ext_resource type="Texture2D" uid="uid://bcmcrroc8cb40" path="res://assets/onboard/sophie/frame_09.png" id="10_3egqh"]
+[ext_resource type="Texture2D" uid="uid://7ac0i7vspihq" path="res://assets/onboard/sophie/frame_10.png" id="11_ypd80"]
+[ext_resource type="Texture2D" uid="uid://bti0i4m2vdlgy" path="res://assets/onboard/sophie/frame_11.png" id="12_ycg7x"]
+[ext_resource type="Texture2D" uid="uid://bxtuthyr23idg" path="res://assets/onboard/sophie/frame_12.png" id="13_bjng0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8kr8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oxvwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8sslx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mlfy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_36w3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n5xyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oblvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_orjsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fo8kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3egqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ypd80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ycg7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bjng0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="onboard-sophie" instance=ExtResource("1_14vdu")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 1
+numRequiredActions = 1
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_o8kr8")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://6xig2y0sknf"]
+[gd_scene load_steps=40 format=3 uid="uid://6xig2y0sknf"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_7vw0y"]
 [ext_resource type="Texture2D" uid="uid://dd7htce1irpxd" path="res://assets/fourdaysuntil/4DU_09_Anim/frame_01.png" id="2_rnhyo"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://f3bf5hibr6ed" path="res://assets/fourdaysuntil/4DU_09_Anim/frame_34.png" id="35_6l3ph"]
 [ext_resource type="Texture2D" uid="uid://bfatd4oudo2yw" path="res://assets/fourdaysuntil/4DU_09_Anim/frame_35.png" id="36_d1d10"]
 [ext_resource type="Texture2D" uid="uid://bye2hl6urqqi0" path="res://assets/fourdaysuntil/4DU_09_Anim/frame_36.png" id="37_gwatd"]
+[ext_resource type="Texture2D" uid="uid://cqkc34bysynl0" path="res://assets/fourdaysuntil/4DU_08_Anim/frame_02.png" id="38_gqlbk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_httom"]
 animations = [{
@@ -159,7 +160,7 @@ helperTimeToWait = 10
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/4du/4du_9"
-currentCharacter = 3
+sceneFadeIn = true
 autoCharacterWaitTime = 12.0
 nextShot = "res://scenes/fourdaysuntil/4du_10.tscn"
 
@@ -169,6 +170,5 @@ autoplay = "default"
 frame = 35
 frame_progress = 1.0
 
-[node name="temp - name display" parent="." index="3"]
-visible = false
-text = "4du_9"
+[node name="FadeInOverlay" parent="." index="7"]
+fadeImage = ExtResource("38_gqlbk")

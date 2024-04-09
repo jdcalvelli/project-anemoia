@@ -18,6 +18,12 @@ func _ready():
 	EventBus.shutterComplete.connect(_on_shutter_complete)
 
 func _physics_process(_delta):
+	# time scale check
+	if InputManager.triggersHeld == [1,1]:
+		Engine.time_scale = 1
+	else:
+		Engine.time_scale = 0
+
 	# if we're over the num shots
 	if currentShot.numActionsTaken >= currentShot.numRequiredActions and currentShot.numRequiredActions != 0:
 		return

@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clavuj7vooycd"
+uid="uid://byvwobk222sv3"
 path="res://.godot/imported/frame_04.png-8601eb3570cdfa8ff9e54fc9a3fdfa9e.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/frame_04.png-8601eb3570cdfa8ff9e54fc9a3fdfa9e
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

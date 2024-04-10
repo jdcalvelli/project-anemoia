@@ -12,18 +12,40 @@ var currentShot: Shot
 # this will be refactored out?
 var goNextWaitTime: float = 1.5
 
+# for triggers
+var tween_time_up
+var tween_time_down
+
 func _ready():
 	EventBus.analogRotate.connect(_on_analog_rotate)
 	EventBus.analogFlick.connect(_on_analog_flick)
 	EventBus.shutterComplete.connect(_on_shutter_complete)
 
 func _physics_process(_delta):
+	FMODRuntime.studio_system.get_bus("bus:/").set_volume(Engine.time_scale)
 	# time scale check
 	if InputManager.triggersHeld == [1,1]:
-		Engine.time_scale = 1
+		if Engine.time_scale != 1:
+			if tween_time_up:
+				pass
+			else:
+				tween_time_up = create_tween()
+				tween_time_up.set_ease(Tween.EASE_OUT)
+				tween_time_up.set_trans(Tween.TRANS_SINE)
+				tween_time_up.tween_property(Engine, "time_scale", 1, 0.3)
+				tween_time_up.tween_callback(func(): tween_time_up = null)
 	else:
-		Engine.time_scale = 0
-
+		if Engine.time_scale != 0:
+			if tween_time_down:
+				pass
+			else:
+				tween_time_down = create_tween()
+				tween_time_down.set_ease(Tween.EASE_OUT)
+				tween_time_down.set_trans(Tween.TRANS_SINE)
+				tween_time_down.tween_property(Engine, "time_scale", 0, 0.3)
+				tween_time_down.tween_callback(func(): tween_time_down = null)
+				
+	
 	# if we're over the num shots
 	if currentShot.numActionsTaken >= currentShot.numRequiredActions and currentShot.numRequiredActions != 0:
 		return

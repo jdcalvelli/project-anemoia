@@ -27,6 +27,10 @@ var triggersHeld := [0,0]
 
 # process func for the analog stick motions
 func _physics_process(_delta):
+	# catch for trigger holding
+	if triggersHeld != [1,1]:
+		return
+
 	# determine which stick we care about
 	match GameManager.currentShot.currentCharacter:
 		GameManager.Characters.FATHER:

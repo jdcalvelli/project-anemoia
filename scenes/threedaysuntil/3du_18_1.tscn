@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bphu3h220c4hj"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_185kp"]
+
+[node name="3du_18_1" instance=ExtResource("1_185kp")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 1
+numRequiredActions = 3
+nextShot = "res://scenes/threedaysuntil/3du_18_2.tscn"

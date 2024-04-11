@@ -47,12 +47,6 @@ func _input(event):
 		EventBus.rightBumperPress.emit()
 	elif event.is_action_pressed("restart-button"):
 		get_tree().change_scene_to_file("res://scenes/before/bd_1.tscn")
-	elif event.is_action_pressed("period-button"):
-		# move to the next scene in the assigned shot counter
-		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(GameManager.currentShot.nextShot))
-	elif event.is_action_pressed("comma-button"):
-		# move to the next scene in the assigned shot counter
-		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(GameManager.currentShot.prevShot))
 	else:
 		# if its anything else, dont do anything
 		return

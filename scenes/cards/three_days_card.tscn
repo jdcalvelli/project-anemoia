@@ -1,14 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://d210degtn0q1k"]
+[gd_scene load_steps=6 format=3 uid="uid://d210degtn0q1k"]
 
 [ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_ud6kq"]
 [ext_resource type="Texture2D" uid="uid://dsltmyp13n27s" path="res://assets/cards/3_Days_Before_Funeral.png" id="2_p2m5q"]
+[ext_resource type="Script" path="res://scripts/SPIKE/DIRTY-FadeToBlack.gd" id="3_vsw17"]
+
+[sub_resource type="Gradient" id="Gradient_nicg2"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g54xl"]
+gradient = SubResource("Gradient_nicg2")
+width = 3000
+height = 2000
 
 [node name="three_days_card" instance=ExtResource("1_ud6kq")]
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 5.0
-nextShot = "res://scenes/threedaysuntil/3du_01.tscn"
 
 [node name="Sprite2D" parent="." index="2"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_p2m5q")
+
+[node name="DIRTY-FadeToBlack" type="Sprite2D" parent="." index="3"]
+modulate = Color(1, 1, 1, 0)
+texture = SubResource("GradientTexture2D_g54xl")
+script = ExtResource("3_vsw17")

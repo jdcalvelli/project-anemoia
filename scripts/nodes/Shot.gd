@@ -64,7 +64,7 @@ func _ready():
 		AudioManager.play_scene_audio(sceneAudioPath)
 
 # for jitter
-func _physics_process(_delta):
+func _physics_process(delta):
 	# if we shouldnt jitter, break out
 	if !shouldJitter:
 		return
@@ -73,8 +73,8 @@ func _physics_process(_delta):
 		#print("twelve frame")
 		# set the position of this image to some random value between 0 and maxjitterval
 		get_node("../AnimatedSprite2D").position = Vector2(randi_range(0, maxJitterVal.x + 1), randi_range(0, maxJitterVal.y + 1))
-	# increment frame counter
-	frameCounter += 1
+	# increment frame counter using delta
+	frameCounter += delta * 60
 
 func _on_action_started_audio():
 	if sceneAudioPlaybackPoint == 1:

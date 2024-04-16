@@ -22,8 +22,15 @@ var rotateFlags := [0,0,0,0,0,0]
 var rockFlags := [0,0,0,0,0,0]
 var isRockingUp := false
 
+# needed for trigger
+var triggersHeld := [0,0]
+
 # process func for the analog stick motions
 func _physics_process(_delta):
+	# catch for trigger holding
+	if triggersHeld != [1,1]:
+		return
+
 	# determine which stick we care about
 	match GameManager.currentShot.currentCharacter:
 		GameManager.Characters.FATHER:
@@ -53,9 +60,17 @@ func _input(event):
 	elif event.is_action_pressed("comma-button"):
 		# move to the next scene in the assigned shot counter
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(GameManager.currentShot.prevShot))
-	else:
-		# if its anything else, dont do anything
-		return
+
+	# for trigger holding
+	if event.is_action_pressed("left-trigger-press"):
+		triggersHeld[0] = 1
+	elif event.is_action_released("left-trigger-press"):
+		triggersHeld[0] = 0
+	if event.is_action_pressed("right-trigger-press"):
+		triggersHeld[1] = 1
+	elif event.is_action_released("right-trigger-press"):
+		triggersHeld[1] = 0
+
 
 # ### helper funcs ###
 

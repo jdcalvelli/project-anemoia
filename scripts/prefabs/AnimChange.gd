@@ -1,5 +1,14 @@
 extends AnimatedSprite2D
 
+@export var imgFadeTimer:int
+
+func _ready():
+	if imgFadeTimer != 0:
+		await get_tree().create_timer(imgFadeTimer).timeout
+		# create a tween for this image alpha
+		var tween = create_tween()
+		tween.tween_property(self, "modulate:a", 1, 1)
+
 func _physics_process(_delta):
 	if GameManager.currentShot.currentCharacter == GameManager.Characters.FATHER:
 		_rotation_view()

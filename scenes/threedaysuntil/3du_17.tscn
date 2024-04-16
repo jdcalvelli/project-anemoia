@@ -65,7 +65,7 @@ helperTweenDuration = 1
 [node name="Shot" parent="." index="0"]
 currentCharacter = 1
 numRequiredActions = 3
-nextShot = "res://scenes/threedaysuntil/3du_18.tscn"
+nextShot = "res://scenes/threedaysuntil/3du_18-UNIQUE.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_q733u")

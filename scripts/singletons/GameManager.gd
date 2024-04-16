@@ -24,7 +24,7 @@ func _ready():
 func _physics_process(_delta):
 	FMODRuntime.studio_system.get_bus("bus:/").set_volume(Engine.time_scale)
 	# time scale check
-	if InputManager.triggersHeld == [1,1]:
+	if InputManager.triggerHeld:
 		if Engine.time_scale != 1:
 			if tween_time_up:
 				pass

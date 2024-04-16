@@ -228,7 +228,7 @@ animations = [{
 }]
 
 [node name="3du_18" instance=ExtResource("1_amvo2")]
-helperTimeToWait = 2
+helperTimeToWait = 999
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bldih7vkprupj"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_2q3td"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1t6i5"]
+
+[node name="3du_22" instance=ExtResource("1_2q3td")]
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 8.0
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_1t6i5")

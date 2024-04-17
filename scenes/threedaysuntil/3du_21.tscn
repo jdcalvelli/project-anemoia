@@ -34,6 +34,7 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 12.0
+nextShot = "res://scenes/threedaysuntil/3du_22.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_wuwax")

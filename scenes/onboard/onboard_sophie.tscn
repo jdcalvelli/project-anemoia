@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bo3560c1frkuc"]
+[gd_scene load_steps=16 format=3 uid="uid://bo3560c1frkuc"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_14vdu"]
 [ext_resource type="Texture2D" uid="uid://dr7nb0s2de7r2" path="res://assets/onboard/sophie/frame_01.png" id="2_oxvwn"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://7ac0i7vspihq" path="res://assets/onboard/sophie/frame_10.png" id="11_ypd80"]
 [ext_resource type="Texture2D" uid="uid://bti0i4m2vdlgy" path="res://assets/onboard/sophie/frame_11.png" id="12_ycg7x"]
 [ext_resource type="Texture2D" uid="uid://bxtuthyr23idg" path="res://assets/onboard/sophie/frame_12.png" id="13_bjng0"]
+[ext_resource type="Texture2D" uid="uid://dybpbpbufmgmq" path="res://assets/onboard/Background_Texture_Opening.png" id="14_nvtv2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8kr8"]
 animations = [{
@@ -61,8 +62,13 @@ animations = [{
 [node name="onboard-sophie" instance=ExtResource("1_14vdu")]
 
 [node name="Shot" parent="." index="0"]
+sceneFadeIn = true
 currentCharacter = 1
 numRequiredActions = 1
+nextShot = "res://scenes/onboard/onboard_jamie.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_o8kr8")
+
+[node name="FadeInOverlay" parent="." index="8"]
+fadeImage = ExtResource("14_nvtv2")

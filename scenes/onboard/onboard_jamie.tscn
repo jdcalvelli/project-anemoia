@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8w38778eq28g"]
+[gd_scene load_steps=16 format=3 uid="uid://b8w38778eq28g"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_vsrq1"]
 [ext_resource type="Texture2D" uid="uid://cx5ege6b3apsw" path="res://assets/onboard/jamie/frame_01.png" id="2_epnel"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://623guc2f1yio" path="res://assets/onboard/jamie/frame_10.png" id="11_4wnxn"]
 [ext_resource type="Texture2D" uid="uid://ccbd6w3dfrvoq" path="res://assets/onboard/jamie/frame_11.png" id="12_jpuno"]
 [ext_resource type="Texture2D" uid="uid://6mevgj1v8xqh" path="res://assets/onboard/jamie/frame_12.png" id="13_eq1jg"]
+[ext_resource type="Texture2D" uid="uid://bxtuthyr23idg" path="res://assets/onboard/sophie/frame_12.png" id="14_ea8bo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qbnx3"]
 animations = [{
@@ -61,8 +62,13 @@ animations = [{
 [node name="onboard-jamie" instance=ExtResource("1_vsrq1")]
 
 [node name="Shot" parent="." index="0"]
+sceneFadeIn = true
 currentCharacter = 0
 numRequiredActions = 1
+nextShot = "res://scenes/onboard/fade_to_black_scene.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_qbnx3")
+
+[node name="FadeInOverlay" parent="." index="8"]
+fadeImage = ExtResource("14_ea8bo")

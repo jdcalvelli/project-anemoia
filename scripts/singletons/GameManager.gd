@@ -13,8 +13,9 @@ var currentShot: Shot
 var goNextWaitTime: float = 1.5
 
 # for triggers
-var tween_time_up
-var tween_time_down
+# for time scale
+var tween_time_up:Tween
+var tween_time_down:Tween
 
 func _ready():
 	EventBus.analogRotate.connect(_on_analog_rotate)

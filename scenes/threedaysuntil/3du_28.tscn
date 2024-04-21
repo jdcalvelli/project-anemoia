@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccelqvuqo2khw"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_lih51"]
+
+[node name="3DU_28" instance=ExtResource("1_lih51")]

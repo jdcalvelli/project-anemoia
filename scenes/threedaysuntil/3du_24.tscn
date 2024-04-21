@@ -63,6 +63,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 currentCharacter = 1
 numRequiredActions = 5
+nextShot = "res://scenes/threedaysuntil/3du_25.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_if4b8")

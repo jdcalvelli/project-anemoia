@@ -1,4 +1,4 @@
-[gd_scene load_steps=204 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=206 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/HelperViews.gd" id="1_46rmh"]
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
@@ -197,6 +197,7 @@
 [ext_resource type="Texture2D" uid="uid://dg2pqmelsyiq8" path="res://assets/utilities/Hold Trigger Instruction/frame_47.png" id="194_4ehmw"]
 [ext_resource type="Texture2D" uid="uid://ca3w8wifydh7g" path="res://assets/utilities/Hold Trigger Instruction/frame_48.png" id="195_0xd71"]
 [ext_resource type="Script" path="res://scripts/prefabs/Trigger-Helper.gd" id="196_e0esd"]
+[ext_resource type="Shader" path="res://shaders/crt.gdshader" id="198_t2yt4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h4lq"]
 animations = [{
@@ -814,6 +815,9 @@ colors = PackedColorArray(0.129412, 0.129412, 0.129412, 1)
 gradient = SubResource("Gradient_p8wme")
 width = 1
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rx68o"]
+shader = ExtResource("198_t2yt4")
+
 [node name="scene-template" type="Node2D"]
 script = ExtResource("1_46rmh")
 helperTimeToWait = 4
@@ -870,3 +874,13 @@ texture = SubResource("GradientTexture1D_ub7su")
 [node name="FadeInOverlay" type="Sprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
 script = ExtResource("148_wxbdn")
+
+[node name="PostProcess" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="PostProcess"]
+material = SubResource("ShaderMaterial_rx68o")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

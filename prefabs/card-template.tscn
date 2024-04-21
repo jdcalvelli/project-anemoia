@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://nml24vc02rfl"]
+[gd_scene load_steps=55 format=3 uid="uid://nml24vc02rfl"]
 
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_3otwj"]
 [ext_resource type="Texture2D" uid="uid://cr11x1ivcjk84" path="res://icon.svg" id="2_flxuu"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://dg2pqmelsyiq8" path="res://assets/utilities/Hold Trigger Instruction/frame_47.png" id="49_byttn"]
 [ext_resource type="Texture2D" uid="uid://ca3w8wifydh7g" path="res://assets/utilities/Hold Trigger Instruction/frame_48.png" id="50_3a8fb"]
 [ext_resource type="Script" path="res://scripts/prefabs/Trigger-Helper.gd" id="51_ue0tx"]
+[ext_resource type="Shader" path="res://shaders/crt.gdshader" id="52_3v5em"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_arnk2"]
 animations = [{
@@ -204,6 +205,9 @@ animations = [{
 "speed": 18.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_501ws"]
+shader = ExtResource("52_3v5em")
+
 [node name="card-template" type="Node2D"]
 
 [node name="Shot" type="Node" parent="."]
@@ -221,3 +225,13 @@ position = Vector2(-672, -320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_arnk2")
 script = ExtResource("51_ue0tx")
+
+[node name="PostProcess" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="PostProcess"]
+material = SubResource("ShaderMaterial_501ws")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -27,9 +27,6 @@ var triggerHeld := false
 
 # process func for the analog stick motions
 func _physics_process(_delta):
-	# catch for trigger holding
-	if !triggerHeld:
-		return
 
 	# determine which stick we care about
 	match GameManager.currentShot.currentCharacter:

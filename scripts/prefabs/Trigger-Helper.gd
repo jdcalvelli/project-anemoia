@@ -8,6 +8,10 @@ var interFrameCounter = 0
 func _physics_process(_delta):
 	frameCounter += 1
 
+	# DONT DO ANY OF THE VISUALS IF THE CHARACTER IS NOT AUTO
+	if GameManager.currentShot.currentCharacter != GameManager.Characters.AUTO:
+		return
+
 	if !InputManager.triggerHeld:
 		interFrameCounter += 1
 		# LOWER THE COLOR OF THE ENTIRE SCENE

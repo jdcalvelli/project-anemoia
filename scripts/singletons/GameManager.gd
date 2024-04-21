@@ -24,27 +24,30 @@ func _ready():
 
 func _physics_process(_delta):
 	FMODRuntime.studio_system.get_bus("bus:/").set_volume(Engine.time_scale)
-	# time scale check
-	if InputManager.triggerHeld:
-		if Engine.time_scale != 1:
-			if tween_time_up:
-				pass
-			else:
-				tween_time_up = create_tween()
-				tween_time_up.set_ease(Tween.EASE_OUT)
-				tween_time_up.set_trans(Tween.TRANS_SINE)
-				tween_time_up.tween_property(Engine, "time_scale", 1, 0.3)
-				tween_time_up.tween_callback(func(): tween_time_up = null)
-	else:
-		if Engine.time_scale != 0:
-			if tween_time_down:
-				pass
-			else:
-				tween_time_down = create_tween()
-				tween_time_down.set_ease(Tween.EASE_OUT)
-				tween_time_down.set_trans(Tween.TRANS_SINE)
-				tween_time_down.tween_property(Engine, "time_scale", 0, 0.3)
-				tween_time_down.tween_callback(func(): tween_time_down = null)
+	
+	# IF THE CURRENT SHOT CHARACTER IS NOT AUTO, DONT CARE ABOUT TRIGGER
+	if currentShot.currentCharacter == Characters.AUTO:
+		# time scale check
+		if InputManager.triggerHeld:
+			if Engine.time_scale != 1:
+				if tween_time_up:
+					pass
+				else:
+					tween_time_up = create_tween()
+					tween_time_up.set_ease(Tween.EASE_OUT)
+					tween_time_up.set_trans(Tween.TRANS_SINE)
+					tween_time_up.tween_property(Engine, "time_scale", 1, 0.3)
+					tween_time_up.tween_callback(func(): tween_time_up = null)
+		else:
+			if Engine.time_scale != 0:
+				if tween_time_down:
+					pass
+				else:
+					tween_time_down = create_tween()
+					tween_time_down.set_ease(Tween.EASE_OUT)
+					tween_time_down.set_trans(Tween.TRANS_SINE)
+					tween_time_down.tween_property(Engine, "time_scale", 0, 0.3)
+					tween_time_down.tween_callback(func(): tween_time_down = null)
 				
 	
 	# if we're over the num shots

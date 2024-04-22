@@ -197,7 +197,7 @@
 [ext_resource type="Texture2D" uid="uid://dg2pqmelsyiq8" path="res://assets/utilities/Hold Trigger Instruction/frame_47.png" id="194_4ehmw"]
 [ext_resource type="Texture2D" uid="uid://ca3w8wifydh7g" path="res://assets/utilities/Hold Trigger Instruction/frame_48.png" id="195_0xd71"]
 [ext_resource type="Script" path="res://scripts/prefabs/Trigger-Helper.gd" id="196_e0esd"]
-[ext_resource type="Shader" path="res://shaders/crt.gdshader" id="198_t2yt4"]
+[ext_resource type="Shader" path="res://shaders/film.gdshader" id="198_xflbq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h4lq"]
 animations = [{
@@ -816,7 +816,23 @@ gradient = SubResource("Gradient_p8wme")
 width = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rx68o"]
-shader = ExtResource("198_t2yt4")
+shader = ExtResource("198_xflbq")
+shader_parameter/texture_size = Vector2(512, 512)
+shader_parameter/shake_amount = 0.005
+shader_parameter/saturation = 1.0
+shader_parameter/contrast = 1.5
+shader_parameter/brightness = 0.125
+shader_parameter/grain_scale = 450.0
+shader_parameter/grain_density = 0.5
+shader_parameter/grain_color = Color(0, 0, 0, 1)
+shader_parameter/streak_color = Color(0, 0, 0, 1)
+shader_parameter/dust_enabled = false
+shader_parameter/dust_opacity = 0.5
+shader_parameter/dust_frequency = 30.0
+shader_parameter/dust_scale = 4.0
+shader_parameter/flash_amount = 0.005
+shader_parameter/vignette_width = 0.15
+shader_parameter/vignette_opacity = 1.0
 
 [node name="scene-template" type="Node2D"]
 script = ExtResource("1_46rmh")

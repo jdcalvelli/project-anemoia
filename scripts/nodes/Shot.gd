@@ -76,7 +76,7 @@ func _physics_process(delta):
 	if !shouldJitter:
 		return
 	# every twelve frames do the jitter
-	if frameCounter % 12 == 0 and get_node("../AnimatedSprite2D"):
+	if frameCounter % 12 == 0 and get_node("../AnimatedSprite2D") != null:
 		#print("twelve frame")
 		# set the position of this image to some random value between 0 and maxjitterval
 		get_node("../AnimatedSprite2D").position = Vector2(randi_range(0, maxJitterVal.x + 1), randi_range(0, maxJitterVal.y + 1))

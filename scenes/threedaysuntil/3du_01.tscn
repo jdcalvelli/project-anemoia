@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_0m2p8"]
 [ext_resource type="Texture2D" uid="uid://d2ise321hfj33" path="res://assets/threedaysuntil/3DU_01.png" id="2_rm02n"]
-[ext_resource type="Texture2D" uid="uid://dsltmyp13n27s" path="res://assets/cards/3_Days_Before_Funeral.png" id="3_nphja"]
+[ext_resource type="Texture2D" uid="uid://ct5myby8qoqsn" path="res://assets/cards/3_Days_Before_Funeral.png" id="3_nphja"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ia2l6"]
 animations = [{

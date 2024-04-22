@@ -1,0 +1,118 @@
+[gd_scene load_steps=27 format=3 uid="uid://b47e7ai48gmx4"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_mo46l"]
+[ext_resource type="Texture2D" uid="uid://d3quick7qnjsy" path="res://assets/threedaysuntil/3DU_27_Anim/frame_01.png" id="2_w8t6w"]
+[ext_resource type="Texture2D" uid="uid://8phbxd6pqlvd" path="res://assets/threedaysuntil/3DU_27_Anim/frame_02.png" id="3_vw7li"]
+[ext_resource type="Texture2D" uid="uid://gt2l1hx2vs2l" path="res://assets/threedaysuntil/3DU_27_Anim/frame_03.png" id="4_64uxw"]
+[ext_resource type="Texture2D" uid="uid://ci7k8wxkqlhbk" path="res://assets/threedaysuntil/3DU_27_Anim/frame_04.png" id="5_hybog"]
+[ext_resource type="Texture2D" uid="uid://cq06i1jfmvf3p" path="res://assets/threedaysuntil/3DU_27_Anim/frame_05.png" id="6_06xxg"]
+[ext_resource type="Texture2D" uid="uid://b1mn7ajay6omg" path="res://assets/threedaysuntil/3DU_27_Anim/frame_06.png" id="7_3401n"]
+[ext_resource type="Texture2D" uid="uid://caij2mofkxacy" path="res://assets/threedaysuntil/3DU_27_Anim/frame_07.png" id="8_ochhc"]
+[ext_resource type="Texture2D" uid="uid://ddilccaiavxmf" path="res://assets/threedaysuntil/3DU_27_Anim/frame_08.png" id="9_b542w"]
+[ext_resource type="Texture2D" uid="uid://yrab2v5doabe" path="res://assets/threedaysuntil/3DU_27_Anim/frame_09.png" id="10_eevdo"]
+[ext_resource type="Texture2D" uid="uid://dvyvg0v8pjr0w" path="res://assets/threedaysuntil/3DU_27_Anim/frame_10.png" id="11_5jh4w"]
+[ext_resource type="Texture2D" uid="uid://u8j23ewd41i5" path="res://assets/threedaysuntil/3DU_27_Anim/frame_11.png" id="12_552ph"]
+[ext_resource type="Texture2D" uid="uid://cep28tre6wrxa" path="res://assets/threedaysuntil/3DU_27_Anim/frame_12.png" id="13_rd27q"]
+[ext_resource type="Texture2D" uid="uid://byqhoo0se61vj" path="res://assets/threedaysuntil/3DU_27_Anim/frame_13.png" id="14_v1p3c"]
+[ext_resource type="Texture2D" uid="uid://db8na7f3wiod2" path="res://assets/threedaysuntil/3DU_27_Anim/frame_14.png" id="15_got2k"]
+[ext_resource type="Texture2D" uid="uid://brpc81me47csa" path="res://assets/threedaysuntil/3DU_27_Anim/frame_15.png" id="16_dh6vl"]
+[ext_resource type="Texture2D" uid="uid://b4k5vf37wr7vp" path="res://assets/threedaysuntil/3DU_27_Anim/frame_16.png" id="17_gdbal"]
+[ext_resource type="Texture2D" uid="uid://b5ov3k1c2in7n" path="res://assets/threedaysuntil/3DU_27_Anim/frame_17.png" id="18_tjlb3"]
+[ext_resource type="Texture2D" uid="uid://b6y2dda43j7l8" path="res://assets/threedaysuntil/3DU_27_Anim/frame_18.png" id="19_12hoo"]
+[ext_resource type="Texture2D" uid="uid://0p8l3o7x3f5o" path="res://assets/threedaysuntil/3DU_27_Anim/frame_19.png" id="20_gh8w5"]
+[ext_resource type="Texture2D" uid="uid://bxe2omhgakhih" path="res://assets/threedaysuntil/3DU_27_Anim/frame_20.png" id="21_bq0uq"]
+[ext_resource type="Texture2D" uid="uid://crppmbc7y3ybo" path="res://assets/threedaysuntil/3DU_27_Anim/frame_21.png" id="22_fef80"]
+[ext_resource type="Texture2D" uid="uid://pi88yxuime0u" path="res://assets/threedaysuntil/3DU_27_Anim/frame_22.png" id="23_kcfdc"]
+[ext_resource type="Texture2D" uid="uid://dod4scrg5higr" path="res://assets/threedaysuntil/3DU_27_Anim/frame_23.png" id="24_me0ei"]
+[ext_resource type="Texture2D" uid="uid://edqt40snantp" path="res://assets/threedaysuntil/3DU_27_Anim/frame_24.png" id="25_fcck5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6cot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w8t6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vw7li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_64uxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hybog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_06xxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3401n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ochhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b542w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eevdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5jh4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_552ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rd27q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v1p3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_got2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dh6vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gdbal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tjlb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_12hoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gh8w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_bq0uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_fef80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kcfdc")
+}, {
+"duration": 3.5,
+"texture": ExtResource("24_me0ei")
+}, {
+"duration": 3.5,
+"texture": ExtResource("25_fcck5")
+}],
+"loop": false,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="3DU_27" instance=ExtResource("1_mo46l")]
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 12.0
+nextShot = "res://scenes/threedaysuntil/3du_28.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_t6cot")
+autoplay = "default"
+frame_progress = 0.196781

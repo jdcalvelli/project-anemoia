@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://ifyf7ppne224"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_w03ej"]
+[ext_resource type="Texture2D" uid="uid://yl1xtnsxx6dw" path="res://assets/threedaysuntil/3DU_23-24_Anim/frame_01.png" id="2_3v31a"]
+[ext_resource type="Texture2D" uid="uid://btuqmyl8ko48b" path="res://assets/threedaysuntil/3DU_23-24_Anim/frame_02.png" id="3_gftpo"]
+[ext_resource type="Texture2D" uid="uid://x8gqw5fo7n82" path="res://assets/threedaysuntil/3DU_23-24_Anim/frame_03.png" id="4_m255d"]
+[ext_resource type="Texture2D" uid="uid://cu065mf3tc02i" path="res://assets/threedaysuntil/3DU_23-24_Anim/frame_04.png" id="5_gu5sj"]
+[ext_resource type="Texture2D" uid="uid://by1bxuo1nocyn" path="res://assets/threedaysuntil/3DU_23-24_Anim/frame_05.png" id="6_rxkyq"]
+[ext_resource type="Texture2D" uid="uid://jbd680o6uqqq" path="res://assets/threedaysuntil/3DU_23-24_Anim/frame_06.png" id="7_1jqd7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cpc26"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3v31a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gftpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m255d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gftpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m255d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gftpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m255d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gu5sj")
+}, {
+"duration": 4.0,
+"texture": ExtResource("6_rxkyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1jqd7")
+}, {
+"duration": 4.0,
+"texture": ExtResource("4_m255d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3v31a")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.5
+}]
+
+[node name="3du_23-24" instance=ExtResource("1_w03ej")]
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 10.0
+nextShot = "res://scenes/threedaysuntil/3du_24.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_cpc26")
+autoplay = "default"
+frame = 11
+frame_progress = 1.0

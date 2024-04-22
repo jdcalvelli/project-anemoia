@@ -33,6 +33,8 @@ func _physics_process(_delta):
 				if tween_time_up:
 					pass
 				else:
+					# change shouldJitter to true
+					GameManager.currentShot.shouldJitter = true
 					tween_time_up = create_tween()
 					tween_time_up.set_ease(Tween.EASE_OUT)
 					tween_time_up.set_trans(Tween.TRANS_SINE)
@@ -43,6 +45,8 @@ func _physics_process(_delta):
 				if tween_time_down:
 					pass
 				else:
+					# change shouldjitter to false
+					GameManager.currentShot.shouldJitter = false
 					tween_time_down = create_tween()
 					tween_time_down.set_ease(Tween.EASE_OUT)
 					tween_time_down.set_trans(Tween.TRANS_SINE)

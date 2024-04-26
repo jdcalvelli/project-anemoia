@@ -20,7 +20,12 @@ func _ready():
 	ambienceInstances.push_back(
 		FMODRuntime.create_instance_path("event:/Ambience/movieTheaterAmbience")
 	)
-	
+	ambienceInstances.push_back(
+		FMODRuntime.create_instance_path("event:/Ambience/outsideAmbience")
+	)
+	ambienceInstances.push_back(
+		FMODRuntime.create_instance_path("event:/Ambience/cafeAmbience")
+	)
 	# constant background rolling shutter
 	FMODRuntime.play_one_shot_path("event:/Ambience/rollingShutterAmbience")
 

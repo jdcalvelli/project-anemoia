@@ -7,6 +7,13 @@
 class_name FMODGuids
 
 class Events:
+	const _3DU_3DU_10_INPROG = "{46743ce0-be03-4612-b1f4-14a5b469761b}"
+	const _3DU_3DU_3 = "{7dbd9c0e-d2f2-4936-9924-0a485aac41dd}"
+	const _3DU_3DU_4 = "{aaef0a82-75da-433b-8e02-38a8f06a375a}"
+	const _3DU_3DU_5_6 = "{4c09333a-0237-40ad-b40d-49a73f72e4af}"
+	const _3DU_3DU_7 = "{662a0d3c-3475-4b1d-aa4f-6e03026c77a1}"
+	const _3DU_3DU_8 = "{3b6693fe-8d3b-4049-8a49-83658f836370}"
+	const _3DU_3DU_9 = "{6247ee58-7c6e-468b-a3bd-aeae51c06181}"
 	const _4DU_4DU_10 = "{bea4bdab-ffb2-41a5-99e1-e889057a1ee6}"
 	const _4DU_4DU_11 = "{f81e14e1-ec0e-4138-b414-216edb5aba40}"
 	const _4DU_4DU_11_PAST = "{f18302b3-aa0a-4eea-b0fa-73b8195165e2}"
@@ -19,8 +26,10 @@ class Events:
 	const _4DU_4DU_5 = "{bf0e2c9d-b050-4828-a184-0e9d816148ad}"
 	const _4DU_4DU_9 = "{f4a7765b-35bd-451f-9876-a6bcca2a8a65}"
 	const AMBIENCE_BABYCRYAMBIENCE = "{d1459fdc-543e-430f-a8d3-fd7797c74dbc}"
+	const AMBIENCE_CAFEAMBIENCE = "{1e7bd8b5-8f84-4534-a19c-45195888d461}"
 	const AMBIENCE_HEADPHONEAMBIENCE = "{678ff57a-cf1c-462d-b053-70e345c297c3}"
 	const AMBIENCE_MOVIETHEATERAMBIENCE = "{0dc9b035-c5a1-45cb-9de5-eccf0b242be3}"
+	const AMBIENCE_OUTSIDEAMBIENCE = "{3b4bdc0f-4b9a-4fc8-9652-dc1f4bcd47a7}"
 	const AMBIENCE_ROLLINGSHUTTERAMBIENCE = "{4a5cd200-06a6-4123-bde1-51557bd551c1}"
 	const AMBIENCE_SCHOOLAMBIENCE = "{d19261b1-a71b-45f7-812a-aa609d1eabd5}"
 	const AMBIENCE_TRAINAMBIENCE = "{e6cbdbbe-fb9e-4860-b439-2abb89d44244}"
@@ -46,6 +55,7 @@ class Busses:
 	const REVERB = "{ad704468-2335-47f2-9767-7978f556895c}"
 
 class Banks:
+	const _3DU = "{c9437801-2b3b-441b-b3e8-3070ea6f5ba7}"
 	const _4DU = "{806647f7-4fd2-42b1-a194-1ac586ff80fd}"
 	const AMBIENCE = "{2e0f410c-03ba-41d6-a83a-1b977876d0a1}"
 	const BEFOREDAYS = "{954e9cf2-1ed3-4b0b-bccb-8e6132576223}"

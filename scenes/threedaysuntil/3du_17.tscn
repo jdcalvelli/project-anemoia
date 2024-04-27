@@ -63,6 +63,8 @@ helperTimeToWait = 2
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_17"
+sceneAudioPlaybackPoint = 1
 currentCharacter = 1
 numRequiredActions = 3
 nextShot = "res://scenes/threedaysuntil/3du_18-UNIQUE.tscn"

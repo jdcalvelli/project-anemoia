@@ -7,7 +7,18 @@
 class_name FMODGuids
 
 class Events:
-	const _3DU_3DU_10_INPROG = "{46743ce0-be03-4612-b1f4-14a5b469761b}"
+	const _3DU_3DU_10 = "{46743ce0-be03-4612-b1f4-14a5b469761b}"
+	const _3DU_3DU_11 = "{b7c8de0a-2c34-42b2-9f16-c36b6a84a6c3}"
+	const _3DU_3DU_11_12 = "{02b009fc-7ee1-4f03-a10b-0a08e656a6c6}"
+	const _3DU_3DU_12 = "{e3ca1f63-927f-47d3-8294-b539b2c54a3e}"
+	const _3DU_3DU_12_RETURN = "{0d2df4fa-ad15-4a69-84b7-9469a4a8a0d9}"
+	const _3DU_3DU_13 = "{32bb322e-4d6f-4742-952c-a9137ddc1c09}"
+	const _3DU_3DU_14 = "{14489d22-f25d-431c-a314-15f525cc6ed5}"
+	const _3DU_3DU_15 = "{8b686e34-7c42-44bc-b7d7-e7fa9134dd91}"
+	const _3DU_3DU_17 = "{ed220d01-091e-41fd-be61-e7dee736980e}"
+	const _3DU_3DU_18 = "{75626994-ba6e-44de-ac40-d61e9408226e}"
+	const _3DU_3DU_19 = "{f2a900f3-babc-4a42-bd17-3b07f5236fce}"
+	const _3DU_3DU_23 = "{fbafe9a4-21dc-4040-b032-c17d65e71754}"
 	const _3DU_3DU_3 = "{7dbd9c0e-d2f2-4936-9924-0a485aac41dd}"
 	const _3DU_3DU_4 = "{aaef0a82-75da-433b-8e02-38a8f06a375a}"
 	const _3DU_3DU_5_6 = "{4c09333a-0237-40ad-b40d-49a73f72e4af}"
@@ -64,6 +75,7 @@ class Banks:
 
 class Parameters:
 	const MUFFLELEVEL = "{62ef29c1-c8cc-4a76-965f-0345ea5c7cc3}"
+	const PASTFACTOR = "{11868656-a1b6-499c-80c1-6099744164a0}"
 	const REVERBLEVEL = "{a3af0bf0-8702-47bf-9707-4d948b1e3ac6}"
 	const VOLUMELEVEL = "{f991d813-090e-4f78-8b60-8e247fa28034}"
 

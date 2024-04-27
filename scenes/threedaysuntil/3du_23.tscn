@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvyc60v21qcs4"]
+[gd_scene load_steps=15 format=3 uid="uid://bbas10l5op11m"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_sr5oe"]
 [ext_resource type="Texture2D" uid="uid://c7dcj7f63bwmg" path="res://assets/threedaysuntil/3DU_23_Anim/frame_01.png" id="2_g173h"]
@@ -61,6 +61,8 @@ animations = [{
 [node name="3du_23" instance=ExtResource("1_sr5oe")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_23"
+sceneAudioPlaybackPoint = 1
 currentCharacter = 1
 numRequiredActions = 5
 nextShot = "res://scenes/threedaysuntil/3du_23_24.tscn"

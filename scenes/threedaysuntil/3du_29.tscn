@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbxjxd5h1qyli"]
+[gd_scene load_steps=6 format=3 uid="uid://00lkk2iyvm7o"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_ctvru"]
 [ext_resource type="Texture2D" uid="uid://yn7ikv8nhrhm" path="res://assets/threedaysuntil/3DU_29_Anim/frame_01.png" id="2_jabsq"]
@@ -40,6 +40,7 @@ animations = [{
 [node name="3DU_29" instance=ExtResource("1_ctvru")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_29"
 autoCharacterWaitTime = 11.0
 nextShot = "res://scenes/threedaysuntil/3du_29_2.tscn"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://vt1of0pmswhy"]
+[gd_scene load_steps=4 format=3 uid="uid://c3w1gbdv8oy00"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_xoumc"]
 [ext_resource type="Texture2D" uid="uid://c1jrfxpa4ywk" path="res://assets/threedaysuntil/3DU_30_Anim/frame_01.png" id="2_bf34x"]

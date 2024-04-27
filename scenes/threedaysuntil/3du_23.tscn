@@ -61,6 +61,7 @@ animations = [{
 [node name="3du_23" instance=ExtResource("1_sr5oe")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieDJAmbience"
 sceneAudioPath = "event:/3du/3du_23"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1

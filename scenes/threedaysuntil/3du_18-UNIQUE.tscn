@@ -232,6 +232,7 @@ helperTimeToWait = 999
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
 sceneAudioPath = "event:/3du/3du_18"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1

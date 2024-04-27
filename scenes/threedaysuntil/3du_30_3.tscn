@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm52c0en0na1p"]
+[gd_scene load_steps=5 format=3 uid="uid://byv7p1g5ekf1w"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_xy5vc"]
 [ext_resource type="Texture2D" uid="uid://djm5m6qquxlwu" path="res://assets/threedaysuntil/3DU_30_Anim/frame_03.png" id="2_b7wxd"]
@@ -26,5 +26,5 @@ nextShot = "res://scenes/threedaysuntil/3du_31.tscn"
 sprite_frames = SubResource("SpriteFrames_lwror")
 autoplay = "default"
 
-[node name="FadeInOverlay" parent="." index="7"]
+[node name="FadeInOverlay" parent="." index="8"]
 fadeImage = ExtResource("3_kc613")

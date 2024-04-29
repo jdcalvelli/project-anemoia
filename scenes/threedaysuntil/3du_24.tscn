@@ -61,7 +61,7 @@ animations = [{
 [node name="3du_24" instance=ExtResource("1_t4d5l")]
 
 [node name="Shot" parent="." index="0"]
-sceneAmbiencePath = "event:/Ambience/hvacAmbience "
+sceneAmbiencePath = "event:/Ambienc e/hvacAmbience "
 sceneAudioPath = "event:/3du/3du_24"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1

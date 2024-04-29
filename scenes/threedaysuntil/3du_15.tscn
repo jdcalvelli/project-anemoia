@@ -29,7 +29,9 @@ animations = [{
 [node name="3du_15" instance=ExtResource("1_lj0ik")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_15"
 autoCharacterWaitTime = 8.0
+nextShot = "res://scenes/threedaysuntil/3du_16.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_08cxy")

@@ -24,17 +24,23 @@ func _ready():
 # helper func
 
 func _on_right_bumper_press():
+	# only continue if we're actually on a camera scene
+	if GameManager.currentShot.currentCharacter != GameManager.Characters.CAMERA:
+		return
+	
 	$"Camera-Helper".hide()
 	if GameManager.currentShot.numActionsTaken != GameManager.currentShot.numRequiredActions:
-		# play shutter click sound
-		FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
 		# tween the shutter
 		tween = create_tween()
 		tween.set_ease(Tween.EASE_IN_OUT)
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property($ShutterVFX, "position:y", 0, 0.075)
 		tween.tween_property($ShutterVFX, "position:y", -1140, 0.075)
-		tween.tween_callback(func(): EventBus.shutterComplete.emit())
+		tween.tween_callback(func():
+			# play shutter click sound at conclusion
+			FMODRuntime.play_one_shot_path("event:/SFX/shutterClick")
+			EventBus.shutterComplete.emit()
+			)
 
 func _on_total_actions_completed():
 	# kill the tween and hide all helper object

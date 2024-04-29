@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://bfcurjmui4nq4"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Ambience/sophieCafeAmbience"
+guid = "{95bd090e-0915-4adb-9f2d-483acd40978b}"
+name = "sophieCafeAmbience"

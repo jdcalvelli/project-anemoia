@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="imogen"
-run/main_scene="res://scenes/before/bd_1.tscn"
+run/main_scene="res://scenes/onboard/opening_scene.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.svg"
-config/version="0.6.0"
+config/version="0.7.0"
 
 [autoload]
 
@@ -42,7 +42,7 @@ settings/banks_path="res://imogen-fmod/Build/Desktop"
 settings/fmod_output_type=0
 settings/fmod_debug_flags=0
 settings/fmod_debug_mode=1
-settings/banks_to_load_at_startup=Array[String](["res://imogen-fmod/Build/Desktop/Master.bank", "res://imogen-fmod/Build/Desktop/Master.strings.bank", "res://imogen-fmod/Build/Desktop/Ambience.bank", "res://imogen-fmod/Build/Desktop/SFX.bank", "res://imogen-fmod/Build/Desktop/beforeDays.bank", "res://imogen-fmod/Build/Desktop/4du.bank"])
+settings/banks_to_load_at_startup=Array[String](["res://imogen-fmod/Build/Desktop/Master.bank", "res://imogen-fmod/Build/Desktop/Master.strings.bank", "res://imogen-fmod/Build/Desktop/Ambience.bank", "res://imogen-fmod/Build/Desktop/SFX.bank", "res://imogen-fmod/Build/Desktop/beforeDays.bank", "res://imogen-fmod/Build/Desktop/4du.bank", "res://imogen-fmod/Build/Desktop/3du.bank"])
 settings/banks_preload_samples=false
 settings/banks_flags=0
 settings/sample_rate=48000
@@ -118,6 +118,16 @@ comma-button={
 period-button={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":46,"key_label":0,"unicode":46,"echo":false,"script":null)
+]
+}
+right-trigger-press={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":5,"axis_value":1.0,"script":null)
+]
+}
+left-trigger-press={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
 ]
 }
 

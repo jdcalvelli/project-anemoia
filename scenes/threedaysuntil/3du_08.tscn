@@ -114,6 +114,8 @@ animations = [{
 [node name="3du_08" instance=ExtResource("1_ssbkx")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/cafeAmbience"
+sceneAudioPath = "event:/3du/3du_8"
 sceneFadeIn = true
 autoCharacterWaitTime = 10.0
 nextShot = "res://scenes/threedaysuntil/3du_09.tscn"
@@ -122,5 +124,5 @@ nextShot = "res://scenes/threedaysuntil/3du_09.tscn"
 sprite_frames = SubResource("SpriteFrames_6kpcj")
 autoplay = "default"
 
-[node name="FadeInOverlay" parent="." index="7"]
+[node name="FadeInOverlay" parent="." index="8"]
 fadeImage = ExtResource("27_ff0rp")

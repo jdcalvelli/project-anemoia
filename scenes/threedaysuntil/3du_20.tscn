@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhe830d1goykm"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_ewx6u"]
+[ext_resource type="Texture2D" uid="uid://bbq3o603eu7qh" path="res://assets/threedaysuntil/3DU_20_Anim/frame_01.png" id="2_73k7f"]
+[ext_resource type="Texture2D" uid="uid://cvyuqlbfty22i" path="res://assets/threedaysuntil/3DU_20_Anim/frame_02.png" id="3_vo6tm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lu7w4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_73k7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vo6tm")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.4
+}]
+
+[node name="3du_20" instance=ExtResource("1_ewx6u")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
+autoCharacterWaitTime = 5.0
+nextShot = "res://scenes/threedaysuntil/3du_21.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_lu7w4")
+autoplay = "default"

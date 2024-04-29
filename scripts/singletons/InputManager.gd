@@ -22,8 +22,12 @@ var rotateFlags := [0,0,0,0,0,0]
 var rockFlags := [0,0,0,0,0,0]
 var isRockingUp := false
 
+# needed for trigger
+var triggerHeld := false
+
 # process func for the analog stick motions
 func _physics_process(_delta):
+
 	# determine which stick we care about
 	match GameManager.currentShot.currentCharacter:
 		GameManager.Characters.FATHER:
@@ -46,16 +50,21 @@ func _input(event):
 	if event.is_action_pressed("right-bumper-press"):
 		EventBus.rightBumperPress.emit()
 	elif event.is_action_pressed("restart-button"):
-		get_tree().change_scene_to_file("res://scenes/before/bd_1.tscn")
+		get_tree().change_scene_to_file("res://scenes/onboard/opening_scene.tscn")
 	elif event.is_action_pressed("period-button"):
 		# move to the next scene in the assigned shot counter
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(GameManager.currentShot.nextShot))
 	elif event.is_action_pressed("comma-button"):
 		# move to the next scene in the assigned shot counter
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(GameManager.currentShot.prevShot))
-	else:
-		# if its anything else, dont do anything
-		return
+
+	# for trigger holding
+	if event.is_action_pressed("left-trigger-press"):
+		triggerHeld = true
+	elif event.is_action_released("left-trigger-press"):
+		triggerHeld = false
+
+
 
 # ### helper funcs ###
 

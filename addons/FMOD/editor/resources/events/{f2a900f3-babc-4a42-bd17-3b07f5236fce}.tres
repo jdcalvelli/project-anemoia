@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c8xryuits6c4d"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/3du/3du_19"
+guid = "{f2a900f3-babc-4a42-bd17-3b07f5236fce}"
+name = "3du_19"

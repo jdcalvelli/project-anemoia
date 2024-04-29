@@ -63,9 +63,12 @@ helperTimeToWait = 2
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/cafeAmbience"
+sceneAudioPath = "event:/3du/3du_5_6"
+sceneAudioPlaybackPoint = 1
 currentCharacter = 0
 numRequiredActions = 3
-nextShot = "res://scenes/threedaysuntil/3du_06.tscn"
+nextShot = "res://scenes/threedaysuntil/3du_06-UNIQUE.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_05aea")

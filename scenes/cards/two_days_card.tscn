@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://hnprtexiedqg"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_lrvfs"]
+[ext_resource type="Texture2D" uid="uid://buu43ke05dh4a" path="res://assets/cards/2_Days_Before_Funeral.png" id="2_u3ouk"]
+
+[node name="two_days_card" instance=ExtResource("1_lrvfs")]
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 6.0
+nextShot = "res://scenes/onboard/opening_scene.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_u3ouk")

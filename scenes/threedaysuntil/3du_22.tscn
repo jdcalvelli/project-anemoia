@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://bldih7vkprupj"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_2q3td"]
+[ext_resource type="Texture2D" uid="uid://bcyl5qdej3pqy" path="res://assets/threedaysuntil/3DU_22_Anim/frame_01.png" id="2_clk7t"]
+[ext_resource type="Texture2D" uid="uid://80cdyxqb7mvu" path="res://assets/threedaysuntil/3DU_22_Anim/frame_02.png" id="3_uflgg"]
+[ext_resource type="Texture2D" uid="uid://dlipw55jvbuwq" path="res://assets/threedaysuntil/3DU_22_Anim/frame_03.png" id="4_413do"]
+[ext_resource type="Texture2D" uid="uid://cyi1wadyk53og" path="res://assets/threedaysuntil/3DU_22_Anim/frame_04.png" id="5_omwa0"]
+[ext_resource type="Texture2D" uid="uid://cgribva6w8bob" path="res://assets/threedaysuntil/3DU_22_Anim/frame_05.png" id="6_eu50h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1t6i5"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("2_clk7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uflgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_413do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uflgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_413do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uflgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_413do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_omwa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eu50h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_omwa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eu50h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_omwa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eu50h")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="3du_22" instance=ExtResource("1_2q3td")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieDJAmbience"
+autoCharacterWaitTime = 10.0
+nextShot = "res://scenes/threedaysuntil/3du_22_23.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_1t6i5")
+autoplay = "default"
+frame = 12
+frame_progress = 1.0

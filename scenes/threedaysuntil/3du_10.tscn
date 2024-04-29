@@ -24,6 +24,12 @@ animations = [{
 "texture": ExtResource("3_g8lot")
 }, {
 "duration": 1.0,
+"texture": ExtResource("2_k4fr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g8lot")
+}, {
+"duration": 1.0,
 "texture": ExtResource("4_xdui7")
 }, {
 "duration": 1.0,
@@ -61,9 +67,13 @@ animations = [{
 [node name="3du_10" instance=ExtResource("1_lhst1")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/cafeAmbience"
+sceneAudioPath = "event:/3du/3du_10"
 autoCharacterWaitTime = 8.0
 nextShot = "res://scenes/threedaysuntil/3du_11.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_ojyh0")
 autoplay = "default"
+frame = 15
+frame_progress = 1.0

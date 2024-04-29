@@ -63,18 +63,25 @@ func _ready():
 	if sceneAudioPlaybackPoint == 0:
 		AudioManager.play_scene_audio(sceneAudioPath)
 
+	# FOR TIMED ACTION SCENES
+	# check if the numRequiredActions is 999
+	if numRequiredActions == 999:
+		# start a timer for 60 seconds
+		await get_tree().create_timer(60).timeout
+		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
+
 # for jitter
-func _physics_process(_delta):
+func _physics_process(delta):
 	# if we shouldnt jitter, break out
 	if !shouldJitter:
 		return
 	# every twelve frames do the jitter
-	if frameCounter % 12 == 0 and get_node("../AnimatedSprite2D"):
+	if frameCounter % 12 == 0 and get_node("../AnimatedSprite2D") != null:
 		#print("twelve frame")
 		# set the position of this image to some random value between 0 and maxjitterval
 		get_node("../AnimatedSprite2D").position = Vector2(randi_range(0, maxJitterVal.x + 1), randi_range(0, maxJitterVal.y + 1))
-	# increment frame counter
-	frameCounter += 1
+	# increment frame counter using delta
+	frameCounter += delta * 60
 
 func _on_action_started_audio():
 	if sceneAudioPlaybackPoint == 1:

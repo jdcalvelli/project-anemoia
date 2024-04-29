@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://00lkk2iyvm7o"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_ctvru"]
+[ext_resource type="Texture2D" uid="uid://yn7ikv8nhrhm" path="res://assets/threedaysuntil/3DU_29_Anim/frame_01.png" id="2_jabsq"]
+[ext_resource type="Texture2D" uid="uid://cu3dldjmsmejk" path="res://assets/threedaysuntil/3DU_29_Anim/frame_02.png" id="3_44w0y"]
+[ext_resource type="Texture2D" uid="uid://dcka6eir62s6e" path="res://assets/threedaysuntil/3DU_29_Anim/frame_03.png" id="4_cpnxl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xfhyr"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("2_jabsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_44w0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cpnxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_44w0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cpnxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_44w0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cpnxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_44w0y")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="3DU_29" instance=ExtResource("1_ctvru")]
+
+[node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_29"
+autoCharacterWaitTime = 11.0
+nextShot = "res://scenes/threedaysuntil/3du_29_2.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_xfhyr")
+autoplay = "default"
+frame = 7
+frame_progress = 1.0

@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://dxctfwynuou4b"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Ambience/outsideAmbience"
+guid = "{3b4bdc0f-4b9a-4fc8-9652-dc1f4bcd47a7}"
+name = "outsideAmbience"

@@ -232,6 +232,9 @@ helperTimeToWait = 999
 helperTweenDuration = 1
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/cafeAmbience"
+sceneAudioPath = "event:/3du/3du_5_6"
+sceneAudioPlaybackPoint = 1
 currentCharacter = 0
 numRequiredActions = 999
 nextShot = "res://scenes/threedaysuntil/3du_07.tscn"

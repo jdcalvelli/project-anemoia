@@ -67,6 +67,8 @@ animations = [{
 [node name="3du_10" instance=ExtResource("1_lhst1")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/cafeAmbience"
+sceneAudioPath = "event:/3du/3du_10"
 autoCharacterWaitTime = 8.0
 nextShot = "res://scenes/threedaysuntil/3du_11.tscn"
 

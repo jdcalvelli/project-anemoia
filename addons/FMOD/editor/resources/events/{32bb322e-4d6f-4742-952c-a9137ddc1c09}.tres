@@ -1,0 +1,27 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://dik3poc0f6ryo"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_6ra1n"]
+data1 = 1196051541
+data2 = 938702944
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_wx5mh"]
+name = "pastFactor"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_6ra1n")
+maximum = 1.0
+guid = "{ff120dbb-7d94-44e7-9086-cb3c1f4a6fd0}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_1j0tf"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_wx5mh")
+path = "parameter:/pastFactor"
+guid = "{ff120dbb-7d94-44e7-9086-cb3c1f4a6fd0}"
+name = "pastFactor"
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{ff120dbb-7d94-44e7-9086-cb3c1f4a6fd0}": SubResource("ParameterAsset_1j0tf")
+}
+path = "event:/3du/3du_13"
+guid = "{32bb322e-4d6f-4742-952c-a9137ddc1c09}"
+name = "3du_13"

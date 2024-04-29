@@ -21,6 +21,7 @@ animations = [{
 [node name="3du_20" instance=ExtResource("1_ewx6u")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
 autoCharacterWaitTime = 5.0
 nextShot = "res://scenes/threedaysuntil/3du_21.tscn"
 

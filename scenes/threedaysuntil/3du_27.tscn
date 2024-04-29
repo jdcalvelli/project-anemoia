@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b47e7ai48gmx4"]
+[gd_scene load_steps=27 format=3 uid="uid://di2hid2dae7sx"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_mo46l"]
 [ext_resource type="Texture2D" uid="uid://d3quick7qnjsy" path="res://assets/threedaysuntil/3DU_27_Anim/frame_01.png" id="2_w8t6w"]
@@ -109,10 +109,10 @@ animations = [{
 [node name="3DU_27" instance=ExtResource("1_mo46l")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
 autoCharacterWaitTime = 12.0
 nextShot = "res://scenes/threedaysuntil/3du_28.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_t6cot")
 autoplay = "default"
-frame_progress = 0.196781

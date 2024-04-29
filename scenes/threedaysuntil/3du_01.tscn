@@ -18,6 +18,7 @@ animations = [{
 [node name="3DU_01" instance=ExtResource("1_0m2p8")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/outsideAmbience"
 sceneFadeIn = true
 autoCharacterWaitTime = 8.0
 nextShot = "res://scenes/threedaysuntil/3du_02.tscn"
@@ -25,6 +26,6 @@ nextShot = "res://scenes/threedaysuntil/3du_02.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_ia2l6")
 
-[node name="FadeInOverlay" parent="." index="7"]
+[node name="FadeInOverlay" parent="." index="8"]
 scale = Vector2(0.5, 0.5)
 fadeImage = ExtResource("3_nphja")

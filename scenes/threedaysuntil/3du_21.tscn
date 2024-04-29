@@ -33,9 +33,12 @@ animations = [{
 [node name="3DU_21" instance=ExtResource("1_qcemk")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
 autoCharacterWaitTime = 12.0
 nextShot = "res://scenes/threedaysuntil/3du_22.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_wuwax")
 autoplay = "default"
+frame = 4
+frame_progress = 1.0

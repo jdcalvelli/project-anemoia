@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1070e12d-b5ba-4496-bec9-08461216b128}">
+		<property name="assetPath">
+			<value>ambience/cafeAmbience/Cymatics - LIFE - Cafeteria 4.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>47.9834693877551</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2e756c3c-c61b-4edd-8f86-b8abdd04a165}</destination>
+		</relationship>
+	</object>
+</objects>

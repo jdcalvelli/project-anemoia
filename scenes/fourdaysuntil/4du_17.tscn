@@ -170,5 +170,5 @@ nextShot = "res://scenes/fourdaysuntil/4du_18.tscn"
 sprite_frames = SubResource("SpriteFrames_nlw7v")
 autoplay = "default"
 
-[node name="FadeInOverlay" parent="." index="7"]
+[node name="FadeInOverlay" parent="." index="8"]
 fadeImage = ExtResource("38_decnv")

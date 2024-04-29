@@ -57,6 +57,7 @@ animations = [{
 [node name="3du_22" instance=ExtResource("1_2q3td")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/sophieDJAmbience"
 autoCharacterWaitTime = 10.0
 nextShot = "res://scenes/threedaysuntil/3du_22_23.tscn"
 

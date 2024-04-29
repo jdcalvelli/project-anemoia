@@ -1,0 +1,8 @@
+[gd_resource type="EventAsset" format=3 uid="uid://boxm7i1uheuge"]
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Ambience/hvacAmbience"
+guid = "{8b5b9788-3ad4-47d3-992d-de2e5380aa53}"
+name = "hvacAmbience"

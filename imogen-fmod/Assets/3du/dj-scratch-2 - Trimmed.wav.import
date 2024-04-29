@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnw6vsgr0oiqr"
+path="res://.godot/imported/dj-scratch-2 - Trimmed.wav-2396f8932132e03e9b2bf4bf0d541762.sample"
+
+[deps]
+
+source_file="res://imogen-fmod/Assets/3du/dj-scratch-2 - Trimmed.wav"
+dest_files=["res://.godot/imported/dj-scratch-2 - Trimmed.wav-2396f8932132e03e9b2bf4bf0d541762.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

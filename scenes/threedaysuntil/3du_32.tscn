@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvoxe7b8wv7um"]
+[gd_scene load_steps=5 format=3 uid="uid://drm4iekbbx466"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_4162c"]
 [ext_resource type="Texture2D" uid="uid://bthw2w8bk0tp3" path="res://assets/threedaysuntil/3DU_32_Anim/frame_01.png" id="2_p83ph"]
@@ -24,11 +24,10 @@ animations = [{
 [node name="3DU_32" instance=ExtResource("1_4162c")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_32"
 autoCharacterWaitTime = 8.0
 nextShot = "res://scenes/cards/two_days_card.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_nn0m0")
 autoplay = "default"
-frame = 2
-frame_progress = 1.0

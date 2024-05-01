@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3dcdd587f725"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_man6w"]
-[ext_resource type="Texture2D" uid="uid://biyusxm3tlbwf" path="res://assets/threedaysuntil/3DU_31.png" id="2_2aneu"]
+[ext_resource type="Texture2D" uid="uid://dhe4jfo47xbhx" path="res://assets/threedaysuntil/3DU_31.png" id="2_2aneu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sb2xf"]
 animations = [{

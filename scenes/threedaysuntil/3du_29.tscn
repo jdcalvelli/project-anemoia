@@ -1,16 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://00lkk2iyvm7o"]
+[gd_scene load_steps=5 format=3 uid="uid://00lkk2iyvm7o"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_ctvru"]
-[ext_resource type="Texture2D" uid="uid://ctshaapafx0e3" path="res://assets/threedaysuntil/3DU_29_Anim/frame_01.png" id="2_jabsq"]
 [ext_resource type="Texture2D" uid="uid://gutrkrdsys3o" path="res://assets/threedaysuntil/3DU_29_Anim/frame_02.png" id="3_44w0y"]
 [ext_resource type="Texture2D" uid="uid://b1rr7o1i3fwdn" path="res://assets/threedaysuntil/3DU_29_Anim/frame_03.png" id="4_cpnxl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xfhyr"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_jabsq")
-}, {
 "duration": 1.0,
 "texture": ExtResource("3_44w0y")
 }, {
@@ -41,8 +37,8 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/3du/3du_29"
-autoCharacterWaitTime = 11.0
-prevShot = "res://scenes/threedaysuntil/3du_28.tscn"
+autoCharacterWaitTime = 7.0
+prevShot = "res://scenes/threedaysuntil/3du_28_29.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_29_2.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

@@ -1,9 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqu67dei5jcfh"]
+[gd_scene load_steps=8 format=3 uid="uid://dqu67dei5jcfh"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_vvlkl"]
-[ext_resource type="Texture2D" uid="uid://cyomjyl5bm2iv" path="res://assets/threedaysuntil/3DU_26_Anim/frame_00.png" id="2_u6ktp"]
-[ext_resource type="Texture2D" uid="uid://b42qdmqmd5j0j" path="res://assets/threedaysuntil/3DU_26_Anim/frame_01.png" id="3_jlkoy"]
-[ext_resource type="Texture2D" uid="uid://d1ycm48urdj86" path="res://assets/threedaysuntil/3DU_26_Anim/frame_02.png" id="4_642yi"]
 [ext_resource type="Texture2D" uid="uid://dwbly7i4ib4g8" path="res://assets/threedaysuntil/3DU_26_Anim/frame_03.png" id="5_x3w1u"]
 [ext_resource type="Texture2D" uid="uid://ipeil20i3yth" path="res://assets/threedaysuntil/3DU_26_Anim/frame_04.png" id="6_p128r"]
 [ext_resource type="Texture2D" uid="uid://cw46vf582x4pu" path="res://assets/threedaysuntil/3DU_26_Anim/frame_05.png" id="7_nhqbi"]
@@ -13,15 +10,6 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_6i81r"]
 animations = [{
 "frames": [{
-"duration": 2.0,
-"texture": ExtResource("2_u6ktp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_jlkoy")
-}, {
-"duration": 2.0,
-"texture": ExtResource("4_642yi")
-}, {
 "duration": 1.0,
 "texture": ExtResource("5_x3w1u")
 }, {
@@ -46,7 +34,7 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
-autoCharacterWaitTime = 21.0
+autoCharacterWaitTime = 11.0
 prevShot = "res://scenes/threedaysuntil/3du_25.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_27.tscn"
 

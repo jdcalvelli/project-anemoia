@@ -35,7 +35,7 @@ sceneAmbiencePath = "event:/Ambience/hvacAmbience"
 sceneAudioPath = "event:/3du/3du_25"
 autoCharacterWaitTime = 7.0
 prevShot = "res://scenes/threedaysuntil/3du_24.tscn"
-nextShot = "res://scenes/threedaysuntil/3du_26.tscn"
+nextShot = "res://scenes/threedaysuntil/3du_25_26.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_x07tr")

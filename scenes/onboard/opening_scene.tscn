@@ -16,6 +16,7 @@ width = 1
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/cards/demo_end_card.tscn"
 nextShot = "res://scenes/onboard/onboard_sophie.tscn"
 
 [node name="Sprite2D" parent="." index="2"]

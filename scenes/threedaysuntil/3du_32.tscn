@@ -26,7 +26,8 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/3du/3du_32"
 autoCharacterWaitTime = 8.0
-nextShot = "res://scenes/cards/two_days_card.tscn"
+prevShot = "res://scenes/threedaysuntil/3du_31.tscn"
+nextShot = "res://scenes/cards/demo_end_card.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_nn0m0")

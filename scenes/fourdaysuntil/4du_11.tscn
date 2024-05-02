@@ -66,6 +66,7 @@ sceneAudioPath = "event:/4du/4du_11"
 sceneAudioPlaybackPoint = 1
 currentCharacter = 1
 numRequiredActions = 5
+prevShot = "res://scenes/fourdaysuntil/4du_10.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_11_past.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

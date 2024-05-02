@@ -29,6 +29,7 @@ sceneAmbiencePath = "event:/Ambience/trainAmbience"
 sceneAmbienceParam = "volumeLevel"
 sceneAmbienceVal = 0.3
 autoCharacterWaitTime = 8.0
+prevShot = "res://scenes/fourdaysuntil/4du_5.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_7.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

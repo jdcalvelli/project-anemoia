@@ -23,11 +23,12 @@ sceneAmbienceParam = "volumeLevel"
 sceneAmbienceVal = 0.5
 sceneFadeIn = true
 autoCharacterWaitTime = 10.0
+prevShot = "res://scenes/cards/title_card.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_2.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_n8wh3")
 
-[node name="FadeInOverlay" parent="." index="7"]
+[node name="FadeInOverlay" parent="." index="8"]
 scale = Vector2(0.5, 0.5)
 fadeImage = ExtResource("3_8ygvu")

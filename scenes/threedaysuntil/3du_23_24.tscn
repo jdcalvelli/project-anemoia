@@ -58,6 +58,7 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/hvacAmbience"
 sceneAudioPath = "event:/3du/3du_23_24"
 autoCharacterWaitTime = 10.0
+prevShot = "res://scenes/threedaysuntil/3du_23.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_24.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

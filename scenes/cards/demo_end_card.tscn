@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c34ruiobg34jq"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_fubf0"]
+
+[node name="demo_end_card" instance=ExtResource("1_fubf0")]
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/cards/two_days_card.tscn"
+nextShot = "res://scenes/onboard/opening_scene.tscn"

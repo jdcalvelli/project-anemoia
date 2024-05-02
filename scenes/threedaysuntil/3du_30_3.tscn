@@ -22,6 +22,7 @@ load_path = "res://.godot/imported/frame_02.png-a8ef2e04d3f7ff9e06d32906df923735
 [node name="Shot" parent="." index="0"]
 sceneFadeIn = true
 autoCharacterWaitTime = 10.0
+prevShot = "res://scenes/threedaysuntil/3du_30_2.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_31.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

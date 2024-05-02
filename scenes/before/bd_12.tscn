@@ -18,6 +18,7 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 4.0
+prevShot = "res://scenes/before/bd_11.tscn"
 nextShot = "res://scenes/before/bd_13.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

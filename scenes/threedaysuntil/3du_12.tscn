@@ -65,6 +65,7 @@ sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAudioPath = "event:/3du/3du_12"
 currentCharacter = 0
 numRequiredActions = 5
+prevShot = "res://scenes/threedaysuntil/3du_11_12.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_12_return.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

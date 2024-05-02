@@ -30,6 +30,7 @@ sceneAmbienceParam = "muffleLevel"
 sceneAmbienceVal = 0.5
 sceneAudioPath = "event:/beforeDays/bd4_5"
 autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/before/bd_4.tscn"
 nextShot = "res://scenes/before/bd_5.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

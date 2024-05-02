@@ -7,6 +7,7 @@
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/before/bd_24.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_1.tscn"
 
 [node name="Sprite2D" parent="." index="2"]

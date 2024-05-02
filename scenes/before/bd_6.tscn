@@ -19,8 +19,8 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/headphoneAmbience"
 sceneAmbienceParam = "muffleLevel"
-currentCharacter = 2
 autoCharacterWaitTime = 4.0
+prevShot = "res://scenes/before/bd_5.tscn"
 nextShot = "res://scenes/before/bd_7.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

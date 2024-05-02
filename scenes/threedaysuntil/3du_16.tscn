@@ -19,6 +19,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/sophieCafeAmbience"
 autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/threedaysuntil/3du_15.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_17.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

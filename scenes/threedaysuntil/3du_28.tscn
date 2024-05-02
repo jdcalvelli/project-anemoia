@@ -8,18 +8,18 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_uhak8"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("2_jaep7")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("3_58p5x")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("4_ji18o")
 }],
 "loop": false,
 "name": &"default",
-"speed": 0.5
+"speed": 1.0
 }]
 
 [node name="3DU_28" instance=ExtResource("1_lih51")]
@@ -32,4 +32,3 @@ nextShot = "res://scenes/threedaysuntil/3du_29.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_uhak8")
 autoplay = "default"
-frame_progress = 1.0

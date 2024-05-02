@@ -20,7 +20,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/outsideAmbience"
 sceneFadeIn = true
-autoCharacterWaitTime = 8.0
+autoCharacterWaitTime = 10.0
 prevShot = "res://scenes/cards/three_days_card.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_02.tscn"
 

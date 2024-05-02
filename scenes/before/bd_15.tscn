@@ -31,7 +31,7 @@ helperTimeToWait = 6
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/beforeDays/bd15"
-autoCharacterWaitTime = 8.0
+autoCharacterWaitTime = 9.0
 prevShot = "res://scenes/before/bd_14.tscn"
 nextShot = "res://scenes/before/bd_16.tscn"
 

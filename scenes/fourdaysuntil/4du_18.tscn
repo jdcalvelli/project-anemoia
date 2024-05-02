@@ -19,7 +19,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
 sceneAmbienceParam = "reverbLevel"
-autoCharacterWaitTime = 7.0
+autoCharacterWaitTime = 5.0
 prevShot = "res://scenes/fourdaysuntil/4du_17.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_19.tscn"
 

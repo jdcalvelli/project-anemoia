@@ -11,7 +11,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_d6c21")
 }, {
-"duration": 0.4,
+"duration": 1.0,
 "texture": ExtResource("3_g26bs")
 }, {
 "duration": 1.0,
@@ -34,3 +34,5 @@ nextShot = "res://scenes/threedaysuntil/3du_15.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_k0dal")
 autoplay = "default"
+frame = 2
+frame_progress = 1.0

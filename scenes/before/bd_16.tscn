@@ -8,7 +8,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_taf0u"]
 animations = [{
 "frames": [{
-"duration": 1.5,
+"duration": 3.0,
 "texture": ExtResource("2_1hsic")
 }, {
 "duration": 1.0,

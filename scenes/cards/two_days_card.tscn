@@ -6,7 +6,7 @@
 [node name="two_days_card" instance=ExtResource("1_lrvfs")]
 
 [node name="Shot" parent="." index="0"]
-autoCharacterWaitTime = 6.0
+autoCharacterWaitTime = 5.0
 prevShot = "res://scenes/threedaysuntil/3du_32.tscn"
 nextShot = "res://scenes/onboard/opening_scene.tscn"
 

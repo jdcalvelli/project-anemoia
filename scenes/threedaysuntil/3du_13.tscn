@@ -62,7 +62,7 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/3du/3du_13"
-autoCharacterWaitTime = 3.0
+autoCharacterWaitTime = 8.0
 prevShot = "res://scenes/threedaysuntil/3du_12_return.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_14.tscn"
 

@@ -7,7 +7,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_ntkol"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("2_h4x0e")
 }, {
 "duration": 1.0,
@@ -23,7 +23,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/cafeAmbience"
 sceneAudioPath = "event:/3du/3du_7"
-autoCharacterWaitTime = 3.0
+autoCharacterWaitTime = 5.0
 prevShot = "res://scenes/threedaysuntil/3du_06-UNIQUE.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_08.tscn"
 

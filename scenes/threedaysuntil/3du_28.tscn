@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bb8lbe7msvg7y"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_lih51"]
-[ext_resource type="Texture2D" uid="uid://b534jqmslb8hv" path="res://assets/threedaysuntil/3DU_28_Anim/frame_01.png" id="2_jaep7"]
-[ext_resource type="Texture2D" uid="uid://bgspj34m18qoq" path="res://assets/threedaysuntil/3DU_28_Anim/frame_02.png" id="3_58p5x"]
-[ext_resource type="Texture2D" uid="uid://b6cwy4kunf856" path="res://assets/threedaysuntil/3DU_28_Anim/frame_03.png" id="4_ji18o"]
+[ext_resource type="Texture2D" uid="uid://dj7r4yacbc5o" path="res://assets/threedaysuntil/3DU_28_Anim/frame_01.png" id="2_jaep7"]
+[ext_resource type="Texture2D" uid="uid://hoeaa5l07d1p" path="res://assets/threedaysuntil/3DU_28_Anim/frame_02.png" id="3_58p5x"]
+[ext_resource type="Texture2D" uid="uid://dv1leiaq2us63" path="res://assets/threedaysuntil/3DU_28_Anim/frame_03.png" id="4_ji18o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uhak8"]
 animations = [{
@@ -11,7 +11,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_jaep7")
 }, {
-"duration": 0.7,
+"duration": 1.0,
 "texture": ExtResource("3_58p5x")
 }, {
 "duration": 1.0,
@@ -31,5 +31,4 @@ nextShot = "res://scenes/threedaysuntil/3du_29.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_uhak8")
 autoplay = "default"
-frame = 2
 frame_progress = 1.0

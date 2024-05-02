@@ -23,6 +23,7 @@ func _ready():
 	EventBus.shutterComplete.connect(_on_shutter_complete)
 
 func _physics_process(_delta):
+	# this should be refactored to a pause when we do hard stop
 	FMODRuntime.studio_system.get_bus("bus:/").set_volume(Engine.time_scale)
 	
 	# IF THE CURRENT SHOT CHARACTER IS NOT AUTO, DONT CARE ABOUT TRIGGER
@@ -76,7 +77,7 @@ func _on_shutter_complete():
 	currentShot.numActionsTaken += 1
 	if currentShot.currentCharacter == Characters.CAMERA:
 		if currentShot.numActionsTaken == currentShot.numRequiredActions:
-			await get_tree().create_timer(goNextWaitTime * 10).timeout
+			await get_tree().create_timer(goNextWaitTime * 6).timeout
 			get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(currentShot.nextShot))
 
 func _on_analog_rotate(stick:InputManager.AnalogSticks):

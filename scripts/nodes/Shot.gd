@@ -67,7 +67,7 @@ func _ready():
 	# check if the numRequiredActions is 999
 	if numRequiredActions == 999:
 		# start a timer for 60 seconds
-		await get_tree().create_timer(60).timeout
+		await get_tree().create_timer(29).timeout
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
 
 # for jitter

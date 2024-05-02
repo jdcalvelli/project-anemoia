@@ -248,18 +248,18 @@ modulate = Color(1, 1, 1, 0)
 scale = Vector2(0.52, 0.52)
 sprite_frames = SubResource("SpriteFrames_7ptj8")
 script = ExtResource("26_qblsi")
-imgFadeTimer = 15
+imgFadeTimer = 5
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." index="3"]
 modulate = Color(1, 1, 1, 0)
 scale = Vector2(0.52, 0.52)
 sprite_frames = SubResource("SpriteFrames_nwrn6")
 script = ExtResource("26_qblsi")
-imgFadeTimer = 30
+imgFadeTimer = 15
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="." index="4"]
 modulate = Color(1, 1, 1, 0)
 scale = Vector2(0.52, 0.52)
 sprite_frames = SubResource("SpriteFrames_lfg8y")
 script = ExtResource("26_qblsi")
-imgFadeTimer = 45
+imgFadeTimer = 23

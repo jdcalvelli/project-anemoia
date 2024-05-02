@@ -27,7 +27,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 9.0
 prevShot = "res://scenes/threedaysuntil/3du_27.tscn"
-nextShot = "res://scenes/threedaysuntil/3du_29.tscn"
+nextShot = "res://scenes/threedaysuntil/3du_28_29.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_uhak8")

@@ -8,28 +8,30 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_tbdge"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("2_yv2wb")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("3_41yie")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("4_kklxl")
 }],
 "loop": false,
 "name": &"default",
-"speed": 0.5
+"speed": 1.0
 }]
 
 [node name="3DU_02" instance=ExtResource("1_cmeou")]
 
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/outsideAmbience"
-autoCharacterWaitTime = 5.0
+autoCharacterWaitTime = 6.0
 prevShot = "res://scenes/threedaysuntil/3du_01.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_03.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_tbdge")
 autoplay = "default"
+frame = 2
+frame_progress = 1.0

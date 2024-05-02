@@ -24,6 +24,7 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/cafeAmbience"
 sceneAudioPath = "event:/3du/3du_7"
 autoCharacterWaitTime = 3.0
+prevShot = "res://scenes/threedaysuntil/3du_06-UNIQUE.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_08.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

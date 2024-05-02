@@ -27,6 +27,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/outsideAmbience"
 autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/threedaysuntil/3du_01.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_03.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

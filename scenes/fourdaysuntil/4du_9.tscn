@@ -162,6 +162,7 @@ helperTimeToWait = 10
 sceneAudioPath = "event:/4du/4du_9"
 sceneFadeIn = true
 autoCharacterWaitTime = 12.0
+prevShot = "res://scenes/fourdaysuntil/4du_8.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_10.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
@@ -170,5 +171,5 @@ autoplay = "default"
 frame = 35
 frame_progress = 1.0
 
-[node name="FadeInOverlay" parent="." index="7"]
+[node name="FadeInOverlay" parent="." index="8"]
 fadeImage = ExtResource("38_gqlbk")

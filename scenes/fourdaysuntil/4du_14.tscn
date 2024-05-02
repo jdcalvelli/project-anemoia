@@ -23,6 +23,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/4du/4du_14"
 autoCharacterWaitTime = 8.0
+prevShot = "res://scenes/fourdaysuntil/4du_13.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_15.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

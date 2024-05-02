@@ -20,6 +20,7 @@ helperTimeToWait = 2
 [node name="Shot" parent="." index="0"]
 currentCharacter = 3
 numRequiredActions = 1
+prevShot = "res://scenes/before/bd_20_5.tscn"
 nextShot = "res://scenes/before/bd_22.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

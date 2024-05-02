@@ -20,6 +20,7 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
 sceneAmbienceParam = "reverbLevel"
 autoCharacterWaitTime = 7.0
+prevShot = "res://scenes/fourdaysuntil/4du_17.tscn"
 nextShot = "res://scenes/fourdaysuntil/4du_19.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

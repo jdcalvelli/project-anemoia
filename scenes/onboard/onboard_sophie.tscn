@@ -65,6 +65,7 @@ animations = [{
 sceneFadeIn = true
 currentCharacter = 1
 numRequiredActions = 1
+prevShot = "res://scenes/onboard/opening_scene.tscn"
 nextShot = "res://scenes/onboard/onboard_jamie.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

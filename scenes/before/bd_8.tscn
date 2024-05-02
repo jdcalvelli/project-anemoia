@@ -24,7 +24,7 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAmbienceParam = "muffleLevel"
 autoCharacterWaitTime = 7.0
-prevShot = "res://scenes/before/bd_7.tscn"
+prevShot = "res://scenes/before/bd_07-08.tscn"
 nextShot = "res://scenes/before/bd_9.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

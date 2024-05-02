@@ -20,6 +20,7 @@ animations = [{
 [node name="Shot" parent="." index="0"]
 sceneFadeIn = true
 autoCharacterWaitTime = 9.0
+prevShot = "res://scenes/onboard/onboard_jamie.tscn"
 nextShot = "res://scenes/before/bd_1.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

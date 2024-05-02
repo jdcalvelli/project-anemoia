@@ -68,8 +68,8 @@ sceneAmbienceVal = 0.7
 sceneAudioPath = "event:/beforeDays/bd7"
 sceneAudioPlaybackPoint = 2
 currentCharacter = 1
-actionScene = true
 numRequiredActions = 1
+prevShot = "res://scenes/before/bd_6.tscn"
 nextShot = "res://scenes/before/bd_07-08.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

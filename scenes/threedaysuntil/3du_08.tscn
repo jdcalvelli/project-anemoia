@@ -118,6 +118,7 @@ sceneAmbiencePath = "event:/Ambience/cafeAmbience"
 sceneAudioPath = "event:/3du/3du_8"
 sceneFadeIn = true
 autoCharacterWaitTime = 10.0
+prevShot = "res://scenes/threedaysuntil/3du_07.tscn"
 nextShot = "res://scenes/threedaysuntil/3du_09.tscn"
 
 [node name="AnimatedSprite2D" parent="." index="1"]

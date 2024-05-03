@@ -823,7 +823,7 @@ shader_parameter/shake_amount = 0.005
 shader_parameter/saturation = 1.0
 shader_parameter/contrast = 1.5
 shader_parameter/brightness = 0.125
-shader_parameter/grain_scale = 450.0
+shader_parameter/grain_scale = 800.0
 shader_parameter/grain_density = 0.5
 shader_parameter/grain_color = Color(0, 0, 0, 1)
 shader_parameter/streak_color = Color(0, 0, 0, 1)
@@ -832,8 +832,8 @@ shader_parameter/dust_opacity = 0.5
 shader_parameter/dust_frequency = 30.0
 shader_parameter/dust_scale = 4.0
 shader_parameter/flash_amount = 0.005
-shader_parameter/vignette_width = 0.15
-shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_width = 0.1
+shader_parameter/vignette_opacity = 0.9
 
 [node name="scene-template" type="Node2D"]
 script = ExtResource("1_46rmh")

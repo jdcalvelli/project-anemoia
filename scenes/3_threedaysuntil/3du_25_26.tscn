@@ -25,6 +25,7 @@ animations = [{
 [node name="3du_25-26" instance=ExtResource("1_xr4yh")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/hvacAmbience"
 autoCharacterWaitTime = 7.0
 prevShot = "res://scenes/3_threedaysuntil/3du_25.tscn"
 nextShot = "res://scenes/3_threedaysuntil/3du_26.tscn"

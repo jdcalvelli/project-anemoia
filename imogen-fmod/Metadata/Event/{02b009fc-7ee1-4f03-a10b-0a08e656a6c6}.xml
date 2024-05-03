@@ -90,7 +90,7 @@
 	<object class="MixerBusPanner" id="{7a1cd4e0-50d5-473a-b67a-3b93da96f93e}" />
 	<object class="SingleSound" id="{65fbfda3-b48d-4d22-859f-6469d559899f}">
 		<property name="start">
-			<value>3</value>
+			<value>3.5</value>
 		</property>
 		<property name="length">
 			<value>25.5240589569161</value>
@@ -126,9 +126,11 @@
 	<object class="MixerBusEffectChain" id="{9502e1ee-f29b-44ef-b899-e49acd7865d4}">
 		<relationship name="effects">
 			<destination>{e7571fa8-914f-4051-b7ce-cb296013785f}</destination>
+			<destination>{9bb14ea3-c300-4e23-9c7a-982516859194}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e0d73924-d8aa-4220-a259-08e761399af4}" />
 	<object class="MixerBusFader" id="{1a166a68-2ed8-4003-9350-59d16568c582}" />
 	<object class="MixerBusFader" id="{e7571fa8-914f-4051-b7ce-cb296013785f}" />
+	<object class="MultibandEqEffect" id="{9bb14ea3-c300-4e23-9c7a-982516859194}" />
 </objects>

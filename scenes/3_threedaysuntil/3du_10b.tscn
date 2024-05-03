@@ -65,6 +65,7 @@ animations = [{
 [node name="3du_10b" instance=ExtResource("1_y6mm3")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_10b"
 autoCharacterWaitTime = 10.0
 prevShot = "res://scenes/3_threedaysuntil/3du_10.tscn"
 nextShot = "res://scenes/3_threedaysuntil/3du_11.tscn"

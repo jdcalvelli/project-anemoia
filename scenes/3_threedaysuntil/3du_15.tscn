@@ -37,5 +37,3 @@ nextShot = "res://scenes/3_threedaysuntil/3du_16.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_08cxy")
 autoplay = "default"
-frame = 3
-frame_progress = 1.0

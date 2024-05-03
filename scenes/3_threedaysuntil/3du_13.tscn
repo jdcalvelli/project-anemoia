@@ -1,12 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://nfutgaxuu15n"]
+[gd_scene load_steps=7 format=3 uid="uid://nfutgaxuu15n"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_3iu2k"]
-[ext_resource type="Texture2D" uid="uid://dlfsolw7yvt2j" path="res://assets/threedaysuntil/3DU_13_Anim/frame_01.png" id="2_dhyin"]
-[ext_resource type="Texture2D" uid="uid://cwab1ja4e1o4o" path="res://assets/threedaysuntil/3DU_13_Anim/frame_02.png" id="3_k35kl"]
-[ext_resource type="Texture2D" uid="uid://cn6y23w05of6v" path="res://assets/threedaysuntil/3DU_13_Anim/frame_04.png" id="4_pl28v"]
-[ext_resource type="Texture2D" uid="uid://d3uhmikwpdaps" path="res://assets/threedaysuntil/3DU_13_Anim/frame_03.png" id="5_snl6e"]
-[ext_resource type="Texture2D" uid="uid://dwjyjihgavhav" path="res://assets/threedaysuntil/3DU_13_Anim/frame_06.png" id="6_duvnr"]
-[ext_resource type="Texture2D" uid="uid://d1u2pq5ov6aw2" path="res://assets/threedaysuntil/3DU_13_Anim/frame_05.png" id="7_b3lnj"]
+[ext_resource type="Texture2D" uid="uid://dlfsolw7yvt2j" path="res://assets/3_threedaysuntil/3DU_13_Anim/frame_01.png" id="2_dhyin"]
+[ext_resource type="Texture2D" uid="uid://cwab1ja4e1o4o" path="res://assets/3_threedaysuntil/3DU_13_Anim/frame_02.png" id="3_k35kl"]
+[ext_resource type="Texture2D" uid="uid://cn6y23w05of6v" path="res://assets/3_threedaysuntil/3DU_13_Anim/frame_04.png" id="4_pl28v"]
+[ext_resource type="Texture2D" uid="uid://d3uhmikwpdaps" path="res://assets/3_threedaysuntil/3DU_13_Anim/frame_03.png" id="5_snl6e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rdy24"]
 animations = [{
@@ -40,18 +38,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_snl6e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_duvnr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_b3lnj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_duvnr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_b3lnj")
 }],
 "loop": false,
 "name": &"default",
@@ -62,7 +48,7 @@ animations = [{
 
 [node name="Shot" parent="." index="0"]
 sceneAudioPath = "event:/3du/3du_13"
-autoCharacterWaitTime = 8.0
+autoCharacterWaitTime = 6.0
 prevShot = "res://scenes/3_threedaysuntil/3du_12_return.tscn"
 nextShot = "res://scenes/3_threedaysuntil/3du_14.tscn"
 

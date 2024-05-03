@@ -1,27 +1,8 @@
-[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://baiunkdhtu7mx"]
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_b3tbu"]
-data1 = 1196051541
-data2 = 938702944
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_x7m57"]
-name = "pastFactor"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_b3tbu")
-maximum = 1.0
-guid = "{ff120dbb-7d94-44e7-9086-cb3c1f4a6fd0}"
-
-[sub_resource type="ParameterAsset" id="ParameterAsset_k4cda"]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_x7m57")
-path = "parameter:/pastFactor"
-guid = "{ff120dbb-7d94-44e7-9086-cb3c1f4a6fd0}"
-name = "pastFactor"
+[gd_resource type="EventAsset" format=3 uid="uid://baiunkdhtu7mx"]
 
 [resource]
 min_distance = 1.0
 max_distance = 20.0
-parameters = {
-"{ff120dbb-7d94-44e7-9086-cb3c1f4a6fd0}": SubResource("ParameterAsset_k4cda")
-}
 path = "event:/3du/3du_10"
 guid = "{46743ce0-be03-4612-b1f4-14a5b469761b}"
 name = "3du_10"

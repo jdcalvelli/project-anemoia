@@ -35,6 +35,7 @@ func _on_right_bumper_press():
 		tween.set_ease(Tween.EASE_OUT)
 		tween.set_trans(Tween.TRANS_EXPO)
 		tween.tween_property($ShutterVFX, "position:y", 0, 0.075)
+		tween.tween_property($PolaroidOverlay, "modulate:a", 1, 0)
 		tween.tween_property($ShutterVFX, "position:y", -1140, 0.075)
 		tween.tween_callback(func():
 			# play shutter click sound at conclusion

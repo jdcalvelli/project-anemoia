@@ -29,7 +29,7 @@ func _physics_process(_delta):
 	# IF THE CURRENT SHOT CHARACTER IS NOT AUTO, DONT CARE ABOUT TRIGGER
 	if currentShot.currentCharacter == Characters.AUTO:
 		# time scale check
-		if InputManager.triggerHeld:
+		if InputManager.triggerHeld.any(func(e): return e == 1):
 			if Engine.time_scale != 1:
 				if tween_time_up:
 					pass

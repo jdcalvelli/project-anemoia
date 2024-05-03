@@ -12,7 +12,7 @@ func _physics_process(_delta):
 	if GameManager.currentShot.currentCharacter != GameManager.Characters.AUTO:
 		return
 
-	if !InputManager.triggerHeld:
+	if InputManager.triggerHeld.all(func(e): return e == 0):
 		interFrameCounter += 1
 		# LOWER THE COLOR OF THE ENTIRE SCENE
 		# checking just the r bc all elements are changed

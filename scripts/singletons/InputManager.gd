@@ -23,7 +23,7 @@ var rockFlags := [0,0,0,0,0,0]
 var isRockingUp := false
 
 # needed for trigger
-var triggerHeld := false
+var triggerHeld := [0,0] 
 
 # process func for the analog stick motions
 func _physics_process(_delta):
@@ -60,9 +60,13 @@ func _input(event):
 
 	# for trigger holding
 	if event.is_action_pressed("left-trigger-press"):
-		triggerHeld = true
+		triggerHeld[0] = 1
 	elif event.is_action_released("left-trigger-press"):
-		triggerHeld = false
+		triggerHeld[0] = 0
+	if event.is_action_pressed("right-trigger-press"):
+		triggerHeld[1] = 1
+	elif event.is_action_released("right-trigger-press"):
+		triggerHeld[1] = 0
 
 
 

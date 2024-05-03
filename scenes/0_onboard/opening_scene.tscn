@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://p1v3xyqjmrkv"]
 
 [ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_0at4g"]
-[ext_resource type="Texture2D" uid="uid://dybpbpbufmgmq" path="res://assets/onboard/Background_Texture_Opening.png" id="2_wd5kg"]
+[ext_resource type="Texture2D" uid="uid://dybpbpbufmgmq" path="res://assets/0_onboard/Background_Texture_Opening.png" id="2_wd5kg"]
 [ext_resource type="Script" path="res://scripts/spike/OpeningScreenVFX.gd" id="3_b2wuo"]
 
 [sub_resource type="Gradient" id="Gradient_p8wme"]

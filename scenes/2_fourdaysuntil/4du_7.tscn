@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbpdedmkqy4s3"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_nqar3"]
-[ext_resource type="Texture2D" uid="uid://dhi0yyg5vmdtm" path="res://assets/fourdaysuntil/4DU_07.png" id="2_t4mk7"]
+[ext_resource type="Texture2D" uid="uid://dhi0yyg5vmdtm" path="res://assets/2_fourdaysuntil/4DU_07.png" id="2_t4mk7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mgjyw"]
 animations = [{
@@ -17,6 +17,9 @@ animations = [{
 [node name="4du_7" instance=ExtResource("1_nqar3")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/trainAmbience"
+sceneAmbienceParam = "volumeLevel"
+sceneAmbienceVal = 0.15
 autoCharacterWaitTime = 4.0
 prevShot = "res://scenes/2_fourdaysuntil/4du_6.tscn"
 nextShot = "res://scenes/2_fourdaysuntil/4du_8.tscn"

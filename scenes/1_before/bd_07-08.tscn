@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyfmihbrrh28u"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_r4usa"]
-[ext_resource type="Texture2D" uid="uid://bflolvsabckwr" path="res://assets/0_before/BD_07-08_Anim/frame_01.png" id="2_ej7h5"]
+[ext_resource type="Texture2D" uid="uid://bflolvsabckwr" path="res://assets/1_before/BD_07-08_Anim/frame_01.png" id="2_ej7h5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hcu4u"]
 animations = [{
@@ -17,8 +17,9 @@ animations = [{
 [node name="bd_07-08" instance=ExtResource("1_r4usa")]
 
 [node name="Shot" parent="." index="0"]
-sceneAmbiencePath = "event:/Ambience/schoolAmbience"
+sceneAmbiencePath = "event:/Ambience/headphoneAmbience"
 sceneAmbienceParam = "muffleLevel"
+sceneAmbienceVal = 1.0
 autoCharacterWaitTime = 2.0
 prevShot = "res://scenes/1_before/bd_7.tscn"
 nextShot = "res://scenes/1_before/bd_07_08b.tscn"

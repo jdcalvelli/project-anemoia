@@ -2,7 +2,7 @@
 
 [resource]
 file_path = "res://imogen-fmod/Build/Desktop/3du.bank"
-modified_time = 1714234351
+modified_time = 1714756480
 path = "bank:/3du"
 guid = "{c9437801-2b3b-441b-b3e8-3070ea6f5ba7}"
 name = "3du"

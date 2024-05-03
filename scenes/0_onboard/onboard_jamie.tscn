@@ -1,19 +1,19 @@
 [gd_scene load_steps=16 format=3 uid="uid://b8w38778eq28g"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_vsrq1"]
-[ext_resource type="Texture2D" uid="uid://cx5ege6b3apsw" path="res://assets/onboard/jamie/frame_01.png" id="2_epnel"]
-[ext_resource type="Texture2D" uid="uid://yi5b52dkc0lo" path="res://assets/onboard/jamie/frame_02.png" id="3_8yo2m"]
-[ext_resource type="Texture2D" uid="uid://loo3uo167m4" path="res://assets/onboard/jamie/frame_03.png" id="4_afejw"]
-[ext_resource type="Texture2D" uid="uid://bq71qh4w16e3i" path="res://assets/onboard/jamie/frame_04.png" id="5_sduhf"]
-[ext_resource type="Texture2D" uid="uid://638d0cr4y7o8" path="res://assets/onboard/jamie/frame_05.png" id="6_vkthg"]
-[ext_resource type="Texture2D" uid="uid://c0t1ratxgax7a" path="res://assets/onboard/jamie/frame_06.png" id="7_dg7bf"]
-[ext_resource type="Texture2D" uid="uid://bagxs15a4vyfm" path="res://assets/onboard/jamie/frame_07.png" id="8_h256h"]
-[ext_resource type="Texture2D" uid="uid://nh4ksscp53eo" path="res://assets/onboard/jamie/frame_08.png" id="9_r3yxl"]
-[ext_resource type="Texture2D" uid="uid://ccjxgd1mgfscn" path="res://assets/onboard/jamie/frame_09.png" id="10_o1o14"]
-[ext_resource type="Texture2D" uid="uid://623guc2f1yio" path="res://assets/onboard/jamie/frame_10.png" id="11_4wnxn"]
-[ext_resource type="Texture2D" uid="uid://ccbd6w3dfrvoq" path="res://assets/onboard/jamie/frame_11.png" id="12_jpuno"]
-[ext_resource type="Texture2D" uid="uid://6mevgj1v8xqh" path="res://assets/onboard/jamie/frame_12.png" id="13_eq1jg"]
-[ext_resource type="Texture2D" uid="uid://bxtuthyr23idg" path="res://assets/onboard/sophie/frame_12.png" id="14_ea8bo"]
+[ext_resource type="Texture2D" uid="uid://cx5ege6b3apsw" path="res://assets/0_onboard/jamie/frame_01.png" id="2_epnel"]
+[ext_resource type="Texture2D" uid="uid://yi5b52dkc0lo" path="res://assets/0_onboard/jamie/frame_02.png" id="3_8yo2m"]
+[ext_resource type="Texture2D" uid="uid://loo3uo167m4" path="res://assets/0_onboard/jamie/frame_03.png" id="4_afejw"]
+[ext_resource type="Texture2D" uid="uid://bq71qh4w16e3i" path="res://assets/0_onboard/jamie/frame_04.png" id="5_sduhf"]
+[ext_resource type="Texture2D" uid="uid://638d0cr4y7o8" path="res://assets/0_onboard/jamie/frame_05.png" id="6_vkthg"]
+[ext_resource type="Texture2D" uid="uid://c0t1ratxgax7a" path="res://assets/0_onboard/jamie/frame_06.png" id="7_dg7bf"]
+[ext_resource type="Texture2D" uid="uid://bagxs15a4vyfm" path="res://assets/0_onboard/jamie/frame_07.png" id="8_h256h"]
+[ext_resource type="Texture2D" uid="uid://nh4ksscp53eo" path="res://assets/0_onboard/jamie/frame_08.png" id="9_r3yxl"]
+[ext_resource type="Texture2D" uid="uid://ccjxgd1mgfscn" path="res://assets/0_onboard/jamie/frame_09.png" id="10_o1o14"]
+[ext_resource type="Texture2D" uid="uid://623guc2f1yio" path="res://assets/0_onboard/jamie/frame_10.png" id="11_4wnxn"]
+[ext_resource type="Texture2D" uid="uid://ccbd6w3dfrvoq" path="res://assets/0_onboard/jamie/frame_11.png" id="12_jpuno"]
+[ext_resource type="Texture2D" uid="uid://6mevgj1v8xqh" path="res://assets/0_onboard/jamie/frame_12.png" id="13_eq1jg"]
+[ext_resource type="Texture2D" uid="uid://bxtuthyr23idg" path="res://assets/0_onboard/sophie/frame_12.png" id="14_ea8bo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qbnx3"]
 animations = [{
@@ -62,6 +62,8 @@ animations = [{
 [node name="onboard-jamie" instance=ExtResource("1_vsrq1")]
 
 [node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/0_onboard/onboard_jamie"
+sceneAudioPlaybackPoint = 1
 sceneFadeIn = true
 currentCharacter = 0
 numRequiredActions = 1

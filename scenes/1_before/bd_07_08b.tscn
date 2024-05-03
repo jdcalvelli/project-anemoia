@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw2k0rvrqs8bb"]
 
 [ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_xeouy"]
-[ext_resource type="Texture2D" uid="uid://53mkqerber1c" path="res://assets/0_before/BD_07-08_Anim/frame_02.png" id="2_1foo3"]
+[ext_resource type="Texture2D" uid="uid://53mkqerber1c" path="res://assets/1_before/BD_07-08_Anim/frame_02.png" id="2_1foo3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hl52g"]
 animations = [{
@@ -17,6 +17,7 @@ animations = [{
 [node name="bd_07-08b" instance=ExtResource("1_xeouy")]
 
 [node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 autoCharacterWaitTime = 3.0
 prevShot = "res://scenes/1_before/bd_07-08.tscn"
 nextShot = "res://scenes/1_before/bd_8.tscn"

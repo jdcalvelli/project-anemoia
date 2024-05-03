@@ -22,7 +22,7 @@ sceneAmbiencePath = "event:/Ambience/trainAmbience"
 sceneAmbienceParam = "volumeLevel"
 sceneAmbienceVal = 0.5
 sceneFadeIn = true
-autoCharacterWaitTime = 10.0
+autoCharacterWaitTime = 8.0
 prevShot = "res://scenes/cards/title_card.tscn"
 nextShot = "res://scenes/2_fourdaysuntil/4du_2.tscn"
 

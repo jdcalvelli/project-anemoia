@@ -20,7 +20,7 @@ animations = [{
 sceneAmbiencePath = "event:/Ambience/schoolAmbience"
 sceneAmbienceParam = "muffleLevel"
 sceneFadeIn = true
-autoCharacterWaitTime = 10.0
+autoCharacterWaitTime = 8.0
 prevShot = "res://scenes/0_onboard/fade_to_black_scene.tscn"
 nextShot = "res://scenes/1_before/bd_2.tscn"
 

@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://ddftxyyinmbaq"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_rlrbe"]
+[ext_resource type="Texture2D" uid="uid://6rf1l4xi6hot" path="res://assets/threedaysuntil/3DU_11-12_Anim/frame_01.png" id="2_scarc"]
+[ext_resource type="Texture2D" uid="uid://gtqlopu7ehj2" path="res://assets/threedaysuntil/3DU_11-12_Anim/frame_02.png" id="3_3as72"]
+[ext_resource type="Texture2D" uid="uid://itqr6txkg4hf" path="res://assets/threedaysuntil/3DU_11-12_Anim/frame_03.png" id="4_gsuml"]
+[ext_resource type="Texture2D" uid="uid://q31q1xlwobal" path="res://assets/threedaysuntil/3DU_11-12_Anim/frame_04.png" id="5_xkbk1"]
+[ext_resource type="Texture2D" uid="uid://ddg2oj6jic55x" path="res://assets/threedaysuntil/3DU_11-12_Anim/frame_05.png" id="6_ggs70"]
+[ext_resource type="Texture2D" uid="uid://b8escufspj7r3" path="res://assets/threedaysuntil/3DU_11-12_Anim/frame_06.png" id="7_8n6t3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0l2o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_scarc")
+}, {
+"duration": 0.4,
+"texture": ExtResource("3_3as72")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_gsuml")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_xkbk1")
+}, {
+"duration": 0.4,
+"texture": ExtResource("6_ggs70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8n6t3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="3du_11-12" instance=ExtResource("1_rlrbe")]
+
+[node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/3du/3du_11_12"
+autoCharacterWaitTime = 10.0
+prevShot = "res://scenes/3_threedaysuntil/3du_11.tscn"
+nextShot = "res://scenes/3_threedaysuntil/3du_12.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_p0l2o")
+autoplay = "default"

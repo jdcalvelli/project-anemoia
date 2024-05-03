@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddtvogx4hi485"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_sy3ch"]
+[ext_resource type="Texture2D" uid="uid://d2x60pgjdbc8c" path="res://assets/1_before/BD_16_Anim/frame_00.png" id="2_eqdkh"]
+[ext_resource type="Texture2D" uid="uid://hxyljvlwhpis" path="res://assets/1_before/BD_16_Anim/frame_01.png" id="3_mby76"]
+[ext_resource type="Texture2D" uid="uid://c1hsogvhsp50s" path="res://assets/1_before/BD_16_Anim/frame_02.png" id="4_xf2md"]
+[ext_resource type="Texture2D" uid="uid://blw4e8hcjrvlh" path="res://assets/1_before/BD_15_Anim/frame_04.png" id="5_w6s31"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_taf0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eqdkh")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_mby76")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_xf2md")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="bd_16" instance=ExtResource("1_sy3ch")]
+
+[node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd16"
+sceneFadeIn = true
+autoCharacterWaitTime = 12.0
+prevShot = "res://scenes/1_before/bd_15.tscn"
+nextShot = "res://scenes/1_before/bd_17.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_taf0u")
+autoplay = "default"
+
+[node name="FadeInOverlay" parent="." index="8"]
+fadeImage = ExtResource("5_w6s31")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://p1v3xyqjmrkv"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_0at4g"]
+[ext_resource type="Texture2D" uid="uid://dybpbpbufmgmq" path="res://assets/onboard/Background_Texture_Opening.png" id="2_wd5kg"]
+[ext_resource type="Script" path="res://scripts/spike/OpeningScreenVFX.gd" id="3_b2wuo"]
+
+[sub_resource type="Gradient" id="Gradient_p8wme"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x3lwv"]
+gradient = SubResource("Gradient_p8wme")
+width = 1
+
+[node name="opening_scene" instance=ExtResource("1_0at4g")]
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/cards/demo_end_card.tscn"
+nextShot = "res://scenes/0_onboard/onboard_sophie.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("2_wd5kg")
+
+[node name="ScreenHolder" type="Node2D" parent="." index="3"]
+script = ExtResource("3_b2wuo")
+
+[node name="TopScreen" type="Sprite2D" parent="ScreenHolder" index="0"]
+z_index = 2
+position = Vector2(2.08165e-12, -576)
+scale = Vector2(1920, 1200)
+texture = SubResource("GradientTexture1D_x3lwv")
+
+[node name="BottomScreen" type="Sprite2D" parent="ScreenHolder" index="1"]
+z_index = 2
+position = Vector2(2.08165e-12, 572)
+scale = Vector2(1920, 1200)
+texture = SubResource("GradientTexture1D_x3lwv")
+
+[node name="Trigger-Helper" parent="." index="4"]
+z_index = 10
+z_as_relative = false

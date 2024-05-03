@@ -7,4 +7,4 @@
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 5.0
 prevShot = "res://scenes/cards/two_days_card.tscn"
-nextShot = "res://scenes/onboard/opening_scene.tscn"
+nextShot = "res://scenes/0_onboard/opening_scene.tscn"

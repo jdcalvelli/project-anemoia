@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://x0ib5q4g864r"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_to0l1"]
+[ext_resource type="Texture2D" uid="uid://rv8p8fn1h127" path="res://assets/before/BD_20_Anim/frame_01.png" id="2_aqxua"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_er4uo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aqxua")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="bd_20-1" instance=ExtResource("1_to0l1")]
+helperTimeToWait = 8
+
+[node name="Shot" parent="." index="0"]
+autoCharacterWaitTime = 2.0
+prevShot = "res://scenes/1_before/bd_19_20_jamie.tscn"
+nextShot = "res://scenes/1_before/bd_20_2.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_er4uo")
+autoplay = "default"

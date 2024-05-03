@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp63yynacdvh6"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_72yg5"]
+[ext_resource type="Texture2D" uid="uid://22w1h61x0sfl" path="res://assets/1_before/BD_01.png" id="2_3yudl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tx52o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3yudl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="bd_1" instance=ExtResource("1_72yg5")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/schoolAmbience"
+sceneAmbienceParam = "muffleLevel"
+sceneFadeIn = true
+autoCharacterWaitTime = 10.0
+prevShot = "res://scenes/0_onboard/fade_to_black_scene.tscn"
+nextShot = "res://scenes/1_before/bd_2.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_tx52o")

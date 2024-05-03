@@ -7,8 +7,8 @@
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 5.0
-prevShot = "res://scenes/before/bd_24.tscn"
-nextShot = "res://scenes/fourdaysuntil/4du_1.tscn"
+prevShot = "res://scenes/0_before/bd_24.tscn"
+nextShot = "res://scenes/1_fourdaysuntil/4du_1.tscn"
 
 [node name="Sprite2D" parent="." index="2"]
 scale = Vector2(0.5, 0.5)

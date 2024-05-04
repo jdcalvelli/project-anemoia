@@ -6,17 +6,8 @@
 [node name="bumper1" instance=ExtResource("1_x3577")]
 
 [node name="Shot" parent="." index="0"]
-sceneAmbiencePath = null
-sceneAmbienceParam = null
-sceneAmbienceVal = null
-sceneAudioPath = null
-sceneAudioPlaybackPoint = null
-sceneFadeIn = null
 currentCharacter = 4
-reverseActions = null
-numRequiredActions = null
 autoCharacterWaitTime = 4.0
-prevShot = null
 nextShot = "res://scenes/bumpers/bumper_2.tscn"
 
 [node name="Sprite2D" parent="." index="2"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0lxy8rxa4srx"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_xcqny"]
+[ext_resource type="Texture2D" uid="uid://b3qkoau315sc7" path="res://assets/2_fourdaysuntil/4DU_18.png" id="2_o2a0q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l37xj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o2a0q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="4du_18" instance=ExtResource("1_xcqny")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/movieTheaterAmbience"
+sceneAmbienceParam = "reverbLevel"
+autoCharacterWaitTime = 5.0
+prevShot = "res://scenes/2_fourdaysuntil/4du_17.tscn"
+nextShot = "res://scenes/2_fourdaysuntil/4du_19.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_l37xj")

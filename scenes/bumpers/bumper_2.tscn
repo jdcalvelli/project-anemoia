@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://xytq4akamca7"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_eyhn5"]
+[ext_resource type="Texture2D" uid="uid://btiwosehe3sva" path="res://assets/bumpers/FmodBumper.png" id="2_2fmlw"]
+
+[node name="bumper2" instance=ExtResource("1_eyhn5")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = null
+sceneAmbienceParam = null
+sceneAmbienceVal = null
+sceneAudioPath = null
+sceneAudioPlaybackPoint = null
+sceneFadeIn = null
+currentCharacter = 4
+reverseActions = null
+numRequiredActions = null
+autoCharacterWaitTime = 4.0
+prevShot = "res://scenes/bumpers/bumper_1.tscn"
+nextShot = "res://scenes/bumpers/bumper_3.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2fmlw")

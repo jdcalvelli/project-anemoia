@@ -1,4 +1,4 @@
-[gd_scene load_steps=206 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=207 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/HelperViews.gd" id="1_46rmh"]
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
@@ -197,6 +197,7 @@
 [ext_resource type="Texture2D" uid="uid://dg2pqmelsyiq8" path="res://assets/utilities/Hold Trigger Instruction/frame_47.png" id="194_4ehmw"]
 [ext_resource type="Texture2D" uid="uid://ca3w8wifydh7g" path="res://assets/utilities/Hold Trigger Instruction/frame_48.png" id="195_0xd71"]
 [ext_resource type="Script" path="res://scripts/prefabs/Trigger-Helper.gd" id="196_e0esd"]
+[ext_resource type="Texture2D" uid="uid://cgcgd58n7ds1l" path="res://assets/utilities/PolaroidOverlay.png" id="198_rpca0"]
 [ext_resource type="Shader" path="res://shaders/film.gdshader" id="198_xflbq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h4lq"]
@@ -822,7 +823,7 @@ shader_parameter/shake_amount = 0.005
 shader_parameter/saturation = 1.0
 shader_parameter/contrast = 1.5
 shader_parameter/brightness = 0.125
-shader_parameter/grain_scale = 450.0
+shader_parameter/grain_scale = 800.0
 shader_parameter/grain_density = 0.5
 shader_parameter/grain_color = Color(0, 0, 0, 1)
 shader_parameter/streak_color = Color(0, 0, 0, 1)
@@ -831,8 +832,8 @@ shader_parameter/dust_opacity = 0.5
 shader_parameter/dust_frequency = 30.0
 shader_parameter/dust_scale = 4.0
 shader_parameter/flash_amount = 0.005
-shader_parameter/vignette_width = 0.15
-shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_width = 0.1
+shader_parameter/vignette_opacity = 0.9
 
 [node name="scene-template" type="Node2D"]
 script = ExtResource("1_46rmh")
@@ -848,6 +849,7 @@ scale = Vector2(0.52, 0.52)
 script = ExtResource("2_ahngt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
 
 [node name="RAA-Helper" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -890,6 +892,11 @@ texture = SubResource("GradientTexture1D_ub7su")
 [node name="FadeInOverlay" type="Sprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
 script = ExtResource("148_wxbdn")
+
+[node name="PolaroidOverlay" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("198_rpca0")
 
 [node name="PostProcess" type="CanvasLayer" parent="."]
 

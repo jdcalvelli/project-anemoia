@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyhgvw8at5d1u"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_y06m7"]
+[ext_resource type="Texture2D" uid="uid://dhh3yyrq2cml7" path="res://assets/bumpers/HeadphonesBumper.png" id="2_whw1h"]
+
+[node name="bumper4" instance=ExtResource("1_y06m7")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = null
+sceneAmbienceParam = null
+sceneAmbienceVal = null
+sceneAudioPath = null
+sceneAudioPlaybackPoint = null
+sceneFadeIn = null
+currentCharacter = 4
+reverseActions = null
+numRequiredActions = null
+autoCharacterWaitTime = 4.0
+prevShot = "res://scenes/bumpers/bumper_3.tscn"
+nextShot = "res://scenes/bumpers/bumper_5.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_whw1h")

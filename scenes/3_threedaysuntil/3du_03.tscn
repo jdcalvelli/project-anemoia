@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuc61qahcj0s"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_1clur"]
+[ext_resource type="Texture2D" uid="uid://bc3idpb4vlqt1" path="res://assets/threedaysuntil/3DU_03_Anim/frame_01.png" id="2_q6sg7"]
+[ext_resource type="Texture2D" uid="uid://b204n58mayra6" path="res://assets/threedaysuntil/3DU_03_Anim/frame_02.png" id="3_ilx4l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ko82e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q6sg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ilx4l")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="3du_03" instance=ExtResource("1_1clur")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/cafeAmbience"
+sceneAudioPath = "event:/3du/3du_3"
+autoCharacterWaitTime = 6.0
+prevShot = "res://scenes/3_threedaysuntil/3du_02.tscn"
+nextShot = "res://scenes/3_threedaysuntil/3du_04.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_ko82e")
+autoplay = "default"

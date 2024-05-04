@@ -1,0 +1,73 @@
+[gd_scene load_steps=15 format=3 uid="uid://cwuxvoa8fjh06"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_t4d5l"]
+[ext_resource type="Texture2D" uid="uid://bm8wlal4y5m13" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_01.png" id="2_1chwg"]
+[ext_resource type="Texture2D" uid="uid://covrd0l7ef401" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_02.png" id="3_iagiw"]
+[ext_resource type="Texture2D" uid="uid://b02wh2gaaor1b" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_03.png" id="4_ada2k"]
+[ext_resource type="Texture2D" uid="uid://btgh262ptuibj" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_04.png" id="5_lq07n"]
+[ext_resource type="Texture2D" uid="uid://cr6t6o10utdup" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_05.png" id="6_rcdu8"]
+[ext_resource type="Texture2D" uid="uid://bllu4dsovdr2p" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_06.png" id="7_hqfyp"]
+[ext_resource type="Texture2D" uid="uid://bwcy6otlycd68" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_07.png" id="8_yxgik"]
+[ext_resource type="Texture2D" uid="uid://etw8pi25npts" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_08.png" id="9_gyknl"]
+[ext_resource type="Texture2D" uid="uid://jjohkxaegl30" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_09.png" id="10_0cej2"]
+[ext_resource type="Texture2D" uid="uid://lgvpxydwvtdt" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_10.png" id="11_7mnqy"]
+[ext_resource type="Texture2D" uid="uid://dvafffs4ytotv" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_11.png" id="12_7aqhy"]
+[ext_resource type="Texture2D" uid="uid://464jyjcrbqkb" path="res://assets/3_threedaysuntil/3DU_24_Anim/frame_12.png" id="13_8w3f6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_if4b8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1chwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iagiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ada2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lq07n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rcdu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hqfyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yxgik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gyknl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0cej2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7mnqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7aqhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8w3f6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="3du_24" instance=ExtResource("1_t4d5l")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = "event:/Ambience/hvacAmbience"
+sceneAudioPath = "event:/3du/3du_24"
+sceneAudioPlaybackPoint = 1
+currentCharacter = 1
+numRequiredActions = 5
+prevShot = "res://scenes/3_threedaysuntil/3du_23_24.tscn"
+nextShot = "res://scenes/3_threedaysuntil/3du_25.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_if4b8")

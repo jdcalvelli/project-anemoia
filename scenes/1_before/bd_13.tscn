@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cig704bej3m2l"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_r4cks"]
+[ext_resource type="Texture2D" uid="uid://dydw1u6gbp4rm" path="res://assets/1_before/BD_13_Anim/frame_01.png" id="2_g1c5d"]
+[ext_resource type="Texture2D" uid="uid://b7i3prs8d3g6h" path="res://assets/1_before/BD_13_Anim/frame_02.png" id="3_tsj55"]
+[ext_resource type="Texture2D" uid="uid://dimquwo0jvb4h" path="res://assets/1_before/BD_13_Anim/frame_03.png" id="4_ddvy7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4mvw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g1c5d")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_tsj55")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_ddvy7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_tsj55")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_ddvy7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_tsj55")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_ddvy7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="bd_13" instance=ExtResource("1_r4cks")]
+
+[node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd13"
+autoCharacterWaitTime = 8.0
+prevShot = "res://scenes/1_before/bd_12.tscn"
+nextShot = "res://scenes/1_before/bd_14.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_y4mvw")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0

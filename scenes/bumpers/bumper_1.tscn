@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://clspmb2ncjeo7"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_x3577"]
+[ext_resource type="Texture2D" uid="uid://buen6f7atruta" path="res://assets/bumpers/GodotBumper.png" id="2_8tcwr"]
+
+[node name="bumper1" instance=ExtResource("1_x3577")]
+
+[node name="Shot" parent="." index="0"]
+currentCharacter = 4
+autoCharacterWaitTime = 4.0
+nextShot = "res://scenes/bumpers/bumper_2.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_8tcwr")

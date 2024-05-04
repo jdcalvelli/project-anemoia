@@ -44,7 +44,7 @@ func _enter_tree():
 	# this is for the auto character
 	# nill at this point
 	await get_tree().create_timer(autoCharacterWaitTime).timeout
-	if currentCharacter == GameManager.Characters.AUTO:
+	if currentCharacter == GameManager.Characters.AUTO or currentCharacter == GameManager.Characters.BUMPER:
 		# print("AUTOMOVE")
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
 
@@ -67,7 +67,7 @@ func _ready():
 	# check if the numRequiredActions is 999
 	if numRequiredActions == 999:
 		# start a timer for 60 seconds
-		await get_tree().create_timer(60).timeout
+		await get_tree().create_timer(29).timeout
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
 
 # for jitter
@@ -100,16 +100,16 @@ func _on_shutter_complete():
 	tween.set_ease(Tween.EASE_IN)
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.tween_property(
-		get_node("../AnimatedSprite2D"),
+		get_node("../Camera2D"),
 		"rotation_degrees",
 		-45,
-		50
+		30
 	)
 	tween.tween_property(
-		get_node("../AnimatedSprite2D"),
-		"scale",
-		Vector2(1, 1),
-		50
+		get_node("../Camera2D"),
+		"zoom",
+		Vector2(0.8, 0.8),
+		30
 	)
 
 func _exit_tree():

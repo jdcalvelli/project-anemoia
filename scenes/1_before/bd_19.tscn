@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2xfdaduhgedp"]
+
+[ext_resource type="PackedScene" uid="uid://bio0m2rmhal5x" path="res://prefabs/scene-template.tscn" id="1_c6287"]
+[ext_resource type="Texture2D" uid="uid://brh23s0as7pll" path="res://assets/1_before/BD_19_Anim/frame_01.png" id="2_scdo6"]
+[ext_resource type="Texture2D" uid="uid://bsj845k53mly6" path="res://assets/1_before/BD_19_Anim/frame_02.png" id="3_mkv0d"]
+[ext_resource type="Texture2D" uid="uid://dd5xjt3murpux" path="res://assets/1_before/BD_19_Anim/frame_03.png" id="4_6w65v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbewh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_scdo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mkv0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6w65v")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="bd_19" instance=ExtResource("1_c6287")]
+
+[node name="Shot" parent="." index="0"]
+sceneAudioPath = "event:/beforeDays/bd19"
+autoCharacterWaitTime = 7.0
+prevShot = "res://scenes/1_before/bd_18.tscn"
+nextShot = "res://scenes/1_before/bd_19_20_sophie.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_wbewh")
+autoplay = "default"

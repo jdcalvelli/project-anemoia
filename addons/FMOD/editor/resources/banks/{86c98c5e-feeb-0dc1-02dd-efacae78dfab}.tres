@@ -2,7 +2,7 @@
 
 [resource]
 file_path = "res://imogen-fmod/Build/Desktop/Master.strings.bank"
-modified_time = 1714230752
+modified_time = 1714776268
 path = "bank:/Master.strings"
 guid = "{86c98c5e-feeb-0dc1-02dd-efacae78dfab}"
 name = "Master.strings"

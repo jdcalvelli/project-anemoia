@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://dr1n0ipa51b8n"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/0_onboard/onboard_jamie"
+guid = "{f1d0337d-c18f-4bd6-bef6-64ab66499015}"
+name = "onboard_jamie"

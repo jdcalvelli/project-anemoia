@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0f2cdb21-a9da-40de-ae8d-626187e3c7f2}">
+		<property name="assetPath">
+			<value>0_onboard/strum-mute-down.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0187755102040816</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2e756c3c-c61b-4edd-8f86-b8abdd04a165}</destination>
+		</relationship>
+	</object>
+</objects>

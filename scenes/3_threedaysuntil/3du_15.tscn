@@ -9,7 +9,13 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_08cxy"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 1.0,
+"texture": ExtResource("2_1gfgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1gfgl")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_1gfgl")
 }, {
 "duration": 2.0,
@@ -37,3 +43,5 @@ nextShot = "res://scenes/3_threedaysuntil/3du_16.tscn"
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_08cxy")
 autoplay = "default"
+frame = 5
+frame_progress = 1.0

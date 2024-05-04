@@ -29,11 +29,13 @@ animations = [{
 }]
 
 [node name="3DU_25" instance=ExtResource("1_ws377")]
+helperTimeToWait = 5
 
 [node name="Shot" parent="." index="0"]
 sceneAmbiencePath = "event:/Ambience/hvacAmbience"
 sceneAudioPath = "event:/3du/3du_25"
-autoCharacterWaitTime = 7.0
+currentCharacter = 3
+numRequiredActions = 1
 prevShot = "res://scenes/3_threedaysuntil/3du_24.tscn"
 nextShot = "res://scenes/3_threedaysuntil/3du_25_26.tscn"
 

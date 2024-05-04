@@ -44,7 +44,7 @@ func _enter_tree():
 	# this is for the auto character
 	# nill at this point
 	await get_tree().create_timer(autoCharacterWaitTime).timeout
-	if currentCharacter == GameManager.Characters.AUTO:
+	if currentCharacter == GameManager.Characters.AUTO or currentCharacter == GameManager.Characters.BUMPER:
 		# print("AUTOMOVE")
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(nextShot))
 

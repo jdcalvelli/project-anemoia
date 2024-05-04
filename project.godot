@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="imogen"
-run/main_scene="res://scenes/0_onboard/opening_scene.tscn"
+run/main_scene="res://scenes/bumpers/bumper_1.tscn"
 config/features=PackedStringArray("4.1")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 config/version="0.7.0"
 

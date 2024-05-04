@@ -5,6 +5,7 @@ enum Characters {
 	MOTHER,
 	AUTO,
 	CAMERA,
+	BUMPER
 }
 
 # current shot reference

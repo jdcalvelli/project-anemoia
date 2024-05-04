@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct3rqvnsfya5m"]
+
+[ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_x5xo2"]
+[ext_resource type="Texture2D" uid="uid://d4de6s337y15y" path="res://assets/bumpers/JdDevBumper.png" id="2_uyubx"]
+
+[node name="bumper5" instance=ExtResource("1_x5xo2")]
+
+[node name="Shot" parent="." index="0"]
+sceneAmbiencePath = null
+sceneAmbienceParam = null
+sceneAmbienceVal = null
+sceneAudioPath = null
+sceneAudioPlaybackPoint = null
+sceneFadeIn = null
+currentCharacter = 4
+reverseActions = null
+numRequiredActions = null
+autoCharacterWaitTime = 4.0
+prevShot = "res://scenes/bumpers/bumper_4.tscn"
+nextShot = "res://scenes/0_onboard/opening_scene.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_uyubx")

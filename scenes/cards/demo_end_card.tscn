@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c34ruiobg34jq"]
+[gd_scene load_steps=3 format=3 uid="uid://c34ruiobg34jq"]
 
 [ext_resource type="PackedScene" uid="uid://nml24vc02rfl" path="res://prefabs/card-template.tscn" id="1_fubf0"]
+[ext_resource type="Texture2D" uid="uid://clqjw0rcqwybe" path="res://assets/cards/tbcontinued.png" id="2_xld3d"]
 
 [node name="demo_end_card" instance=ExtResource("1_fubf0")]
 
 [node name="Shot" parent="." index="0"]
 autoCharacterWaitTime = 5.0
 prevShot = "res://scenes/cards/two_days_card.tscn"
-nextShot = "res://scenes/0_onboard/opening_scene.tscn"
+nextShot = "res://scenes/bumpers/bumper_1.tscn"
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_xld3d")

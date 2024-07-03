@@ -881,6 +881,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(-672, -320)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_joxlb")
+autoplay = "default"
 script = ExtResource("196_e0esd")
 
 [node name="ShutterVFX" type="Sprite2D" parent="."]

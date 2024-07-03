@@ -18,7 +18,7 @@ boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
-config/version="0.7.1"
+config/version="0.7.2"
 
 [autoload]
 

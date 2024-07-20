@@ -1,8 +1,9 @@
-[gd_scene load_steps=207 format=3 uid="uid://bio0m2rmhal5x"]
+[gd_scene load_steps=209 format=3 uid="uid://bio0m2rmhal5x"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/HelperViews.gd" id="1_46rmh"]
 [ext_resource type="Script" path="res://scripts/nodes/Shot.gd" id="1_jgvs3"]
 [ext_resource type="Script" path="res://scripts/prefabs/AnimChange.gd" id="2_ahngt"]
+[ext_resource type="Texture2D" uid="uid://bn872a2ykulod" path="res://assets/0_onboard/jamie/LL_Opening_Jamie.png" id="3_ik02e"]
 [ext_resource type="Texture2D" uid="uid://bwmhl7nvge41a" path="res://assets/utilities/Updated RAA Instruction/frame_01.png" id="4_rkd0x"]
 [ext_resource type="Texture2D" uid="uid://n6riv8xu1vkd" path="res://assets/utilities/Updated RAA Instruction/frame_02.png" id="5_mfhcf"]
 [ext_resource type="Texture2D" uid="uid://c1yr857wl30nj" path="res://assets/utilities/Updated RAA Instruction/frame_03.png" id="6_r10si"]
@@ -199,6 +200,17 @@
 [ext_resource type="Script" path="res://scripts/prefabs/Trigger-Helper.gd" id="196_e0esd"]
 [ext_resource type="Texture2D" uid="uid://cgcgd58n7ds1l" path="res://assets/utilities/PolaroidOverlay.png" id="198_rpca0"]
 [ext_resource type="Shader" path="res://shaders/film.gdshader" id="198_xflbq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3o2gw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ik02e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h4lq"]
 animations = [{
@@ -843,6 +855,10 @@ helperTweenDuration = 2
 [node name="Shot" type="Node" parent="."]
 script = ExtResource("1_jgvs3")
 currentCharacter = 2
+
+[node name="LineLayer" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_3o2gw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.52, 0.52)
